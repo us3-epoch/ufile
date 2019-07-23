@@ -4,132 +4,24 @@
 
 **UFile产品价格**
 
-<table>
-<tbody>
-<tr class="odd">
-<td>计费项</td>
-<td>地域</td>
-<td>范围</td>
-<td>价格</td>
-</tr>
-<tr class="even">
-<td>存储容量</td>
-<td>北京、香港、广东、上海二、<br />
-洛杉矶、新加坡、雅加达</td>
-<td>All</td>
-<td>0.0052元/GB/天</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>拉各斯、台北</td>
-<td>All</td>
-<td>0.004元/GB/天</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>全球化</td>
-<td>All</td>
-<td>0.0091元/GB/天</td>
-</tr>
-<tr class="odd">
-<td>上传流量</td>
-<td>北京、香港、广东、上海二、<br />
-洛杉矶、新加坡、雅加达、<br />
-拉各斯、台北、全球化</td>
-<td>All</td>
-<td>免费</td>
-</tr>
-<tr class="even">
-<td>下载流量</td>
-<td>北京、香港、广东、<br />
-上海二、洛杉矶、全球化</td>
-<td>0—1TB</td>
-<td>0.45元/GB</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>:::</td>
-<td>1TB—10TB</td>
-<td>0.40元/GB</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>:::</td>
-<td>10TB—50TB</td>
-<td>0.36元/GB</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>:::</td>
-<td>50TB—100TB</td>
-<td>0.32元/GB</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>:::</td>
-<td>100TB以上</td>
-<td>0.28元/GB</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>新加坡、雅加达</td>
-<td>0—1TB</td>
-<td>0.65元/GB</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>:::</td>
-<td>1TB—10TB</td>
-<td>0.60元/GB</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>:::</td>
-<td>10TB—50TB</td>
-<td>0.54元/GB</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>:::</td>
-<td>50TB—100TB</td>
-<td>0.48元/GB</td>
-</tr>
-<tr class="odd">
-<td>:::</td>
-<td>:::</td>
-<td>100TB以上</td>
-<td>0.42元/GB</td>
-</tr>
-<tr class="even">
-<td>:::</td>
-<td>拉各斯、台北</td>
-<td>All</td>
-<td>0.4元/GB</td>
-</tr>
-<tr class="odd">
-<td>请求次数</td>
-<td>北京、香港、广东、上海二、<br />
-洛杉矶、新加坡、雅加达、拉各斯、<br />
-台北、全球化</td>
-<td>All</td>
-<td>0.01元/万次</td>
-</tr>
-<tr class="even">
-<td>海外专线流量</td>
-<td>无</td>
-<td>All</td>
-<td>4元/GB</td>
-</tr>
-<tr class="odd">
-<td>UFile流量为阶梯定价，计价示例如下：<br />
-例1:购买北京地域流量20TB，则所需支付金额为7372.8元=0.36元/GB *(20 *1024)GB<br />
-例2:购买新加坡地域流量60TB，则所需支付金额为29491.2元=0.48元/GB *(60 *1024)GB</td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+|  计费项   |  地域         |  范围          |  价格            |
+| 存储容量  |  北京、香港、广东、上海二、\\ 洛杉矶、新加坡、雅加达    |  All         |  0.0052元/GB/天   |
+| :::      |  拉各斯、台北    |  All         |  0.004元/GB/天   |
+| :::      |  全球化         |  All         |  0.0091元/GB/天  |
+| 上传流量  |  北京、香港、广东、上海二、\\ 洛杉矶、新加坡、雅加达、 \\ 拉各斯、台北、全球化  |  All      |  免费       |
+| 下载流量  |  北京、香港、广东、 \\ 上海二、洛杉矶、全球化                  |  0—1TB    |  0.45元/GB  |
+| :::     | :::     |  1TB—10TB    |  0.40元/GB      |
+| :::     | :::     |  10TB—50TB   |  0.36元/GB      |
+| :::     | :::     |  50TB—100TB  |  0.32元/GB      |
+| :::     | :::     |  100TB以上    |  0.28元/GB      |
+| :::     |  新加坡、雅加达  |  0—1TB       |  0.65元/GB      |
+| :::     | :::     |  1TB—10TB    |  0.60元/GB      |
+| :::     | :::     |  10TB—50TB   |  0.54元/GB      |
+| :::     | :::     |  50TB—100TB  |  0.48元/GB      |
+| :::     | :::     |  100TB以上     |  0.42元/GB      |
+| :::     |  拉各斯、台北  |    All     |  0.4元/GB      |
+| 请求次数  |  北京、香港、广东、上海二、\\ 洛杉矶、新加坡、雅加达、拉各斯、 \\ 台北、全球化   |  All         |  0.01元/万次      |
+| 海外专线流量    |  无   |  All         |  4元/GB      |
 
 提示：
 1、全球化空间管理与单地域空间管理配额不互通
