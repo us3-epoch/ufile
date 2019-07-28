@@ -101,7 +101,8 @@ D机房内网: www.ufile.cn-north-04.ucloud.cn
 孟买：  
 外网：www.ind-mumbai.ufileos.com  
 内网：www.internal-ind-mumbai.ufileos.com  
-\===== 使用filemgr工具时遇到timeout错误时怎么办？ =====
+
+##  使用filemgr工具时遇到timeout错误时怎么办？
 
 "client timeout" 、"i/o
 timeout"，文件所在机器的出带宽有限很容易发生此错误，可以使用mput，并增加--speedlimit进行限速。
@@ -138,3 +139,4 @@ CDN回源，流量从UFile流向UCDN，这部分流量UCDN不计费，由UFile�
 4.欠费后、限制服务前、删除前/后都会有邮件通知和短信通知，被通知人为对应项目的资源回收消息订阅人。  
 **欠费处理时间轴如下：**  
 ![](/images/欠费通知时间轴.png)
+
