@@ -16,7 +16,7 @@
 
 ## 日志命名规则
 
-<TargetPrefix><SourceBucket>-YYYY-mm-DD-HH-UniqueString  
+\<TargetPrefix\>\<SourceBucket\>-YYYY-mm-DD-HH-UniqueString  
 命名规则中:  
 TargetPrefix由用户指定，表示存储访问日志记录的名称前缀，可以为空。  
 YYYY-mm-DD-HH-分别是该日志被创建时的阿拉伯数字的年、月、日、小时。  
