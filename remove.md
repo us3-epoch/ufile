@@ -12,7 +12,11 @@
 [设置回源规则](https://docs.ucloud.cn/storage_cdn/ufile/guide/mirror)
 
 优点：
+
 客户的请求可以快速无缝的切换到UFile
+
 缺点：
+
 1.部分未访问到的文件无法迁移到UFIle  
+
 2.访问UFile不存在的文件需要回源，访问延时会增加
