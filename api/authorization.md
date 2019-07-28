@@ -64,7 +64,7 @@ StringToSign中包括两类标头元素：
 
 另一类是UCloud附加标头，以“X-UCloud-”开头，此类标头需要按照下面指定的方法构造CanonicalizedUCloudHeaders字符串后加入到StringToSign中。
 
-**note**
+注：
 
 1.  如果位置标头不在请求中（例如，Content-Type或Content-MD5对于PUT请求是可选的，并且对于GET请求没有任何意义），必须使用空字符串""替换该位置；
 2.  BASE64使用standardbase64，不是URLSafe的base64算法，下同；
