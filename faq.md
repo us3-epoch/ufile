@@ -74,7 +74,7 @@ D机房内网: www.ufile.cn-north-04.ucloud.cn
 广州  
 外网：www.cn-gd.ufileos.com  
 内网：www.internal-cn-gd-02.ufileos.com  
-美国  
+洛杉矶  
 外网：www.us-ca.ufileos.com  
 内网：www.internal-us-ca-01.ufileos.com  
 雅加达  
@@ -100,7 +100,13 @@ D机房内网: www.ufile.cn-north-04.ucloud.cn
 内网：www.internal-vn-sng.ufileos.com  
 孟买：  
 外网：www.ind-mumbai.ufileos.com  
-内网：www.internal-ind-mumbai.ufileos.com  
+内网：www.internal-ind-mumbai.ufileos.com 
+华盛顿：
+外网：www.us-ws.ufileos.com
+内网：www.internal-us-ws.ufileos.com
+法兰克福：
+外网：www.ge-fra.ufileos.com
+内网：www.internal-ge-fra.ufileos.com
 
 ##  使用filemgr工具时遇到timeout错误时怎么办？
 
