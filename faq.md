@@ -101,12 +101,12 @@ D机房内网: www.ufile.cn-north-04.ucloud.cn
 孟买：  
 外网：www.ind-mumbai.ufileos.com  
 内网：www.internal-ind-mumbai.ufileos.com 
-华盛顿：
-外网：www.us-ws.ufileos.com
-内网：www.internal-us-ws.ufileos.com
-法兰克福：
-外网：www.ge-fra.ufileos.com
-内网：www.internal-ge-fra.ufileos.com
+华盛顿：  
+外网：www.us-ws.ufileos.com   
+内网：www.internal-us-ws.ufileos.com   
+法兰克福：  
+外网：www.ge-fra.ufileos.com   
+内网：www.internal-ge-fra.ufileos.com   
 
 ##  使用filemgr工具时遇到timeout错误时怎么办？
 
