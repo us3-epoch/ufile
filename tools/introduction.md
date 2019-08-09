@@ -508,6 +508,26 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
   --format: 格式化输出的文件格式
 ```
 
+#### 流式上传单个文件(从标准输入读取)
+
+```
+./filemgr --action stream-upload --bucket bucketname --key key [--speedlimit speedlimit]
+参数说明:
+  --bucket: 需要上传至的存储空间
+  --key: 上传至存储空间中的文件名
+  --file: stdin, 可不填
+  --speedlimit: 上传限速，单位bytes/s 
+  --storageclass: 文件存储类型，分别是标准、低频、归档，对应有效值：STANDARD, IA, ARCHIVE； 文件默认类型，继承于Bucket默认类型。（Bucket默认类型为STANDARD）
+```
+
+示例：
+
+备份数据库test，同时上传至名为uclouddemo的存储空间，命名为mysql.bak ：
+
+```
+mysqldump -h127.0.0.1 -P3306 -uroot -pufile --database test | ./filemgr --action stream-upload --bucket uclouddemo --key mysql.bak
+```
+
 #### filemgr版本更新
 
 该选项用于更新工具版本
