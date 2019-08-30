@@ -96,7 +96,6 @@ UFile
 | GetFile        | 读文件 |
 | DeleteFile     | 删除文件 |
 | 无             | 修改文件内容 |
-| OpMeta         | 修改文件属性 |
 | 无             | 复制文件 |
 | 无             | 重命名文件 |
 
