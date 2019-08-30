@@ -335,7 +335,7 @@ UfileClient.object(OBJECT_AUTHORIZER, config).APIs.executeAsync(UfileCallback<T>
 
 您的文件上传到UCloud UFile 的 Bucket 后，会自动生成该文件的访问地址，您可以使用此地址访问 Bucket 内的文件。若您希望通过自定义域名访问这些文件，需要将自定义域名绑定到文件所在的存储空间，并添加 CNAME 记录指向存储空间对应的外网域名。
 
-> 注意 按照中华人民共和国《互联网管理条例》的要求，所有需要绑定自定义域名的用户，必须提前将域名在工信部备案。若您的域名未备案，您可通过UCloud云提供的[备案](https://beian.aliyun.com/order/selfBaIndex.htm)服务进行备案。
+> 注意 按照中华人民共和国《互联网管理条例》的要求，所有需要绑定自定义域名的用户，必须提前将域名在工信部备案。若您的域名未备案，您可通过UCloud云提供的备案服务进行备案。
 
 | 操作方式   | 说明 |
 | ---------- | ------------------------ |
@@ -379,7 +379,7 @@ UfileClient.object(OBJECT_AUTHORIZER, config).APIs.executeAsync(UfileCallback<T>
 
 您可以通过 UFile API 的 DeleteBucket 接口删除您创建的存储空间。
 
-> 说明 删除存储空间的 API 详细信息可参考[DeleteBucket](https://help.aliyun.com/document_detail/31973.html#reference-o1j-rrw-tdb)
+> 说明 删除存储空间的 API 详细信息可参考[DeleteBucket](https://docs.ucloud.cn/api/ufile-api/delete_bucket)
 
 > 如果存储空间不为空（存储空间中有文件或者是尚未完成的分片上传），则存储空间无法删除，必须删除存储空间中的所有文件和未完成的分片文件后，存储空间才能成功删除。如果想删除存储空间内部所有的文件，推荐使用生命周期管理。
 
@@ -387,7 +387,7 @@ UfileClient.object(OBJECT_AUTHORIZER, config).APIs.executeAsync(UfileCallback<T>
 
 ### 简单上传
 
-简单上传指的是使用UFile API中的PutObject方法上传单个文件（Object）。简单上传适用于一次HTTP请求交互即可完成上传的场景，比如小文件（小于5GB）的上传。
+简单上传指的是使用UFile API中的PutObject方法上传单个文件（Object）。简单上传适用于一次HTTP请求交互即可完成上传的场景，比如小文件（小于1GB）的上传。
 
 说明
 
@@ -405,9 +405,7 @@ UfileClient.object(OBJECT_AUTHORIZER, config).APIs.executeAsync(UfileCallback<T>
 
 - 不能以正斜线（/）或者反斜线（\\）字符开头。
 
-- 在使用简单上传的情况下，可以携带Object Meta信息对Object进行描述，比如可以设定Content-Type等标准HTTP头，也可以设定自定义信息。详情请参见[设置文件元信息](https://help.aliyun.com/document_detail/31859.html#concept-lkf-swy-5db)。
-
-- 为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。详情请参见[*权限控制*](#_权限控制_1)。
+- 为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。
 
 - 在文件上传到UFile上后，您可以通过上传回调来向指定的应用服务器发起回调请求，进行下一步操作。
 
@@ -417,7 +415,7 @@ UfileClient.object(OBJECT_AUTHORIZER, config).APIs.executeAsync(UfileCallback<T>
 
 表单上传是指使用UFile API中的PostFile请求来完成Object的上传，上传的Object不能超过5GB。
 
-> 说明 表单上传的API接口详细信息请参见[*PostFile*](#_7.7.2表单上传 - PostFile)。
+> 说明 表单上传的API接口详细信息请参见PostFile。
 
 适用场景
 
@@ -449,7 +447,7 @@ SDK demo
 
 - 不能以正斜线（/）或者反斜线（\\）字符开头。
 
-- 为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。详情请参见[*权限控制*](#_权限控制_1)。
+- 为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。
 
 ### 分片上传和断点续传
 
@@ -487,31 +485,31 @@ UCloud UFile提供的分片上传（Multipart Upload）和断点续传功能，�
 
 - 将要上传的文件按照一定的大小分片。
 
-- 初始化一个分片上传任务（[*InitiateMultipartUpload*](#_7.7.3.1 初始化分片上传- InitiateMultipartUpload)）。
+- 初始化一个分片上传任务（[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
 
-- 逐个或并行上传分片（[*UploadPart*](#_7.7.3.2 上传分片 - UploadPart)）。
+- 逐个或并行上传分片（[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
 
-- 完成上传（[*FinishMultipartUpload*](#_7.7.3.3 完成分片 - FinishMultipartUpload)）。
+- 完成上传（[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
 
 该过程需注意以下几点：
 
-> 除了最后一块Part，其他Part的大小不能小于4MB，否则会导致调用[*FinishMultipartUpload*](#_7.7.3.3 完成分片 - FinishMultipartUpload)接口时失败。
+> 除了最后一块Part，其他Part的大小不能小于4MB，否则会导致调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)接口时失败。
 
 > 要上传的文件切分成Part之后，文件顺序是通过上传过程中指定的partNumber来确定的，实际执行中并没有顺序要求，因此可以实现并发上传。
 
 > 具体的并发个数并不是越多速度越快，要结合用户自身的网络情况和设备负载综合考虑。
 
-> 默认情况下，已经上传但还没有调用[*FinishMultipartUpload*](#_7.7.3.3 完成分片 - FinishMultipartUpload)的Part是不会自动回收的，因此如果要终止上传并删除占用的空间请调用AbortMultipartUpload。
+> 默认情况下，已经上传但还没有调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)的Part是不会自动回收的，因此如果要终止上传并删除占用的空间请调用AbortMultipartUpload。
 
 4. 上传的安全及授权
 
-为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。详情请参见[*权限控制*](#_权限控制_1)。
+为了防止第三方未经授权往您的Bucket里上传数据，UFile提供了Bucket和Object级别的访问权限控制。
 
 5. 上传后续操作
 
-- 在文件上传到UFile上后，您可以通过[*上传回调*](#_4.4.4上传回调)来向指定的应用服务器发起回调请求，进行下一步操作。
+- 在文件上传到UFile上后，您可以通过上传回调来向指定的应用服务器发起回调请求，进行下一步操作。
 
-- 如果上传的是图片，您还可以进行[*图片处理*](#_图片处理)。
+- 如果上传的是图片，您还可以进行[图片处理]()。
 
 ### 上传回调
 
