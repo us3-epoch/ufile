@@ -40,12 +40,6 @@ Region 表示 UFile的数据中心所在的地域，物理位置。用户可以�
 
 Region是在创建 Bucket 的时候指定的，一旦指定之后就不允许更改。该 Bucket 下所有的 Object 都存储在对应的数据中心，目前不支持 Object 级别的 Region 设置。
 
-### Endpoint（访问域名）
-
-Endpoint 表示 UFile 对外服务的访问域名。UFile 以 HTTP RESTful API 的形式对外提供服务，当访问不同的 Region 的时候，需要不同的域名。通过内网和外网访问同一个 Region 所需要的 Endpoint 也是不同的。例如上海 Region 的外网 Endpoint 是 www.cn-sh2.ufileos.com，内网 Endpoint 是 www.internal-cn-sh2-01.ufileos.com。
-
-具体的内容请参见下面「UFile开通Region和Endpoint对照表」中各个 Region 对应的 Endpoint。
-
 ### 访问密钥
 
 访问密钥指的是访问身份验证中用到的 public\_key 和 private\_key。UFile 通过使用 public\_key 和 private\_key 对称加密的方法来验证某个请求的发送者身份。public\_key 用于标识用户，private\_key 是用户用于加密签名字符串和 UFile 用来验证签名字符串的密钥，其中 private\_key 必须保密。对于 UFile 来说，访问密钥的来源有：
