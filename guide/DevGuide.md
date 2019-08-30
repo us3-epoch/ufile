@@ -42,7 +42,9 @@ Region是在创建 Bucket 的时候指定的，一旦指定之后就不允许更
 
 ### Endpoint（访问域名）
 
-Endpoint 表示 UFile 对外服务的访问域名。UFile 以 HTTP RESTful API 的形式对外提供服务，当访问不同的 Region 的时候，需要不同的域名。通过内网和外网访问同一个 Region 所需要的 Endpoint 也是不同的。例如上海 Region 的外网 Endpoint 是 www.cn-sh2.ufileos.com，内网 Endpoint 是 www.internal-cn-sh2-01.ufileos.com。具体的内容请参见各个 Region 对应的 Endpoint。
+Endpoint 表示 UFile 对外服务的访问域名。UFile 以 HTTP RESTful API 的形式对外提供服务，当访问不同的 Region 的时候，需要不同的域名。通过内网和外网访问同一个 Region 所需要的 Endpoint 也是不同的。例如上海 Region 的外网 Endpoint 是 www.cn-sh2.ufileos.com，内网 Endpoint 是 www.internal-cn-sh2-01.ufileos.com。
+
+具体的内容请参见下面「UFile开通Region和Endpoint对照表」中各个 Region 对应的 Endpoint。
 
 ### 访问密钥
 
