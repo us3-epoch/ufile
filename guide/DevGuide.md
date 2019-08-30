@@ -145,8 +145,7 @@ Region表示UFile的数据中心所在的地域，Endpoint表示UFile对外服�
 说明
 
 - 在分享链接或者做自定义域名绑定（CNAME）的时候建议使用三级域名，即Bucket + Endpoint的形式。以华东2地域内名为ufile-sample的Bucket为例，三级域名为ufile-sample.cn-sh2.ufileos.com。
-- 使用SDK时，请将 http:// 或 https:// + Endpoint 作为初始化的参数。以华东1的Endpoint为例，建议将初始化参数设置为http://cn-sh2.ufileos.com 或者 [https://cn-sh2.ufileos.com，不建议将三级域名（即http://bucket.cn-sh2.ufileos.com）作为初始化参数。](https://oss-cn-shanghai.aliyuncs.com，不建议将三级域名（即http:/bucket.oss-cn-shanghai.aliyuncs.com）作为初始化参数。)
-- 原地址ufile.ucloud.cn 默认指向华北1 地域外网地址。
+- 使用SDK时，请将 http:// 或 https:// + Endpoint 作为初始化的参数。
 
 ### UFile访问域名使用规则
 
