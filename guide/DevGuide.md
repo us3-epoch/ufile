@@ -162,7 +162,7 @@ UFile会为每一个存储空间（Bucket）分配默认的访问域名，本文
 
 - UFile以HTTP RESTful API的形式对外提供服务，当访问不同的地域（Region）时，需要不同的访问域名。
 
-- Endpoint分内网和外网访问域名。例如，华东1（上海）地域的外网Endpoint是cn-sh2.ufileos.com，内网Endpoint是internal-cn-sh2-01.ufileos.com。Region和Endpoint对照表请参考[访问域名和数据中心](https://help.aliyun.com/document_detail/31837.html#concept-zt4-cvy-5db)。
+- Endpoint分内网和外网访问域名。例如，华东1（上海）地域的外网Endpoint是cn-sh2.ufileos.com，内网Endpoint是internal-cn-sh2-01.ufileos.com。Region和Endpoint对照表请参考「访问域名和数据中心」。
 
 - 您也可以通过绑定自定义域名或绑定CDN加速域名，将UFile的外网访问域名替换为您的自有域名。
 
@@ -170,7 +170,7 @@ UFile会为每一个存储空间（Bucket）分配默认的访问域名，本文
 
 外网指的是互联网。通过外网访问产生的流入流量（写）是免费的，流出流量（读）是收费的。
 
-说明 UFile费用详情请参见[*UFile服务价格页*](#_产品定价)和[*计量项和计费项*](#_计费案例)。
+说明 UFile费用详情请参见[UFile服务价格页]()。
 
 外网访问UFile有如下两种方式：
 
@@ -190,8 +190,7 @@ UFile会为每一个存储空间（Bucket）分配默认的访问域名，本文
 
 `abc.cn-sh2.ufileos.com/myfile/aaa.txt`
 
-> 注意 UFile访问域名需携带Object访问路径才可以被访问，仅访问域名，如 abc.cn-sh2.ufileos.com，会有报错提示。若您希望直接访问UFile访问域名，可以通过配置[静态网站托管](https://help.aliyun.com/document_detail/31939.html#concept-trc-jn2-vdb)来实现。
-
+> 注意 UFile访问域名需携带Object访问路径才可以被访问，仅访问域名，如 abc.cn-sh2.ufileos.com，会有报错提示。
 您还可以直接将Object的URL放入HTML中使用，如下所示：
 ```html
 <img src="https://abc.cn-sh2.ufileos.com/myfile/aaa.jpg" />;
