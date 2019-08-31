@@ -1,6 +1,6 @@
 # 日志管理
 
-{{indexmenu_n>4}}
+{{indexmenu_n>6}}
 
 ## 设置日志存储
 
