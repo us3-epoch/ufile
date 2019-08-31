@@ -1,4 +1,4 @@
-{{indexmenu_n>12}}
+{{indexmenu_n>1}}
 
 # 支持AWS S3 协议说明
 
