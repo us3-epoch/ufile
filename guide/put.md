@@ -47,10 +47,6 @@
 
 * 从架构上来说，原来的上传都统一走网站服务器，上传量过大时，需要扩容网站服务器。采用表单上传后，直接从客户端上传数据到UFile，上传量过大时，压力都在UFile上，由UFile来保障服务质量。
 
-### SDK demo
-
-请参见[SDK](https://docs.ucloud.cn/storage_cdn/ufile/tools/sdk)。
-
 ### 分片上传
 
 UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上传的文件分成多个数据块（UFile里又称之为Part）来分别上传，上传完成之后再调用UFile的接口将这些Part组合成一个Object来达到断点续传的效果。
