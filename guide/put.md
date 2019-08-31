@@ -64,15 +64,15 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 * 流式上传：可以在需要上传的文件大小还不确定的情况下开始上传。这种场景在视频监控等行业应用中比较常见。
 
 
-#### 分片上传流程
+#### 分片上传流程：
 
-1.将要上传的文件按照一定的大小分片。
+* 将要上传的文件按照一定的大小分片。
 
-2.初始化一个分片上传任务[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
+* 初始化一个分片上传任务[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
 
-3.逐个或并行上传分片[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
+* 逐个或并行上传分片[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
 
-4.完成上传[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
+* 完成上传[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
 
 
 #### 该过程需注意以下几点：
