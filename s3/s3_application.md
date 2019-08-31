@@ -136,7 +136,7 @@ CentOS 系统下安装依赖软件：
 在执行第五步，./configure的过程中，可能会遇到以下的问题。汇总为:
 
 报错：
-    configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
+    configure: error: Package requirements (fuse >= 2.8.4 libcurl >= 7.0
     libxml-2.0 >= 2.6 ) were not met:
 
 原因: fuse 版本过低，此时，您需要手动安装 fuse
@@ -233,11 +233,11 @@ multireq_max="8" -o parallel_count="32"
 
 ### 文件上传和下载
 
-   **挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。**
+挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。
 
-    1.拷贝文件到${LocalMountPath} ，即是上传文件。
+1.拷贝文件到${LocalMountPath} ，即是上传文件。
 
-    2.将文件从${LocalMountPath}拷贝到其他路径，即下载文件。
+2.将文件从${LocalMountPath}拷贝到其他路径，即下载文件。
 
 #### 注意：
 
