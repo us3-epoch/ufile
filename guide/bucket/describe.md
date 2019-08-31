@@ -10,6 +10,6 @@
 |--------- |--------------------------------------------------------------------------------------------------------------- |
 |控制台  |进入控制台后在存储空间属性中直接显示地域信息 |
 |管理工具  |[管理工具](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/introduction) |
-|API   |[获取Bucket信息-DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket) |
+|API   |[API](https://docs.ucloud.cn/api/ufile-api/index) |
 |SDK   |[SDK](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/sdk) |
 
