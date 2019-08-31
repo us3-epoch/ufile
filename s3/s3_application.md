@@ -114,7 +114,7 @@ CentOS 6及其以下版本
 
 CentOS 系统下安装依赖软件：
 
-    1. sudo yum install automake gcc-c++ git libcurl-devel libxml2-devel    
+      sudo yum install automake gcc-c++ git libcurl-devel libxml2-devel    
       fuse-devel make openssl-devel fuse unzip
 
 #### 编译和安装 s3fs
@@ -234,9 +234,9 @@ multireq_max="8" -o parallel_count="32"
 
    **挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。**
 
-    1.拷贝文件到\${LocalMountPath} ，即是上传文件。
+    1.拷贝文件到${LocalMountPath} ，即是上传文件。
 
-    2.将文件从\${LocalMountPath}拷贝到其他路径，即下载文件。
+    2.将文件从${LocalMountPath}拷贝到其他路径，即下载文件。
 
 #### 注意：
 
@@ -246,11 +246,11 @@ multireq_max="8" -o parallel_count="32"
 
 ### 删除文件
 
-将文件从\${LocalMountPath}删除掉，则UFile存储空间中，该文件也被删除掉。
+将文件从${LocalMountPath}删除掉，则UFile存储空间中，该文件也被删除掉。
 
 ### 卸载UFile存储空间
 
-    sudo umount \${LocalMountPath}
+    sudo umount ${LocalMountPath}
 
 ### 性能数据
 
@@ -280,7 +280,7 @@ UFile-bucket挂载到本地。具体安装方式步骤参考基于S3FS、UFile�
 
 #### 安装依赖项
 
-先检查下本地是否有FTP服务，执行命令rpm -qa \| grep
+先检查下本地是否有FTP服务，执行命令rpm -qa | grep
 vsftpd,如果显示未安装，则执行以下命令，安装FTP。
 
 运行以下命令安装 vsftpd。  
@@ -299,17 +299,17 @@ vsftpd,如果显示未安装，则执行以下命令，安装FTP。
 
 a.运行以下命令创建 ftptest 用户，并且设置指定目录。
 
-useradd \${username} -d {SpecifiedDirectory}
+useradd ${username} -d {SpecifiedDirectory}
 
 (删除用户命令：sudo userdel -r newuser)
 
 b.运行以下命令修改 ftptest 用户密码。
 
-passwd \${username}
+passwd ${username}
 
 #### 客户端使用
 
 此时，您可以在外部任何一台机器上连接该服务器，输入您的用户名和密码，来管理bucket的文件
 
-ftp \${ftp_server_ip}
+ftp ${ftp_server_ip}
 
