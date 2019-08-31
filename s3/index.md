@@ -1,6 +1,6 @@
 # 支持AWS S3协议
 
-{{indexmenu_n>12}}
+{{indexmenu_n>1}}
 
 **目录**
 
