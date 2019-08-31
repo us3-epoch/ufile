@@ -25,8 +25,6 @@ UFile提供了从Object指定的位置开始下载的功能，在下载大的Obj
 
 查看文件列表的 API 详细信息请参考 [PrefixFileList](https://docs.ucloud.cn/api/ufile-api/prefix_file_list)。
 
-您可以调用通过 PrefixFileList 接口，一次性得到某一 Bucket 下最多 1000 个 Object 的列表。通过下面的三个参数，您可以实现多种列举功能：
-
 ### 删除文件
 
 删除文件即删除上传到存储空间（Bucket）中的文件（Object）。
