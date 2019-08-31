@@ -58,7 +58,7 @@
 5、SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
 = '.ufile.cn-north-03.ucloud.cn' （其他SDK的配置文件通常改proxy_suffix)。
 
-## 各机房proxy\_host地址分别是什么？
+## 各机房proxy_host地址分别是什么？
 
 北京  
 外网：www.cn-bj.ufileos.com  
