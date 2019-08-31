@@ -6,7 +6,7 @@
 
 在上传文件（Object）到 UFile 之前，您需要使用 UFile API 中的 CreateBucket 接口来创建一个用于存储文件的存储空间（Bucket），存储空间具有各种配置属性，包括地域、访问权限以及其他元数据。或者使用[UFile控制台](https://console.ucloud.cn/ufile/ufile)来创建一个存储空间（Bucket），并设置存储空间的访问权限。
 
-> 说明：创建存储空间的 API 接口的详细信息请参见 [CreateBucket](https://help.aliyun.com/document_detail/31959.html#reference-wdh-fj5-tdb)。
+    说明：创建存储空间的 API 接口的详细信息请参见 [CreateBucket](https://help.aliyun.com/document_detail/31959.html#reference-wdh-fj5-tdb)。
 
 使用限制
 
@@ -36,7 +36,7 @@
 
 您可以通过UFile API的DescribeBucket接口获取存储空间（Bucket）所属的地域，即数据中心的物理位置信息。
 
-> 说明 获取存储空间地域信息的API详情请参考[DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket)。
+    说明 获取存储空间地域信息的API详情请参考[DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket)。
 
 ### 绑定自定义域名
 
@@ -81,8 +81,7 @@
 ### 删除存储空间
 
 您可以通过 UFile API 的 DeleteBucket 接口删除您创建的存储空间。
+删除存储空间的 API 详细信息可参考[DeleteBucket](https://docs.ucloud.cn/api/ufile-api/delete_bucket)
 
-> 说明 删除存储空间的 API 详细信息可参考[DeleteBucket](https://docs.ucloud.cn/api/ufile-api/delete_bucket)
-
-> 如果存储空间不为空（存储空间中有文件或者是尚未完成的分片上传），则存储空间无法删除，必须删除存储空间中的所有文件和未完成的分片文件后，存储空间才能成功删除。如果想删除存储空间内部所有的文件，推荐使用生命周期管理。
+    如果存储空间不为空（存储空间中有文件或者是尚未完成的分片上传），则存储空间无法删除，必须删除存储空间中的所有文件和未完成的分片文件后，存储空间才能成功删除。如果想删除存储空间内部所有的文件，推荐使用生命周期管理。
 
