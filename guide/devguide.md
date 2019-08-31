@@ -6,7 +6,7 @@
 
 在上传文件（Object）到 UFile 之前，您需要使用 UFile API 中的 CreateBucket 接口来创建一个用于存储文件的存储空间（Bucket），存储空间具有各种配置属性，包括地域、访问权限以及其他元数据。或者使用[UFile控制台](https://console.ucloud.cn/ufile/ufile)来创建一个存储空间（Bucket），并设置存储空间的访问权限。
 
-    说明：创建存储空间的 API 接口的详细信息请参见 [CreateBucket](https://help.aliyun.com/document_detail/31959.html#reference-wdh-fj5-tdb)。
+创建存储空间的 API 接口的详细信息请参见 [CreateBucket](https://help.aliyun.com/document_detail/31959.html#reference-wdh-fj5-tdb)。
 
 使用限制
 
@@ -35,14 +35,13 @@
 ### 获取空间地域信息
 
 您可以通过UFile API的DescribeBucket接口获取存储空间（Bucket）所属的地域，即数据中心的物理位置信息。
-
-    说明 获取存储空间地域信息的API详情请参考[DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket)。
+获取存储空间地域信息的API详情请参考[DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket)。
 
 ### 绑定自定义域名
 
 您的文件上传到UCloud UFile 的 Bucket 后，会自动生成该文件的访问地址，您可以使用此地址访问 Bucket 内的文件。若您希望通过自定义域名访问这些文件，需要将自定义域名绑定到文件所在的存储空间，并添加 CNAME 记录指向存储空间对应的外网域名。
 
-> 注意 按照中华人民共和国《互联网管理条例》的要求，所有需要绑定自定义域名的用户，必须提前将域名在工信部备案。若您的域名未备案，您可通过UCloud云提供的备案服务进行备案。
+    注意 按照中华人民共和国《互联网管理条例》的要求，所有需要绑定自定义域名的用户，必须提前将域名在工信部备案。若您的域名未备案，您可通过UCloud云提供的备案服务进行备案。
 
 |操作方式   |说明 |
 |---------- |------------------------ |
