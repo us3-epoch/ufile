@@ -12,7 +12,7 @@ UFile令牌功能可以根据用户的需求灵活的开放存储空间和文件
 
 1. 登陆UCloud官方控制台，进入UFile—令牌管理
 
-2. 通过调用[*UFile API*](#_Service操作（令牌、配额）)进行创建、编辑等操作
+2. 通过调用[UFile API](https://docs.ucloud.cn/api/ufile-api/index)进行创建、编辑等操作
 
 #### 创建/编辑令牌
 
