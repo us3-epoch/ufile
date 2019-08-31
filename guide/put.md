@@ -50,6 +50,7 @@
 
 UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上传的文件分成多个数据块（UFile里又称之为Part）来分别上传，上传完成之后再调用UFile的接口将这些Part组合成一个Object来达到断点续传的效果。
 
+
 #### 适用场景
 
 当使用简单上传（PutFile）功能来上传较大的文件到UFile的时候，如果上传的过程中出现了网络错误，那么此次上传失败，重试必须从文件起始位置上传。针对这种情况，您可以使用分片上传来达到断点续传的效果。
@@ -62,6 +63,7 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 
 * 流式上传：可以在需要上传的文件大小还不确定的情况下开始上传。这种场景在视频监控等行业应用中比较常见。
 
+
 #### 分片上传流程
 
 * 将要上传的文件按照一定的大小分片。
@@ -71,6 +73,7 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 * 逐个或并行上传分片（[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
 
 * 完成上传（[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
+
 
 #### 该过程需注意以下几点：
 
