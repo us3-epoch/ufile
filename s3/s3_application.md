@@ -135,7 +135,8 @@ CentOS 系统下安装依赖软件：
 备注：  
 在执行第五步，./configure的过程中，可能会遇到以下的问题。汇总为:
 
-    报错：configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
+报错：
+    configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
     libxml-2.0 \>= 2.6 ) were not met:
 
 原因: fuse 版本过低，此时，您需要手动安装 fuse
