@@ -97,8 +97,8 @@
 |            | 绑定自定义域名前                         | 绑定自定义域名后 |
 | ---------- | ---------------------------------------- | -------------------------------------------- |
 | 流程对比   | 1.  访问 http://img.abc.com/logo.jpg     | 1.  访问 http://img.abc.com/logo.jpg |
-|            | 2.  DNS 解析到用户服务器 IP。            | 2.  DNS 解析到 abc-img.cn-bj.ufileos.com。|
-|            | 3.  访问用户服务器上的logo.jpg。         | 3.  访问 UFile 上 abc-img 里的 logo.jpg。|
+| :::           | 2.  DNS 解析到用户服务器 IP。            | 2.  DNS 解析到 abc-img.cn-bj.ufileos.com。|
+| :::          | 3.  访问用户服务器上的logo.jpg。         | 3.  访问 UFile 上 abc-img 里的 logo.jpg。|
 
 ### 管理跨区域复制
 
