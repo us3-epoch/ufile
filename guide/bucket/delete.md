@@ -7,3 +7,10 @@
 
     如果存储空间不为空（存储空间中有文件或者是尚未完成的分片上传），则存储空间无法删除，必须删除存储空间中的所有文件和未完成的分片文件后，存储空间才能成功删除。如果想删除存储空间内部所有的文件，推荐使用生命周期管理。
 
+### 操作方式
+|操作方式    |说明 |
+|--------- |--------------------------------------------------------------------------------------------------------------- |
+|控制台  |Web 应用程序，直观易用 |
+|管理工具  |[管理工具](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/introduction) |
+|API   |[API](https://docs.ucloud.cn/api/ufile-api/index) |
+|SDK   |[SDK](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/sdk) |
