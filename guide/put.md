@@ -77,13 +77,13 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 
 #### 该过程需注意以下几点：
 
-1.除了最后一块Part，其他Part的大小不能小于4MB，否则会导致调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)接口时失败。
+* 除了最后一块Part，其他Part的大小不能小于4MB，否则会导致调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)接口时失败。
 
-2.要上传的文件切分成Part之后，文件顺序是通过上传过程中指定的partNumber来确定的，实际执行中并没有顺序要求，因此可以实现并发上传。
+* 要上传的文件切分成Part之后，文件顺序是通过上传过程中指定的partNumber来确定的，实际执行中并没有顺序要求，因此可以实现并发上传。
 
-3.具体的并发个数并不是越多速度越快，要结合用户自身的网络情况和设备负载综合考虑。
+* 具体的并发个数并不是越多速度越快，要结合用户自身的网络情况和设备负载综合考虑。
 
-4.默认情况下，已经上传但还没有调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)的Part是不会自动回收的，因此如果要终止上传并删除占用的空间请调用AbortMultipartUpload。
+* 默认情况下，已经上传但还没有调用[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload)的Part是不会自动回收的，因此如果要终止上传并删除占用的空间请调用AbortMultipartUpload。
 
 ### 上传后续操作
 
