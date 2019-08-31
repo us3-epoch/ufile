@@ -43,9 +43,8 @@
 | :::           | 简历被上传到网站服务器。          | 简历上传到UFile。|
 |  :::          | 网站服务器再将简历上传到UFile。   | |
 
-* 从流程上来说，使用表单上传，少了一步转发流程，更加方便。
-
-* 从架构上来说，原来的上传都统一走网站服务器，上传量过大时，需要扩容网站服务器。采用表单上传后，直接从客户端上传数据到UFile，上传量过大时，压力都在UFile上，由UFile来保障服务质量。
+从流程上来说，使用表单上传，少了一步转发流程，更加方便。
+从架构上来说，原来的上传都统一走网站服务器，上传量过大时，需要扩容网站服务器。采用表单上传后，直接从客户端上传数据到UFile，上传量过大时，压力都在UFile上，由UFile来保障服务质量。
 
 ### 分片上传
 
@@ -57,23 +56,21 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 
 相对于其他的上传方式，分片上传适用于以下场景：
 
-- 恶劣的网络环境：如手机端，当出现上传失败的时候，可以对失败的Part进行独立的重试，而不需要重新上传其他的Part。
+* 恶劣的网络环境：如手机端，当出现上传失败的时候，可以对失败的Part进行独立的重试，而不需要重新上传其他的Part。
 
-- 断点续传：中途暂停之后，可以从上次上传完成的Part的位置继续上传。
+* 加速上传：要上传到UFile的本地文件很大的时候，可以并行上传多个Part以加快上传。
 
-- 加速上传：要上传到UFile的本地文件很大的时候，可以并行上传多个Part以加快上传。
-
-- 流式上传：可以在需要上传的文件大小还不确定的情况下开始上传。这种场景在视频监控等行业应用中比较常见。
+* 流式上传：可以在需要上传的文件大小还不确定的情况下开始上传。这种场景在视频监控等行业应用中比较常见。
 
 #### 分片上传流程
 
-- 将要上传的文件按照一定的大小分片。
+* 将要上传的文件按照一定的大小分片。
 
-- 初始化一个分片上传任务（[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
+* 初始化一个分片上传任务（[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
 
-- 逐个或并行上传分片（[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
+* 逐个或并行上传分片（[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
 
-- 完成上传（[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
+* 完成上传（[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
 
 #### 该过程需注意以下几点：
 
@@ -87,9 +84,9 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 
 ### 上传后续操作
 
-- 在文件上传到UFile上后，您可以通过上传回调来向指定的应用服务器发起回调请求，进行下一步操作。
+* 在文件上传到UFile上后，您可以通过上传回调来向指定的应用服务器发起回调请求，进行下一步操作。
 
-- 如果上传的是图片，您还可以进行「图片处理」。
+* 如果上传的是图片，您还可以进行「图片处理」。
 
 ### 上传回调
 
