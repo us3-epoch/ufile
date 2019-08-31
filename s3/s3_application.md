@@ -238,7 +238,7 @@ multireq_max="8" -o parallel_count="32"
 
     2.将文件从\${LocalMountPath}拷贝到其他路径，即下载文件。
 
-**注意：**  
+#### 注意：
 
 1.路径不符合Linux文件路径规范的路径，可以在UFIle管理控制台看到，但不会在Fuse挂载的\${LocalMountPath}下显示。
 
