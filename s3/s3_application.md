@@ -173,14 +173,14 @@ CentOS 系统下安装依赖软件：
 
 #### 配置密钥文件
 
-在\${HOME}/目录中创建.passwd-s3fs 文件。文件格式为[API 公钥:API 秘钥]。  
+在${HOME}/目录中创建.passwd-s3fs 文件。文件格式为[API 公钥:API 秘钥]。  
 公私钥获取方式具体请参考[如何获取账户公私钥](https://docs.ucloud.cn/ai/uai-train/basic/key)  
 例如:
 
-     \`[root\@10-9-42-233 s3fs-fuse-1.83]\# cat \~/.passwd-s3fs
+     [root@10-9-42-233 s3fs-fuse-1.83]# cat ~/.passwd-s3fs
      AKdDhQD4Nfyrr9nGPJ+d0iFmJGwQlgBTwxxxxxxxxxxxx:7+LPnkPdPWhX2AJ+p/B1XVFi8bbbbbbbbbbbbbbbbb
 
-将文件设置读写权限。 chmod 600 \${HOME}/.passwd-s3fs
+将文件设置读写权限。 chmod 600 ${HOME}/.passwd-s3fs
 
 #### 执行挂载操作
 
@@ -190,7 +190,7 @@ CentOS 系统下安装依赖软件：
 
 * 获取[UFile对象存储](https://console.ucloud.cn/ufile/ufile)中的bucket名称\${UFileBucketName}（仅限北京地域）  
   
-  注意:空间名称不带域名后缀,比如UFile空间名称显示为[[test.cn-bj.ufileos.com](http://test.cn-bj.ufileos.com/)],则\${UFileBucketName}=test
+  注意:空间名称不带域名后缀,比如UFile空间名称显示为[[test.cn-bj.ufileos.com](http://test.cn-bj.ufileos.com/)],则${UFileBucketName}=test
 
 * 根据UFile存储空间所在地域，本地服务器是否在UCloud内网，从[支持AWS
   
@@ -215,7 +215,7 @@ CentOS 系统下安装依赖软件：
 
 s3fs s3fs-test /data/vs3fs -o
 url=[http://internal.s3-cn-bj.ufileos.com](http://internal.s3-cn-bj.ufileos.com/) -o
-passwd_file=\~/.passwd-s3fs -o dbglevel=info -o
+passwd_file=~/.passwd-s3fs -o dbglevel=info -o
 curldbg,use_path_request_style,allow_other -o retries=1 -o multipart_size="8" -o
 multireq_max="8" -o parallel_count="32"
 
