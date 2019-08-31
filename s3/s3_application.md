@@ -128,7 +128,7 @@ CentOS 系统下安装依赖软件：
     5. ./configure  
     6. make  
     7. sudo make install  
-    8. s3fs --version \#查看 s3fs版本号
+    8. s3fs --version #查看 s3fs版本号
 
 可以看s3fs的版本号，到此，s3fs已经安装成功。
 
@@ -137,12 +137,12 @@ CentOS 系统下安装依赖软件：
 
 报错：
     configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
-    libxml-2.0 \>= 2.6 ) were not met:
+    libxml-2.0 >= 2.6 ) were not met:
 
 原因: fuse 版本过低，此时，您需要手动安装 fuse
 2.8.4及以上版本，安装命令示例如下：
 
-1. yum -y remove fuse-devel \#卸载当前版本的fuse
+1. yum -y remove fuse-devel #卸载当前版本的fuse
 
 2. wget <https://github.com/libfuse/libfuse/releases/download/fuse_2_9_4/fuse-2.9.4.tar.gz>
 
@@ -160,13 +160,13 @@ CentOS 系统下安装依赖软件：
    
    PKG_CONFIG_PATH=/usr/lib/[pkgconfig:/usr/lib64/pkgconfig/:/usr/local/lib/pkgconfig](http://pkgconfig/usr/lib64/pkgconfig/:/usr/local/lib/pkgconfig)
 
-9. modprobe fuse \#挂载 fuse 内核模块
+9. modprobe fuse #挂载 fuse 内核模块
 
-10. echo "/usr/local/lib" \>\> /etc/[ld.so](http://ld.so/).conf
+10. echo "/usr/local/lib" >> /etc/[ld.so](http://ld.so/).conf
 
-11. ldconfig \#更新动态链接库
+11. ldconfig #更新动态链接库
 
-12. pkg-config --modversion fuse \#查看 fuse 版本号，当看到 “2.9.4” 时，表示
+12. pkg-config --modversion fuse #查看 fuse 版本号，当看到 “2.9.4” 时，表示
     
     fuse2.9.4 安装成功
 
@@ -187,9 +187,9 @@ CentOS 系统下安装依赖软件：
 
 操作指令解释:
 
-* 建立UFile挂载文件路径 \${LocalMountPath}
+* 建立UFile挂载文件路径 ${LocalMountPath}
 
-* 获取[UFile对象存储](https://console.ucloud.cn/ufile/ufile)中的bucket名称\${UFileBucketName}（仅限北京地域）  
+* 获取[UFile对象存储](https://console.ucloud.cn/ufile/ufile)中的bucket名称${UFileBucketName}（仅限北京地域）  
   
   注意:空间名称不带域名后缀,比如UFile空间名称显示为[[test.cn-bj.ufileos.com](http://test.cn-bj.ufileos.com/)],则${UFileBucketName}=test
 
@@ -201,8 +201,8 @@ CentOS 系统下安装依赖软件：
 
 参数说明如下：
 
-    s3fs \${UFileBucketName} \${LocalFilePath}  
-    -o url={UFileS3URl} -o passwd_file=\~/.passwd-s3fs  
+    s3fs ${UFileBucketName} ${LocalFilePath}  
+    -o url={UFileS3URl} -o passwd_file=~/.passwd-s3fs  
     -o dbglevel=info  
     -o curldbg,use_path_request_style,allow_other  
     -o retries=1 //错误重试次数  
