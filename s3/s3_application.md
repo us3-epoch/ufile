@@ -6,26 +6,26 @@
 
 ### 功能说明
 
->   S3 Browser是一种易于使用和强大的Amazon S3免费客户端。
->   它提供了一个简单的Web服务接口，可用于存储和检索任意数量的数据，无论任何时候从任何地方。
->   可以通过相关配置，直接操控Ufile对象存储的bucket中的文件，进行上传，下载，删除等操作。
+S3 Browser是一种易于使用和强大的Amazon S3免费客户端。
+它提供了一个简单的Web服务接口，可用于存储和检索任意数量的数据，无论任何时候从任何地方。
+可以通过相关配置，直接操控Ufile对象存储的bucket中的文件，进行上传，下载，删除等操作。
 
 ### 安装和使用
 
 ### 适用的操作系统
 
->   Windows
+Windows
 
 ### 安装步骤
 
 #### 1. 下载安装包
 
->   下载地址: http://s3browser.com
+下载地址: http://s3browser.com
 
 #### 2. 安装程序。
 
->   进入下载页面，点击Download S3 Browser Freeware
->   8.1.5，按照提示，进行安装即可。
+进入下载页面，点击Download S3 Browser Freeware
+8.1.5，按照提示，进行安装即可。
 
 ### 使用方法
 
@@ -71,31 +71,31 @@ multipart uploads with size(in megabytes)为8，如下图所示：
 
 ### 功能说明
 
->   s3fs 工具支持将
->   UFile-bucket挂载到本地，像使用本地文件系统一样直接操作对象存储中的对象。
->   目前仅支持北京地域的bucket。
+s3fs 工具支持将
+UFile-bucket挂载到本地，像使用本地文件系统一样直接操作对象存储中的对象。
+目前仅支持北京地域的bucket。
 
 ### 安装和使用
 
 ### 适用的操作系统
 
->   Linux,MacOS
+Linux,MacOS
 
 ### 安装步骤
 
 MacOS环境
 
->   brew cask install osxfuse  
->   brew install s3fs
+    brew cask install osxfuse  
+    brew install s3fs
 
 RHEL和CentOS 7或更新版本通过EPEL：
 
->   sudo yum install epel-release  
->   sudo yum install s3fs-fuse
+    sudo yum install epel-release  
+    sudo yum install s3fs-fuse
 
 Debian 9和Ubuntu 16.04或更新版本
 
->   sudo apt-get install s3fs
+    sudo apt-get install s3fs
 
 CentOS 6及其以下版本
 
@@ -105,39 +105,38 @@ CentOS 6及其以下版本
 
 首先，您需要从GitHub上将源码下载到指定目录，以 /data/s3fs为例：
 
-> 1. cd /data  
-> 2. mkdir s3fs  
-> 3. cd s3fs  
-> 4. wget <https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip>
+    1. cd /data  
+    2. mkdir s3fs  
+    3. cd s3fs  
+    4. wget <https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip>
 
 #### 安装依赖项
 
 CentOS 系统下安装依赖软件：
 
-> 1. sudo yum install automake gcc-c++ git libcurl-devel libxml2-devel
->    
->    fuse-devel make openssl-devel fuse unzip
+    1. sudo yum install automake gcc-c++ git libcurl-devel libxml2-devel    
+      fuse-devel make openssl-devel fuse unzip
 
 #### 编译和安装 s3fs
 
 进入安装目录，执行如下命令进行编译和安装：
 
-> 1. cd /data/s3fs  
-> 2. unzip v1.83.zip  
-> 3. cd s3fs-fuse-1.83/  
-> 4. ./autogen.sh  
-> 5. ./configure  
-> 6. make  
-> 7. sudo make install  
-> 8. s3fs --version \#查看 s3fs版本号
+    1. cd /data/s3fs  
+    2. unzip v1.83.zip  
+    3. cd s3fs-fuse-1.83/  
+    4. ./autogen.sh  
+    5. ./configure  
+    6. make  
+    7. sudo make install  
+    8. s3fs --version \#查看 s3fs版本号
 
 可以看s3fs的版本号，到此，s3fs已经安装成功。
 
 备注：  
 在执行第五步，./configure的过程中，可能会遇到以下的问题。汇总为:
 
->   报错：configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
->   libxml-2.0 \>= 2.6 ) were not met:
+    报错：configure: error: Package requirements (fuse \>= 2.8.4 libcurl \>= 7.0
+    libxml-2.0 \>= 2.6 ) were not met:
 
 原因: fuse 版本过低，此时，您需要手动安装 fuse
 2.8.4及以上版本，安装命令示例如下：
@@ -178,8 +177,8 @@ CentOS 系统下安装依赖软件：
 公私钥获取方式具体请参考[如何获取账户公私钥](https://docs.ucloud.cn/ai/uai-train/basic/key)  
 例如:
 
->   \`[root\@10-9-42-233 s3fs-fuse-1.83]\# cat \~/.passwd-s3fs
->   AKdDhQD4Nfyrr9nGPJ+d0iFmJGwQlgBTwxxxxxxxxxxxx:7+LPnkPdPWhX2AJ+p/B1XVFi8bbbbbbbbbbbbbbbbb
+     \`[root\@10-9-42-233 s3fs-fuse-1.83]\# cat \~/.passwd-s3fs
+     AKdDhQD4Nfyrr9nGPJ+d0iFmJGwQlgBTwxxxxxxxxxxxx:7+LPnkPdPWhX2AJ+p/B1XVFi8bbbbbbbbbbbbbbbbb
 
 将文件设置读写权限。 chmod 600 \${HOME}/.passwd-s3fs
 
@@ -187,30 +186,30 @@ CentOS 系统下安装依赖软件：
 
 操作指令解释:
 
-- 建立UFile挂载文件路径 \${LocalMountPath}
+* 建立UFile挂载文件路径 \${LocalMountPath}
 
-- 获取[UFile对象存储](https://console.ucloud.cn/ufile/ufile)中的bucket名称\${UFileBucketName}（仅限北京地域）  
+* 获取[UFile对象存储](https://console.ucloud.cn/ufile/ufile)中的bucket名称\${UFileBucketName}（仅限北京地域）  
   
   注意:空间名称不带域名后缀,比如UFile空间名称显示为[[test.cn-bj.ufileos.com](http://test.cn-bj.ufileos.com/)],则\${UFileBucketName}=test
 
-- 根据UFile存储空间所在地域，本地服务器是否在UCloud内网，从[支持AWS
+* 根据UFile存储空间所在地域，本地服务器是否在UCloud内网，从[支持AWS
   
   S3协议说明](https://ushare.ucloudadmin.com/pages/viewpage.action?pageId=27270862)中获取\${UFileS3URl}地址
 
-- 执行命令。
+* 执行命令。
 
 参数说明如下：
 
->   s3fs \${UFileBucketName} \${LocalFilePath}  
->   -o url={UFileS3URl} -o passwd_file=\~/.passwd-s3fs  
->   -o dbglevel=info  
->   -o curldbg,use_path_request_style,allow_other  
->   -o retries=1 //错误重试次数  
->   -o multipart_size="8" //分片上传的大小为 8MB，目前仅支持该值 -o
->   multireq_max="8" //当上传的文件大于 8MB 是采用分片上传，目前UFile 的 S3
->   接入层不允许 PUT 单个文件超过 8MB，所以该值建议必填  
->   -f //表示前台执行，后台执行则省略  
->   -o parallel_count="32" //并行操作数，可以提高分片并发操作，建议不要超过 128
+    s3fs \${UFileBucketName} \${LocalFilePath}  
+    -o url={UFileS3URl} -o passwd_file=\~/.passwd-s3fs  
+    -o dbglevel=info  
+    -o curldbg,use_path_request_style,allow_other  
+    -o retries=1 //错误重试次数  
+    -o multipart_size="8" //分片上传的大小为 8MB，目前仅支持该值 -o
+    multireq_max="8" //当上传的文件大于 8MB 是采用分片上传，目前UFile 的 S3
+    接入层不允许 PUT 单个文件超过 8MB，所以该值建议必填  
+    -f //表示前台执行，后台执行则省略  
+    -o parallel_count="32" //并行操作数，可以提高分片并发操作，建议不要超过 128
 
 #### 示例：
 
@@ -233,44 +232,44 @@ multireq_max="8" -o parallel_count="32"
 
 ### 文件上传和下载
 
->   **挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。**
+   **挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。**
 
->   1.拷贝文件到\${LocalMountPath} ，即是上传文件。
+    1.拷贝文件到\${LocalMountPath} ，即是上传文件。
 
->   2.将文件从\${LocalMountPath}拷贝到其他路径，即下载文件。
+    2.将文件从\${LocalMountPath}拷贝到其他路径，即下载文件。
 
->   **注意：**  
->   1.路径不符合Linux文件路径规范的路径，可以在UFIle管理控制台看到，但不会在Fuse挂载的\${LocalMountPath}下显示。
+**注意：**  
 
->   2.Fuse使用枚举文件清单会比较缓慢，建议直接使用指定到具体文件的命令，如vim,cp,rm指定具体文件。
+1.路径不符合Linux文件路径规范的路径，可以在UFIle管理控制台看到，但不会在Fuse挂载的\${LocalMountPath}下显示。
+
+2.Fuse使用枚举文件清单会比较缓慢，建议直接使用指定到具体文件的命令，如vim,cp,rm指定具体文件。
 
 ### 删除文件
 
->   将文件从\${LocalMountPath}删除掉，则UFile存储空间中，该文件也被删除掉。
+将文件从\${LocalMountPath}删除掉，则UFile存储空间中，该文件也被删除掉。
 
 ### 卸载UFile存储空间
 
->   sudo umount \${LocalMountPath}
+    sudo umount \${LocalMountPath}
 
 ### 性能数据
 
->   写入吞吐量40MB/s左右
-
->   读取吞吐量能达到166 MB/s(跟并发量相关)
+写入吞吐量40MB/s左右
+读取吞吐量能达到166 MB/s(跟并发量相关)
 
 ## 基于UFile的FTP服务
 
 ### 功能说明
 
->   对象存储支持通过 FTP
->   协议直接操作 Bucket中的对象和目录，包括上传文件、下载文件、删除文件以及创建文件夹等。
->   (有问题，不支持进入文件夹)
+对象存储支持通过 FTP
+协议直接操作 Bucket中的对象和目录，包括上传文件、下载文件、删除文件以及创建文件夹等。
+(有问题，不支持进入文件夹)
 
 ### 安装和使用
 
 ### 适用的操作系统
 
->   Linux
+Linux
 
 ### 安装步骤
 
@@ -284,14 +283,15 @@ UFile-bucket挂载到本地。具体安装方式步骤参考基于S3FS、UFile�
 先检查下本地是否有FTP服务，执行命令rpm -qa \| grep
 vsftpd,如果显示未安装，则执行以下命令，安装FTP。
 
->   运行以下命令安装 vsftpd。  
->   yum install -y vsftpd
+运行以下命令安装 vsftpd。  
+
+    yum install -y vsftpd
 
 #### 开启本地fpd服务
 
 执行以下命令，开启ftp服务。
 
->   service vsftpd start
+    service vsftpd start
 
 ### S3FS 使用方法
 
