@@ -1,6 +1,6 @@
 # 镜像回源
 
-{{indexmenu_n>4}}
+{{indexmenu_n>5}}
 
 ### 管理回源设置
 
