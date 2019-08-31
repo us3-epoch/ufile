@@ -66,13 +66,13 @@ UCloud UFile提供的分片上传（Multipart Upload）功能，可以将要上�
 
 #### 分片上传流程：
 
-* 将要上传的文件按照一定的大小分片。
+将要上传的文件按照一定的大小分片。
 
-* 初始化一个分片上传任务[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
+初始化一个分片上传任务[InitiateMultipartUpload](https://docs.ucloud.cn/api/ufile-api/initiate_multipart_upload）。
 
-* 逐个或并行上传分片[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
+逐个或并行上传分片[UploadPart](https://docs.ucloud.cn/api/ufile-api/upload_part）。
 
-* 完成上传[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
+完成上传[FinishMultipartUpload](https://docs.ucloud.cn/api/ufile-api/finish_multipart_upload）。
 
 
 #### 该过程需注意以下几点：
