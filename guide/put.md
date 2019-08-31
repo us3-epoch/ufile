@@ -28,7 +28,7 @@
 
 ### 表单上传
 
-表单上传是指使用UFile API中的[PostFile](https://docs.ucloud.cn/api/ufile-api/post_file)请求来完成Object的上传，上传的Object不能超过5GB。
+表单上传是指使用UFile API中的[PostFile](https://docs.ucloud.cn/api/ufile-api/post_file)请求来完成Object的上传，上传的Object不能超过1GB。
 
     说明 表单上传的API接口详细信息请参见PostFile。
 
