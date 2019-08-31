@@ -76,19 +76,19 @@ API密钥包含公钥与私钥两部分。在API请求前，需要先使用公�
 
 您把数据存储到UFile以后，就可以使用UCloud提供的其他产品和服务对其进行相关操作。以下是您会经常使用到的UCloud产品和服务：
 
-| 产品 | 服务 |
-| ---- | ---- |
-| 云主机（UHost） | 提供简单高效、处理能力可弹性伸缩的云端计算服务。请参见UHost产品详情页面。 |
-| 内容分发网络（UCDN） | 将源站资源缓存到各区域的边缘节点，供您就近快速获取内容。请参见UCDN产品详情页面。 |
-| 数据湖分析（USQL） | 构建基于Serverless的大数据分析解决方案，方便您分析和处理自己的数据。请参见USQL产品详情页面。 |
-| 媒体处理（UMedia） | 将存储于UFile的音视频转码成适合在 PC、TV 以及移动终端上播放的格式。并基于海量数据深度学习，对音视频的内容、文字、语音、场景多模态分析，实现智能审核、内容理解、智能编辑。请参见媒体处理产品详情页面。 |
+|产品 |服务 |
+|---- |---- |
+|云主机（UHost） |提供简单高效、处理能力可弹性伸缩的云端计算服务。请参见[UHost产品详情页面](https://console.ucloud.cn/uhost/uhost)。 |
+|内容分发网络（UCDN） |将源站资源缓存到各区域的边缘节点，供您就近快速获取内容。请参见[UCDN产品详情页面](https://console.ucloud.cn/ucdn/ucdndashboard)。 |
+|数据湖分析（USQL） |构建基于Serverless的大数据分析解决方案，方便您分析和处理自己的数据。请参见[USQL产品详情页面](https://console.ucloud.cn/usql/editsql)。 |
+|媒体处理（UMedia） |将存储于UFile的音视频转码成适合在 PC、TV 以及移动终端上播放的格式。并基于海量数据深度学习，对音视频的内容、文字、语音、场景多模态分析，实现智能审核、内容理解、智能编辑。请参见[媒体处理产品详情页面](https://console.ucloud.cn/umedia/umediataskmanage)。 |
 
 ## 使用 UFile
 
 UFile提供了Web服务页面，方便您管理UFile。您可以登录UFile管理控制台，操作存储空间和对象。关于管理控制台的操作，请参见控制台用户指南。
 
 UFile也提供了丰富的 API 接口和各种语言的 SDK
-包，方便您灵活地管理UFile。请参见UFile API参考和UFile SDK参考。
+包，方便您灵活地管理UFile。请参见[UFile API参考](https://docs.ucloud.cn/api/ufile-api/index)和[UFile SDK参考](https://docs.ucloud.cn/storage_cdn/ufile/tools/sdk)。
 
 ## UFile 定价
 
