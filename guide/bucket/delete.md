@@ -1,4 +1,4 @@
-{{indexmenu_n>1}}
+{{indexmenu_n>3}}
 
 # 删除存储空间
 
