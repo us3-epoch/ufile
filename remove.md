@@ -32,4 +32,4 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 UFile对象存储不同bucket之前的数据迁移
 支持s3协议的对象存储迁移到UFile对象存储
 
-详情请参照[管理工具](https://docs.ucloud.cn/storage_cdn/ufile/tools/introduction)
+详情请参照[管理工具-数据迁移工具](https://docs.ucloud.cn/storage_cdn/ufile/ufile/tools/tools/ufile_import)
