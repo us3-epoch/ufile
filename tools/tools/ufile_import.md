@@ -13,14 +13,15 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 * 支持s3协议的对象存储迁移到UFile对象存储
 
 ### 准备工作
-1. 根据需要迁移的文件的总大小，选择硬盘合适的云主机。必须要保证`硬盘存储量大于文件迁移数据量`,否则可能会因为硬盘大小不够，而造成迁移数据不完整。  
-   举例：假设您有总量为100G的文件需要迁移，设置的处理文件并发数是40(即ufile-import.json中的`concurrent`参数，可以往下阅读，了解该参数的使用。)，在全部的迁移文件中，单个文件最大大小为1G左右，则您至少需要大小为:40乘以1乘以2=80G,左右大小的硬盘，来缓存下载过程中的临时文件,来保证迁移过程中，有足够的硬盘容量，来缓存临时文件,否则可能会造成迁移文件的不完整
+1. 根据需要迁移的文件的总大小，选择硬盘合适的云主机。必须要保证硬盘存储量大于文件迁移数据量,否则可能会因为硬盘大小不够，而造成迁移数据不完整。  
+
+举例：假设您有总量为100G的文件需要迁移，设置的处理文件并发数是40(即ufile-import.json中的"concurrent"参数，可以往下阅读，了解该参数的使用。)，在全部的迁移文件中，单个文件最大大小为1G左右，则您至少需要大小为:40乘以1乘以2=80G,左右大小的硬盘，来缓存下载过程中的临时文件,来保证迁移过程中，有足够的硬盘容量，来缓存临时文件,否则可能会造成迁移文件的不完整
 
 ### 名词定义
-这里我们将介绍一些名词，稍后再使用`ufile-import`工具的过程中，您会看到他们。工具中将只显示英文，为了方便您理解，我们特别将关键字都以中文对照以及解释的方式列在下面，方便参考。
+这里我们将介绍一些名词，稍后再使用"ufile-import"工具的过程中，您会看到他们。工具中将只显示英文，为了方便您理解，我们特别将关键字都以中文对照以及解释的方式列在下面，方便参考。
 
 |序号(Index)|英文(English)|中文(Chinese)|工具当中的选项(Corresponding Options in "ufile-import")|释义|
-| --------   | -----:  | :----:  | :----:  | :----:  |
+| --------   | ----- | ---- | ---- | ----  |
 |0|endpoint|域名|"endpoint"|表示OSS对外服务的访问域名.例如：oss-cn-hangzhou.aliyuncs.com，具体请参考[如何获取阿里云访问域名](https://helpcdn.aliyun.com/document_detail/31837.html)|
 |1|bucket|存储空间|“bucket”|对象存储开通的存储空间的名称|
 |2|bucket_name|存储空间|"bucket_name"|对象存储开通的存储空间的名称|
@@ -44,14 +45,14 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
     {    
   	"endpoint": "",       //阿里云OSS域名  
   	"bucket": "%BUCKET%", //阿里云OSS存储空间名称  
- 	 "accessID": "",         //公钥信息  
- 	 "accessKey": "",         //私钥信息  
+ 	 "accessID": "",      //公钥信息  
+ 	 "accessKey": "",     //私钥信息  
     }    
 
 #### 七牛云配置文件说明
 
     {    
-  	"bucket": "%BUCKET%",                    //七牛云Kodo存储空间名称         
+  	"bucket": "%BUCKET%",               //七牛云Kodo存储空间名称         
         "domain": "%DOMAIN%",               //kodo-test-bucket绑定的CDN域名     
         "accessKey": "",                    //公钥信息             
         "secretKey": ""                     //私钥信息     
@@ -60,19 +61,19 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 #### UFile配置文件
 
     {  
-        "public_key":"",     //公钥  
-        "private_key":"",    	 //私钥  
-        "bucket_name":"%BUCKET%", //bucket名称  
-        "file_host":"", //bucket的host信息，例如:cn-bj.ufileos.com  
-        "bucket_host":"" //为空  
+        "public_key":"",           //公钥  
+        "private_key":"",    	   //私钥  
+        "bucket_name":"%BUCKET%",  //bucket名称  
+        "file_host":"",            //bucket的host信息，例如:cn-bj.ufileos.com  
+        "bucket_host":""           //为空  
       } 
 
 #### s3配置文件
 
     {  
-     "bucket":"",       //bucket名称  
-     "region":"",       //接入地域  
-     "endPoint":"",     //接入域名  
+     "bucket":"",               //bucket名称  
+     "region":"",               //接入地域  
+     "endPoint":"",             //接入域名  
      "accessKeyId":"",          //公钥  
      "secretAccessKey":""       //私钥  
      }  
@@ -80,10 +81,10 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 #### ufile-import配置文件说明
 
     {  
-     "redis": "localhost:6379", //本地redis服务端口号  
-     "concurrent": 40, //每秒处理的线程数  
-     "temp": "/tmp/", //存放文件的临时文件夹目录   
-     "retry_count": 4, //如果失败了，尝试重试的次数。  
+     "redis": "localhost:6379",         //本地redis服务端口号  
+     "concurrent": 40,                  //每秒处理的线程数  
+     "temp": "/tmp/",                   //存放文件的临时文件夹目录   
+     "retry_count": 4,                  //如果失败了，尝试重试的次数。  
      "source": "${filename}.oss.json",  //源站的配置文件名称  
      "destine": "${filename}.ufile.json"//目标空间的配置文件名称  
     }  
@@ -98,37 +99,44 @@ Linux64位操作系统请下载
 下载地址: https://github.com/ufilesdk-dev/ufile-import/archive/master.zip
 
 ####  2. 安装程序。
-进入下载安装包目录，解压文件.   
-   `unzip master.zip`  
-   `cd ufile-import-master`    
-   `tar zxvf  ufile-import.tgz`  
+进入下载安装包目录，解压文件. 
+
+    unzip master.zip 
+    cd ufile-import-master  
+    tar zxvf  ufile-import.tgz 
+   
 #### 3. 启动redis服务。
 服务依赖于redis服务，安装包中已经还有redis服务的相关配置，直接启动即可。  
-     `1 cd ufile-import`  
-     `2 cd redis`  
-     `3 ./start.sh`  
+
+     1 cd ufile-import`  
+     2 cd redis`  
+     3 ./start.sh` 
+
 可以通过执行 `./ps.sh`命令来查看redis服务状态，redis服务正常启动，状态如下:
-     ```html  
+
      root      5318     1  0 14:50 pts/0    00:00:15 ./redis-server 127.0.0.1:6379
-     ```
+
 ## 使用方法
-   ### 从阿里云oss迁移到UFile对象存储
-   假设我在阿里云oss有一个bucket，名字为`oss-test-bucket`,所在地域为华北2（北京）,对应的外网访问EndPoint为:`oss-cn-beijing.aliyuncs.com`,accessId为:`osstestaccessId`,accessKey为:`osstestaccessKeyDate`  
-   我在UFile对象存储有一个bucket,名字为`ufile-test-bucket`,所在地域为上海，对应的外网访问域名host为:`ufile-test-bucket.cn-sh2.ufileos.com`,公钥为:`ufiletestpublickey`,私钥为:`ufileprivatekeydata`  
+### 从阿里云oss迁移到UFile对象存储
+
+假设我在阿里云oss有一个bucket，名字为`oss-test-bucket`,所在地域为华北2（北京）,对应的外网访问EndPoint为:`oss-cn-beijing.aliyuncs.com`,accessId为:`osstestaccessId`,accessKey为:`osstestaccessKeyDate`  
+
+我在UFile对象存储有一个bucket,名字为`ufile-test-bucket`,所在地域为上海，对应的外网访问域名host为:`ufile-test-bucket.cn-sh2.ufileos.com`,公钥为:`ufiletestpublickey`,私钥为:`ufileprivatekeydata`  
 
 #### 首先，进入`ufile-import`目录，编写oss配置文件。  
-     - `1. cd ufile-import`  进入文件目录  
-     - `2. mkdir job_test` 创建存放配置文件的文件夹  
-     - `3. cp template/oss.json.template ./job_test/src.oss.json` 复制配置文件模板到指定目录  
-     - 编辑src.oss.json文件，填写内容如下:
-        >
-        >{      
-  	     "endpoint": "oss-cn-beijing.aliyuncs.com",      //阿里云OSS域名            
-  	     "bucket": "oss-test-bucket",                    //阿里云OSS存储空间名称         
- 	       "accessID": "osstestaccessId",                     //公钥信息             
- 	       "accessKey": "osstestaccessKeyDate",                //私钥信息  
-	     "prefix":"test2/"                                  //文件前缀       
-	       }  
+
+1. cd ufile-import  进入文件目录  
+2. mkdir job_test 创建存放配置文件的文件夹  
+3. cp template/oss.json.template ./job_test/src.oss.json 复制配置文件模板到指定目录  
+编辑src.oss.json文件，填写内容如下:
+
+             {      
+  	      "endpoint": "oss-cn-beijing.aliyuncs.com",      //阿里云OSS域名            
+  	      "bucket": "oss-test-bucket",                    //阿里云OSS存储空间名称         
+ 	      "accessID": "osstestaccessId",                  //公钥信息             
+ 	      "accessKey": "osstestaccessKeyDate",            //私钥信息  
+	      "prefix":"test2/"                               //文件前缀       
+	     }  
     
 #### 复制ufile配置文件，并且编辑填写相应内容:
 复制配置文件模板`cp template/ufile.json.template ./job_test/dst.ufile.json`
@@ -160,18 +168,21 @@ Linux64位操作系统请下载
 如果要后台执行服务,可以执行`nohup ./ufile-import ./job_test &`  启动服务。
  
 ### 从七牛云Kodo迁移到UFile对象存储
-   假设我在七牛云Kodo有一个bucket，名字为`kodo-test-bucket`,所在地域为华北,绑定的CDN域名为:`kodo-test.clouddn.com`,accessKey为:`kodoAccessKey`,secretKey为:`kodoSecretKey`  
-   我在UFile对象存储有一个bucket,名字为`ufile-test-bucket`,所在地域为上海，对应的外网访问域名host为:`ufile-test-bucket.cn-sh2.ufileos.com`,公钥为:`ufiletestpublickey`,私钥为:`ufileprivatekeydata`  
+假设我在七牛云Kodo有一个bucket，名字为`kodo-test-bucket`,所在地域为华北,绑定的CDN域名为:`kodo-test.clouddn.com`,accessKey为:`kodoAccessKey`,secretKey为:`kodoSecretKey`  
+
+我在UFile对象存储有一个bucket,名字为`ufile-test-bucket`,所在地域为上海，对应的外网访问域名host为:`ufile-test-bucket.cn-sh2.ufileos.com`,公钥为:`ufiletestpublickey`,私钥为:`ufileprivatekeydata`  
 
 #### 首先，进入`ufile-import`目录，编写kodo配置文件。  
-`1. cd ufile-import`  进入文件目录  
-`2. mkdir job_test` 创建存放配置文件的文件夹  
-`3. cp template/kodo.json.template ./job_test/src.kodo.json` 复制配置文件模板到指定目录  
+
+1. cd ufile-import 进入文件目录  
+2. mkdir job_test 创建存放配置文件的文件夹  
+3. cp template/kodo.json.template ./job_test/src.kodo.json 复制配置文件模板到指定目录  
+
 编辑src.kodo.json文件，填写内容如下:
 
              {             
-  	     "bucket": "kodo-test-bucket",                    //七牛云Kodo存储空间名称         
-  	     "domain": "http://kodo-test.clouddn.com",               //kodo-test-bucket绑定的CDN域名     
+  	       "bucket": "kodo-test-bucket",                    //七牛云Kodo存储空间名称         
+  	       "domain": "http://kodo-test.clouddn.com",        //kodo-test-bucket绑定的CDN域名     
  	       "accessKey": "kodoAccessKey",                    //公钥信息             
  	       "secretKey": "kodoSecretKey"                     //私钥信息       
 	      }  
@@ -181,11 +192,11 @@ Linux64位操作系统请下载
 编辑`dst.ufile.json`,填写内容如下
 
         {    
-         "public_key":"ufiletestpublickey",        //公钥              
-   	     "private_key":"ufileprivatekeydata",    	 //私钥  
-         "bucket_name":"ufile-test-bucket", //bucket名称  
-         "file_host":"cn-sh2.ufileos.com", //bucket的host信息，例如:cn-bj.ufileos.com  
-         "bucket_host":"" //为空  
+         "public_key":"ufiletestpublickey",           //公钥              
+   	     "private_key":"ufileprivatekeydata",     //私钥  
+         "bucket_name":"ufile-test-bucket",           //bucket名称  
+         "file_host":"cn-sh2.ufileos.com",            //bucket的host信息，例如:cn-bj.ufileos.com  
+         "bucket_host":""                             //为空  
          } 
      
 #### 复制ufile-import配置文件，并且编辑填写相应内容:
@@ -209,18 +220,20 @@ Linux64位操作系统请下载
 假设我在UFile对象存储有一个bucket,名字为`ufile-bucket-A`,所在地域为上海，对应的外网访问域名host为:`ufile-bucket-A.cn-sh2.ufileos.com`,公钥为:`ufiletestpublickeyA`,私钥为:`ufileprivatekeydataA`  
 我想将数据迁到另外一个bucket，名字为`ufile-bucket-B`,所在地域为北京，对应的外网访问域名host为:`ufile-bucket-B.cn-bj.ufileos.com`,公钥为:`ufiletestpublickeyB`,私钥为:`ufileprivatekeydataB`.
 
-#### 首先，进入`ufile-import`目录，编写UFile配置文件。  
-`1. cd ufile-import`  进入文件目录  
-`2. mkdir job_test` 创建存放配置文件的文件夹  
-`3. cp template/ufile.json.template ./job_test/src.ufile.json` 复制配置文件模板到指定目录  
+#### 首先，进入ufile-import目录，编写UFile配置文件。  
+
+1. cd ufile-import  进入文件目录  
+2. mkdir job_test 创建存放配置文件的文件夹  
+3. cp template/ufile.json.template ./job_test/src.ufile.json 复制配置文件模板到指定目录  
+
 编辑src.ufile.json文件，填写内容如下:
 
      {      
        "public_key":"ufiletestpublickeyA",        //公钥             
-        "private_key":"ufileprivatekeydataA",    	 //私钥  
-       "bucket_name":"ufile-bucket-A", //bucket名称  
-       "file_host":"cn-sh2.ufileos.com", //bucket的host信息，例如:cn-bj.ufileos.com  
-       "bucket_host":"" //为空  
+        "private_key":"ufileprivatekeydataA",     //私钥  
+       "bucket_name":"ufile-bucket-A",            //bucket名称  
+       "file_host":"cn-sh2.ufileos.com",          //bucket的host信息，例如:cn-bj.ufileos.com  
+       "bucket_host":""                           //为空  
       }
      
 #### 复制ufile配置文件，并且编辑填写相应内容:
@@ -229,10 +242,10 @@ Linux64位操作系统请下载
 
        {    
        "public_key":"ufiletestpublickeyB",          //公钥            
-       "private_key":"ufileprivatekeydataB",    //私钥  
-       "bucket_name":"ufile-bucket-B", //bucket名称  
-       "file_host":"cn-bj.ufileos.com", //bucket的host信息，例如:cn-bj.ufileos.com    
-       "bucket_host":"" //为空    
+       "private_key":"ufileprivatekeydataB",        //私钥  
+       "bucket_name":"ufile-bucket-B",              //bucket名称  
+       "file_host":"cn-bj.ufileos.com",             //bucket的host信息，例如:cn-bj.ufileos.com    
+       "bucket_host":""                             //为空    
        }   
      
 #### 复制ufile-import配置文件，并且编辑填写相应内容:
