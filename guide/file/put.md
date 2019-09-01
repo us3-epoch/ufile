@@ -10,7 +10,7 @@
 
 - 简单上传的API接口的详细信息请参见[PutFile](https://docs.ucloud.cn/api/ufile-api/put_file)。
 
-- 大文件（大于5GB）的上传请使用分片上传。
+- 大文件（大于1GB）的上传请使用分片上传。
 
 - 命名限制：
 
