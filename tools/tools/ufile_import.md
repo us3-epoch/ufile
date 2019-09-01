@@ -44,3 +44,5 @@ Linux64位操作系统请下载
 可以通过执行 `./ps.sh`命令来查看redis服务状态，redis服务正常启动，状态如下:
 
      root      5318     1  0 14:50 pts/0    00:00:15 ./redis-server 127.0.0.1:6379
+
+工具使用详情参照[UFile迁移工具使用说明](https://github.com/ufilesdk-dev/ufile-import/blob/master/README.md)
