@@ -32,7 +32,7 @@ Linux64位操作系统请下载
     unzip master.zip 
     cd ufile-import-master  
     tar zxvf  ufile-import.tgz 
-   
+
 #### 3. 启动redis服务。
 
 服务依赖于redis服务，安装包中已经还有redis服务的相关配置，直接启动即可。  
