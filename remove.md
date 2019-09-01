@@ -20,3 +20,16 @@
 1.部分未访问到的文件无法迁移到UFIle  
 
 2.访问UFile不存在的文件需要回源，访问延时会增加
+
+## UFile数据迁移工具
+
+### 介绍
+ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)的工具。您可以将ufile-import部署在本地服务或者云主机上，轻松将您其他云存储的数据迁移到UFile。
+
+### 适用情况
+阿里云对象存储数据迁移到UFile对象存储
+七牛云对象存储数据迁移到UFile对象存储
+UFile对象存储不同bucket之前的数据迁移
+支持s3协议的对象存储迁移到UFile对象存储
+
+详情请参照[管理工具](https://docs.ucloud.cn/storage_cdn/ufile/tools/introduction)
