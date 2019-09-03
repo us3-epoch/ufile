@@ -116,7 +116,7 @@ API密钥可以在控制台的“API密钥”页面获得。将public\_key和pri
 ./filemgr --action mput --bucket demobucket --key key --file filename [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
    --bucket: 需要上传至的 bucket 名称         
-   --key: 上传至 bucket 中的文件名称--file : 需要上传的本地文件路径       
+   --key: 上传至 bucket 中的文件名称       
    --file: 需要上传的本地文件路径
    --threads: 分片上传并发数，默认为5
    --retrycount: 分片上传失败重试次数，默认10，大文件上传建议配置大些
