@@ -79,7 +79,7 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 
 ### 接入域名（Endpoint）
 
-| 地域   | 内网Endpoint                 | 内网Endpoint                          |
+| 地域   | 外网Endpoint                 | 内网Endpoint                          |
 | ---- | -------------------------- | ----------------------------------- |
 | 北京二  | s3-cn-bj.ufileos.com       | internal.s3-cn-bj.ufileos.com       |
 | 上海   | s3-cn-sh2.ufileos.com      | internal.s3-cn-sh2.ufileos.com      |
