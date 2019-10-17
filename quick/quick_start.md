@@ -34,7 +34,7 @@ UFile将数据文件以对象（object）的形式上传到存储空间（bucket
 
 ### 使用命令行管理工具 UFile Tools
 
-UFile Tools是以命令行方式管理 UFile 数据的工具，支持Windows、Linux、Mac平台。UFile Tools提供方便、简洁、丰富的 Bucket 和 Object管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[命令行工具UFile Tools](https://docs.ucloud.cn/storage_cdn/ufile/tools/introduction)。
+UFile Tools是以命令行方式管理 UFile 数据的工具，支持Windows、Linux、Mac平台。UFile Tools提供方便、简洁、丰富的 Bucket 和 Object管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[命令行工具UFile Tools](https://docs.ucloud.cn/storage_cdn/ufile/tools/tools/tools_file)。
 
 
 ### 使用 API/SDK 
