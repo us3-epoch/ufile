@@ -57,6 +57,7 @@
 B机房内网：www.ufile.cn-north-02.ucloud.cn
 C机房内网: www.ufile.cn-north-03.ucloud.cn
 D机房内网: www.ufile.cn-north-04.ucloud.cn
+E机房内网: www.ufile.cn-north-04.ucloud.cn
 上海二
 外网: www.cn-sh2.ufileos.com
 内网: www.internal-cn-sh2-01.ufileos.com
