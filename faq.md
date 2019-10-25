@@ -1,6 +1,6 @@
 # FAQ
 
-{{indexmenu_n>13}}
+
 
 ## 对象存储空间和Key是什么？
 
