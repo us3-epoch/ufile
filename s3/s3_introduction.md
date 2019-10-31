@@ -102,6 +102,6 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 
 ### 图片操作支持
 
-参考[UFile官方文档图片处理服务](https://docs.ucloud.cn/storage_cdn/ufile/pic)
+参考[UFile官方文档图片处理服务](https://docs.ucloud.cn/storage_cdn/ufile/service/pic)
 
 
