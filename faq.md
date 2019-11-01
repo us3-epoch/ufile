@@ -128,7 +128,7 @@ method。
 
 CDN回源，流量从UFile流向UCDN，这部分流量UCDN不计费，由UFile计费，请参照下图：
 ![](/images/cdn回源ufile的流量.png)  
-计费价格详见：[UFile产品价格](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/bill)
+计费价格详见：[UFile产品价格](/storage_cdn/ufile/bill)
 
 ## 镜像回源支持的空间类型
 
