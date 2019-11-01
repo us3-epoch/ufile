@@ -8,9 +8,9 @@
 |操作方式    |说明 |
 |--------- |--------------------------------------------------------------------------------------------------------------- |
 |控制台  |Web 应用程序，直观易用 |
-|管理工具  |[管理工具](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/introduction) |
+|管理工具  |[管理工具](/storage_cdn/ufile/tools/introduction) |
 |API   |[API](https://docs.ucloud.cn/api/ufile-api/index) |
-|SDK   |[SDK](https://cms.docs.ucloudadmin.com/storage_cdn/ufile/tools/sdk) |
+|SDK   |[SDK](/storage_cdn/ufile/tools/sdk) |
 
 #### 使用限制
 
