@@ -22,8 +22,8 @@
     * [日志管理](storage_cdn/ufile/guide/logging)
     * [令牌管理](storage_cdn/ufile/guide/token)
 * 增值服务
+    * [图片处理服务](storage_cdn/ufile/service/pic)
     * [海外专线服务](storage_cdn/ufile/service/overseas)
-    * [增值服务](storage_cdn/ufile/service/pic)
 * [数据迁移说明](storage_cdn/ufile/remove)
 * 鉴权方法说明
     * [API签名算法](storage_cdn/ufile/api/authorization)
