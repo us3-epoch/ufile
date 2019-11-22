@@ -49,7 +49,7 @@
 }
 ```
 
-不同地域的proxy\_host是不一样的，具体如下:
+不同地域的proxy\_host是不一样的，具体如下: 
 
 ```
 北京
@@ -107,7 +107,8 @@ E机房内网: www.ufile.cn-north-04.ucloud.cn
 API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
 
 对于命令行工具，Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。  
-注：当工具在后台执行时，请加上参数 `--nobar=true`
+__注：当工具在后台执行时，请加上参数 `--nobar=true`__  
+__注：如果不是filemgr，而是各种SDK中使用，请把www 替换成Bucket名__  
 
 #### 分片上传单个文件
 
