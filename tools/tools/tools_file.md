@@ -443,7 +443,11 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 备份数据库test，同时上传至名为uclouddemo的存储空间，命名为mysql.bak ：
 
 ```
+例子一：
 mysqldump -h127.0.0.1 -P3306 -uroot -pufile --database test | ./filemgr --action stream-upload --bucket uclouddemo --key mysql.bak
+
+例子二，带压缩：
+mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-upload --bucket yeon-test --key mysql_bak.sql.gz --file stdin
 ```
 
 #### filemgr版本更新
