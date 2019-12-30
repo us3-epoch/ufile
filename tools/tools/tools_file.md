@@ -447,7 +447,26 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 mysqldump -h127.0.0.1 -P3306 -uroot -pufile --database test | ./filemgr --action stream-upload --bucket uclouddemo --key mysql.bak
 
 例子二，带压缩：
-mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-upload --bucket yeon-test --key mysql_bak.sql.gz --file stdin
+mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-upload --bucket uclouddemo --key mysql_bak.sql.gz --file stdin
+```
+
+#### 流式下载文件
+
+```
+./filemgr --action stream-download --bucket bucketname --key key --file stdout [--speedlimit speedlimit]
+参数说明:
+  --bucket: 需要下载的存储空间
+  --key: 存储空间里下载的文件名
+```
+
+```
+例子一：
+./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql.bak  --file stdout > mysql.sql
+
+例子二，下载并解压缩：
+./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql_bak.sql.gz --file stdout  |gzip -d > get.py
+./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql_bak.sql.tgz --file stdout | tar xzvf -
+
 ```
 
 #### filemgr版本更新
