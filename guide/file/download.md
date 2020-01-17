@@ -3,7 +3,7 @@
 
 # 下载文件
 
-### 简单下载
+## 简单下载
 
 简单下载是通过UFile API的GetObject接口，下载已经上传的文件（Object），Object下载是使用HTTP的GET请求来完成的。
 
@@ -13,19 +13,19 @@
 
 * 如果需要使用自定义域名来访问Object，请参考自定义域名访问UFile。
 
-### 断点续传下载
+## 断点续传下载
 
 UFile提供了从Object指定的位置开始下载的功能，在下载大的Object的时候，可以分多次下载。如果下载中断，重启的时候也可以从上次完成的位置开始继续下载。
 
 和简单上传类似，您也需要对该Object有读权限。通过设置参数Range来支持断点续传，对于比较大的Object建议使用该功能。Range的定义可参考HTTP RFC。如果在请求头中使用Range参数，则返回消息中会包含整个文件的长度和此次返回的范围。例如：Content-Range: bytes 0–9/44，表示整个文件长度为44，此次返回的范围为0–9。如果不在范围内，则传送整个文件，并且不在结果中提及Content-Range，返回码为206。
 
-### 查看文件列表
+## 查看文件列表
 
 您可以通过 UFile API 中的 PrefixFileList 接口列出您在存储空间（Bucket）中上传的文件（Object）。
 
 查看文件列表的 API 详细信息请参考 [PrefixFileList](https://docs.ucloud.cn/api/ufile-api/prefix_file_list)。
 
-### 删除文件
+## 删除文件
 
 删除文件即删除上传到存储空间（Bucket）中的文件（Object）。
 

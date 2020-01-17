@@ -21,6 +21,7 @@
     * [域名管理](storage_cdn/ufile/guide/domain)
     * [生命周期](storage_cdn/ufile/guide/lifecycle)
     * [镜像回源](storage_cdn/ufile/guide/mirror)
+    * [跨区域复制](storage_cdn/ufile/guide/multisite)
     * [日志管理](storage_cdn/ufile/guide/logging)
     * [令牌管理](storage_cdn/ufile/guide/token)
 * 增值服务
