@@ -14,7 +14,7 @@ UFile令牌功能可以根据用户的需求灵活的开放存储空间和文件
 
 2. 通过调用[UFile API](https://docs.ucloud.cn/api/ufile-api/index)进行创建、编辑等操作
 
-#### 创建/编辑令牌
+## 创建/编辑令牌
 
 ![](/images/guide/令牌.png)
 

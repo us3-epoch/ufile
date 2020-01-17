@@ -19,6 +19,7 @@
         * [上传文件](storage_cdn/ufile/guide/file/put)
         * [下载文件](storage_cdn/ufile/guide/file/download)
     * [域名管理](storage_cdn/ufile/guide/domain)
+    * [生命周期](storage_cdn/ufile/guide/lifecycle)
     * [镜像回源](storage_cdn/ufile/guide/mirror)
     * [日志管理](storage_cdn/ufile/guide/logging)
     * [令牌管理](storage_cdn/ufile/guide/token)
