@@ -11,16 +11,17 @@
     * [开始使用对象存储](storage_cdn/ufile/quick/quick_start)
     * [使用UFile管理控制台](storage_cdn/ufile/quick/console)
 * 操作指南
-    * 存储空间（Bucket)
+    * 存储空间（Bucket）
         * [创建存储空间](storage_cdn/ufile/guide/bucket/devguide)
         * [获取空间地域信息](storage_cdn/ufile/guide/bucket/describe)
         * [删除存储空间](storage_cdn/ufile/guide/bucket/delete)
-    * 对象/文件（Object))
+    * 对象/文件（Object）
         * [上传文件](storage_cdn/ufile/guide/file/put)
         * [下载文件](storage_cdn/ufile/guide/file/download)
     * [域名管理](storage_cdn/ufile/guide/domain)
     * [生命周期](storage_cdn/ufile/guide/lifecycle)
     * [镜像回源](storage_cdn/ufile/guide/mirror)
+    * [跨域访问](storage_cdn/ufile/guide/cors)
     * [跨区域复制](storage_cdn/ufile/guide/multisite)
     * [日志管理](storage_cdn/ufile/guide/logging)
     * [令牌管理](storage_cdn/ufile/guide/token)
