@@ -53,53 +53,53 @@
 
 ```
 北京
-外网：www.cn-bj.ufileos.com 
-B机房内网：www.ufile.cn-north-02.ucloud.cn
-C机房内网: www.ufile.cn-north-03.ucloud.cn
-D机房内网: www.ufile.cn-north-04.ucloud.cn
-E机房内网: www.ufile.cn-north-04.ucloud.cn
+外网：<bucket_name>.cn-bj.ufileos.com 
+B机房内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
+C机房内网: <bucket_name>.ufile.cn-north-03.ucloud.cn
+D机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
+E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
 上海二
-外网: www.cn-sh2.ufileos.com
-内网: www.internal-cn-sh2-01.ufileos.com
+外网: <bucket_name>.cn-sh2.ufileos.com
+内网: <bucket_name>.internal-cn-sh2-01.ufileos.com
 香港
-外网：www.hk.ufileos.com
-内网：www.internal-hk-01.ufileos.com
+外网：<bucket_name>.hk.ufileos.com
+内网：<bucket_name>.internal-hk-01.ufileos.com
 广东
-外网：www.cn-gd.ufileos.com
-内网：www.internal-cn-gd-02.ufileos.com
+外网：<bucket_name>.cn-gd.ufileos.com
+内网：<bucket_name>.internal-cn-gd-02.ufileos.com
 洛杉矶
-外网：www.us-ca.ufileos.com
-内网：www.internal-us-ca-01.ufileos.com
+外网：<bucket_name>.us-ca.ufileos.com
+内网：<bucket_name>.internal-us-ca-01.ufileos.com
 雅加达
-外网：www.idn-jakarta.ufileos.com
-内网：www.internal-idn-jakarta-01.ufileos.com
+外网：<bucket_name>.idn-jakarta.ufileos.com
+内网：<bucket_name>.internal-idn-jakarta-01.ufileos.com
 新加坡
-外网：www.sg.ufileos.com
-内网：www.internal-sg-01.ufileos.com
+外网：<bucket_name>.sg.ufileos.com
+内网：<bucket_name>.internal-sg-01.ufileos.com
 尼日利亚
-外网：www.afr-nigeria.ufileos.com
-内网：www.internal-afr-nigeria.ufileos.com
+外网：<bucket_name>.afr-nigeria.ufileos.com
+内网：<bucket_name>.internal-afr-nigeria.ufileos.com
 台北
-外网：www.tw-tp.ufileos.com
-内网:www.internal-tw-tp.ufileos.com
+外网：<bucket_name>.tw-tp.ufileos.com
+内网: <bucket_name>.internal-tw-tp.ufileos.com
 圣保罗
-外网：www.bra-saopaulo.ufileos.com 
-内网：www.internal-bra-saopaulo.ufileos.com
+外网：<bucket_name>.bra-saopaulo.ufileos.com 
+内网：<bucket_name>.internal-bra-saopaulo.ufileos.com
 迪拜
-外网：www.uae-dubai.ufileos.com
-内网：www.internal-uae-dubai.ufileos.com
+外网：<bucket_name>.uae-dubai.ufileos.com
+内网：<bucket_name>.internal-uae-dubai.ufileos.com
 越南
-外网：www.vn-sng.ufileos.com
-内网：www.internal-vn-sng.ufileos.com
+外网：<bucket_name>.vn-sng.ufileos.com
+内网：<bucket_name>.internal-vn-sng.ufileos.com
 孟买
-外网：www.ind-mumbai.ufileos.com
-内网：www.internal-ind-mumbai.ufileos.com
+外网：<bucket_name>.ind-mumbai.ufileos.com
+内网：<bucket_name>.internal-ind-mumbai.ufileos.com
 华盛顿
-外网：www.us-ws.ufileos.com
-内网：www.internal-us-ws.ufileos.com
+外网：<bucket_name>.us-ws.ufileos.com
+内网：<bucket_name>.internal-us-ws.ufileos.com
 法兰克福
-外网：www.ge-fra.ufileos.com
-内网：www.internal-ge-fra.ufileos.com
+外网：<bucket_name>.ge-fra.ufileos.com
+内网：<bucket_name>.internal-ge-fra.ufileos.com
 全球化
 外网：<bucket_name>.up.ufileos.com
 ```
@@ -108,7 +108,7 @@ API密钥可以在控制台的“API密钥”页面获得。将public\_key和pri
 
 对于命令行工具，Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。  
 __注：当工具在后台执行时，请加上参数 `--nobar=true`__  
-__注：如果不是filemgr，而是各种SDK中使用，请把www 替换成Bucket名__  
+
 
 #### 分片上传单个文件
 
