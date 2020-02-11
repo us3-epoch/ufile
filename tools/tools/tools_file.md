@@ -30,7 +30,6 @@
 
 [filemgr-mac](http://tools.ufile.ucloud.com.cn/filemgr-mac.tar.gz)
 
-<WRAP center round important 60%>
 普通上传（PUT）、表单上传方式、秒传文件（UPLOAD-HIT）的文件大小不能超过
 1GB，要上传大小超过 1GB 的文件必须使用分片上传（MPUT）方式。 </WRAP>
 
