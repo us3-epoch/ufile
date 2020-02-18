@@ -134,6 +134,14 @@ Format）是专门为数码相机的照片设定的可交换图像文件格式�
 http://demobucket.ufile.ucloud.com.cn/here-for-example.jpg?iopcmd=rotate& degree=180|iopcmd=thumbnail&type=1&scale=40
 </code>
 
+
+
+
+
+```
+http://demobucket.ufile.ucloud.com.cn/here-for-example.jpg?iopcmd=rotate& degree=180|iopcmd=thumbnail&type=1&scale=40
+```
+
 上述请求会将demobucket这个空间中的here-for-example.jpg文件先旋转180度，然后按比例缩放为原来的40%大小。
 
 注意：如果请求当前不支持的iopcmd，则会报错，不会返回原图。
