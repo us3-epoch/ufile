@@ -52,59 +52,59 @@
 
 ```
 北京
-外网：<bucket_name>.cn-bj.ufileos.com 
-B机房内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
-C机房内网: <bucket_name>.ufile.cn-north-03.ucloud.cn
-D机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
-E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
-目前内网域名，推荐都用E机房域名即可；
+    外网：<bucket_name>.cn-bj.ufileos.com 
+    B机房内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
+    C机房内网: <bucket_name>.ufile.cn-north-03.ucloud.cn
+    D机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
+    E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
+    目前内网域名，推荐都用E机房域名即可；
 上海二
-外网: <bucket_name>.cn-sh2.ufileos.com
-内网: <bucket_name>.internal-cn-sh2-01.ufileos.com
+    外网: <bucket_name>.cn-sh2.ufileos.com
+    内网: <bucket_name>.internal-cn-sh2-01.ufileos.com
 香港
-外网：<bucket_name>.hk.ufileos.com
-内网：<bucket_name>.internal-hk-01.ufileos.com
+    外网：<bucket_name>.hk.ufileos.com
+    内网：<bucket_name>.internal-hk-01.ufileos.com
 广东
-外网：<bucket_name>.cn-gd.ufileos.com
-内网：<bucket_name>.internal-cn-gd-02.ufileos.com
+    外网：<bucket_name>.cn-gd.ufileos.com
+    内网：<bucket_name>.internal-cn-gd-02.ufileos.com
 洛杉矶
-外网：<bucket_name>.us-ca.ufileos.com
-内网：<bucket_name>.internal-us-ca-01.ufileos.com
+    外网：<bucket_name>.us-ca.ufileos.com
+    内网：<bucket_name>.internal-us-ca-01.ufileos.com
 雅加达
-外网：<bucket_name>.idn-jakarta.ufileos.com
-内网：<bucket_name>.internal-idn-jakarta-01.ufileos.com
+    外网：<bucket_name>.idn-jakarta.ufileos.com
+    内网：<bucket_name>.internal-idn-jakarta-01.ufileos.com
 新加坡
-外网：<bucket_name>.sg.ufileos.com
-内网：<bucket_name>.internal-sg-01.ufileos.com
+    外网：<bucket_name>.sg.ufileos.com
+    内网：<bucket_name>.internal-sg-01.ufileos.com
 首尔
-外网：<bucket_name>.kr-seoul.ufileos.com
-内网：<bucket_name>.internal-kr-seoul.ufileos.com
+    外网：<bucket_name>.kr-seoul.ufileos.com
+    内网：<bucket_name>.internal-kr-seoul.ufileos.com
 尼日利亚
-外网：<bucket_name>.afr-nigeria.ufileos.com
-内网：<bucket_name>.internal-afr-nigeria.ufileos.com
+    外网：<bucket_name>.afr-nigeria.ufileos.com
+    内网：<bucket_name>.internal-afr-nigeria.ufileos.com
 台北
-外网：<bucket_name>.tw-tp.ufileos.com
-内网: <bucket_name>.internal-tw-tp.ufileos.com
+    外网：<bucket_name>.tw-tp.ufileos.com
+    内网: <bucket_name>.internal-tw-tp.ufileos.com
 圣保罗
-外网：<bucket_name>.bra-saopaulo.ufileos.com 
-内网：<bucket_name>.internal-bra-saopaulo.ufileos.com
+    外网：<bucket_name>.bra-saopaulo.ufileos.com 
+    内网：<bucket_name>.internal-bra-saopaulo.ufileos.com
 迪拜
-外网：<bucket_name>.uae-dubai.ufileos.com
-内网：<bucket_name>.internal-uae-dubai.ufileos.com
+    外网：<bucket_name>.uae-dubai.ufileos.com
+    内网：<bucket_name>.internal-uae-dubai.ufileos.com
 越南
-外网：<bucket_name>.vn-sng.ufileos.com
-内网：<bucket_name>.internal-vn-sng.ufileos.com
+    外网：<bucket_name>.vn-sng.ufileos.com
+    内网：<bucket_name>.internal-vn-sng.ufileos.com
 孟买
-外网：<bucket_name>.ind-mumbai.ufileos.com
-内网：<bucket_name>.internal-ind-mumbai.ufileos.com
+    外网：<bucket_name>.ind-mumbai.ufileos.com
+    内网：<bucket_name>.internal-ind-mumbai.ufileos.com
 华盛顿
-外网：<bucket_name>.us-ws.ufileos.com
-内网：<bucket_name>.internal-us-ws.ufileos.com
+    外网：<bucket_name>.us-ws.ufileos.com
+    内网：<bucket_name>.internal-us-ws.ufileos.com
 法兰克福
-外网：<bucket_name>.ge-fra.ufileos.com
-内网：<bucket_name>.internal-ge-fra.ufileos.com
+    外网：<bucket_name>.ge-fra.ufileos.com
+    内网：<bucket_name>.internal-ge-fra.ufileos.com
 全球化
-外网：<bucket_name>.up.ufileos.com
+    外网：<bucket_name>.up.ufileos.com
 ```
 
 API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
