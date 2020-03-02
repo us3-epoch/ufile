@@ -57,6 +57,7 @@ B机房内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
 C机房内网: <bucket_name>.ufile.cn-north-03.ucloud.cn
 D机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
 E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
+目前内网域名，推荐都用E机房域名即可；
 上海二
 外网: <bucket_name>.cn-sh2.ufileos.com
 内网: <bucket_name>.internal-cn-sh2-01.ufileos.com
@@ -75,6 +76,9 @@ E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
 新加坡
 外网：<bucket_name>.sg.ufileos.com
 内网：<bucket_name>.internal-sg-01.ufileos.com
+首尔
+外网：<bucket_name>.kr-seoul.ufileos.com
+内网：<bucket_name>.internal-kr-seoul.ufileos.com
 尼日利亚
 外网：<bucket_name>.afr-nigeria.ufileos.com
 内网：<bucket_name>.internal-afr-nigeria.ufileos.com
