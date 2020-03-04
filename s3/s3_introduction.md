@@ -6,24 +6,24 @@
 
 UFile目前的S3协议模块对标准S3协议的支持如下表：
 
-| **API名字**                 | **备注说明**                                                                                                                           |
-| ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| GET Bucket service        | 用于获取Bucket列表，只能获取公私钥或者Token拥有者创建的Bucket                                                                                            |
-| GET Bucket location       | 返回所在地域名，不建议依赖该API                                                                                                                  |
-| GET Bucket acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL”                                                                           |
-| GET Bucket versioning     | 没有太多意义，主要为了支持S3 Browser而实现，Status字段永远为空字符串                                                                                         |
-| GET Object acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL”                                                                           |
-| HEAD Object               | 获取文件元数据信息                                                                                                                          |
-| PUT Object                | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| POST Object               | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| PUT Object copy           | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| GET Object                | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| List Objects              | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| DELETE Object             | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| Delete Multiple Objects   | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
-| Initiate Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
+| **API名字**                 | **备注说明**                                 |
+| ------------------------- | ---------------------------------------- |
+| GET Bucket service        | 用于获取Bucket列表，只能获取公私钥或者Token拥有者创建的Bucket  |
+| GET Bucket location       | 返回所在地域名，不建议依赖该API                        |
+| GET Bucket acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
+| GET Bucket versioning     | 没有太多意义，主要为了支持S3 Browser而实现，Status字段永远为空字符串 |
+| GET Object acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
+| HEAD Object               | 获取文件元数据信息                                |
+| PUT Object                | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| POST Object               | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| PUT Object copy           | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| GET Object                | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| List Objects              | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| DELETE Object             | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| Delete Multiple Objects   | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
+| Initiate Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
 | Upload Part               | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) , 目前只支持8MB大小的分片 |
-| Complete Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf)                 |
+| Complete Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
 
 注意:
 
@@ -37,7 +37,7 @@ UFile目前的S3协议模块对标准S3协议的支持如下表：
 
       例如AWS S3 Java SDK:
       System.setProperty(SkipMd5CheckStrategy.DISABLEGETOBJECTMD5VALIDATION_PROPERTY,"");
-  
+      
       System.setProperty(SkipMd5CheckStrategy.DISABLEPUTOBJECTMD5VALIDATION_PROPERTY,"");
 
 ### 仅仅支持签名V4
@@ -79,15 +79,18 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 
 ### 接入域名（Endpoint）
 
-| 地域   | 外网Endpoint                 | 内网Endpoint                          |
-| ---- | -------------------------- | ----------------------------------- |
-| 北京二  | s3-cn-bj.ufileos.com       | internal.s3-cn-bj.ufileos.com       |
-| 上海   | s3-cn-sh2.ufileos.com      | internal.s3-cn-sh2.ufileos.com      |
-| 尼日利亚 | s3-afr-nigeria.ufileos.com | internal.s3-afr-nigeria.ufileos.com |
-| 浪潮2  | s3.infile.inspurcloud.cn   | s3-internal.infile.inspurcloud.cn   |
-| 越南   | s3-vn-sng.ufileos.com      | internal.s3-vn-sng.ufileos.com      |
+|    地域    |         外网Endpoint         |             内网Endpoint              |
+| :------: | :------------------------: | :---------------------------------: |
+|  中国-北京二  |    s3-cn-bj.ufileos.com    |    internal.s3-cn-bj.ufileos.com    |
+|  中国-上海   |   s3-cn-sh2.ufileos.com    |   internal.s3-cn-sh2.ufileos.com    |
+|  中国-广州   |            待支持             |    internal.s3-cn-gd.ufileos.com    |
+|  中国-香港   |     s3-hk.ufileos.com      |     internal.s3-hk.ufileos.com      |
+|  越南-胡志明  |   s3-vn-sng.ufileos.com    |   internal.s3-vn-sng.ufileos.com    |
+| 尼日利亚-拉各斯 | s3-afr-nigeria.ufileos.com | internal.s3-afr-nigeria.ufileos.com |
+|  韩国-首尔   |  s3-kr-seoul.ufileos.com   |  internal.s3-kr-seoul.ufileos.com   |
+|  巴西-圣保罗  |  bra-saopaulo.ufileos.com  |                 待支持                 |
 
-注意: 目前北京二地域已经支持https协议，其他地域后续支持
+注意: *目前中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗地域已经支持https协议，其他地域后续支持 (所有地域内网不支持https)*
 
 ### 回调扩展功能支持
 
