@@ -22,16 +22,22 @@ UFile目前的S3协议模块对标准S3协议的支持如下表：
 | DELETE Object             | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
 | Delete Multiple Objects   | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
 | Initiate Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
-| Upload Part               | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) , 目前只支持8MB大小的分片 |
+| Upload Part               | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) , **注意目前只支持8MB大小的分片!!!!** |
 | Complete Multipart Upload | 参考[UFile S3 兼容API文档-2.0.pdf](http://ufile-release.cn-bj.ufileos.com/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%202.0.pdf) |
 
 注意:
 
-* PUT Object 目前仅支持8MB大小文件，如果需要上传大于8MB的文件，请采用分片上传的API
+* PUT Object 目前仅支持16MB大小文件，如果需要上传大于16MB的文件，请采用分片上传的API
 
 * POST Object目前仅支持最大32MB文件的上传；
 
-* 目前UFile S3 不支持x-amz-content-sha256(请求内容签名)；
+* 目前UFile S3 不支持多版本功能；
+
+* 目前UFile S3 不支持用户自定义元数据功能，如Header头指定x-amz-meta-*；
+
+* 目前UFile S3 不支持存储类型，默认为标准类型；
+
+* 目前UFile S3 不支持x-amz-content-sha256为`UNSIGNED-PAYLOAD`的签名；
 
 * 目前不支持S3 API的MD5校验(原因跟S3的ETag计算方式有差异)，建议关闭:
 
@@ -89,6 +95,7 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 | 尼日利亚-拉各斯 | s3-afr-nigeria.ufileos.com | internal.s3-afr-nigeria.ufileos.com |
 |  韩国-首尔   |  s3-kr-seoul.ufileos.com   |  internal.s3-kr-seoul.ufileos.com   |
 |  巴西-圣保罗  |  bra-saopaulo.ufileos.com  |                 待支持                 |
+|  美国-洛杉矶  |    s3-us-ca.ufileos.com    |    internal.s3-us-ca.ufileos.com    |
 
 注意: *目前中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗地域已经支持https协议，其他地域后续支持 (所有地域内网不支持https)*
 
