@@ -203,7 +203,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 作为前缀
 
 如果该文件夹下有一个名为1.jpg
-的文件并且空间属性为public，则上传完成后可以通过 <http://demobucket.ufile.ucloud.com.cn/demo/1.jpg> 访问该文件
+的文件并且空间属性为public，则上传完成后可以通过无签名url（例如：http://demobucket.ufile.ucloud.com.cn/demo/1.jpg） 访问该文件
 
 ```
 ./filemgr --action put --dir ~/files --bucket demobucket --prefix demo/
