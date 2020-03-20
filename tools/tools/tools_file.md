@@ -165,11 +165,12 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 #### 普通上传单个文件(大于4M文件请使用上述分片上传)
 
 ```
-./filemgr --action put --bucket bucketname --key key --file filename [--speedlimit speedlimit]
+./filemgr --action put --bucket bucketname --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket: 需要上传至的存储空间
   --key: 上传至存储空间中的文件名
   --file: 需要上传的本地文件路径
+  --retrycount: 分片上传失败重试次数，默认10，大文件上传建议配置大些
   --speedlimit: 上传限速，单位bytes/s 
   --storageclass: 文件存储类型，分别是标准、低频、归档，对应有效值：STANDARD, IA, ARCHIVE； 文件默认类型，继承于Bucket默认类型。（Bucket默认类型为STANDARD）
 ```
@@ -185,12 +186,13 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 #### 普通上传文件夹
 
 ```
-./filemgr --action put --bucket bucketname --dir dirname [--trimpath trimpath] [--prefix prefix] [--speedlimit speedlimit]
+./filemgr --action put --bucket bucketname --dir dirname [--trimpath trimpath] [--prefix prefix] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
    --bucket: 需要上传至的存储空间名
    --dir: 需要上传的本地文件夹
    --trimpath: 截掉绝对路径的部分前缀
    --prefix: 生成文件的Key时使用的前缀，指定该参数时生成的Key是 prefix+base（filename）
+   --retrycount: 分片上传失败重试次数，默认10，大文件上传建议配置大些
    --speedlimit: 上传限速，单位bytes/s
    --storageclass: 文件存储类型，分别是标准、低频、归档，对应有效值：STANDARD, IA, ARCHIVE； 文件默认类型，继承于Bucket默认类型。（Bucket默认类型为STANDARD）
 ```
@@ -227,13 +229,14 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 增量上传仅上传新增或有发生修改的整个文件。
 
 ```
-./filemgr --action sync --bucket demobucket --dir syncdir [--speedlimit speedlimit] [--prefix prefix] [--excludeptn pattern] [--includeptn pattern]
+./filemgr --action sync --bucket demobucket --dir syncdir [--speedlimit speedlimit] [--prefix prefix] [--retrycount retrycount] [--excludeptn pattern] [--includeptn pattern]
  参数说明:           
    --bucket : 需要同步至远端的 bucket 名称
    --dir    : 需要同步的本地文件夹
    --threads : 上传并发数
    --speedlimit : 上传限速(byte/s)
    --prefix : 生成文件的 key 时使用的前缀
+   --retrycount: 分片上传失败重试次数，默认10，大文件上传建议配置大些
    --excludeptn: 需要排除上传的文件模式，支持 POSIX 正则表达式
    --includeptn: 需要包含上传的文件模式，支持 POSIX 正则表达式
 ```
@@ -287,11 +290,12 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 #### 普通下载单个文件
 
 ```
-./filemgr --action download --bucket demobucket --key key --file filename
+./filemgr --action download --bucket demobucket --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket : 需要下载的文件所在的 bucket 名称
   --key : 需要下载的文件 key 名称
   --file : 需要保存在本地的文件路径
+  --retrycount: 分片上传失败重试次数，默认10，大文件上传建议配置大些
   --speedlimit: 下载限速，单位bytes/s
 ```
 
@@ -323,12 +327,13 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 #### 批量下载
 
 ```
-./filemgr --action batch-download --bucket demobucket --pattern pattern --dir localdir [--threads threads] [--speedlimit speedlimit]
+./filemgr --action batch-download --bucket demobucket --pattern pattern --dir localdir [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket : 需要下载的文件所在的 bucket 名称
   --pattern : 需要下载的文件模板，支持POSIX正则表达式
   --dir : 需要保存在本地的文件目录
   --threads: 下载并发数，默认为5
+  --retrycount: 分片下载失败重试次数，默认10，大文件上传建议配置大些
   --speedlimit: 下载限速，单位bytes/s
 ```
 
@@ -432,11 +437,12 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 #### 流式上传单个文件(从标准输入读取)
 
 ```
-./filemgr --action stream-upload --bucket bucketname --key key [--speedlimit speedlimit]
+./filemgr --action stream-upload --bucket bucketname --key key [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket: 需要上传至的存储空间
   --key: 上传至存储空间中的文件名
   --file: stdin, 可不填
+  --retrycount: 分片下载失败重试次数，默认10，大文件上传建议配置大些
   --speedlimit: 上传限速，单位bytes/s 
   --storageclass: 文件存储类型，分别是标准、低频、归档，对应有效值：STANDARD, IA, ARCHIVE； 文件默认类型，继承于Bucket默认类型。（Bucket默认类型为STANDARD）
 ```
