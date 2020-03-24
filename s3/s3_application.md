@@ -175,7 +175,7 @@ CentOS 系统下安装依赖软件：
 ###### 配置密钥文件
 
 在${HOME}/目录中创建.passwd-s3fs 文件。文件格式为[API 公钥:API 秘钥]。  
-公私钥获取方式具体请参考[如何获取账户公私钥](https://docs.ucloud.cn/ai/uai-train/basic/key)  
+公私钥获取方式具体请参考[如何获取账户公私钥](https://docs.ucloud.cn/uai-train/basic/key)  
 例如:
 
      [root@10-9-42-233 s3fs-fuse-1.83]# cat ~/.passwd-s3fs

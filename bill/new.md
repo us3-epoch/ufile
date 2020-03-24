@@ -76,7 +76,7 @@ CDN回源流量：
 5.2.欠费超过30天，存储空间和数据删除且不可恢复。  
 
 注：欠费30天内补足欠费，服务会自动开启。超过30天后，将视您主动放弃UFile存储服务，空间和数据删除都无法恢复。
-详情请参照[FAQ-欠费处理](https://docs.ucloud.cn/storage_cdn/ufile/faq)。
+详情请参照[FAQ-欠费处理](https://docs.ucloud.cn/ufile/faq)。
 
 ## 三、计费案例
 
@@ -90,7 +90,7 @@ CDN回源流量费用：200 GB \* 0.15元/GB = 30元
 UCDN产品侧总费用如下：  
 CDN下载流量费用= 900GB \* 0.34元/GB = 306元  
 UFile+UCDN总费用：40.16 + 306=346.16元  
-注：用户因为开启了UCDN加速服务，还会生成一项CDN下载流量的费用，在UCDN产品侧统计和计费。计费价格详见：[UCDN产品价格](https://docs.ucloud.cn/cdn/ucdn/charge)
+注：用户因为开启了UCDN加速服务，还会生成一项CDN下载流量的费用，在UCDN产品侧统计和计费。计费价格详见：[UCDN产品价格](https://docs.ucloud.cn/ucdn/charge)
 
 **案例二：**
 用户B使用UFile，但没有开启UCDN加速服务。在18年12月1号的日消费量：文件存储容量约2.5TB，在闲时段产生外网流出流量150。

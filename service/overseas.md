@@ -30,4 +30,4 @@ PS：开通专线后。若新增的自定义域名需使用专线访问源站，
 
 ### 专线价格
 
-海外专线服务收费请参考：[产品价格-海外专线流量](https://docs.ucloud.cn/storage_cdn/ufile/bill/new) 
+海外专线服务收费请参考：[产品价格-海外专线流量](https://docs.ucloud.cn/ufile/bill/new) 

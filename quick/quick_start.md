@@ -4,7 +4,7 @@
 
 UCloud对象存储服务UFile为您提供基于网络的数据存取服务。使用UFile您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
 
-初次使用UFile，请您先了解 [UCloud UFile使用限制](https://docs.ucloud.cn/storage_cdn/ufile/introduction/limit)。
+初次使用UFile，请您先了解 [UCloud UFile使用限制](https://docs.ucloud.cn/ufile/introduction/limit)。
 
 UFile将数据文件以对象（object）的形式上传到存储空间（bucket）中。您可以进行以下操作：
 
@@ -34,12 +34,12 @@ UFile将数据文件以对象（object）的形式上传到存储空间（bucket
 
 ### 使用命令行管理工具 UFile Tools
 
-UFile Tools是以命令行方式管理 UFile 数据的工具，支持Windows、Linux、Mac平台。UFile Tools提供方便、简洁、丰富的 Bucket 和 Object管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[命令行工具UFile Tools](https://docs.ucloud.cn/storage_cdn/ufile/tools/tools/tools_file)。
+UFile Tools是以命令行方式管理 UFile 数据的工具，支持Windows、Linux、Mac平台。UFile Tools提供方便、简洁、丰富的 Bucket 和 Object管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[命令行工具UFile Tools](https://docs.ucloud.cn/ufile/tools/tools/tools_file)。
 
 
 ### 使用 API/SDK 
 
 UFile 提供多种语言的 API/SDK 包，方便您快速进行二次开发。
-各SDK详细信息请参见[UFile SDK 文档](https://docs.ucloud.cn/storage_cdn/ufile/tools/sdk)。
+各SDK详细信息请参见[UFile SDK 文档](https://docs.ucloud.cn/ufile/tools/sdk)。
 各接口的详细信息请参见[UFile API 文档](https://docs.ucloud.cn/api/ufile-api/index)。
 

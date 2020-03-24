@@ -7,7 +7,7 @@
 对象存储空间默认提供测试域名进行访问。默认该测试域名关闭。  
 当您没有自己的域名创建CDN加速时，可以点击开启一键创建CDN加速域名试用。  
 测试域名是由我们系统完成备案和配置CNAME至UFile对应存储空间域名。有关测试域名的CDN高级配置，请到[UCDN产品页](https://console.ucloud.cn/ucdn/ucdndomainmanage)进行操作。  
-使用此CDN加速域名访问将产生CDN流量和CDN回源流量费用，流量费用请参照[UCDN计费规则](https://docs.ucloud.cn/cdn/ucdn/charge)。  
+使用此CDN加速域名访问将产生CDN流量和CDN回源流量费用，流量费用请参照[UCDN计费规则](https://docs.ucloud.cn/ucdn/charge)。  
 ![](/images/guide/测试域名v4.png)
 
 ## 自定义域名

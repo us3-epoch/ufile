@@ -1,6 +1,6 @@
-<div class="sidebar_title icon__ufile"> 对象存储 UFile</div>
+# 概览
 
-* [概览](/ufile/README)
+
 * 产品简介
     * [什么是对象存储](/ufile/introduction/concept)
     * [产品优势](/ufile/introduction/advantages)
