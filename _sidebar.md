@@ -41,7 +41,7 @@
     * [SDK参考](/ufile/tools/sdk)
 * [API参考](/ufile/api_reference)
 * 支持AWS S3协议
-    * [支持AWS S3 协议说明](/ufile/s3/s3_introduction)
+    * [支持AWS S3协议说明](/ufile/s3/s3_introduction)
     * [基于UFile S3的一些场景应用](/ufile/s3/s3_application)
 * 产品价格
     * [UFile计费规则](/ufile/bill/new)

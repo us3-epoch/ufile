@@ -193,7 +193,7 @@ CentOS 系统下安装依赖软件：
 
   注意:空间名称不带域名后缀,比如UFile空间名称显示为[[test.cn-bj.ufileos.com](http://test.cn-bj.ufileos.com/)],则${UFileBucketName}=test
 
-* 根据UFile存储空间所在地域，本地服务器是否在UCloud内网，参考[支持 AWS S3 协议说明](https://docs.ucloud.cn/ufile/s3/s3_introduction)
+* 根据UFile存储空间所在地域，本地服务器是否在UCloud内网，参考[支持 AWS S3协议说明]((ufile/s3/s3_introduction)
 
 * 执行命令。
 
