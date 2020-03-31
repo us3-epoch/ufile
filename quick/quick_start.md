@@ -41,5 +41,5 @@ UFile Tools是以命令行方式管理 UFile 数据的工具，支持Windows、L
 
 UFile 提供多种语言的 API/SDK 包，方便您快速进行二次开发。
 各SDK详细信息请参见[UFile SDK 文档](https://docs.ucloud.cn/ufile/tools/sdk)。
-各接口的详细信息请参见[UFile API 文档](https://docs.ucloud.cn/api/ufile-api/index)。
+各接口的详细信息请参见[UFile API 文档](https://docs.ucloud.cn/api/ufile-api/README)。
 

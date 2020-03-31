@@ -34,4 +34,4 @@
 
 [放弃分片 - AbortMultipartUpload](https://docs.ucloud.cn/api/ufile-api/abort_multipart_upload)
 
-[其他API](https://docs.ucloud.cn/api/ufile-api/index)
+[其他API](https://docs.ucloud.cn/api/ufile-api/README)

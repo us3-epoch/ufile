@@ -102,7 +102,7 @@ UFile提供标准、低频、归档三种存储类型，全面覆盖从热到冷
 UFile提供了Web服务页面，方便您管理UFile。您可以登录UFile管理控制台，操作存储空间和对象。关于管理控制台的操作，请参见控制台用户指南。
 
 UFile也提供了丰富的 API 接口和各种语言的 SDK
-包，方便您灵活地管理UFile。请参见[UFile API参考](https://docs.ucloud.cn/api/ufile-api/index)和[UFile SDK参考](https://docs.ucloud.cn/ufile/tools/sdk)。
+包，方便您灵活地管理UFile。请参见[UFile API参考](https://docs.ucloud.cn/api/ufile-api/README)和[UFile SDK参考](https://docs.ucloud.cn/ufile/tools/sdk)。
 
 ## UFile 定价
 

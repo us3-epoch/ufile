@@ -9,7 +9,7 @@
 |--------- |--------------------------------------------------------------------------------------------------------------- |
 |控制台  |Web 应用程序，直观易用 |
 |管理工具  |[管理工具](ufile/tools/tools/tools_bcket) |
-|API   |[API](https://docs.ucloud.cn/api/ufile-api/index) |
+|API   |[API](https://docs.ucloud.cn/api/ufile-api/README) |
 |SDK   |[SDK](ufile/tools/sdk) |
 
 ### 使用限制
