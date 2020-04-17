@@ -103,8 +103,6 @@
 法兰克福
     外网：<bucket_name>.ge-fra.ufileos.com
     内网：<bucket_name>.internal-ge-fra.ufileos.com
-全球化
-    外网：<bucket_name>.up.ufileos.com
 ```
 
 API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
