@@ -107,7 +107,8 @@
 
 API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
 
-对于命令行工具，Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。  
+对于命令行工具，Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。 
+以下demo统一使用linux64平台命令filemgr-linux64，Windows-64用户请替换为filemgr-win64，Windows-32用户请替换为filemgr-win32，Mac用户请替换为filemgr-mac
 __注：当工具在后台执行时，请加上参数 `--nobar=true`__  
 
 
@@ -116,7 +117,7 @@ __注：当工具在后台执行时，请加上参数 `--nobar=true`__
 当文件较大时请使用分片上传，分片上传允许在某个分片失败情况下进行续传，并且可以多个分片并发上传，适合较大文件的场景。
 
 ```
-./filemgr --action mput --bucket demobucket --key key --file filename [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action mput --bucket demobucket --key key --file filename [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
    --bucket: 需要上传至的 bucket 名称         
    --key: 上传至 bucket 中的文件名称       
@@ -132,7 +133,7 @@ __注：当工具在后台执行时，请加上参数 `--nobar=true`__
 以分片上传方式上传一个本地文件 hello.avi 至名为 demobucket 的存储空间中并且命名为 world.avi：
 
 ```
-./filemgr --action mput --bucket demobucket --key world.avi --file /opt/video/hello.avi --threads 10 --retrycount 20  --speedlimit 1024
+./filemgr-linux64 --action mput --bucket demobucket --key world.avi --file /opt/video/hello.avi --threads 10 --retrycount 20  --speedlimit 1024
 ```
 
 注：
@@ -144,7 +145,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 对于文件夹中大文件较多的情况分片上传文件夹相比普通上传文件夹要快。
 
 ```
-./filemgr --action mput --bucket demobucket  --dir localdir [--threads threads] [--trimpath trimpath] [--prefix prefix] [--retrycount retrycount] [--speedlimit speedlimit]       
+./filemgr-linux64 --action mput --bucket demobucket  --dir localdir [--threads threads] [--trimpath trimpath] [--prefix prefix] [--retrycount retrycount] [--speedlimit speedlimit]       
  参数说明:           
    --bucket: 需要上传至的 bucket 名称         
    --dir: 需要上传的本地文件夹
@@ -163,7 +164,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 #### 普通上传单个文件(大于4M文件请使用上述分片上传)
 
 ```
-./filemgr --action put --bucket bucketname --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action put --bucket bucketname --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket: 需要上传至的存储空间
   --key: 上传至存储空间中的文件名
@@ -178,13 +179,13 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 把一个本地文件 ucloud.jpg 上传至名称为 uclouddemo 的bucket中，并命名为 logo.jpg ：
 
 ```
-./filemgr --action put --bucket uclouddemo --key logo.jpg --file /home/yours/pictures/ucloud.jpg
+./filemgr-linux64 --action put --bucket uclouddemo --key logo.jpg --file /home/yours/pictures/ucloud.jpg
 ```
 
 #### 普通上传文件夹
 
 ```
-./filemgr --action put --bucket bucketname --dir dirname [--trimpath trimpath] [--prefix prefix] [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action put --bucket bucketname --dir dirname [--trimpath trimpath] [--prefix prefix] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
    --bucket: 需要上传至的存储空间名
    --dir: 需要上传的本地文件夹
@@ -204,13 +205,13 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 的文件并且空间属性为public，则上传完成后可以通过无签名url（例如：http://demobucket.ufile.ucloud.com.cn/demo/1.jpg ）访问该文件
 
 ```
-./filemgr --action put --dir ~/files --bucket demobucket --prefix demo/
+./filemgr-linux64 --action put --dir ~/files --bucket demobucket --prefix demo/
 ```
 
 如果您不希望使用绝对路径来作为Key，可以使用--trimpath截掉部分路径名。如下：
 
 ```
-./filemgr --action put --dir ~/files --bucket demobucket --prefix demo/ --trimpath /root/test
+./filemgr-linux64 --action put --dir ~/files --bucket demobucket --prefix demo/ --trimpath /root/test
 ```
 
 示例2:
@@ -219,7 +220,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 的文件名为 files/a.jpg、files/b.txt。
 
 ```
-./filemgr --action put --dir ~/files --bucket demobucket --trimpath /some/dir/cutoff/
+./filemgr-linux64 --action put --dir ~/files --bucket demobucket --trimpath /some/dir/cutoff/
 ```
 
 #### 增量上传
@@ -227,7 +228,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 增量上传仅上传新增或有发生修改的整个文件。
 
 ```
-./filemgr --action sync --bucket demobucket --dir syncdir [--speedlimit speedlimit] [--prefix prefix] [--retrycount retrycount] [--excludeptn pattern] [--includeptn pattern]
+./filemgr-linux64 --action sync --bucket demobucket --dir syncdir [--speedlimit speedlimit] [--prefix prefix] [--retrycount retrycount] [--excludeptn pattern] [--includeptn pattern]
  参数说明:           
    --bucket : 需要同步至远端的 bucket 名称
    --dir    : 需要同步的本地文件夹
@@ -243,7 +244,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 
 ```
 把本地文件夹${HOME}/go 同步到名为 demobucket 的存储空间中
-> $./filemgr --action sync --bucket demobucket --dir ~/go
+./filemgr-linux64 --action sync --bucket demobucket --dir ~/go
 Syncing...
 Sync Successed[ src/pkg/math/sqrt_amd64.s ] => demobucket : src/pkg/math/sqrt_amd64.s
 Sync Successed[ src/lib9/fmt/dofmt.c ] => demobucket : src/lib9/fmt/dofmt.c
@@ -260,7 +261,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 |4556 |4556| 0  |
 
 继续检查是否还有文件需要更新
-$./filemgr --action sync --bucket demobucket --dir ~/go
+./filemgr-linux64 --action sync --bucket demobucket --dir ~/go
 ```
 
 注：
@@ -270,7 +271,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 #### 秒传文件
 
 ```
-./filemgr --action upload-hit --bucket demobucket --key key --file filename
+./filemgr-linux64 --action upload-hit --bucket demobucket --key key --file filename
 参数说明:
   --bucket: 需要上传至的 bucket 名称
   --key : 上传至 bucket 中的文件名称
@@ -282,13 +283,13 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 尝试秒传本地文件 falcon.avi 至存储空间 nfl2014 命名为 2014-superbow.avi
 
 ```
-./filemgr --action upload-hit --bucket demobucket --key 2014-superbow.avi --file falcon.avi
+./filemgr-linux64 --action upload-hit --bucket demobucket --key 2014-superbow.avi --file falcon.avi
 ```
 
 #### 普通下载单个文件
 
 ```
-./filemgr --action download --bucket demobucket --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action download --bucket demobucket --key key --file filename [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket : 需要下载的文件所在的 bucket 名称
   --key : 需要下载的文件 key 名称
@@ -302,13 +303,13 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 获取一个名为 demobucket 的存储空间中一个名为ucloud.png的文件并且保存为/opt/data/ucloud.png
 
 ```
-./filemgr --action download --bucket demobucket --key ucloud.png --file /opt/data/ucloud.png
+./filemgr-linux64 --action download --bucket demobucket --key ucloud.png --file /opt/data/ucloud.png
 ```
 
 #### 分片下载单个文件(适合大文件下载)
 
 ```
-./filemgr --action mdownload --bucket demobucket --key key --file filename [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action mdownload --bucket demobucket --key key --file filename [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket : 需要下载的文件所在的 bucket 名称
   --key : 需要下载的文件 key 名称
@@ -325,7 +326,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 #### 批量下载
 
 ```
-./filemgr --action batch-download --bucket demobucket --pattern pattern --dir localdir [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action batch-download --bucket demobucket --pattern pattern --dir localdir [--threads threads] [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket : 需要下载的文件所在的 bucket 名称
   --pattern : 需要下载的文件模板，支持POSIX正则表达式
@@ -342,7 +343,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 #### 删除文件
 
 ```
-./filemgr --action delete --bucket demobucket --key key
+./filemgr-linux64 --action delete --bucket demobucket --key key
 参数说明:
 --bucket: 需要删除的文件所在的 bucket 名称
 --key : 需要删除的文件在 bucket 中的名称
@@ -353,13 +354,13 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 删除一个名为 demobucket 的存储空间中名为 20140201.blog 的文件
 
 ```
-./filemgr --action delete --bucket demobucket --key 20140201.blog
+./filemgr-linux64 --action delete --bucket demobucket --key 20140201.blog
 ```
 
 #### 批量删除
 
 ```
-./filemgr --action batch-delete --bucket demobucket --pattern pattern
+./filemgr-linux64 --action batch-delete --bucket demobucket --pattern pattern
 参数说明:
   --bucket : 需要删除的文件所在的 bucket 名称
   --pattern : 需要删除的文件模板，支持POSIX正则表达式
@@ -370,7 +371,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 该选项用于计算使用ufile特殊算法得到的文件哈希值
 
 ```
-./filemgr --action etag --file filename
+./filemgr-linux64 --action etag --file filename
 参数说明:
 --file: 需要计算哈希的本地文件路径
 ```
@@ -380,7 +381,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 计算本地文件 sniff-the-rose.pdf 的 ETag：
 
 ```
-./filemgr --action etag --file /opt/tiger/sniff-the-rose.pdf
+./filemgr-linux64 --action etag --file /opt/tiger/sniff-the-rose.pdf
 ```
 
 #### 检查文件
@@ -388,7 +389,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 该选项用于检查文件是否存在于ufile对应空间
 
 ```
-./filemgr --action check --bucket bucketname --key key
+./filemgr-linux64 --action check --bucket bucketname --key key
 参数说明:
   --bucket: 需要检查的文件所在的 bucket 名称
   --key: 需要检查的文件名
@@ -399,7 +400,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 该选项用于获取文件的URL
 
 ```
-./filemgr --action fetchurl --bucket bucketname --key key --method method [--expires expires]
+./filemgr-linux64 --action fetchurl --bucket bucketname --key key --method method [--expires expires]
 参数说明:
   --bucket: 需要检查的文件所在的 bucket 名称
   --key: 需要获取url的文件名
@@ -412,7 +413,7 @@ $./filemgr --action sync --bucket demobucket --dir ~/go
 获取一个名为 demobucket 的存储空间中一个名为 QQ.pkg 的文件在5分钟内的有效下载 URL ：
 
 ```
-./filemgr --action fetchurl --bucket demobucket --key QQ.pkg --method get --expires 300
+./filemgr-linux64 --action fetchurl --bucket demobucket --key QQ.pkg --method get --expires 300
 URL为：
 http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%40ucloud.cn13998635452068156091%26Signature%3DjFQFLtoAUhgOodpvfu8uLUDnzLg%3D%26Expires%3D1420010439
 ```
@@ -422,7 +423,7 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 该选项用于获取ufile存储空间的文件列表
 
 ```
-./filemgr --action getfilelist --bucket bucketname [--limit limit] [--marker marker] [--prefix prefix] [--pattern pattern] [--format format]
+./filemgr-linux64 --action getfilelist --bucket bucketname [--limit limit] [--marker marker] [--prefix prefix] [--pattern pattern] [--format format]
 参数说明:
   --bucket: 需要检查的文件所在的 bucket 名称
   --limit: 需要获取文件列表的数量，默认获取全部
@@ -435,7 +436,7 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 #### 流式上传单个文件(从标准输入读取)
 
 ```
-./filemgr --action stream-upload --bucket bucketname --key key [--retrycount retrycount] [--speedlimit speedlimit]
+./filemgr-linux64 --action stream-upload --bucket bucketname --key key [--retrycount retrycount] [--speedlimit speedlimit]
 参数说明:
   --bucket: 需要上传至的存储空间
   --key: 上传至存储空间中的文件名
@@ -451,16 +452,16 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 
 ```
 例子一：
-mysqldump -h127.0.0.1 -P3306 -uroot -pufile --database test | ./filemgr --action stream-upload --bucket uclouddemo --key mysql.bak
+mysqldump -h127.0.0.1 -P3306 -uroot -pufile --database test | ./filemgr-linux64 --action stream-upload --bucket uclouddemo --key mysql.bak
 
 例子二，带压缩：
-mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-upload --bucket uclouddemo --key mysql_bak.sql.gz --file stdin
+mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr-linux64 --action stream-upload --bucket uclouddemo --key mysql_bak.sql.gz --file stdin
 ```
 
 #### 流式下载文件
 
 ```
-./filemgr --action stream-download --bucket bucketname --key key --file stdout [--speedlimit speedlimit]
+./filemgr-linux64 --action stream-download --bucket bucketname --key key --file stdout [--speedlimit speedlimit]
 参数说明:
   --bucket: 需要下载的存储空间
   --key: 存储空间里下载的文件名
@@ -468,11 +469,11 @@ mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-uplo
 
 ```
 例子一：
-./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql.bak  --file stdout > mysql.sql
+./filemgr-linux64 --action stream-download --bucket uclouddemo --key mysql.bak  --file stdout > mysql.sql
 
 例子二，下载并解压缩：
-./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql_bak.sql.gz --file stdout  |gzip -d > get.py
-./filemgr64.exe --action stream-download --bucket uclouddemo --key mysql_bak.sql.tgz --file stdout | tar xzvf -
+./filemgr-linux64 --action stream-download --bucket uclouddemo --key mysql_bak.sql.gz --file stdout  |gzip -d > get.py
+./filemgr-linux64 --action stream-download --bucket uclouddemo --key mysql_bak.sql.tgz --file stdout | tar xzvf -
 
 ```
 
@@ -481,5 +482,5 @@ mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr --action stream-uplo
 该选项用于更新工具版本
 
 ```
-./filemgr --update
+./filemgr-linux64 --update
 ```
