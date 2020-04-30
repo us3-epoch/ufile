@@ -46,16 +46,16 @@
 
 1、空间管理的API，内网访问时域名同公网，使用api.ucloud.cn。
 
-2、文件管理的API，需要使用内网专用域名\<bucket\_name\>.ufile.cn-north-03.ucloud.cn。
+2、文件管理的API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
 
 例如，bucket名称为demobucket，则其C机房内网域名为demobucket.ufile.cn-north-03.ucloud.cn。
 
 3、文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4、命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":`www.ufile.cn-north-03.ucloud.cn`
+4、命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":'`www.ufile.cn-north-03.ucloud.cn`'
 
 5、SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
-= '.ufile.cn-north-03.ucloud.cn' （其他SDK的配置文件通常改proxy_suffix)。
+= '`ufile.cn-north-03.ucloud.cn`' （其他SDK的配置文件通常改proxy_suffix)。
 
 ## 各机房proxy_host地址分别是什么？
 
