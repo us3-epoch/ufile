@@ -16,20 +16,20 @@ Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以�
 3. 异地备份：针对需要更高安全级别的用户，UFile支持跨区域复制功能。
 通过控制台配置跨区域复制功能，可以帮助用户在上传备份的同时，完成数据的异地备份。
 
-<img src="http://ufile-doc.cn-bj.ufileos.com/backup.png?UCloudPublicKey=cKPf3xruLBCxWbFsFjK16i8bJnhJXXj7AElNQ/JGKV7YDrOdhrlPsBwkoFY=&Signature=EYOhlsnV2niATSNdwVnIbAK8NXo="/>
+![image](/images/backup1.png)
 
 ## 方案优势
-1、使用Filemgr进行流式备份以及流式恢复，完成不落地备份与恢复，可以避免落盘操作。
+1. 使用Filemgr进行流式备份以及流式恢复，完成不落地备份与恢复，可以避免落盘操作。
 
-2、使用UFile生命周期功能，配合定期删除、低频存储、归档存储可以实现数据分级存储，帮助用户节约存储成本。
+2. 使用UFile生命周期功能，配合定期删除、低频存储、归档存储可以实现数据分级存储，帮助用户节约存储成本。
 
-3、使用UFile跨区域复制功能，为备份数据进行异地容灾，提高备份数据安全性。
+3. 使用UFile跨区域复制功能，为备份数据进行异地容灾，提高备份数据安全性。
 
 ## 方案实施
 ### 使用Filemgr进行流式备份，流式恢复
-1、下载Filemgr，<a href="https://docs.ucloud.cn/ufile/tools/tools/tools_file">下载地址</a>
+1. 下载Filemgr，[UFile迁移工具](ufile/tools/tools/tools_file)
 
-2、在Filemgr目录下配置config.cfg，proxy host域名<a href="https://docs.ucloud.cn/ufile/faq?id=%e5%90%84%e6%9c%ba%e6%88%bfproxy_host%e5%9c%b0%e5%9d%80%e5%88%86%e5%88%ab%e6%98%af%e4%bb%80%e4%b9%88%ef%bc%9f">请参照</a>
+2. 在Filemgr目录下配置config.cfg，proxy host域名请参照[各机房proxy_host地址](ufile/faq?id=%e5%90%84%e6%9c%ba%e6%88%bfproxy_host%e5%9c%b0%e5%9d%80%e5%88%86%e5%88%ab%e6%98%af%e4%bb%80%e4%b9%88%ef%bc%9f)
 ```json
 {
     "public_key" : "paste your public key here",
@@ -38,7 +38,7 @@ Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以�
     "api_host" : "api.spark.ucloud.cn"
 }
 ```
-3、使用Filemgr进行备份恢复，此处展示最简命令，其他备份命令请结合自己业务类比实现
+3. 使用Filemgr进行备份恢复，此处展示最简命令，其他备份命令请结合自己业务类比实现
 
 ```bash
 # 注意如果，欲使用低频存储(IA)或者冷存储(ARCHIVE)，请在命令参数storageclass中指定，支持三种值：STANDARD, IA, ARCHIVE
@@ -106,21 +106,27 @@ Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以�
 如果不希望异常情况终止任务，请将retrycount参数设置为一个比较大的值，默认为10。每次执行失败会开始重试，第5次重试开始每次重试会等待5s，请合理计算重试次数。
 
 ### 使用生命周期实现定期删除
-1、打开对象存储控制台，进入备份使用的bucket详情页
-<img src="http://ufile-doc.cn-bj.ufileos.com/lc-1.png?UCloudPublicKey=cKPf3xruLBCxWbFsFjK16i8bJnhJXXj7AElNQ/JGKV7YDrOdhrlPsBwkoFY=&Signature=k7aBPbsKtyHFqFsSYbqMrl7hZe0=" />
+1. 打开对象存储控制台，进入备份使用的bucket详情页
 
-2、点击生命周期tab，进入生命周期配置页
-<img src="http://ufile-doc.cn-bj.ufileos.com/lc-2.png?UCloudPublicKey=cKPf3xruLBCxWbFsFjK16i8bJnhJXXj7AElNQ/JGKV7YDrOdhrlPsBwkoFY=&Signature=vUHxDe/Rv82eE6iiQisI0FMeUtw=" />
+![image](/images/backup2.png)
 
-3、为该bucket配置定期删除任务
-4、当备份文件超过配置期限，文件会被自动删除
+2. 点击生命周期tab，进入生命周期配置页
+
+![image](/images/backup3.png)
+
+3. 为该bucket配置定期删除任务
+
+4. 当备份文件超过配置期限，文件会被自动删除
 
 ### 使用跨区域复制进行异地容灾
-1、打开对象存储控制台，进入备份使用的bucket详情页
-<img src="http://ufile-doc.cn-bj.ufileos.com/cr-1.png?UCloudPublicKey=cKPf3xruLBCxWbFsFjK16i8bJnhJXXj7AElNQ/JGKV7YDrOdhrlPsBwkoFY=&Signature=RSB1cyWKiMAizud07FHEnVtR1NU=" />
+1. 打开对象存储控制台，进入备份使用的bucket详情页
+2. 
+![image](/images/backup4.png)
 
-2、点击开区域复制tab，进入跨区域复制配置页
-<img src="http://ufile-doc.cn-bj.ufileos.com/cr-2.png?UCloudPublicKey=cKPf3xruLBCxWbFsFjK16i8bJnhJXXj7AElNQ/JGKV7YDrOdhrlPsBwkoFY=&Signature=P1GT3GJjm5mPOAmao0wHDnHLqm4=" />
+2. 点击开区域复制tab，进入跨区域复制配置页
 
-3、为该bucket配置跨区域复制任务
-4、当该bucket下产生备份文件时，文件会被自动同步到配置好的异地bucket中
+![image](/images/backup5.png)
+
+3. 为该bucket配置跨区域复制任务
+
+4. 当该bucket下产生备份文件时，文件会被自动同步到配置好的异地bucket中

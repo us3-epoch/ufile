@@ -8,7 +8,7 @@
 
 用户在UFile创建存储空间后，通过配置存储空间的回源配置，UFile将在接收到访问请求时，会先在UFile本地查找文件，如果文件不存在，则会回源到用户指定的源站获取文件，并且在UFile本地存储一份。下一次访问同一个文件时就会直接从UFile本地直接返回给用户。
 
-具体设置方法请参考：
+具体设置方法请参照：
 [设置回源规则](https://docs.ucloud.cn/ufile/guide/mirror)
 
 优点：
@@ -34,4 +34,4 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 UFile对象存储不同bucket之前的数据迁移
 支持s3协议的对象存储迁移到UFile对象存储
 
-详情请参照[管理工具-数据迁移工具](https://docs.ucloud.cn/ufile/tools/tools/ufile_import)
+详情请参照：[管理工具-数据迁移工具](https://docs.ucloud.cn/ufile/tools/tools/ufile_import)
