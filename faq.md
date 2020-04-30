@@ -52,7 +52,7 @@
 
 3、文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4、命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":" \_www.ufile.cn-north-03.ucloud.cn"
+4、命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":`www.ufile.cn-north-03.ucloud.cn`
 
 5、SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
 = '.ufile.cn-north-03.ucloud.cn' （其他SDK的配置文件通常改proxy_suffix)。
