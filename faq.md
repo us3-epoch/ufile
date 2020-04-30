@@ -44,11 +44,11 @@
 
 ## 对象存储空间如何通过内网访问？
 
-1、空间管理的API，内网访问时域名同公网，使用api.ucloud.cn。
+1、空间管理的API，内网访问时域名同公网，使用`api.ucloud.cn`。
 
 2、文件管理的API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
 
-例如，bucket名称为demobucket，则其C机房内网域名为demobucket.ufile.cn-north-03.ucloud.cn。
+例如，bucket名称为demobucket，则其C机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
 
 3、文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
