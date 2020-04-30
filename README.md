@@ -27,7 +27,7 @@
 * 增值服务
     * [图片处理服务](/ufile/service/pic)
     * [海外专线服务](/ufile/service/overseas)
-* [数据迁移说明](/ufile/remove)
+
 * 鉴权方法说明
     * [API签名算法](/ufile/api/authorization)
     * [签名工具](/ufile/api/authorization-tool)
@@ -42,6 +42,9 @@
 * 支持AWS S3协议
     * [支持AWS S3 协议说明](/ufile/s3/s3_introduction)
     * [基于UFile S3的一些场景应用](/ufile/s3/s3_application)
+* 解决方案
+    * [数据迁移方案](/ufile/solutions/remove)
+    * [数据库备份方案](/ufile/solutions/backup)
 * 产品价格
     * [UFile计费规则](/ufile/bill/new)
 * [FAQ](/ufile/faq)
