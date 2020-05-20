@@ -44,17 +44,17 @@
 
 ## 对象存储空间如何通过内网访问？
 
-1、空间管理的API，内网访问时域名同公网，使用`api.ucloud.cn`。
+1. 空间管理的API，内网访问时域名同公网，使用`api.ucloud.cn`。
 
-2、文件管理的API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
+2. 文件管理的API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
 
 例如，bucket名称为demobucket，则其C机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
 
-3、文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
+3. 文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4、命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":'`www.ufile.cn-north-03.ucloud.cn`'
+4. 命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":'`www.ufile.cn-north-03.ucloud.cn`'
 
-5、SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
+5. SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
 = '`ufile.cn-north-03.ucloud.cn`' （其他SDK的配置文件通常改proxy_suffix)。
 
 ## 各机房proxy_host地址分别是什么？
@@ -139,14 +139,17 @@ CDN回源，流量从UFile流向UCDN，这部分流量UCDN不计费，由UFile�
 
 当您的账户欠费时，将会对您的UFile服务造成以下影响：
 
-1.欠费3天后，服务（上传、下载、删除等）会被限制，无法创建UFile存储空间，部分请求会失败，直至所有服务都不可用。限制服务期间存储数据仍被保留。
-
+1. 欠费3天后，服务（上传、下载、删除等）会被限制，无法创建UFile存储空间，部分请求会失败，直至所有服务都不可用。限制服务期间存储数据仍被保留。
 ![](/images/ufile欠费限购.png)
 
-2.欠费30天后，将视为您主动放弃UFile服务，系统将回收存储空间并删除存储数据，存储数据删除后不可恢复。
-3.欠费3天内支付欠费订单，您的服务不受影响；欠费3-30天之间支付全部欠费订单，系统将恢复服务可用性，解除UFile服务限制。  
-4.存储在UFile的数据在被删除前仍会产生计费，如您仍在使用UCloud产品，请及时删除，避免产生额外计费。  
-5.欠费后、限制服务前、删除前/后都会有邮件通知和短信通知，被通知人为对应项目的资源回收消息订阅人。  
+2. 欠费30天后，将视为您主动放弃UFile服务，系统将回收存储空间并删除存储数据，存储数据删除后不可恢复。
+
+3. 欠费3天内支付欠费订单，您的服务不受影响；欠费3-30天之间支付全部欠费订单，系统将恢复服务可用性，解除UFile服务限制。
+
+4. 存储在UFile的数据在被删除前仍会产生计费，如您仍在使用UCloud产品，请及时删除，避免产生额外计费。
+
+5. 欠费后、限制服务前、删除前/后都会有邮件通知和短信通知，被通知人为对应项目的资源回收消息订阅人。
+
 **欠费处理时间轴如下：**  
 ![](/images/欠费通知时间轴.png)
 
