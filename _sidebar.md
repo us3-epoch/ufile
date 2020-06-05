@@ -4,8 +4,8 @@
 * 产品简介
     * [什么是对象存储](/ufile/introduction/concept)
     * [产品优势](/ufile/introduction/advantages)
-    * [功能简介](/ufile/introduction/functions)
-    * [产品限制](/ufile/introduction/limit)
+    * [功能概览](/ufile/introduction/functions)
+    * [使用限制](/ufile/introduction/limit)
     * [存储类型](/ufile/introduction/storage_type)
 * 快速上手
     * [开始使用对象存储](/ufile/quick/quick_start)
@@ -27,7 +27,6 @@
     * [令牌管理](/ufile/guide/token)
 * 增值服务
     * [图片处理服务](/ufile/service/pic)
-    * [海外专线服务](/ufile/service/overseas)
 * 鉴权方法说明
     * [API签名算法](/ufile/api/authorization)
     * [签名工具](/ufile/api/authorization-tool)
