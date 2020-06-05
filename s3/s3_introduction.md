@@ -68,7 +68,7 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 
 ### API支持路径风格和虚拟主机风格
 
-#### 路径风格格式为: http://\${Endpoint}/\${bucket名字}/\${key名字}，bucket名字作为路径使用的一部分;
+**路径风格格式为: http://\${Endpoint}/\${bucket名字}/\${key名字}，bucket名字作为路径使用的一部分;**
 
     例如: AWS S3 Java SDK在UCloud北京地域走外网使用UFile S3服务则设置如下：  
     "AWSCredential credentials = new BasicAWSCredentials(ACCESS_KEY,
