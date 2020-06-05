@@ -60,7 +60,7 @@ UFile目前的S3协议模块对标准S3协议的支持如下表：
 
 S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是UCloud的API公钥和私钥，或者是UFille服务提供的Token公钥和Token私钥；
 
-#### 注意 要求无论是API公私钥还是Token公私钥，要求操作的bucket，必须满足以下条件:
+**注意：要求无论是API公私钥还是Token公私钥，要求操作的bucket，必须满足以下条件:**
 
 * 创建该bucke的账户与API公私钥的拥有者必须一致；
 
@@ -81,7 +81,7 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
     conn.setS3ClientOptions(clientOptions);  
     conn.setEndpoint("s3-cn-bj.ufileos.com");"
 
-#### 虚拟主机风格: http://${bucket名字}.${Endpoint}/${key名字}，类似UFile目前使用的URL形式；
+**虚拟主机风格: http://${bucket名字}.${Endpoint}/${key名字}，类似UFile目前使用的URL形式；**
 
 ### 接入域名（Endpoint）
 
