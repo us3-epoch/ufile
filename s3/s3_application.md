@@ -12,24 +12,21 @@ S3 Browser是一种易于使用和强大的Amazon S3免费客户端。
 
 ### 安装和使用
 
-##### 适用的操作系统
-
-###### Windows
+**适用的操作系统：Windows**
 
 ### 安装步骤
 
-##### 1. 下载安装包
+1. 下载安装包
 
 下载地址: http://s3browser.com
 
-#####  2. 安装程序
+2. 安装程序
 
-进入下载页面，点击Download S3 Browser Freeware
-8.1.5，按照提示，进行安装即可。
+进入下载页面，点击Download S3 Browser Freeware 8.1.5，按照提示，进行安装即可。
 
 ### 使用方法
 
-##### 1. 增加用户
+1. 增加用户
 
 点击左上角 Accounts按钮，在下拉框中，点击Add New Account
 
@@ -55,9 +52,9 @@ Api公钥，或者Token。具体获取请参考如何获取令牌\|如何获取�
 
 点击Save Changes 保持配置，则成功创建用户。
 
-##### 2. 对象操作
+2. 对象操作
 
-###### 控制台功能说明
+## 控制台功能说明
 
 ![](/images/console.png)  
 
@@ -67,21 +64,17 @@ multipart uploads with size(in megabytes)为8，如下图所示：
 
 ![](images/console2.png)
 
-## 网络文件系统
+## 网络文件系统 S3FS
 
-### s3fs
-
-##### 功能说明
+### 功能说明
 
 s3fs 工具支持将Bucket挂载到本地，像使用本地文件系统一样直接操作对象存储中的对象。
 
-##### 安装和使用
+### 安装和使用
 
-###### 适用的操作系统
+**适用的操作系统Linux、MacOS**
 
-Linux,MacOS
-
-##### 安装步骤
+#### 安装步骤
 
 MacOS环境
 
@@ -101,7 +94,7 @@ CentOS 6及其以下版本
 
 需要编译s3fs,并且安装该程序
 
-##### 获取源码
+#### 获取源码
 
 首先，您需要从GitHub上将源码下载到指定目录，以 /data/s3fs为例：
 
@@ -110,14 +103,14 @@ CentOS 6及其以下版本
     3. cd s3fs  
     4. wget <https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip>
 
-##### 安装依赖项
+#### 安装依赖项
 
 CentOS 系统下安装依赖软件：
 
       sudo yum install automake gcc-c++ git libcurl-devel libxml2-devel    
       fuse-devel make openssl-devel fuse unzip
 
-##### 编译和安装 s3fs
+#### 编译和安装 s3fs
 
 进入安装目录，执行如下命令进行编译和安装：
 
@@ -170,9 +163,9 @@ CentOS 系统下安装依赖软件：
 
     fuse2.9.4 安装成功
 
-##### s3fs 使用方法
+### s3fs 使用方法
 
-###### 配置密钥文件
+#### 配置密钥文件
 
 在${HOME}/目录中创建.passwd-s3fs 文件。文件格式为[API 公钥:API 秘钥]。  
 公私钥获取方式具体请参考[如何获取账户公私钥](https://docs.ucloud.cn/uai-train/basic/key)  
@@ -183,7 +176,7 @@ CentOS 系统下安装依赖软件：
 
 将文件设置读写权限。 chmod 600 ${HOME}/.passwd-s3fs
 
-###### 执行挂载操作
+#### 执行挂载操作
 
 操作指令解释:
 
@@ -210,7 +203,7 @@ CentOS 系统下安装依赖软件：
     -f //表示前台执行，后台执行则省略  
     -o parallel_count="32" //并行操作数，可以提高分片并发操作，建议不要超过 128
 
-###### 示例：
+**示例：**
 
 s3fs s3fs-test /data/vs3fs -o
 url=[http://internal.s3-cn-bj.ufileos.com](http://internal.s3-cn-bj.ufileos.com/) -o
@@ -218,7 +211,7 @@ passwd_file=~/.passwd-s3fs -o dbglevel=info -o
 curldbg,use_path_request_style,allow_other -o retries=1 -o multipart_size="8" -o
 multireq_max="8" -o parallel_count="32"
 
-###### 挂载效果
+#### 挂载效果
 
 执行df -h 指令，可以看到s3fs程序的运行。效果如下: 
 
@@ -229,7 +222,7 @@ multireq_max="8" -o parallel_count="32"
 
 ![](images/yum.png)
 
-###### 文件上传和下载
+#### 文件上传和下载
 
 挂载UFile存储空间和后，可以像使用本地文件夹一样使用UFile存储空间。
 
@@ -237,37 +230,36 @@ multireq_max="8" -o parallel_count="32"
 
 2.将文件从${LocalMountPath}拷贝到其他路径，即下载文件。
 
-###### 注意：
+**注意：**
 
 1.路径不符合Linux文件路径规范的路径，可以在UFIle管理控制台看到，但不会在Fuse挂载的\${LocalMountPath}下显示。
 
 2.Fuse使用枚举文件清单会比较缓慢，建议直接使用指定到具体文件的命令，如vim,cp,rm指定具体文件。
 
-###### 删除文件
+#### 删除文件
 
 将文件从${LocalMountPath}删除掉，则UFile存储空间中，该文件也被删除掉。
 
-###### 卸载UFile存储空间
+#### 卸载UFile存储空间
 
     sudo umount ${LocalMountPath}
-###### 性能数据
+
+### 性能数据
 
 写入吞吐量40MB/s左右
 读取吞吐量能达到166 MB/s(跟并发量相关)
 
-### goofys
+## goofys
 
-##### 功能说明
+### 功能说明
 
 goofys 工具同s3fs,  也支持将 Bucket挂载到本地，像使用本地文件系统一样直接操作对象存储中的对象。 性能方面比s3fs更优.
 
-##### 安装与使用
+### 安装与使用
 
-###### 使用操作系统
+**适用的操作系统：Linux，MacOS**
 
-Linux,MacOS
-
-##### 使用步骤
+### 使用步骤
 
 - 下载可执行文件
 
@@ -296,11 +288,11 @@ Linux,MacOS
 
 - 测试挂载是否成功, 可以拷贝一个本地文件到mount_test目录, 看是否上传到ufile。
 
-##### 其它操作(删除,上传,获取,卸载 )
+### 其它操作(删除,上传,获取,卸载 )
 
 同s3fs, 可参考上面的s3fs操作
 
-##### 性能数据
+### 性能数据
 
 4核8G的uhost虚拟机, 上传500M以上的文件, 平均速度可达140MB/s
 
@@ -314,17 +306,15 @@ Linux,MacOS
 
 ### 安装和使用
 
-##### 适用的操作系统
-
-Linux
+**适用的操作系统：Linux**
 
 ### 安装步骤
 
-#####搭建环境
+#### 搭建环境
 
 使用s3fs工具将Bucket挂载到本地。具体安装方式步骤参考基于S3FS、UFile搭建**网络文件系统**的内容。
 
-#####安装依赖项
+#### 安装依赖项
 
 先检查下本地是否有FTP服务，执行命令rpm -qa | grep
 vsftpd,如果显示未安装，则执行以下命令，安装FTP。
@@ -332,7 +322,8 @@ vsftpd,如果显示未安装，则执行以下命令，安装FTP。
 运行以下命令安装 vsftpd。  
 
     yum install -y vsftpd
-#####开启本地fpd服务
+
+#### 开启本地fpd服务
 
 执行以下命令，开启ftp服务。
 
@@ -340,7 +331,7 @@ vsftpd,如果显示未安装，则执行以下命令，安装FTP。
 
 ### S3FS 使用方法
 
-#####添加账户
+#### 添加账户
 
 a.运行以下命令创建 ftptest 用户，并且设置指定目录。
 
@@ -352,7 +343,7 @@ b.运行以下命令修改 ftptest 用户密码。
 
 passwd ${username}
 
-#####客户端使用
+#### 客户端使用
 
 此时，您可以在外部任何一台机器上连接该服务器，输入您的用户名和密码，来管理bucket的文件
 

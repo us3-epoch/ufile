@@ -17,15 +17,13 @@ ufile-import是对象存储UFile提供的一款将数据迁移至UFile(Bucket)�
 
 举例：假设您有总量为100G的文件需要迁移，设置的处理文件并发数是40(即ufile-import.json中的"concurrent"参数，可以往下阅读，了解该参数的使用。)，在全部的迁移文件中，单个文件最大大小为1G左右，则您至少需要大小为:40乘以1乘以2=80G,左右大小的硬盘，来缓存下载过程中的临时文件,来保证迁移过程中，有足够的硬盘容量，来缓存临时文件,否则可能会造成迁移文件的不完整
 
-## 安装
+## 安装步骤
 
-### 通用步骤:
-
-####  1. 下载安装包
+1. 下载安装包
 Linux64位操作系统请下载
 下载地址: https://github.com/ufilesdk-dev/ufile-import/archive/master.zip
 
-####  2. 安装程序。
+2. 安装程序。
 
 进入下载安装包目录，解压文件. 
 
@@ -33,7 +31,7 @@ Linux64位操作系统请下载
     cd ufile-import-master  
     tar zxvf  ufile-import.tgz 
 
-#### 3. 启动redis服务。
+3. 启动redis服务。
 
 服务依赖于redis服务，安装包中已经还有redis服务的相关配置，直接启动即可。  
 
