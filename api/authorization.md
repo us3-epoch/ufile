@@ -66,29 +66,29 @@ StringToSign中包括两类标头元素：
 
 注：
 
-1.  如果位置标头不在请求中（例如，Content-Type或Content-MD5对于PUT请求是可选的，并且对于GET请求没有任何意义），必须使用空字符串""替换该位置；
-2.  BASE64使用standardbase64，不是URLSafe的base64算法，下同；
-3.  当使用POST表单上传时，签名使用的Content-Type字段应该是form参数中的Content-Type字段(即文件本身的mimetype)，而非HTTP请求的Content-Type。
+1. 如果位置标头不在请求中（例如，Content-Type或Content-MD5对于PUT请求是可选的，并且对于GET请求没有任何意义），必须使用空字符串""替换该位置；
+2. BASE64使用standardbase64，不是URLSafe的base64算法，下同；
+3. 当使用POST表单上传时，签名使用的Content-Type字段应该是form参数中的Content-Type字段(即文件本身的mimetype)，而非HTTP请求的Content-Type。
 
 **计算CanonicalizedUCloudHeaders步骤**
 
-1.将每个以X-UCloud-开头的HTTP标头名称转换为小写。例如，“X-UCloud-Date”改为“x-ucloud-date”。
+1. 将每个以X-UCloud-开头的HTTP标头名称转换为小写。例如，“X-UCloud-Date”改为“x-ucloud-date”。
 
-2.根据标头名称按字典顺序排列标头集。
+2. 根据标头名称按字典顺序排列标头集。
 
-3.按照RFC2616中第4.2节中的规定，将相同名称的标头字段合并为一个“header-name:comma-separated-value-list”对，各值之间不留空格。
+3. 按照RFC2616中第4.2节中的规定，将相同名称的标头字段合并为一个“header-name:comma-separated-value-list”对，各值之间不留空格。
 
 例如，可以将元数据标头“x-ucloud-meta-username:fred”和“x-ucloud-meta-username:barney”合并为单个标头“x-ucloud-meta-username:fred,barney”。
 
-4.通过将折叠空格（包括换行符）替换为单个空格，“展开”跨多个行的长标头（按照RFC2616中第4.2节允许的方式）。
+4. 通过将折叠空格（包括换行符）替换为单个空格，“展开”跨多个行的长标头（按照RFC2616中第4.2节允许的方式）。
 
-5.删除标头中冒号周围的空格。例如，标头“x-ucloud-meta-username:fred,barney”改为“x-ucloud-meta-username:fred,barney”。
+5. 删除标头中冒号周围的空格。例如，标头“x-ucloud-meta-username:fred,barney”改为“x-ucloud-meta-username:fred,barney”。
 
-6.最后，请向生成的列表中的每个标准化标头附加换行字符(U+000A)。通过将此列表中所有的标头规范化为单个字符串，构建CanonicalizedUcloudHeaders元素。
+6. 最后，请向生成的列表中的每个标准化标头附加换行字符(U+000A)。通过将此列表中所有的标头规范化为单个字符串，构建CanonicalizedUcloudHeaders元素。
 
 **示例**
 
-1、确定使用API接口，例如使用PUTFile接口，签名前的请求如下
+1. 确定使用API接口，例如使用PUTFile接口，签名前的请求如下
 
     PUT /demokey HTTP/1.1
     Host: demobucket.ufile.ucloud.cn
@@ -98,7 +98,7 @@ StringToSign中包括两类标头元素：
     X-UCloud-Bar: bar1
     X-UCloud-Bar: bar2
 
-2、拼接签名字符串对照step1的请求中的各个参数，程序中的各变量取值如下（采用伪代码描述）
+2. 拼接签名字符串对照step1的请求中的各个参数，程序中的各变量取值如下（采用伪代码描述）
 
     bucket = "demobucket"
     key = "demokey"
@@ -119,23 +119,23 @@ StringToSign中包括两类标头元素：
 
     string2sign = "PUT\n\nimage/jpeg\n\nx-ucloud-foo:foo\nx-ucloud-bar:bar1,bar2\n/demobucket/demokey"
 
-3、hmac-sha1运算
+3. hmac-sha1运算
 
 使用ucloud分配给您的私钥对签名字符串做hmac-sha1运算
 
     hmacstring = hmac-sha1(privateKey, string2sign)
 
-4、base64运算
+4. base64运算
 
 对生成的hmacstring做base64运算
 
     base64string = base64(hmacstring) = S5FVD2w613MKb/hisjaqHdjvn9U=
 
-5、生成最终签名格式
+5. 生成最终签名格式
 
     signature = UCloud demouser@ucloud.cn13424346821929713944:S5FVD2w613MKb/hisjaqHdjvn9U=
 
-6、生成带签名的HTTP请求
+6. 生成带签名的HTTP请求
 
     PUT /demokey HTTP/1.1
     Host: demobucket.ufile.ucloud.cn
