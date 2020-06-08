@@ -38,8 +38,7 @@
         * [签名工具](/ufile/api/authorization-tool)
 	* [上传策略说明](/ufile/putpolicy)
     * [API列表](/ufile/api_reference)
-    * 管理工具
-        * [管理工具](/ufile/tools/introduction)
+    * [管理工具](/ufile/tools/introduction)
         * [空间管理](/ufile/tools/tools/tools_bcket)
         * [文件管理](/ufile/tools/tools/tools_file)
         * [UFile迁移工具](/ufile/tools/tools/ufile_import)
