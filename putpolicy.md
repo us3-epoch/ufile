@@ -55,13 +55,11 @@ signstring\_ with\_ putpolicy = signstring + base64(json_encode(put_policy))
 
 ## 用法示例
 
-假设上传的文件为：flower.jpg
-
-上传策略为：
+假设上传的文件为：flower.jpg，上传策略为：
 
 ```
 "callbackUrl" : "<http://inner.umedia.ucloud.com.cn/CreateUmediaTask>",
-"callbackBody" :"url=<http://demo.ufile.ucloud.cn/test.mp4&patten_name=mypolicy>"
+"callbackBody" :"url=<http://demo.ufile.ucloud.cn/flower.jpg&patten_name=mypolicy>"
 ```
 
 则没有上传策略的上传请求是:
