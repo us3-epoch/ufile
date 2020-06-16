@@ -8,7 +8,7 @@
 当您没有自己的域名创建CDN加速时，可以点击开启一键创建CDN加速域名试用。  
 测试域名是由我们系统完成备案和配置CNAME至UFile对应存储空间域名。有关测试域名的CDN高级配置，请到[UCDN产品页](https://console.ucloud.cn/ucdn/ucdndomainmanage)进行操作。  
 使用此CDN加速域名访问将产生CDN流量和CDN回源流量费用，流量费用请参照[UCDN计费规则](https://docs.ucloud.cn/ucdn/charge)。  
-![](/images/guide/域名管理1.png)
+![](/images/域名管理1.png)
 
 ## 自定义域名
 
@@ -19,11 +19,11 @@
 2. UFile控制台提供管理自定义域名功能，用户可操作绑定自定义域名并开启加速。
 选择对应空间，在右侧的操作中点击域名管理按钮。
 
-![](/images/guide/域名管理2.png)
+![](/images/域名管理2.png)
 
 在自定义域名弹窗中输入需要绑定的自定义域名，选择是否CDN加速。
 
-![](/images/guide/域名管理3.png)
+![](/images/域名管理3.png)
 
 CDN加速选项在UCDN产品页加速和管理，选择CDN加速为"是"，点击确定后将前往UCDN产品页面继续完成操作。
 
