@@ -1,6 +1,4 @@
-# FAQ
-
-
+# 常见问题
 
 ## 对象存储空间和Key是什么？
 
@@ -56,56 +54,6 @@
 
 5. SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
 = '`ufile.cn-north-03.ucloud.cn`' （其他SDK的配置文件通常改proxy_suffix)。
-
-## 各机房proxy_host地址分别是什么？
-
-北京  
-外网：www.cn-bj.ufileos.com  
-B机房内网：www.ufile.cn-north-02.ucloud.cn  
-C机房内网: www.ufile.cn-north-03.ucloud.cn  
-D机房内网: www.ufile.cn-north-04.ucloud.cn  
-上海二  
-外网: www.cn-sh2.ufileos.com  
-内网: www.internal-cn-sh2-01.ufileos.com  
-香港  
-外网：www.hk.ufileos.com  
-内网：www.internal-hk-01.ufileos.com  
-广州  
-外网：www.cn-gd.ufileos.com  
-内网：www.internal-cn-gd-02.ufileos.com  
-洛杉矶  
-外网：www.us-ca.ufileos.com  
-内网：www.internal-us-ca-01.ufileos.com  
-雅加达  
-外网：www.idn-jakarta.ufileos.com  
-内网：www.internal-idn-jakarta-01.ufileos.com  
-新加坡  
-外网：www.sg.ufileos.com  
-内网：www.internal-sg-01.ufileos.com  
-尼日利亚：  
-外网：www.afr-nigeria.ufileos.com  
-内网：www.internal-afr-nigeria.ufileos.com  
-台北：  
-外网：www.tw-tp.ufileos.com  
-内网:www.internal-tw-tp.ufileos.com  
-圣保罗：  
-外网：www.bra-saopaulo.ufileos.com  
-内网：www.internal-bra-saopaulo.ufileos.com  
-迪拜：  
-外网：www.uae-dubai.ufileos.com  
-内网：www.internal-uae-dubai.ufileos.com  
-越南：  
-外网：www.vn-sng.ufileos.com  
-内网：www.internal-vn-sng.ufileos.com  
-孟买：  
-外网：www.ind-mumbai.ufileos.com  
-内网：www.internal-ind-mumbai.ufileos.com   
-华盛顿：  
-外网：www.us-ws.ufileos.com   
-内网：www.internal-us-ws.ufileos.com   
-法兰克福：  
-外网：www.ge-fra.ufileos.com   
-内网：www.internal-ge-fra.ufileos.com   
 
 ##  使用filemgr工具时遇到timeout错误时怎么办？
 

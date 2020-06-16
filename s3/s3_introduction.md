@@ -6,25 +6,25 @@
 
 UFile目前的S3协议模块对标准S3协议的支持如下表：
 
-| **API名字**               | **备注说明**                                                 |
-| ------------------------- | ------------------------------------------------------------ |
-| GET Bucket service        | 用于获取Bucket列表，只能获取公私钥或者Token拥有者创建的Bucket |
-| GET Bucket location       | 返回所在地域名，不建议依赖该API                              |
-| GET Bucket acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
-| GET Bucket versioning     | 没有太多意义，主要为了支持S3 Browser而实现，Status字段永远为空字符串 |
-| GET Object acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
-| HEAD Object               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| PUT Object                | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| POST Object               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| PUT Object copy           | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| GET Object                | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| List Objects              | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| DELETE Object             | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| Delete Multiple Objects   | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| Initiate Multipart Upload | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| Upload Part               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) , **注意目前只支持8MB大小的分片!!!!** |
-| Complete Multipart Upload | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
-| Abort Multipart Upload    | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.docx) |
+| **编号** | **API名字**               | **备注说明**                                                 |
+| :------: | ------------------------- | ------------------------------------------------------------ |
+|    1     | GET Bucket service        | 用于获取Bucket列表，只能获取公私钥或者Token拥有者创建的Bucket |
+|    2     | GET Bucket location       | 返回所在地域名，不建议依赖该API                              |
+|    3     | GET Bucket acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
+|    4     | GET Bucket versioning     | 没有太多意义，主要为了支持S3 Browser而实现，Status字段永远为空字符串 |
+|    5     | GET Object acl            | 没有太多意义，主要为了支持S3 Browser而实现，Permission字段永远为“FULL_CONTROL” |
+|    6     | HEAD Object               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    7     | PUT Object                | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    8     | POST Object               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    9     | PUT Object copy           | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    10    | GET Object                | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    11    | List Objects              | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    12    | DELETE Object             | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    13    | Delete Multiple Objects   | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    14    | Initiate Multipart Upload | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    15    | Upload Part               | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) , **注意目前只支持8MB大小的分片!!!!** |
+|    16    | Complete Multipart Upload | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    17    | Abort Multipart Upload    | 参考[UFile S3 兼容API文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
 
 注意:
 
@@ -102,12 +102,13 @@ S3的AccessKeyID(或称AccessKey)和SecretAccessKey(或称SecretKey)对应就是
 |  12  |   德国-法兰克福   |   s3-ge-fra.ufileos.com    |   internal.s3-ge-fra.ufileos.com    |
 |  13  | 印度尼西亚-雅加达 | s3-idn-jakarta.ufileos.com | internal.s3-idn-jakarta.ufileos.com |
 |  14  |     印度-孟买     | s3-ind-mumbai.ufileos.com  | internal.s3-ind-mumbai.ufileos.com  |
+|  15  |      新加坡       |     s3-sg.ufileos.com      |     internal.s3-sg.ufileos.com      |
 
-注意: *目前中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域已经支持https协议，其他地域可支持路径风格https后续支持 (所有地域内网不支持https)*
+注意: *目前中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域已经支持https协议，其他地域可支持路径风格https，后续支持虚拟主机风格https (所有地域内网不支持https)*
 
 ### 回调扩展功能支持
 
-| **请求形式 API 名字**                  | **PUT Objec** | **POST Object** | **Complete Multipart Upload** |
+| **请求形式 API 名字**                  | **PUT Object** | **POST Object** | **Complete Multipart Upload** |
 | ------------------------------- | ------------- | --------------- | ----------------------------- |
 | **在 URL 中携带参数**                 | √             | ×               | √                             |
 | **在 Header 中携带参数**              | √             | ×               | √                             |

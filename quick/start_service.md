@@ -1,10 +1,10 @@
 
 
-# 开通 UFile 对象存储服务
+# 开通 UFile 服务
 
-当您注册UCloud账号并完成实名认证后，即可使用 UFile 对象存储服务。
+当您注册 UCloud 账号并完成实名认证后，即可使用 UFile 对象存储服务。
 
-UCloud对象存储服务UFile为您提供基于网络的数据存取服务。使用UFile您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
+UCloud 对象存储服务 UFile 为您提供基于网络的数据存取服务。使用 UFile 您可以通过网络随时存储和调用包括文本、图片、音频和视频等在内的各种非结构化数据文件。
 
 初次使用UFile，请您先了解 [UCloud UFile使用限制](https://docs.ucloud.cn/ufile/introduction/limit)。
 
