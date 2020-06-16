@@ -56,25 +56,25 @@ UFile提供标准、低频、归档三种存储类型，分别用于频繁访问
 
 |API                     |标准存储类型 |低频访问存储类型 |归档存储类型   |
 | ----------------------- | ------     | -------- | -------- |
-| 空间管理                 |            |          |          |
+| 空间管理                 | :::       |  :::     |  :::     |
 | CreateBucket            | 支持     | 支持       | 支持       |
 | DescribeBucket          | 支持     | 支持       | 支持       |
 | UpdateBucket            | 支持     | 支持       | 支持       |
 | DeleteBucket            | 支持     | 支持       | 支持       |
-| 文件管理                    |        |          |          |
+| 文件管理                 | :::       | :::      | :::      |
 | PutFile                 | 支持     | 支持       | 支持       |
 | PostFile                | 支持     | 支持       | 支持       |
 | UploadHit               | 支持     | 支持       | 支持       |
 | GetFile                 | 支持     | 支持       | 支持，需要先解冻 |
 | HEADFile                | 支持     | 支持       | 支持，需要先解冻 |
 | DeleteFile              | 支持     | 支持       | 支持       |
-| Multipart操作             |        |          |          |
+| Multipart操作             | :::      | :::      | :::      |
 | InitiateMultipartUpload | 支持     | 支持       | 支持       |
 | UploadPart              | 支持     | 支持       | 支持       |
 | FinishMultipartUpload   | 支持     | 支持       | 支持       |
 | AbortMultipartUpload    | 支持     | 支持       | 支持       |
 | PrefixFileList          | 支持     | 支持       | 支持       |
 | RestoreObject           | 不支持    | 不支持      | 支持       |
-| 其他功能的API                |        |          |          |
+| 其他功能的API             |  :::     | :::      | :::        |
 | 日志管理                    | 支持     | 支持       | 支持       |
 | 图片处理                    | 支持     | 支持       | 支持       |
