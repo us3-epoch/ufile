@@ -12,10 +12,7 @@
     * [开通UFile服务](/ufile/quick/start_service)
     * [开始使用UFile](/ufile/quick/quick_start)
 * 控制台指南
-    * [创建存储空间](/ufile/guide/create_space)
-    * [删除存储空间](/ufile/guide/delete_space)
-    * [查看存储空间信息](/ufile/guide/view_space)
-    * [修改空间类型](/ufile/guide/modi_space)
+    * [存储空间](/ufile/guide/space)
     * [日志管理](/ufile/guide/logging)
     * [数据分析](/ufile/guide/analyze)
     * [文件管理](/ufile/guide/management)
