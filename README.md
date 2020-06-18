@@ -27,7 +27,7 @@
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
-        * [获取空间地域信息](/ufile/guide/bucket/describe)
+        * [获取存储空间信息](/ufile/guide/bucket/describe)
         * [删除存储空间](/ufile/guide/bucket/delete)
     * 对象/文件（Object）
         * [上传文件](/ufile/guide/file/put)
@@ -41,8 +41,8 @@
         * [文件管理](/ufile/tools/tools/tools_file)
         * [UFile迁移工具](/ufile/tools/tools/ufile_import)
     * AWS S3协议支持
-        * [支持AWS S3协议说明](/ufile/s3/s3_introduction)
-        * [基于UFile S3的一些场景应用](/ufile/s3/s3_application)
+        * [AWS S3协议支持说明](/ufile/s3/s3_introduction)
+        * [AWS S3协议应用场景](/ufile/s3/s3_application)
     * 增值服务
         * [图片处理服务](/ufile/service/pic)
 * [API列表](/ufile/api_reference)
