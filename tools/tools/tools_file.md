@@ -8,15 +8,15 @@
 
 2、上传文件夹：普通上传（PUT），分片上传（MPUT），增量上传（SYNC）。
 
-3、下载文件/文件夹：普通下载（DOWNLOAD）, 分片下载（MDOWNLOAD）, 批量下载（BATCH-DOWNLOAD）
+3、下载文件/文件夹：普通下载（DOWNLOAD），分片下载（MDOWNLOAD），批量下载（BATCH-DOWNLOAD）
 
-4、删除文件/文件夹: 普通删除（DELETE）, 批量删除（BATCH-DELETE）
+4、删除文件/文件夹: 普通删除（DELETE），批量删除（BATCH-DELETE）
 
-5、计算etag（ETAG）
+5、计算 etag（ETAG）
 
 6、检查文件是否存在（CHECK）
 
-7、获取文件url（FETCHURL）
+7、获取文件 url（FETCHURL）
 
 8、拉取文件列表（GETFILELIST）
 
@@ -31,13 +31,13 @@
 [filemgr-mac](http://tools.ufile.ucloud.com.cn/filemgr-mac.tar.gz)
 
 普通上传（PUT）、表单上传方式、秒传文件（UPLOAD-HIT）的文件大小不能超过
-1GB，要上传大小超过 1GB 的文件必须使用分片上传（MPUT）方式。 </WRAP>
+1GB，要上传大小超过 1GB 的文件必须使用分片上传（MPUT）方式。
 
 ### 使用说明
 
-该工具用于在命令行做上传/下载/删除等针对文件的操作，如果有需要动态上传文件的场景，请使用API进行内容管理操作。
-上传超过100MB大小的文件，网络条件较差，和UFile的服务器之间的连接经常断开的场景请使用工具中的分片上传（MPUT）。
-使用前请修改当前目录下的配置文件config.cfg，把API密钥加入到配置项：
+该工具用于在命令行做上传/下载/删除等针对文件的操作，如果有需要动态上传文件的场景，请使用 API 进行内容管理操作。
+上传超过 100MB 大小的文件，网络条件较差，和 UFile 的服务器之间的连接经常断开的场景请使用工具中的分片上传（MPUT）。
+使用前请修改当前目录下的配置文件 config.cfg，把 API 密钥加入到配置项：
 
 ```
 {
@@ -48,7 +48,7 @@
 }
 ```
 
-不同地域的proxy\_host是不一样的，具体如下: 
+不同地域的 proxy\_host 是不一样的，具体如下: 
 
 ```
 北京
@@ -105,11 +105,12 @@
     内网：<bucket_name>.internal-ge-fra.ufileos.com
 ```
 
-API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
+API 密钥可以在控制台中 [API 产品 - API 密钥](https://console.ucloud.cn/uapi/apikey)，点击显示 API 密钥获取。将 public\_key 和 private\_key 分别填入 config.cfg 文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好 API 密钥，避免泄露。
 
-对于命令行工具，Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。 
-以下demo统一使用linux64平台命令filemgr-linux64，Windows-64用户请替换为filemgr-win64，Windows-32用户请替换为filemgr-win32，Mac用户请替换为filemgr-mac
-__注：当工具在后台执行时，请加上参数 `--nobar=true`__  
+对于命令行工具，Linux/Mac 用户请在 terminal 执行，Windows 用户请在 cmd 终端执行。 
+以下 demo 统一使用 Linux64 平台命令 filemgr-linux64，Windows-64 用户请替换为 filemgr-win64，Windows-32 用户请替换为 filemgr-win32，Mac 用户请替换为 filemgr-mac。
+
+**注：当工具在后台执行时，请加上参数`--nobar=true`。** 
 
 
 #### 分片上传单个文件
@@ -136,9 +137,7 @@ __注：当工具在后台执行时，请加上参数 `--nobar=true`__
 ./filemgr-linux64 --action mput --bucket demobucket --key world.avi --file /opt/video/hello.avi --threads 10 --retrycount 20  --speedlimit 1024
 ```
 
-注：
-
-filemgr支持对分片上传失败的文件进行自动续传，只需要在执行失败时重新执行命令即可。只能运行单个进程，多进程会导致上传失败。如需并发上传，请选择目录上传或者增量上传。
+**注：filemgr 支持对分片上传失败的文件进行自动续传，只需要在执行失败时重新执行命令即可。只能运行单个进程，多进程会导致上传失败。如需并发上传，请选择目录上传或者增量上传。**
 
 #### 分片上传文件夹
 
@@ -216,8 +215,7 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 
 示例2:
 
-假设有个目录名为 /some/dir/cutoff/files/，下面有 a.jpg、b.txt两个文件，则以下的处理会使得保存在 UFILE
-的文件名为 files/a.jpg、files/b.txt。
+假设有个目录名为 /some/dir/cutoff/files/，下面有 a.jpg、b.txt 两个文件，则以下的处理会使得保存在 UFile 的文件名为 files/a.jpg、files/b.txt。
 
 ```
 ./filemgr-linux64 --action put --dir ~/files --bucket demobucket --trimpath /some/dir/cutoff/
@@ -242,8 +240,9 @@ filemgr支持对分片上传失败的文件进行自动续传，只需要在执�
 
 示例：
 
+把本地文件夹${HOME}/go 同步到名为 demobucket 的存储空间中。
+
 ```
-把本地文件夹${HOME}/go 同步到名为 demobucket 的存储空间中
 ./filemgr-linux64 --action sync --bucket demobucket --dir ~/go
 Syncing...
 Sync Successed[ src/pkg/math/sqrt_amd64.s ] => demobucket : src/pkg/math/sqrt_amd64.s
@@ -264,9 +263,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 ./filemgr-linux64 --action sync --bucket demobucket --dir ~/go
 ```
 
-注：
-
-只能运行单个进程，多进程会导致上传失败。
+**注：只能运行单个进程，多进程会导致上传失败。**
 
 #### 秒传文件
 
@@ -280,7 +277,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 
 示例:
 
-尝试秒传本地文件 falcon.avi 至存储空间 nfl2014 命名为 2014-superbow.avi
+尝试秒传本地文件 falcon.avi 至存储空间 nfl2014 命名为 2014-superbow.avi。
 
 ```
 ./filemgr-linux64 --action upload-hit --bucket demobucket --key 2014-superbow.avi --file falcon.avi
@@ -300,7 +297,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 
 示例:
 
-获取一个名为 demobucket 的存储空间中一个名为ucloud.png的文件并且保存为/opt/data/ucloud.png
+获取一个名为 demobucket 的存储空间中一个名为 ucloud.png 的文件并且保存为 /opt/data/ucloud.png。
 
 ```
 ./filemgr-linux64 --action download --bucket demobucket --key ucloud.png --file /opt/data/ucloud.png
@@ -477,7 +474,7 @@ mysqldump -h 127.0.0.1 my_dbs my_table  | gzip |  ./filemgr-linux64 --action str
 
 ```
 
-#### filemgr版本更新
+#### filemgr 版本更新
 
 该选项用于更新工具版本
 

@@ -2,35 +2,36 @@
 
 ## 背景
 对象存储作为海量非结构化数据的云存储应用，面对日益上涨的数据库备份场景，可以有效帮助用户缩减备份流程，降低备份成本，有效提升用户体验。
-本文介绍了如何基于UFile完成数据库备份。
+本文介绍了如何基于 UFile 完成数据库备份。
 
 ## 应用场景
-目前UFile数据库备份场景主要有以下三类：
+目前 UFile 数据库备份场景主要有以下三类：
 
-1. 备份与恢复：备份方式推荐使用Filemgr备份到UFile中。
-Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以帮助用户完成数据不落地备份与恢复。
+1. 备份与恢复：备份方式推荐使用 Filemgr 备份到 UFile 中。
+Filemgr 支持本地备份恢复与流式备份恢复，通过流式功能可以帮助用户完成数据不落地备份与恢复。
 
-2. 分级存储：针对需要定时清理备份、缩减备份成本的用户，UFile支持生命周期功能。
+2. 分级存储：针对需要定时清理备份、缩减备份成本的用户，UFile 支持生命周期功能。
 通过控制台指定生命周期规则，可以帮助用户完成：1、定期清理；2、定期转入低频；3、定期转入归档；
 
-3. 异地备份：针对需要更高安全级别的用户，UFile支持跨区域复制功能。
+3. 异地备份：针对需要更高安全级别的用户，UFile 支持跨区域复制功能。
 通过控制台配置跨区域复制功能，可以帮助用户在上传备份的同时，完成数据的异地备份。
 
 ![image](/images/backup1.png)
 
 ## 方案优势
-1. 使用Filemgr进行流式备份以及流式恢复，完成不落地备份与恢复，可以避免落盘操作。
+1. 使用 Filemgr 进行流式备份以及流式恢复，完成不落地备份与恢复，可以避免落盘操作。
 
-2. 使用UFile生命周期功能，配合定期删除、低频存储、归档存储可以实现数据分级存储，帮助用户节约存储成本。
+2. 使用 UFile [生命周期](/ufile/guide/lifecycle) 功能，配合定期删除、低频存储、归档存储可以实现数据分级存储，帮助用户节约存储成本。
 
-3. 使用UFile跨区域复制功能，为备份数据进行异地容灾，提高备份数据安全性。
+3. 使用 UFile [跨区域复制](/ufile/guide/multisite)，为备份数据进行异地容灾，提高备份数据安全性。
 
 ## 方案实施
 ### 使用Filemgr进行流式备份，流式恢复
-1. 下载Filemgr，[UFile迁移工具](ufile/tools/tools/tools_file)
+1. 下载 Filemgr，[迁移工具](ufile/tools/tools/tools_file)
 
-2. 在Filemgr目录下配置config.cfg，proxy host域名请参照[各机房proxy_host地址](ufile/faq?id=%e5%90%84%e6%9c%ba%e6%88%bfproxy_host%e5%9c%b0%e5%9d%80%e5%88%86%e5%88%ab%e6%98%af%e4%bb%80%e4%b9%88%ef%bc%9f)
-```json
+2. 在 Filemgr 目录下配置 config.cfg，proxy host 域名请参照 [地域和域名](/ufile/introduction/region)
+
+```
 {
     "public_key" : "paste your public key here",
     "private_key" : "paste your private key here",
@@ -38,9 +39,10 @@ Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以�
     "api_host" : "api.spark.ucloud.cn"
 }
 ```
-3. 使用Filemgr进行备份恢复，此处展示最简命令，其他备份命令请结合自己业务类比实现
+3. 使用 Filemgr 进行备份恢复，此处展示最简命令，其他备份命令请结合自己业务类比实现
 
-```bash
+```
+bash
 # 注意如果，欲使用低频存储(IA)或者冷存储(ARCHIVE)，请在命令参数storageclass中指定，支持三种值：STANDARD, IA, ARCHIVE
 # 注意如果，备份时指定了storageclass参数为ARCHIVE，需要提前对该文件restore
 ./filemgr-linux64 --action restore --bucket <bucketName> --key <backupKey>
@@ -102,31 +104,32 @@ Filemgr支持本地备份恢复与流式备份恢复，通过流式功能可以�
     # 恢复
     ./filemgr-linux --action stream-download --bucket <bucketName> --key <all-backupKey> --threads <threads> --retrycount <retry> 2>./error.log | openssl enc -d -aes256 -in - -out - -kfile <key file> | mysql
 ```
-**备注**：
-如果不希望异常情况终止任务，请将retrycount参数设置为一个比较大的值，默认为10。每次执行失败会开始重试，第5次重试开始每次重试会等待5s，请合理计算重试次数。
+
+**备注：**
+如果不希望异常情况终止任务，请将 retrycount 参数设置为一个比较大的值，默认为 10。每次执行失败会开始重试，第 5 次重试开始每次重试会等待 5s，请合理计算重试次数。
 
 ### 使用生命周期实现定期删除
-1. 打开对象存储控制台，进入备份使用的bucket详情页
+1. 打开对象存储控制台，进入备份使用的 bucket 详情页
 
 ![image](/images/backup2.png)
 
-2. 点击生命周期tab，进入生命周期配置页
+2. 点击生命周期 tab，进入生命周期配置页
 
 ![image](/images/backup3.png)
 
-3. 为该bucket配置定期删除任务
+3. 为该 bucket 配置定期删除任务
 
 4. 当备份文件超过配置期限，文件会被自动删除
 
 ### 使用跨区域复制进行异地容灾
-1. 打开对象存储控制台，进入备份使用的bucket详情页
-2. 
+1. 打开对象存储控制台，进入备份使用的 bucket 详情页
+
 ![image](/images/backup4.png)
 
-2. 点击开区域复制tab，进入跨区域复制配置页
+2. 点击开区域复制 tab，进入跨区域复制配置页
 
 ![image](/images/backup5.png)
 
-3. 为该bucket配置跨区域复制任务
+3. 为该 bucket 配置跨区域复制任务
 
-4. 当该bucket下产生备份文件时，文件会被自动同步到配置好的异地bucket中
+4. 当该 bucket 下产生备份文件时，文件会被自动同步到配置好的异地 bucket 中

@@ -1,6 +1,6 @@
 # 常见问题
 
-## 对象存储空间和Key是什么？
+## 对象存储空间和  Key 是什么？
 
 对象存储空间（简称存储空间）是文件的组织管理单位，一个文件必然位于某个空间中。空间名称全局唯一，且无法进行修改。
 
@@ -20,17 +20,17 @@
 
 对象存储空间没有目录的概念，所以不能按照目录列出文件列表。
 
-但上传文件时，Key依然沿用目录形式，便于特定的用户使用场景需要。
+但上传文件时，Key 依然沿用目录形式，便于特定的用户使用场景需要。
 
 例如：demobucket.ufile.ucloud.cn/test/a.jpg 这里的 key=test/a.jpg 。
 
 ## 如何使用对象存储空间提供的两个域名？
 
-每个存储空间默认提供一个存储空间域名与一个CDN加速域名。
+每个存储空间默认提供一个存储空间域名与一个 CDN 加速域名。
 
 文件上传操作必须将请求发往存储空间域名。
 
-文件下载操作可以通过访问存储空间域名或CDN加速域名进行。文件下载时建议使用CDN加速域名进行下载，以获得更好的下载体验。
+文件下载操作可以通过访问存储空间域名或 CDN 加速域名进行。文件下载时建议使用 CDN 加速域名进行下载，以获得更好的下载体验。
 
 ## 我可以存储多少数据？对象存储空间是否有容量上限？
 
@@ -38,48 +38,45 @@
 
 ## 文件大小有什么限制？
 
-单个文件大小上限为5TB。
+单个文件大小上限为 5TB。
 
 ## 对象存储空间如何通过内网访问？
 
-1. 空间管理的API，内网访问时域名同公网，使用`api.ucloud.cn`。
+1. 空间管理的 API，内网访问时域名同公网，使用`api.ucloud.cn`。
 
-2. 文件管理的API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
+2. 文件管理的 API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
 
-例如，bucket名称为demobucket，则其C机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
+例如，bucket 名称为 demobucket，则其 C 机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
 
-3. 文件管理的API列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
+3. 文件管理的 API 列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4. 命令行工具，通过内网访问，需要将配置文件中的proxy_host 改成 "proxy_host":'`www.ufile.cn-north-03.ucloud.cn`'
+4. 命令行工具，通过内网访问，需要将配置文件中的 `proxy_host` 改成` "proxy_host":'www.ufile.cn-north-03.ucloud.cn'`。
 
-5. SDK（以phpSDK为例）通过内网访问，需要将配置文件中$UCLOUD\_PROXY\_SUFFIX改成$UCLOUD\_PROXY\_SUFFIX
-= '`ufile.cn-north-03.ucloud.cn`' （其他SDK的配置文件通常改proxy_suffix)。
+5. SDK（以 phpSDK 为例）通过内网访问，需要将配置文件中 `$UCLOUD\_PROXY\_SUFFIX` 改成 `$UCLOUD\_PROXY\_SUFFIX = 'ufile.cn-north-03.ucloud.cn'`（其他 SDK 的配置文件通常改 proxy_suffix)。
 
 ##  如何删除大量对象？
 
-您可以通过设置[生命周期](/ufile/guide/lifecycle)的方式，对存储桶内文件进行删除操作。
+您可以通过设置 [生命周期](/ufile/guide/lifecycle) 的方式，对存储桶内文件进行删除操作。
 
-##  使用filemgr工具时遇到timeout错误时怎么办？
+##  使用 filemgr 工具时遇到 timeout 错误时怎么办？
 
-"client timeout" 、"i/o
-timeout"，文件所在机器的出带宽有限很容易发生此错误，可以使用mput，并增加--speedlimit进行限速。
+"client timeout" 、"i/o timeout"，文件所在机器的出带宽有限很容易发生此错误，可以使用 mput，并增加 `--speedlimit` 进行限速。
 
-## UFile域名被第三方平台告知有安全风险怎么处理？
+## UFile 域名被第三方平台告知有安全风险怎么处理？
 
-第三方平台的安全检测是基于泛域名做检测及封禁处理，而UFile不同客户的域名使用同一个泛域名，因此只要有一个客户有违规内容，整个UFIle默认域名都会被安全软件封禁。
+第三方平台的安全检测是基于泛域名做检测及封禁处理，而 UFile 不同客户的域名使用同一个泛域名，因此只要有一个客户有违规内容，整个 UFile 默认域名都会被安全软件封禁。
 
-这个问题我们和第三方平台沟通过多次，对方以按照逐个域名做封禁成本太大为由拒绝。因此遇到封禁情况的客户，建议通过使用自定义域名解决。配置方法参考\[操作指南\]—\[自定义域名\]。
+这个问题我们和第三方平台沟通过多次，对方以按照逐个域名做封禁成本太大为由拒绝。因此遇到封禁情况的客户，建议通过使用自定义域名解决。配置方法参考 [域名管理](/ufile/guide/domain)。
 
 ## 有跨域需求时如何申请？
 
-如需在UFile配置跨域，需要指派工单至技术支持，工单内注明：bucket名称、ufile域名、Origin地址和要跨域的http
-method。
+如需在 UFile 配置跨域，需要指派工单至技术支持，工单内注明：bucket 名称、UFile 域名、Origin 地址和要跨域的 http method。
 
-## CDN回源UFile的流量如何计费？
+## CDN 回源 UFile 的流量如何计费？
 
-CDN回源，流量从UFile流向UCDN，这部分流量UCDN不计费，由UFile计费，请参考下图：
+CDN 回源，流量从 UFile 流向 UCDN，这部分流量 UCDN 不计费，由 UFile 计费，请参考下图：
 ![](/images/cdn回源ufile的流量.png)  
-计费价格详见：[UFile产品价格](ufile/bill)
+计费价格详见：[UFile 计费规则](/ufile/bill/new)
 
 ## 镜像回源支持的空间类型
 
@@ -89,16 +86,16 @@ CDN回源，流量从UFile流向UCDN，这部分流量UCDN不计费，由UFile�
 
 ![](/images/ufile欠费处理弹窗.png)
 
-**当您的账户欠费时，将会对您的UFile服务造成以下影响：**  
+**当您的账户欠费时，将会对您的 UFile 服务造成以下影响：**  
 
-1. 欠费3天后，服务（上传、下载、删除等）会被限制，无法创建UFile存储空间，部分请求会失败，直至所有服务都不可用。限制服务期间存储数据仍被保留。
+1. 欠费 3 天后，服务（上传、下载、删除等）会被限制，无法创建UFile存储空间，部分请求会失败，直至所有服务都不可用。限制服务期间存储数据仍被保留。
 ![](/images/ufile欠费限购.png)
 
-2. 欠费30天后，将视为您主动放弃UFile服务，系统将回收存储空间并删除存储数据，存储数据删除后不可恢复。
+2. 欠费 30 天后，将视为您主动放弃UFile服务，系统将回收存储空间并删除存储数据，存储数据删除后不可恢复。
 
-3. 欠费3天内支付欠费订单，您的服务不受影响；欠费3-30天之间支付全部欠费订单，系统将恢复服务可用性，解除UFile服务限制。
+3. 欠费 3 天内支付欠费订单，您的服务不受影响；欠费 3-30 天之间支付全部欠费订单，系统将恢复服务可用性，解除 UFile 服务限制。
 
-4. 存储在UFile的数据在被删除前仍会产生计费，如您仍在使用UCloud产品，请及时删除，避免产生额外计费。
+4. 存储在 UFile 的数据在被删除前仍会产生计费，如您仍在使用 UCloud 产品，请及时删除，避免产生额外计费。
 
 5. 欠费后、限制服务前、删除前/后都会有邮件通知和短信通知，被通知人为对应项目的资源回收消息订阅人。
 

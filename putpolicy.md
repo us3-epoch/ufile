@@ -2,7 +2,7 @@
 
 
 
-UFile 上传策略（PutPolicy）用于上传 API 执行一些用户可以指定的操作,这些操作将会在上传动作完成后（部分动作是在开始上传前执行）触发,完成用户指定的操作。
+UFile 上传策略（PutPolicy）用于上传 API 执行一些用户可以指定的操作，这些操作将会在上传动作完成后（部分动作是在开始上传前执行）触发，完成用户指定的操作。
 
 可以使用 PutPolicy 的 API 包括: PutFile、FinishMultipartUpload。
 
@@ -34,7 +34,7 @@ Authorization: UCloud publickey:signature:encodedPutPolicy
 ```
 
 其中，encodedPutPolicy = base64(json\_ encode(put\_ policy))
-**(注意：json 格式请使用压缩后的格式，不要携带空白字符,除非key/value本身是含有空白字符的字符串。这里的base64是URLSafe的base64）**
+**(注意：json 格式请使用压缩后的格式，不要携带空白字符,除非 key/value 本身是含有空白字符的字符串。这里的 base64 是 URLSafe 的 base64）**
 
 此外，旧有方式的签名字符串计算方式是：
 
