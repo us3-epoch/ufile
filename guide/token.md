@@ -2,17 +2,17 @@
 
 # 令牌管理
 
-UFile令牌功能可以根据用户的需求灵活的开放存储空间和文件管理权限。
+UFile 令牌功能可以根据用户的需求灵活的开放存储空间和文件管理权限。
 
 一个令牌由一对特殊的公私钥组成。其中包括了：允许操作的存储空间列表、允许操作的文件前缀列表、操作权限和令牌过期时间等属性。
 
 用户可以按需申请不同令牌来完成不同权限的管控。
 
-用户可以通过两种方式管理UFile令牌：
+用户可以通过两种方式管理 UFile 令牌：
 
-1. 登陆UCloud官方控制台，进入UFile—令牌管理。
+1. 登陆 UCloud 官方控制台，进入 [UFile - 令牌管理](https://console.ucloud.cn/ufile/token)。
 
-2. 通过调用[UFile API](https://docs.ucloud.cn/api/ufile-api/README)进行创建、编辑等操作。
+2. 通过调用 [UFile API](https://docs.ucloud.cn/api/ufile-api/README) 进行创建、编辑等操作。
 
 ## 创建/编辑令牌
 

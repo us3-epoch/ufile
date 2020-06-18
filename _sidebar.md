@@ -39,7 +39,7 @@
     * [管理工具](/ufile/tools/introduction)
         * [空间管理](/ufile/tools/tools/tools_bcket)
         * [文件管理](/ufile/tools/tools/tools_file)
-        * [UFile迁移工具](/ufile/tools/tools/ufile_import)
+        * [迁移工具](/ufile/tools/tools/ufile_import)
     * AWS S3 协议支持
         * [AWS S3 协议支持说明](/ufile/s3/s3_introduction)
         * [AWS S3 协议应用场景](/ufile/s3/s3_application)

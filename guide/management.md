@@ -18,7 +18,7 @@
 
 ![image](/images/文件管理4.png)
 
-## 修改MIME-Type
+## 修改 MIME-Type
 
 ![image](/images/文件管理5.png)
 
