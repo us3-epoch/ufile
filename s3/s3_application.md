@@ -40,9 +40,9 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。
 
 **Signature Version:** 签名版本，选择 Signature V4。
 
-**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://cms.docs.ucloudadmin.com/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e)。
+**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e)。
 
-**Secret Access Key:** API 私钥。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://cms.docs.ucloudadmin.com/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e) 。
+**Secret Access Key:** API 私钥。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e) 。
 
 **Encrypt Access Keys with a passward:** 请勿勾选。
 
