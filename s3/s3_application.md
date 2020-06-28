@@ -163,7 +163,7 @@ CentOS 系统下安装依赖软件：
 
 在 `${HOME}/` 目录中创建 `.passwd-s3fs` 文件。文件格式为 `[API 公钥:API 秘钥]`。
 
-公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://cms.docs.ucloudadmin.com/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e)。 
+公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3%e7%9a%84accesskeyid%e5%92%8csecretaccesskey%e8%af%b4%e6%98%8e)。 
 
 例如:
 
