@@ -50,6 +50,9 @@
 * 解决方案
     * [数据迁移方案](/ufile/solutions/remove)
     * [数据库备份方案](/ufile/solutions/backup)
-* 产品价格
-    * [UFile 计费规则](/ufile/bill/new)
+* [计量计费](/ufile/bill/new)
+    * [产品价格](/ufile/bill/billing)
+    * [计费规则](/ufile/bill/directions)
+    * [欠费处理](/ufile/bill/arrears)
+    * [计费案例](/ufile/bill/case)
 * [常见问题](/ufile/faq)
