@@ -26,9 +26,7 @@ Linux/Mac用户请在terminal执行，Windows用户请在cmd终端执行。使�
 }
 ```
 
-注：
-
-API密钥可以在控制台的“API密钥”页面获得。将public\_key和private\_key分别填入config.cfg文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好API密钥，避免泄露。
+备注：API 密钥可以在控制台的“API 密钥”页面获得。将 public\_key 和 private\_key 分别填入 config.cfg 文件的对应位置，客户端工具通过此密钥完成鉴权。请妥善保管好 API 密钥，避免泄露。
 
 #### 创建存储空间
 

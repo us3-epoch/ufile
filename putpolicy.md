@@ -83,4 +83,4 @@ Authorization: UCloud aGVsbHdvZGhhZGhhc2RoYWRzZGFkaHNkaGFkaGhkaGxrc2Rh:ZGFkLHBwM
 
 ```
 
-注：签名与bucket相关，示例中签名仅作参考。
+备注：签名与bucket相关，示例中签名仅作参考。

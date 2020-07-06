@@ -12,7 +12,8 @@ CDN 回源流量费用：200GB \* 0.15 元/GB = 30 元
 UCDN 产品侧总费用如下：  
 CDN 下载流量费用= 900GB \* 0.34 元/GB = 306 元  
 UFile+UCDN 总费用：40.16 + 306 = 346.16 元  
-注：用户因为开启了 UCDN 加速服务，还会生成一项 CDN 下载流量的费用，在 UCDN 产品侧统计和计费。计费价格详见：[UCDN 产品价格](https://docs.ucloud.cn/ucdn/charge)
+
+备注：用户因为开启了 UCDN 加速服务，还会生成一项 CDN 下载流量的费用，在 UCDN 产品侧统计和计费。计费价格详见：[UCDN 产品价格](https://docs.ucloud.cn/ucdn/charge)。
 
 ## 案例二
 用户B 使用 UFile，但没有开启 UCDN 加速服务。在 18年12月1号 的日消费量：文件存储容量约 2.5TB，在闲时段产生外网流出流量 150GB，在忙时段产生外网流出流量 800GB。  

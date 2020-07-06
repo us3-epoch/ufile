@@ -62,7 +62,7 @@ StringToSign 中包括两类标头元素：
 
 一类是位置标头，仅有 3 个，分别是 Content-MD5、Content-Type 和 Date，在 StringToSign 中不包括这些标头的名称，仅包括它们在请求中的值，如果请求中这些标头不存在，需要用空字符串`("")`代替；另一类是 UCloud 附加标头，以`X-UCloud-`开头，此类标头需要按照下面指定的方法构造 CanonicalizedUCloudHeaders 字符串后加入到 StringToSign 中。
 
-注：
+备注：
 
 1. 如果位置标头不在请求中（例如，Content-Type 或 Content-MD5 对于 PUT 请求是可选的，并且对于GET请求没有任何意义），必须使用空字符串""替换该位置；
 2. BASE64 使用 standardbase64，不是 URLSafe 的 base64 算法，下同；

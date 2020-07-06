@@ -26,4 +26,4 @@ UFile 提供了各种主流语言的 SDK，用于对象存储相关功能的调�
 
 [C++ SDK](https://github.com/ufilesdk-dev/ufile-cppsdk)
 
-注：使用 JS SDK 需要指派跨域配置的工单至技术支持，请参考 FAQs。
+备注：使用 JS SDK 需要指派跨域配置的工单至技术支持，请参考 [常见问题](/ufile/faq)。

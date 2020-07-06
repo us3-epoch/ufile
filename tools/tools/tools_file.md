@@ -110,7 +110,7 @@ API 密钥可以在控制台中 [API 产品 - API 密钥](https://console.ucloud
 对于命令行工具，Linux/Mac 用户请在 terminal 执行，Windows 用户请在 cmd 终端执行。 
 以下 demo 统一使用 Linux64 平台命令 filemgr-linux64，Windows-64 用户请替换为 filemgr-win64，Windows-32 用户请替换为 filemgr-win32，Mac 用户请替换为 filemgr-mac。
 
-**注：当工具在后台执行时，请加上参数`--nobar=true`。** 
+**备注：当工具在后台执行时，请加上参数`--nobar=true`。** 
 
 
 #### 分片上传单个文件
@@ -137,7 +137,7 @@ API 密钥可以在控制台中 [API 产品 - API 密钥](https://console.ucloud
 ./filemgr-linux64 --action mput --bucket demobucket --key world.avi --file /opt/video/hello.avi --threads 10 --retrycount 20  --speedlimit 1024
 ```
 
-**注：filemgr 支持对分片上传失败的文件进行自动续传，只需要在执行失败时重新执行命令即可。只能运行单个进程，多进程会导致上传失败。如需并发上传，请选择目录上传或者增量上传。**
+**备注：filemgr 支持对分片上传失败的文件进行自动续传，只需要在执行失败时重新执行命令即可。只能运行单个进程，多进程会导致上传失败。如需并发上传，请选择目录上传或者增量上传。**
 
 #### 分片上传文件夹
 
@@ -156,9 +156,7 @@ API 密钥可以在控制台中 [API 产品 - API 密钥](https://console.ucloud
    --storageclass: 文件存储类型，分别是标准、低频、归档，对应有效值：STANDARD, IA, ARCHIVE； 文件默认类型，继承于Bucket默认类型。（Bucket默认类型为STANDARD）
 ```
 
-注：
-
-只能运行单个进程，多进程会导致上传失败。
+**备注：只能运行单个进程，多进程会导致上传失败。**
 
 #### 普通上传单个文件(大于4M文件请使用上述分片上传)
 
@@ -263,7 +261,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 ./filemgr-linux64 --action sync --bucket demobucket --dir ~/go
 ```
 
-**注：只能运行单个进程，多进程会导致上传失败。**
+**备注：只能运行单个进程，多进程会导致上传失败。**
 
 #### 秒传文件
 
@@ -316,9 +314,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
   --speedlimit: 下载限速，单位bytes/s
 ```
 
-注：
-
-只能运行单个进程，多进程会导致下载失败。如需并发下载，请选择批量下载。
+**备注：只能运行单个进程，多进程会导致下载失败。如需并发下载，请选择批量下载。**
 
 #### 批量下载
 
@@ -333,9 +329,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
   --speedlimit: 下载限速，单位bytes/s
 ```
 
-注：
-
-只能运行单个进程，多进程会导致下载失败。
+**备注：只能运行单个进程，多进程会导致下载失败。**
 
 #### 删除文件
 
