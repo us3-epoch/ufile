@@ -36,9 +36,9 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 **Signature Version:** 签名版本，选择 Signature V4。
 
-**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://github.com/UCloudDocs/ufile/blob/master/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明)。
+**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明)。
 
-**Secret Access Key:** API 私钥。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://github.com/UCloudDocs/ufile/blob/master/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明) 。
+**Secret Access Key:** API 私钥。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明) 。
 
 **Encrypt Access Keys with a passward:** 请勿勾选。
 
@@ -46,7 +46,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 具体配置填写如下：
 
-![img](images/addAccount.png)
+![img](images/addAccount.jpg)
 
 点击左下角的Advanced S3-compatible storage settings配置签名版本以及URL风格
 
@@ -106,13 +106,13 @@ CentOS 6 及其以下版本
 
 #### 获取源码
 
-首先，您需要从 GitHub 上将源码下载到指定目录，以 `/data/s3fs` 为例：
+首先，您需要从  上将源码下载到指定目录，以 `/data/s3fs` 为例：
 
 ```
 1. cd /data  
 2. mkdir s3fs  
 3. cd s3fs  
-4. wget https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip
+4. wget https://.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip
 ```
 
 #### 安装依赖项
@@ -150,7 +150,7 @@ CentOS 系统下安装依赖软件：
 
 1. yum -y remove fuse-devel #卸载当前版本的 fuse
 
-2. wget https://github.com/libfuse/libfuse/releases/download/fuse_2_9_4/fuse-2.9.4.tar.gz
+2. wget https://.com/libfuse/libfuse/releases/download/fuse_2_9_4/fuse-2.9.4.tar.gz
 
 3. tar -zxvf fuse-2.9.4.tar.gz
 
@@ -180,7 +180,7 @@ CentOS 系统下安装依赖软件：
 
 在 `${HOME}/` 目录中创建 `.passwd-s3fs` 文件。文件格式为 `[API 公钥:API 秘钥]`。
 
-公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](https://github.com/UCloudDocs/ufile/blob/master/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明)。
+公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明)。
 
 例如:
 
@@ -205,7 +205,7 @@ CentOS 系统下安装依赖软件：
 
   注意:空间名称不带域名后缀，比如 UFile 空间名称显示为`test.cn-bj.ufileos.com`，则`${UFileBucketName}=test`
 
-- 根据 UFile 存储空间所在地域，本地服务器是否在 UCloud 内网，参考[支持 AWS S3 协议说明](https://github.com/UCloudDocs/ufile/blob/master/s3/ufile/s3/s3_introduction)
+- 根据 UFile 存储空间所在地域，本地服务器是否在 UCloud 内网，参考[支持 AWS S3 协议说明](/ufile/s3/s3_introduction)
 
 - 执行命令。
 
