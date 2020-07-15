@@ -12,17 +12,17 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 ### 安装步骤
 
-​1. 下载安装包
+​	1.下载安装包
 
 下载地址: [http://s3browser.com](http://s3browser.com/)
 
-2. 安装程序
+​	2.安装程序
 
 进入下载页面，点击 Download S3 Browser，按照提示，进行安装即可。
 
 ### 使用方法
 
-1. 增加用户
+​	1.增加用户
 
 点击左上角 Accounts 按钮，在下拉框中，点击 Add new account
 
@@ -54,15 +54,17 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 修改成功点击Close 关闭当前设置，点击Add new account 保存配置，则成功创建用户。
 
-​2. 对象操作
+​	2.对象操作
 
 ## 控制台功能说明
 
-[![img](images/console.png)](https://github.com/UCloudDocs/ufile/blob/master/images/console.png)
+![img](images/console.png)
 
 特别说明：目前分片大小只支持 8M 具体配置如下： 1.点击上方工具栏 Tools，在下拉列表中选择 Options，选择 General，在弹出页面中，设置 Enable multipart uploads with size (in megabytes) 为 8，如下图所示：
 
 ![img](images/console2.png)
+
+
 
 ## 网络文件系统 S3FS
 
@@ -230,11 +232,11 @@ s3fs s3fs-test /data/vs3fs -o url=[http://internal.s3-cn-bj.ufileos.com](http://
 
 执行 `df -h` 指令，可以看到 s3fs 程序的运行。效果如下:
 
-[![img](https://github.com/UCloudDocs/ufile/raw/master/s3/images/dfh.png)](https://github.com/UCloudDocs/ufile/blob/master/s3/images/dfh.png)
+![img](images/dfh.png)
 
 此时，可以看到 `/data/vs3fs` 目录下的文件和指定 bucket 的文件，保持一致。 也可以通过 tree 执行，查看文件结构。安装指令：`yum install -y tree` 效果如下：
 
-[![img](https://github.com/UCloudDocs/ufile/raw/master/s3/images/yum.png)](https://github.com/UCloudDocs/ufile/blob/master/s3/images/yum.png)
+![img](images/yum.png)
 
 #### 文件上传和下载
 
@@ -300,7 +302,7 @@ aws_secret_access_key = 93614*******b1dc40
 
 挂载效果如图：
 
-[![img](images/goofys_mount.png)](https://github.com/UCloudDocs/ufile/blob/master/images/goofys_mount.png)
+![img](images/goofys_mount.png)
 
 测试挂载是否成功, 可以拷贝一个本地文件到 mount_test 目录, 看是否上传到 UFile。
 
@@ -367,5 +369,6 @@ service vsftpd start
 ```
 ftp ${ftp_server_ip}
 ```
+
 
 
