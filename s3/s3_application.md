@@ -36,7 +36,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 **Signature Version:** 签名版本，选择 Signature V4。
 
-**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3-的-accesskeyid-和-secretaccesskey-说明)。
+**Access Key ID:** Api 公钥，或者 Token。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3-的-accesskeyid-和-secretaccesskey-说明) 。
 
 **Secret Access Key:** API 私钥。具体获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3-的-accesskeyid-和-secretaccesskey-说明) 。
 
@@ -180,7 +180,7 @@ CentOS 系统下安装依赖软件：
 
 在 `${HOME}/` 目录中创建 `.passwd-s3fs` 文件。文件格式为 `[API 公钥:API 秘钥]`。
 
-公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3的accesskeyid和secretaccesskey说明)。
+公私钥获取方式具体请参考获取请参考 [S3 的 AccessKeyID 和 SecretAccessKey 说明](/ufile/s3/s3_introduction?id=s3-的-accesskeyid-和-secretaccesskey-说明)。
 
 例如:
 
