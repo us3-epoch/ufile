@@ -50,6 +50,7 @@
 * 解决方案
     * [数据迁移方案](https://docs.ucloud.cn/ufile/solutions/remove)
     * [数据库备份方案](https://docs.ucloud.cn/ufile/solutions/backup)
+    * [数据归档方案](https://docs.ucloud.cn/ufile/solutions/archive)
 * [计量计费](https://docs.ucloud.cn/ufile/bill/new)
     * [产品价格](https://docs.ucloud.cn/ufile/bill/billing)
     * [计费规则](https://docs.ucloud.cn/ufile/bill/directions)
