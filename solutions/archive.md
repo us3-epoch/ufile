@@ -50,4 +50,4 @@ UFile 提供 [文件存储类型转换](https://docs.ucloud.cn/api/ufile-api/cla
 
 您可以通过开通存储空间（Bucket）生命周期功能，实现存储空间内所有文件或特定前缀文件定期自动转换为归档存储，从而节省存储费用。
 
-如您需要详细了解生命周期功能的设置方式，请参考 [产品价格](/ufile/guide/lifecycle)
+如您需要详细了解生命周期功能的设置方式，请参考 [生命周期](/ufile/guide/lifecycle)
