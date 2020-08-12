@@ -44,7 +44,7 @@ UFile 提供的上传类 API 中，在请求头（Request Headers）中以 X-Ufi
 
 2. 通过文件存储类型转换 API 修改存储类型
 
-UFile 提供 [文件存储类型转换](https://docs.ucloud.cn/api/ufile-api/class_switch)，您可以使用该 API 转换文件的存储类型。
+UFile 提供 [文件存储类型转换](https://docs.ucloud.cn/api/ufile-api/class_switch) API，您可以使用该 API 转换文件的存储类型。
 
 ### 设置生命周期策略将文件转换为归档存储
 
