@@ -98,20 +98,22 @@ StringToSign 中包括两类标头元素：
 
 2. 拼接签名字符串对照 step1 的请求中的各个参数，程序中的各变量取值如下（采用伪代码描述）
 
-    bucket = "demobucket"
-    key = "demokey"
-    http_verb = "PUT"
-    content_md5 = "" 
-    content_type = "image/jpeg"
-    date = "" 
-    canonicalized_ucloud_headers = "x-ucloud-foo:foo" + "\n" + "x-ucloud-bar:bar1,bar2" + \n"
-    canonicalized_resource = "/" + "demobucket" + "/" + "demokey"
-    string2sign = "PUT" + "\n"
-        + "" + "\n"
-        + "image/jpg" + "\n"
-        + "" + "\n"
-        + "x-ucloud-foo:foo" + "\n" + "x-ucloud-bar:bar1,bar2" + "\n"
-        + "/demobucket/demokey"
+``` 
+bucket = "demobucket"
+key = "demokey"
+http_verb = "PUT"
+content_md5 = "" 
+content_type = "image/jpeg"
+date = "" 
+canonicalized_ucloud_headers = "x-ucloud-foo:foo" + "\n" + "x-ucloud-bar:bar1,bar2" + \n"
+canonicalized_resource = "/" + "demobucket" + "/" + "demokey"
+string2sign = "PUT" + "\n"
+    + "" + "\n"
+    + "image/jpg" + "\n"
+    + "" + "\n"
+    + "x-ucloud-foo:foo" + "\n" + "x-ucloud-bar:bar1,bar2" + "\n"
+    + "/demobucket/demokey"
+``` 
 
 即
 
