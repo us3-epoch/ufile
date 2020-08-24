@@ -1,6 +1,6 @@
 # API 签名算法
 
-UFileREST API 基于 HMAC（哈希消息身份验证码）密钥使用自定义	HTTP
+UFile REST API 基于 HMAC（哈希消息身份验证码）密钥使用自定义	HTTP
 方案进行身份验证。要对请求进行身份验证，您首先需要合并请求的选定元素以形成一个字符串。然后，您可以使用 UCloud 私有访问密钥来计算该字符串的 HMAC。通常我们将此过程称为“签署请求”并且我们将输出 HMAC 算法称为“签名”，因为它会模拟真实签名的安全属性。最后，您可以使用本部分中介绍的语法，作为请求的参数添加此签名。
 
 系统收到经身份验证的请求时，将提取您申领的 UCloud 私有访问密钥，并以相同的使用方式将它用于计算已收到的消息的签名。然后，它会将计算出的签名与请求者提供的签名进行对比。如果两个签名相匹配，则系统认为请求者必须拥有对 UCloud 私有访问密钥的访问权限，因此充当向其颁发密钥的委托人的颁发机构。如果两个签名不匹配，那么请求将被丢弃，同时系统将返回错误消息。
@@ -41,11 +41,11 @@ UFileREST API 基于 HMAC（哈希消息身份验证码）密钥使用自定义	
 
 ### 身份验证标头
 
-该方式使用 Authorization 头部字段传递签名数据，并放置于各 HTTP 请求的报文头中，如下图所示，身份验证标头具有以下形式:
+该方式使用 Authorization 头部字段传递签名数据，并放置于各 HTTP 请求的报文头中，如下图所示，身份验证标头具有以下形式：
 
     Authorization: UCloud UCloudPublicKey:Signature
 
-其中，Signature 是一个哈希值，具体为请求中特定元素的 HMAC-SHA1（RFC2104），因此 Signature 会因请求不同而异。如果客户端请求中随附的 Signature 与服务端计算出的 Signature 相匹配，则证明请求者拥有 UCloud 允许的访问权限。以下是 Authorization 身份验证标头构造的伪代码
+其中，Signature 是一个哈希值，具体为请求中特定元素的 HMAC-SHA1（RFC2104），因此 Signature 会因请求不同而异。如果客户端请求中随附的 Signature 与服务端计算出的 Signature 相匹配，则证明请求者拥有 UCloud 允许的访问权限。以下是 Authorization 身份验证标头构造的伪代码：
 
     Authorization = "UCloud" + " " + UCloudPublicKey + ":" + Signature
     Signature = Base64( HMAC-SHA1( UCloudPrivateKey, UTF-8-Encoding-Of( StringToSign ) ) )
@@ -67,6 +67,7 @@ StringToSign 中包括两类标头元素：
 1. 如果位置标头不在请求中（例如，Content-Type 或 Content-MD5 对于 PUT 请求是可选的，并且对于GET请求没有任何意义），必须使用空字符串""替换该位置；
 2. BASE64 使用 standardbase64，不是 URLSafe 的 base64 算法，下同；
 3. 当使用 POST 表单上传时，签名使用的 Content-Type 字段应该是 form 参数中的 Content-Type 字段（即文件本身的 mimetype），而非 HTTP 请求的 Content-Type。
+4. UCloudPublicKey 和 UCloudPrivateKey 对应 [令牌管理](/ufile/guide/token) 中创建的令牌，用户也可以用 UCloud 私有访问密钥进行访问。
 
 **计算CanonicalizedUCloudHeaders步骤**
 
