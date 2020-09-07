@@ -112,7 +112,7 @@ CentOS 6 及其以下版本
 1. cd /data  
 2. mkdir s3fs  
 3. cd s3fs  
-4. wget https://.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip
+4. wget https://github.com/s3fs-fuse/s3fs-fuse/archive/v1.83.zip
 ```
 
 #### 安装依赖项
