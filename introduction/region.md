@@ -19,4 +19,4 @@
 | 胡志明市  | www.vn-sng.ufileos.com      | www.internal-vn-sng.ufileos.com     |
 | 华盛顿  | www.us-ws.ufileos.com      | www.internal-us-ws.ufileos.com     |
 | 孟买  | www.ind-mumbai.ufileos.com      | www.internal-ind-mumbai.ufileos.com     |
-
+| 首尔  | www.kr-seoul.ufileos.com      | www.internal-kr-seoul.ufileos.com     |
