@@ -1,4 +1,4 @@
-<div class="sidebar_title icon__ufile"> 对象存储 US3</div>
+<div class="sidebar_title icon__ufile"> 对象存储 UFile</div>
 
 
 * [概览](/ufile/README)
