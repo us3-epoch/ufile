@@ -1,4 +1,4 @@
-<div class="sidebar_title icon__ufile"> 对象存储 UFile</div>
+<div class="sidebar_title icon__ufile"> 对象存储 US3</div>
 
 
 * [概览](/ufile/README)
@@ -10,8 +10,8 @@
     * [存储类型](/ufile/introduction/storage_type)
     * [地域和域名](/ufile/introduction/region)
 * 快速上手
-    * [开通 UFile 服务](/ufile/quick/start_service)
-    * [开始使用 UFile](/ufile/quick/quick_start)
+    * [开通 US3 服务](/ufile/quick/start_service)
+    * [开始使用 US3](/ufile/quick/quick_start)
 * 控制台指南
     * [存储空间](/ufile/guide/space)
     * [日志管理](/ufile/guide/logging)
