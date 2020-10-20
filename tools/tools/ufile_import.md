@@ -3,14 +3,14 @@
 # 迁移工具
 
 ## 介绍
-ufile-import 是对象存储 UFile 提供的一款将数据迁移至 UFile 存储空间（Bucket） 的工具。您可以将 ufile-import 部署在本地服务或者云主机上，轻松将您其他云存储的数据迁移到 UFile。
+ufile-import 是对象存储 US3 提供的一款将数据迁移至 US3 存储空间（Bucket） 的工具。您可以将 ufile-import 部署在本地服务或者云主机上，轻松将您其他云存储的数据迁移到 US3。
 
 ### 适用情况
 
-* 阿里云对象存储数据迁移到 UFile 对象存储
-* 七牛云对象存储数据迁移到 UFile 对象存储
-* UFile 对象存储不同 Bucket 之前的数据迁移
-* 支持 S3 协议的对象存储迁移到 UFile 对象存储
+* 阿里云对象存储数据迁移到 US3 对象存储
+* 七牛云对象存储数据迁移到 US3 对象存储
+* US3 对象存储不同 Bucket 之前的数据迁移
+* 支持 S3 协议的对象存储迁移到 US3 对象存储
 
 ### 准备工作
 1. 根据需要迁移的文件的总大小，选择硬盘合适的云主机。必须要保证硬盘存储量大于文件迁移数据量,否则可能会因为硬盘大小不够，而造成迁移数据不完整。  
@@ -43,4 +43,4 @@ Linux 64 位操作系统请下载
 
      root      5318     1  0 14:50 pts/0    00:00:15 ./redis-server 127.0.0.1:6379
 
-工具使用详情参照 [UFile 迁移工具使用说明](https://github.com/ufilesdk-dev/ufile-import)
+工具使用详情参照 [US3 迁移工具使用说明](https://github.com/ufilesdk-dev/ufile-import)
