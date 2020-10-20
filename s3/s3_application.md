@@ -4,7 +4,7 @@
 
 ### 功能说明
 
-S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提供了一个简单的 Web 服务接口，可用于存储和检索任意数量的数据，无论任何时候从任何地方。 可以通过相关配置，直接操控 UFile 对象存储的 Bucket 中的文件，进行上传，下载，删除等操作。
+S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提供了一个简单的 Web 服务接口，可用于存储和检索任意数量的数据，无论任何时候从任何地方。 可以通过相关配置，直接操控 US3 对象存储的 Bucket 中的文件，进行上传，下载，删除等操作。
 
 ### 安装和使用
 
@@ -199,13 +199,13 @@ CentOS 系统下安装依赖软件：
 
 操作指令解释:
 
-- 建立 UFile 挂载文件路径 `${LocalMountPath}`
+- 建立 US3 挂载文件路径 `${LocalMountPath}`
 
 - 获取已创建的存储空间（Bucket）名称 `${UFileBucketName}`
 
-  注意:空间名称不带域名后缀，比如 UFile 空间名称显示为`test.cn-bj.ufileos.com`，则`${UFileBucketName}=test`
+  注意:空间名称不带域名后缀，比如 US3 空间名称显示为`test.cn-bj.ufileos.com`，则`${UFileBucketName}=test`
 
-- 根据 UFile 存储空间所在地域，本地服务器是否在 UCloud 内网，参考[支持 AWS S3 协议说明](/ufile/s3/s3_introduction)
+- 根据 US3 存储空间所在地域，本地服务器是否在 UCloud 内网，参考[支持 AWS S3 协议说明](/ufile/s3/s3_introduction)
 
 - 执行命令。
 
@@ -240,21 +240,21 @@ s3fs s3fs-test /data/vs3fs -o url=[http://internal.s3-cn-bj.ufileos.com](http://
 
 #### 文件上传和下载
 
-挂载 UFile 存储空间和后，可以像使用本地文件夹一样使用 UFile 存储空间。
+挂载 US3 存储空间和后，可以像使用本地文件夹一样使用 US3 存储空间。
 
 1. 拷贝文件到 `${LocalMountPath}` ，即是上传文件。
 2. 将文件从 `${LocalMountPath}` 拷贝到其他路径，即下载文件。
 
 **注意：**
 
-1. 路径不符合 Linux 文件路径规范的路径，可以在 UFile 管理控制台看到，但不会在 Fuse 挂载的 `\${LocalMountPath}` 下显示。
+1. 路径不符合 Linux 文件路径规范的路径，可以在 US3 管理控制台看到，但不会在 Fuse 挂载的 `\${LocalMountPath}` 下显示。
 2. Fuse 使用枚举文件清单会比较缓慢，建议直接使用指定到具体文件的命令，如 vim、cp、rm 指定具体文件。
 
 #### 删除文件
 
-将文件从 `${LocalMountPath}` 删除掉，则 UFile 存储空间中，该文件也被删除掉。
+将文件从 `${LocalMountPath}` 删除掉，则 US3 存储空间中，该文件也被删除掉。
 
-#### 卸载UFile存储空间
+#### 卸载US3存储空间
 
 ```
 sudo umount ${LocalMountPath}
@@ -304,7 +304,7 @@ aws_secret_access_key = 93614*******b1dc40
 
 ![img](images/goofys_mount.png)
 
-测试挂载是否成功, 可以拷贝一个本地文件到 mount_test 目录, 看是否上传到 UFile。
+测试挂载是否成功, 可以拷贝一个本地文件到 mount_test 目录, 看是否上传到 US3。
 
 ### 其它操作（删除,上传,获取,卸载）
 
@@ -314,7 +314,7 @@ aws_secret_access_key = 93614*******b1dc40
 
 4核8G 的 UHost 虚拟机, 上传 500MB 以上的文件, 平均速度可达140MB/s
 
-## 基于 UFile 的 FTP 服务
+## 基于 US3 的 FTP 服务
 
 ### 功能说明
 
@@ -328,7 +328,7 @@ aws_secret_access_key = 93614*******b1dc40
 
 #### 搭建环境
 
-使用 s3fs 工具将 Bucket 挂载到本地。具体安装方式步骤参考基于 S3FS、UFile 搭建**网络文件系统**的内容。
+使用 s3fs 工具将 Bucket 挂载到本地。具体安装方式步骤参考基于 S3FS、US3 搭建**网络文件系统**的内容。
 
 #### 安装依赖项
 
