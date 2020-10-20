@@ -36,7 +36,7 @@
 ### 使用说明
 
 该工具用于在命令行做上传/下载/删除等针对文件的操作，如果有需要动态上传文件的场景，请使用 API 进行内容管理操作。
-上传超过 100MB 大小的文件，网络条件较差，和 UFile 的服务器之间的连接经常断开的场景请使用工具中的分片上传（MPUT）。
+上传超过 100MB 大小的文件，网络条件较差，和 US3 的服务器之间的连接经常断开的场景请使用工具中的分片上传（MPUT）。
 使用前请修改当前目录下的配置文件 config.cfg，把 API 密钥加入到配置项：
 
 ```
@@ -213,7 +213,7 @@ API 密钥可以在控制台中 [API 产品 - API 密钥](https://console.ucloud
 
 示例2:
 
-假设有个目录名为 /some/dir/cutoff/files/，下面有 a.jpg、b.txt 两个文件，则以下的处理会使得保存在 UFile 的文件名为 files/a.jpg、files/b.txt。
+假设有个目录名为 /some/dir/cutoff/files/，下面有 a.jpg、b.txt 两个文件，则以下的处理会使得保存在 US3 的文件名为 files/a.jpg、files/b.txt。
 
 ```
 ./filemgr-linux64 --action put --dir ~/files --bucket demobucket --trimpath /some/dir/cutoff/
@@ -359,7 +359,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 
 #### 计算文件ETag
 
-该选项用于计算使用ufile特殊算法得到的文件哈希值
+该选项用于计算使用 US3 特殊算法得到的文件哈希值
 
 ```
 ./filemgr-linux64 --action etag --file filename
@@ -377,7 +377,7 @@ Sync Successed[ src/pkg/runtime/runtime_linux_test.go ] => demobucket : src/pkg/
 
 #### 检查文件
 
-该选项用于检查文件是否存在于ufile对应空间
+该选项用于检查文件是否存在于 US3 对应空间
 
 ```
 ./filemgr-linux64 --action check --bucket bucketname --key key
@@ -411,7 +411,7 @@ http://demobucket.ufile.ucloud.com.cn/QQ.pkg%3DUCloudPublicKey%3Ducloudtesting%4
 
 #### 获取文件列表
 
-该选项用于获取ufile存储空间的文件列表
+该选项用于获取 US3 存储空间的文件列表
 
 ```
 ./filemgr-linux64 --action getfilelist --bucket bucketname [--limit limit] [--marker marker] [--prefix prefix] [--pattern pattern] [--format format]
