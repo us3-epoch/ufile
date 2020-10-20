@@ -6,7 +6,7 @@
 
 对象存储空间默认提供测试域名进行访问。默认该测试域名关闭。  
 当您没有自己的域名创建 CDN 加速时，可以点击开启一键创建 CDN 加速域名试用。  
-测试域名是由我们系统完成备案和配置 CNAME 至 UFile 对应存储空间域名。有关测试域名的 CDN 高级配置，请到 [UCDN 产品页](https://console.ucloud.cn/ucdn/ucdndomainmanage) 进行操作。  
+测试域名是由我们系统完成备案和配置 CNAME 至 US3 对应存储空间域名。有关测试域名的 CDN 高级配置，请到 [UCDN 产品页](https://console.ucloud.cn/ucdn/ucdndomainmanage) 进行操作。  
 使用此 CDN 加速域名访问将产生 CDN 流量和 CDN 回源流量费用，流量费用请参照 [UCDN计费规则](https://docs.ucloud.cn/ucdn/charge)。  
 ![](/images/域名管理1.png)
 
@@ -16,7 +16,7 @@
 
 1. 确认自定义域名已经完成备案（若未进行备案，域名会被管局停止解析，导致业务不可用），备案相关请访问 [备案专区](https://beian.ucloud.cn)。
 
-2. UFile 控制台提供管理自定义域名功能，用户可操作绑定自定义域名并开启加速。
+2. US3 控制台提供管理自定义域名功能，用户可操作绑定自定义域名并开启加速。
 选择对应空间，在右侧的操作中点击域名管理按钮。
 
 ![](/images/域名管理2.png)
