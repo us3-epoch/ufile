@@ -8,7 +8,7 @@
 
 [创建Bucket-CreateBucket](https://docs.ucloud.cn/api/ufile-api/create_bucket)
 
-[创建UFile令牌-CreateUFileToken](https://docs.ucloud.cn/api/ufile-api/create_ufile_token)
+[创建US3令牌-CreateUFileToken](https://docs.ucloud.cn/api/ufile-api/create_ufile_token)
 
 [删除Bucket-DeleteBucket](https://docs.ucloud.cn/api/ufile-api/delete_bucket)
 
