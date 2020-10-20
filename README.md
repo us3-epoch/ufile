@@ -10,8 +10,8 @@
     * [存储类型](https://docs.ucloud.cn/ufile/introduction/storage_type)
     * [地域和域名](https://docs.ucloud.cn/ufile/introduction/region)
 * 快速上手
-    * [开通 UFile 服务](https://docs.ucloud.cn/ufile/quick/start_service)
-    * [开始使用 UFile](https://docs.ucloud.cn/ufile/quick/quick_start)
+    * [开通 US3 服务](https://docs.ucloud.cn/ufile/quick/start_service)
+    * [开始使用 US3](https://docs.ucloud.cn/ufile/quick/quick_start)
 * 控制台指南
     * [存储空间](https://docs.ucloud.cn/ufile/guide/space)
     * [日志管理](https://docs.ucloud.cn/ufile/guide/logging)
