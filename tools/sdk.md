@@ -2,7 +2,7 @@
 
 # SDK 列表
 
-UFile 提供了各种主流语言的 SDK，用于对象存储相关功能的调用，各个 SDK 的 Git 仓库链接如下：
+US3 提供了各种主流语言的 SDK，用于对象存储相关功能的调用，各个 SDK 的 Git 仓库链接如下：
 
 [JS SDK](https://github.com/ufilesdk-dev/ufile-jssdk)
 
