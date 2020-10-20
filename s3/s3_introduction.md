@@ -70,7 +70,7 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 ### API支持路径风格和虚拟主机风格
 
 **路径风格格式为: `http://\${Endpoint}/\${bucket名字}/\${key名字}`，bucket 名字作为路径使用的一部分。**
-例如，AWS S3 Java SDK 在 UCloud 北京地域走外网使用 UFile S3 服务则设置如下：  
+例如，AWS S3 Java SDK 在 UCloud 北京地域走外网使用 US3 S3 服务则设置如下：  
 
     
     "AWSCredential credentials = new BasicAWSCredentials(ACCESS_KEY,
@@ -83,7 +83,7 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
     conn.setS3ClientOptions(clientOptions);  
     conn.setEndpoint("s3-cn-bj.ufileos.com");"
 
-**虚拟主机风格: http://${bucket名字}.${Endpoint}/${key名字}，类似UFile目前使用的URL形式。**
+**虚拟主机风格: http://${bucket名字}.${Endpoint}/${key名字}，类似US3目前使用的URL形式。**
 
 ### 接入域名（Endpoint）
 
