@@ -4,7 +4,7 @@
 
 ### 支持的 API
 
-UFile 目前的 S3 协议模块对标准 S3 协议的支持如下表：
+US3 目前的 S3 协议模块对标准 S3 协议的支持如下表：
 
 | **编号** | **API名字**               | **备注说明**                                                 |
 | :------: | ------------------------- | ------------------------------------------------------------ |
@@ -13,18 +13,18 @@ UFile 目前的 S3 协议模块对标准 S3 协议的支持如下表：
 |    3     | GET Bucket acl            | 没有太多意义，主要为了支持 S3 Browser 而实现，Permission字段永远为 “FULL_CONTROL” |
 |    4     | GET Bucket versioning     | 没有太多意义，主要为了支持 S3 Browser 而实现，Status 字段永远为空字符串 |
 |    5     | GET Object acl            | 没有太多意义，主要为了支持 S3 Browser 而实现，Permission 字段永远为 “FULL_CONTROL” |
-|    6     | HEAD Object               | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    7     | PUT Object                | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    8     | POST Object               | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    9     | PUT Object copy           | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    10    | GET Object                | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    11    | List Objects              | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    12    | DELETE Object             | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    13    | Delete Multiple Objects   | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    14    | Initiate Multipart Upload | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    15    | Upload Part               | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) , **注意目前只支持 8MB 大小的分片!!!!** |
-|    16    | Complete Multipart Upload | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    17    | Abort Multipart Upload    | 参考[UFile S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    6     | HEAD Object               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    7     | PUT Object                | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    8     | POST Object               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    9     | PUT Object copy           | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    10    | GET Object                | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    11    | List Objects              | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    12    | DELETE Object             | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    13    | Delete Multiple Objects   | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    14    | Initiate Multipart Upload | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    15    | Upload Part               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) , **注意目前只支持 8MB 大小的分片!!!!** |
+|    16    | Complete Multipart Upload | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    17    | Abort Multipart Upload    | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
 
 注意:
 
@@ -32,13 +32,13 @@ UFile 目前的 S3 协议模块对标准 S3 协议的支持如下表：
 
 * POST Object 目前仅支持最大 32MB 文件的上传；
 
-* 目前UFile S3 不支持多版本功能；
+* 目前US3 S3 不支持多版本功能；
 
-* ~~目前UFile S3 不支持用户自定义元数据功能，如Header头指定x-amz-meta-*~~；
+* ~~目前US3 S3 不支持用户自定义元数据功能，如Header头指定x-amz-meta-*~~；
 
-* ~~目前UFile S3 不支持存储类型，默认为标准类型~~，存储类型转换规则参考【存储类型转换规则】；
+* ~~目前US3 S3 不支持存储类型，默认为标准类型~~，存储类型转换规则参考【存储类型转换规则】；
 
-* ~~目前UFile S3 不支持x-amz-content-sha256为`UNSIGNED-PAYLOAD`的签名~~；
+* ~~目前US3 S3 不支持x-amz-content-sha256为`UNSIGNED-PAYLOAD`的签名~~；
 
 * 目前不支持 S3 API 的 MD5 校验（原因跟 S3 的 ETag 计算方式有差异），建议关闭:
 
@@ -59,7 +59,7 @@ UFile 目前的 S3 协议模块对标准 S3 协议的支持如下表：
 
 ### S3 的 AccessKeyID 和 SecretAccessKey 说明
 
-S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）对应就是 UCloud 的 API 公钥和私钥，或者是 UFile 服务提供的 Token 公钥和 Token 私钥；
+S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）对应就是 UCloud 的 API 公钥和私钥，或者是 US3服务提供的 Token 公钥和 Token 私钥；
 
 **注意：要求无论是 API 公私钥还是 Token 公私钥，要求操作的 bucket，必须满足以下条件:**
 
@@ -124,7 +124,7 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 
 ### 存储类型转换规则
 
-| **UFile存储类型**                  | **S3存储类型** | **UFile对应S3默认存储类型** |
+| **US3存储类型**                  | **S3存储类型** | **US3对应S3默认存储类型** |
 | --------------- | ------------- | --------------- |
 | STANDARD        | STANDARD<br/>STANDARD_IA             | STANDARD               |
 | IA              | ONEZONE_IA<br/>INTELLIGENT_TIERING<br/>REDUCED_REDUNDANCY             | ONEZONE_IA               |
