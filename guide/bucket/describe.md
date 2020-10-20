@@ -2,7 +2,7 @@
 
 # 获取存储空间信息
 
-您可以通过 UFile API 的 DescribeBucket 接口获取存储空间（Bucket）的详细信息。
+您可以通过 US3 API 的 DescribeBucket 接口获取存储空间（Bucket）的详细信息。
 获取存储空间信息的 API 详情请参考 [DescribeBucket](https://docs.ucloud.cn/api/ufile-api/describe_bucket)。
 
 ## 操作方式
