@@ -10,9 +10,9 @@ US3 令牌功能可以根据用户的需求灵活的开放存储空间和文件�
 
 用户可以通过两种方式管理 US3 令牌：
 
-1. 登陆 UCloud 官方控制台，进入 [UFile - 令牌管理](https://console.ucloud.cn/ufile/token)。
+1. 登陆 UCloud 官方控制台，进入 [US3 - 令牌管理](https://console.ucloud.cn/ufile/token)。
 
-2. 通过调用 [UFile API](https://docs.ucloud.cn/api/ufile-api/README) 进行创建、编辑等操作。
+2. 通过调用 [US3 API](https://docs.ucloud.cn/api/ufile-api/README) 进行创建、编辑等操作。
 
 ## 创建/编辑令牌
 
