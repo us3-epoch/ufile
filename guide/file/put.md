@@ -48,7 +48,7 @@
 
 ## 分片上传
 
-UCloud US3 提供的分片上传（Multipart Upload）功能，可以将要上传的文件分成多个数据块（US3 里又称之为 Part）来分别上传，上传完成之后再调用 US3 的接口将这些 Part 组合成一个 Object 来达到断点续传的效果。
+US3 提供的分片上传（Multipart Upload）功能，可以将要上传的文件分成多个数据块（US3 里又称之为 Part）来分别上传，上传完成之后再调用 US3 的接口将这些 Part 组合成一个 Object 来达到断点续传的效果。
 
 
 ### 适用场景
@@ -93,6 +93,6 @@ UCloud US3 提供的分片上传（Multipart Upload）功能，可以将要上�
 
 ## 上传回调
 
-UCloud US3 在上传文件完成的时候可以提供回调（Callback）给应用服务器。您只需要在发送给 US3 的请求中携带相应的 Callback 参数，即能实现回调。
+US3 在上传文件完成的时候可以提供回调（Callback）给应用服务器。您只需要在发送给 US3 的请求中携带相应的 Callback 参数，即能实现回调。
 
 
