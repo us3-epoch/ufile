@@ -76,7 +76,7 @@
 
 CDN 回源，流量从 US3 流向 UCDN，这部分流量 UCDN 不计费，由 US3 计费，请参考下图：
 
-![](/images/UCDN回源US3的流量计费.png)  
+![](/images/UCDN回源US3.png)  
 计费价格详见：[计量计费](/ufile/bill/new)
 
 ## 镜像回源支持的空间类型
