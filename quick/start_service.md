@@ -16,4 +16,4 @@ UCloud 对象存储服务 US3 为您提供基于网络的数据存取服务。�
 
 3. 在控制台界面左上角点击全部产品按钮，在产品列表中点击 [对象存储 US3](https://console.ucloud.cn/ufile/ufile)。
 
-![](/images/控制台列表.png)
+![](/images/导航页US3截图.png)
