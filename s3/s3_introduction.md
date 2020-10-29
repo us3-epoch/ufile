@@ -13,18 +13,18 @@ US3 目前的 S3 协议模块对标准 S3 协议的支持如下表：
 |    3     | GET Bucket acl            | 没有太多意义，主要为了支持 S3 Browser 而实现，Permission字段永远为 “FULL_CONTROL” |
 |    4     | GET Bucket versioning     | 没有太多意义，主要为了支持 S3 Browser 而实现，Status 字段永远为空字符串 |
 |    5     | GET Object acl            | 没有太多意义，主要为了支持 S3 Browser 而实现，Permission 字段永远为 “FULL_CONTROL” |
-|    6     | HEAD Object               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    7     | PUT Object                | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    8     | POST Object               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    9     | PUT Object copy           | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    10    | GET Object                | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    11    | List Objects              | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    12    | DELETE Object             | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    13    | Delete Multiple Objects   | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    14    | Initiate Multipart Upload | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    15    | Upload Part               | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) , **注意目前只支持 8MB 大小的分片!!!!** |
-|    16    | Complete Multipart Upload | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
-|    17    | Abort Multipart Upload    | 参考[US3 S3 兼容 API 文档-2.1.pdf](http://ufile-release.cn-bj.ufileos.com/s3/UFile%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.1.pdf) |
+|    6     | HEAD Object               | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    7     | PUT Object                | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    8     | POST Object               | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    9     | PUT Object copy           | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    10    | GET Object                | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    11    | List Objects              | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    12    | DELETE Object             | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    13    | Delete Multiple Objects   | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    14    | Initiate Multipart Upload | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    15    | Upload Part               | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) , **注意目前只支持 8MB 大小的分片!!!!** |
+|    16    | Complete Multipart Upload | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
+|    17    | Abort Multipart Upload    | 参考[US3 兼容 S3 API - v2.2.pdf](http://ufile-release.cn-bj.ufileos.com/s3%2FUS3%20%E5%85%BC%E5%AE%B9S3%20API%20-%20v2.2.pdf) |
 
 注意:
 
