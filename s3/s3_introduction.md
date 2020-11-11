@@ -96,7 +96,7 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 |  5   |    越南-胡志明    |   s3-vn-sng.ufileos.com    |   internal.s3-vn-sng.ufileos.com    |
 |  6   |  尼日利亚-拉各斯  | s3-afr-nigeria.ufileos.com | internal.s3-afr-nigeria.ufileos.com |
 |  7   |     韩国-首尔     |  s3-kr-seoul.ufileos.com   |  internal.s3-kr-seoul.ufileos.com   |
-|  8   |    巴西-圣保罗    |  bra-saopaulo.ufileos.com  |               待支持                |
+|  8   |    巴西-圣保罗    |  s3-bra-saopaulo.ufileos.com  |               待支持                |
 |  9   |    美国-洛杉矶    |    s3-us-ca.ufileos.com    |    internal.s3-us-ca.ufileos.com    |
 |  10  |    美国-华盛顿    |    s3-us-ws.ufileos.com    |    internal.s3-us-ws.ufileos.com    |
 |  11  |    阿联酋-迪拜    |  s3-uae-dubai.ufileos.com  |  internal.s3-uae-dubai.ufileos.com  |
