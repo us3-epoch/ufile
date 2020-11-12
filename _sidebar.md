@@ -38,7 +38,7 @@
 	* [上传策略说明](/ufile/putpolicy)
     * [管理工具](/ufile/tools/introduction)
         * [统一管理工具](/ufile/tools/tools/us3cli)
-	* [文件系统挂载工具](ufile/tools/tools/us3fs)
+	* [文件挂载工具](ufile/tools/tools/us3fs)
         * [空间管理](/ufile/tools/tools/tools_bcket)
         * [文件管理](/ufile/tools/tools/tools_file)
         * [迁移工具](/ufile/tools/tools/ufile_import)
