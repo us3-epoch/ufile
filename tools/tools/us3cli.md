@@ -287,7 +287,7 @@ Configuration file [ config3 ] has been updated
 ##### 命令格式
 
 ```
-us3cli cat us3://<bucketname>/<keyname> [--retrycount <重试次数>][--speedlimit <速度限制>]
+us3cli cat us3://<存储空间名称>/<文件key> [--retrycount <重试次数>][--speedlimit <速度限制>]
 ```
 
 ##### 参数说明
@@ -368,11 +368,11 @@ us3cli cp us3://<存储空间名称>/<文件Key> us3://<存储空间名称>/<文
 
 注：
 
-1.通配符表达式暂时只支持“*”,"?"两种字符，并且需要注意的是，四种表达式筛选均以当前目录下文件路径为准
+1. 通配符表达式暂时只支持“*”,"?"两种字符，并且需要注意的是，四种表达式筛选均以当前目录下文件路径为准
 
  如：   us3://us3cli/test 目录下的test2/test3.txt  会以test2/test3.txt作为字符串筛选，而不是以test3.txt作为字符串进行筛选
 
-2.以下所有speedlimit选项均描述为平均速度
+2. 以下所有speedlimit选项均描述为平均速度
 
 ##### 使用示例
 
@@ -528,7 +528,6 @@ us3cli etag [<本地文件路径1>,[<本地文件路径2>] ...] [us3://<存储�
 # us3cli etag main.go
 Name              Etag                            
 main.go           AQAAAEpmwm87EANJQDpLTEmxsjR7-R0N
-test.go       	  AQAAAA2_k04RGgAoswywP94gVsmsRph1
 ```
 
 - 计算us3文件etag值
@@ -617,12 +616,12 @@ us3://bucket/aa.txt     4KB        ARCHIVE              AQAAAGNlfLt9cIbFawzU5caZ
 
 #### mb
 
-该命令用于创建存储空间
+该命令用于创建存储空间名称间
 
 ##### 命令格式
 
 ```
-us3cli mb us3://<存储空间名称>  [--acl <权限类型>][--region <桶所在地区>][--projectid <项目ID>]
+us3cli mb us3://<存储空间名称间名称>  [--acl <权限类型>][--region <桶所在地区>][--projectid <项目ID>]
 ```
 
 ##### 参数说明
@@ -679,12 +678,12 @@ Make bucket [ us3cli-test ] success
 
 #### mkdir
 
-本命令用于在us3存储空间内创建目录
+本命令用于在us3存储空间名称间内创建目录
 
 ##### 命令格式
 
 ```
-us3cli mkdir [-d] us3://<存储空间名称>/<目录名>[/<目录名>]
+us3cli mkdir [-d] us3://<存储空间名称间名称>/<目录名>[/<目录名>]
 ```
 
 ##### 参数说明
@@ -746,7 +745,7 @@ us3cli modify us3://<存储空间名称>/<文件Key> [--storageclass <存储类�
 
 - metadata改变
 
-1.修改test.txt文件的元数据信息，以key=value形式作为参数，可修改多个元数据信息，中间以英文逗号","分隔.
+1. 修改test.txt文件的元数据信息，以key=value形式作为参数，可修改多个元数据信息，中间以英文逗号","分隔.
 
 ```
 # us3cli modify us3://bucket/test.txt --metadata "key1=value1,key2=value2"
@@ -768,7 +767,7 @@ us3cli modify us3://<存储空间名称>/<文件Key> [--storageclass <存储类�
 
 本命令用于移动文件
 
-注意：本命令只能用于相同bucket之内，同时-f选项只支持文文件
+注意：本命令只能用于相同bucket之内，同时-f选项只支持文件
 
 ##### 命令格式
 
@@ -1092,9 +1091,9 @@ us3cli sync <本地文件路径> us3://<存储空间名称>/<文件Key> [--mode 
 
 增量模式说明：
 
-1.cache模式使用本地缓存，从本地上传到bucket成功的文件，都会被记录为上传成功文件，如果需要重新上传，可以选择删除当前用户目录下的.us3cliconfig/leveldb文件夹，使用命令时会自动创建新的文件夹。
+1. cache模式使用本地缓存，从本地上传到bucket成功的文件，都会被记录为上传成功文件，如果需要重新上传，可以选择删除当前用户目录下的.us3cliconfig/leveldb文件夹，使用命令时会自动创建新的文件夹。
 
-2.remote模式下最终以本地文件为标准，保证bucket中的目标文件夹和本地同步，`以下场景会进行文件删除，请慎用`：
+2. remote模式下最终以本地文件为标准，保证bucket中的目标文件夹和本地同步，`以下场景会进行文件删除，请慎用`：
 
 增量上传文件夹后，将本地文件删除，再次使用remote模式增量，会将bucket中的文件删除以保持US3 Bucket和本地同步
 
