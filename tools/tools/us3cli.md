@@ -334,19 +334,19 @@ us3cli cat us3://bucket1/test.txt
 上传文件
 
 ```
-us3cli cp <本地文件路径> us3://<桶名字>/<文件Key> [-r][--hit modtime|etag][--parallel <分片上传并发数>][--speedlimit <速度限制>][--storageclass <存储类型>][-exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>]
+us3cli cp <本地文件路径> us3://<存储空间名称>/<文件Key> [-r][--hit modtime|etag][--parallel <分片上传并发数>][--speedlimit <速度限制>][--storageclass <存储类型>][-exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>]
 ```
 
 下载文件
 
 ```
-us3cli cp us3://<桶名字>/<文件Key> <本地文件路径> [-r] [--speedlimit <速度限制>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>]
+us3cli cp us3://<存储空间名称>/<文件Key> <本地文件路径> [-r] [--speedlimit <速度限制>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>]
 ```
 
 拷贝文件
 
 ```
-us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [-r][-exclude <通配符表达式>][-rexclude <正则表达式>][-include <通配符表达式>][-rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...]
+us3cli cp us3://<存储空间名称>/<文件Key> us3://<存储空间名称>/<文件Key> [-r][-exclude <通配符表达式>][-rexclude <正则表达式>][-include <通配符表达式>][-rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...]
 ```
 
 ##### 参数说明
@@ -489,7 +489,7 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [-r][-excl
 ##### 命令格式
 
 ```
-us3cli du us3://<桶名字>
+us3cli du us3://<存储空间名称>
 ```
 
 ##### 使用示例
@@ -511,7 +511,7 @@ Total storage:  1.05 GB
 ##### 命令格式
 
 ```
-us3cli etag [<本地文件路径1>,[<本地文件路径2>] ...] [us3://<桶名字>/<文件Key>] [-]
+us3cli etag [<本地文件路径1>,[<本地文件路径2>] ...] [us3://<存储空间名称>/<文件Key>] [-]
 ```
 
 ##### 参数说明
@@ -564,7 +564,7 @@ test3.txt    							AQAAAHPuBl-6VRpzVHiBFjSOVhLrcsam
 ##### 命令格式
 
 ```
-us3cli ls [us3://<桶名称>] [--limit <输出限制数>][--restore][--delimiter]
+us3cli ls [us3://<存储空间名称>] [--limit <输出限制数>][--restore][--delimiter]
 ```
 
 ##### 参数说明
@@ -622,7 +622,7 @@ us3://bucket/aa.txt     4KB        ARCHIVE              AQAAAGNlfLt9cIbFawzU5caZ
 ##### 命令格式
 
 ```
-us3cli mb us3://<桶名字>  [--acl <权限类型>][--region <桶所在地区>][--projectid <项目ID>]
+us3cli mb us3://<存储空间名称>  [--acl <权限类型>][--region <桶所在地区>][--projectid <项目ID>]
 ```
 
 ##### 参数说明
@@ -684,7 +684,7 @@ Make bucket [ us3cli-test ] success
 ##### 命令格式
 
 ```
-us3cli mkdir [-d] us3://<桶名字>/<目录名>[/<目录名>]
+us3cli mkdir [-d] us3://<存储空间名称>/<目录名>[/<目录名>]
 ```
 
 ##### 参数说明
@@ -714,7 +714,7 @@ us3cli mkdir [-d] us3://<桶名字>/<目录名>[/<目录名>]
 ##### 命令格式
 
 ```
-us3cli modify us3://<桶名字>/<文件Key> [--storageclass <存储类型>][--mimetype <多媒体文件格式>][--metadata <<key1=value1>[,<key2=value2>]...>]
+us3cli modify us3://<存储空间名称>/<文件Key> [--storageclass <存储类型>][--mimetype <多媒体文件格式>][--metadata <<key1=value1>[,<key2=value2>]...>]
 ```
 
 ##### 参数说明
@@ -773,7 +773,7 @@ us3cli modify us3://<桶名字>/<文件Key> [--storageclass <存储类型>][--mi
 ##### 命令格式
 
 ```
-us3cli mv us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--force]
+us3cli mv us3://<存储空间名称>/<文件Key> us3://<存储空间名称>/<文件Key> [--force]
 ```
 
 ##### 参数说明
@@ -815,7 +815,7 @@ us3cli mv us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--force]
 ##### 命令格式
 
 ```
-us3cli rb us3://<桶名字>
+us3cli rb us3://<存储空间名称>
 ```
 
 ##### 参数说明
@@ -841,7 +841,7 @@ Delete bucket [bucket1] success
 ##### 命令格式
 
 ```
-us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--speedlimit <速度限制>][--parallel <并发数限制>]
+us3cli rcat us3://<存储空间名称>/<文件Key>	[-retrycount <重试次数>][--speedlimit <速度限制>][--parallel <并发数限制>]
 ```
 
 ##### 参数说明
@@ -885,7 +885,7 @@ us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--speedli
 ##### 命令格式
 
 ```
-us3cli restore [-r] us3://<桶名字>/<文件Key>
+us3cli restore [-r] us3://<存储空间名称>/<文件Key>
 ```
 
 ##### 参数说明
@@ -927,7 +927,7 @@ us3cli restore [-r] us3://<桶名字>/<文件Key>
 ##### 命令格式
 
 ```
-us3cli rm us3://<桶名字>/<文件Key> [-r][-f][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--qps <每秒最大请求数量>]
+us3cli rm us3://<存储空间名称>/<文件Key> [-r][-f][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--qps <每秒最大请求数量>]
 ```
 
 ##### 参数说明
@@ -998,7 +998,7 @@ The file [test.txt] is being deleted, continue(y or n)? y
 ##### 命令格式
 
 ```
-us3cli sign us3://<桶名字>/<文件Key>   [--expires <时间>]
+us3cli sign us3://<存储空间名称>/<文件Key>   [--expires <时间>]
 ```
 
 ##### 参数说明
@@ -1028,7 +1028,7 @@ us3cli sign us3://<桶名字>/<文件Key>   [--expires <时间>]
 ##### 命令格式
 
 ```
-us3cli stat us3://<桶名字>[/<文件key>]
+us3cli stat us3://<存储空间名称>[/<文件key>]
 ```
 
 ##### 使用示例
@@ -1069,7 +1069,7 @@ Vary:                   Origin
 ##### 命令格式
 
 ```
-us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|remote][--speedlimit <速度限制>][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>]
+us3cli sync <本地文件路径> us3://<存储空间名称>/<文件Key> [--mode cache|remote][--speedlimit <速度限制>][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>]
 ```
 
 ##### 参数说明
