@@ -37,8 +37,9 @@
         * [签名工具](https://docs.ucloud.cn/ufile/api/authorization-tool)
 	* [上传策略说明](https://docs.ucloud.cn/ufile/putpolicy)
     * [管理工具](https://docs.ucloud.cn/ufile/tools/introduction)
-        * [空间管理](https://docs.ucloud.cn/ufile/tools/tools/tools_bcket)
-        * [文件管理](https://docs.ucloud.cn/ufile/tools/tools/tools_file)
+        * [统一管理工具](https://docs.ucloud.cn/ufile/tools/tools/us3cli)
+        * [空间管理工具](https://docs.ucloud.cn/ufile/tools/tools/tools_bcket)
+        * [文件管理工具](https://docs.ucloud.cn/ufile/tools/tools/tools_file)
         * [迁移工具](https://docs.ucloud.cn/ufile/tools/tools/ufile_import)
     * AWS S3 协议支持
         * [AWS S3 协议支持说明](https://docs.ucloud.cn/ufile/s3/s3_introduction)
