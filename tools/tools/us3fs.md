@@ -48,7 +48,7 @@ curl -o us3fs http://ufile-release.cn-bj.ufileos.com/us3fs%2Fus3fs
 * 不支持随机写/追加写
 * 只支持文件之间的rename
 * 不支持硬/软链接
-* 多个客户端挂载同一个US3存储空间时，需要用户自行维护数据一致性。
+* 多个客户端挂载同一个US3存储空间时，需要用户自行维护数据一致性
 
 -----
 
