@@ -2,8 +2,7 @@
 
 # 文件管理工具
 
-**注：US3 已推出全新命令行工具 us3cli，支持丰富的存储空间（bucket）以及对象（object）操作。**
-详情请参照 [US3CLI 命令行工具](/ufile/tools/tools/us3cli)使用说明。
+**注：US3 已推出全新命令行工具 us3cli，统一整合旧版本空间管理工具及文件管理工具的功能，支持丰富的存储空间（bucket）以及对象（object）操作。**详情请参照 [US3CLI 命令行工具](/ufile/tools/tools/us3cli)使用说明。
 
 文件管理工具可帮助用户进行存储空间内文件的管理操作，包括：
 
