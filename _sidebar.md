@@ -24,6 +24,13 @@
     * [跨域设置](/ufile/guide/cors)
     * [统计报表](/ufile/guide/dashboard)
     * [令牌管理](/ufile/guide/token)
+* [管理工具](/ufile/tools/introduction)
+    * [US3CLI 命令行工具](/ufile/tools/tools/us3cli)
+    * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
+    * 旧命令行工具（历史版本）
+        * [空间管理工具](/ufile/tools/tools/tools_bcket)
+        * [文件管理工具](/ufile/tools/tools/tools_file)
+    * [迁移工具](/ufile/tools/tools/ufile_import)
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
@@ -36,12 +43,6 @@
         * [API 签名算法](/ufile/api/authorization)
         * [签名工具](/ufile/api/authorization-tool)
 	* [上传策略说明](/ufile/putpolicy)
-    * [管理工具](/ufile/tools/introduction)
-        * [US3CLI 命令行工具](/ufile/tools/tools/us3cli)
-        * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
-        * [空间管理](/ufile/tools/tools/tools_bcket)
-        * [文件管理](/ufile/tools/tools/tools_file)
-        * [迁移工具](/ufile/tools/tools/ufile_import)
     * AWS S3 协议支持
         * [AWS S3 协议支持说明](/ufile/s3/s3_introduction)
         * [AWS S3 协议应用场景](/ufile/s3/s3_application)
