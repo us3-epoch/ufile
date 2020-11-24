@@ -28,8 +28,8 @@
     * [US3CLI 命令行工具](/ufile/tools/tools/us3cli)
     * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
     * 旧命令行工具（历史版本）
-        * [空间管理工具](/ufile/tools/tools/tools_bcket)
-        * [文件管理工具](/ufile/tools/tools/tools_file)
+        * [BUCKETMGR空间管理](/ufile/tools/tools/tools_bcket)
+        * [FILEMGR文件管理](/ufile/tools/tools/tools_file)
     * [迁移工具](/ufile/tools/tools/ufile_import)
 * 开发者指南
     * 存储空间（Bucket）
