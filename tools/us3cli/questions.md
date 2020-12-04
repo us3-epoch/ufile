@@ -4,11 +4,11 @@
 
 ### 问题原因
 
-​	    当前工具查找bucket范围默认为当前账户默认项目，如您的Bucket不在默认项目下，普通操作是无法找到的，需要使用--projectid选项填写您要操作的bucket所在项目ID，即projectid。
+​当前工具查找bucket范围默认为当前账户默认项目，如您的Bucket不在默认项目下，普通操作是无法找到的，需要使用--projectid选项填写您要操作的bucket所在项目ID，即projectid。
 
 ### 解决方案
 
-​       在您想要操作的命令后加上--projectid <projectid> 就可以操作当前项目下的bucket
+在您想要操作的命令后加上--projectid <projectid> 就可以操作当前项目下的bucket
 
 ```
 #1.查看projectid
