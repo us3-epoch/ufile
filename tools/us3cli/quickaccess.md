@@ -189,8 +189,8 @@ us3cli mb us3://<bucketname> --projectid <projectid> --region <region> --acl <ac
 us3cli cp <local filename> us3://<bucketname>/<us3key>
 #流式文件
 us3cli rcat us3://<bucketname>/<us3key>
-#使用示例：
 
+#使用示例：
 #普通上传文件，不指定任何参数
 ./us3cli cp ./test.txt us3://buckettest/test.txt
 #指定存储类型为IA上传 (不区分大小写)
@@ -208,10 +208,10 @@ cat test.txt | ./us3cli rcat us3://buckettest/test.txt --retrycount 10 --paralle
 ### 上传文件夹
 
 ```
-命令格式：
+#命令格式：
 us3cli cp -r <localdir> us3://<bucketname>/<us3key>
 
-使用示例:
+#使用示例:
 #普通上传文件夹
 ./us3cli cp -r ./testdir us3://buckettest/us3dir
 #上传后缀名为“.txt"的文件
@@ -328,7 +328,6 @@ us3cli rm  us3://<bucketname>/<us3key>
 #命令格式：
 us3cli rm  -r us3://<bucketname>/<us3key>
 
-
 #使用示例：
 #删除文件夹
 ./us3cli rm -r us3://buckettest/test
@@ -362,7 +361,6 @@ us3cli stat us3://<bucketname>/<us3key>
 #命令格式
 us3cli ls us3://<bucketname>[/us3key]
 
-
 #使用示例
 ./us3cli ls us3://buckettest
 
@@ -383,7 +381,6 @@ us3cli ls us3://<bucketname>[/us3key]
 ```
 #命令格式
 us3cli modify us3://<bucketname>/us3key
-
 
 #使用示例
 #修改文件mimetype为xxx/yyy

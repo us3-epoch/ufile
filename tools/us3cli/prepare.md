@@ -9,12 +9,12 @@
 
 Ⅱ.Linux
 
-​        x86架构
+​x86架构
 
 - [us3cli-linux32](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-linux32)
 - [us3cli-linux64](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-linux64)
 
-   arm架构
+arm架构
 
 - [us3cli-arm32](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-arm32)
 - [us3cli-arm64](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-arm64)
