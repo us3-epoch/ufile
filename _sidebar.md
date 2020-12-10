@@ -1,5 +1,3 @@
-<div class="sidebar_title icon__ufile"> 对象存储 US3</div>
-
 
 * [概览](/ufile/README)
 * 产品简介
