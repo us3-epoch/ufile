@@ -107,7 +107,7 @@ US3SYNC start success!
 1. 服务启动后，在浏览器中打开：https://<web服务监听IP>:<web服务监听端口>/
    PS. 使用云主机部署迁移服务时，这里需要使用EIP，而不是0.0.0.0
 2. 页面登录，使用启动时设置的用户名和密码
-3. 添加工作节点，参考 **创建节点界面说明**，需要为每个节点提供唯一工作路径
+3. 添加工作节点，参考 [创建节点界面说明](#创建节点界面说明)，需要为每个节点提供唯一工作路径
    每个工作节点需要提供唯一工作路径，如果路径不存在会自动创建对应目录
 ```
 - 命令行操作
@@ -128,7 +128,7 @@ ps -ef | grep US3SYNC
 #### 创建任务
 - 界面操作
 ```
-1. 创建任务，参考 **创建任务界面说明**，点击创建任务按钮，在对话框中填写对应信息，点击确定
+1. 创建任务，参考 [创建任务界面说明](#创建任务界面说明)，点击创建任务按钮，在对话框中填写对应信息，点击确定
 说明：
 迁移过程会将指定的源端前缀下的文件迁移到指定的目的端前缀下面，例如：
 1. 源端前缀指定了：A/ 目的端前缀指定了 B/
@@ -146,7 +146,7 @@ nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pa
 #### 启动迁移
 - 界面操作
 ```
-1. 参考 **创建任务界面说明**，点击开启迁移按钮
+1. 参考 [创建任务界面说明](#创建任务界面说明)，点击开启迁移按钮
 ```
 - 命令行操作
 命令行方式启动maste节点后自动开始迁移，无需操作
@@ -159,9 +159,9 @@ nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pa
 
 #### 重试
 - 界面操作
-```
-1. 如果迁移后有失败记录，可以对迁移失败的文件进行重试，参考 **任务管理界面说明**，点击管理-重试按钮
-```
+
+1. 如果迁移后有失败记录，可以对迁移失败的文件进行重试，参考 [创建任务界面说明](#创建任务界面说明)，点击管理-重试按钮
+
 - 命令行方式（不推荐）
 ```
 命令行方式需要执行以下命令启动重试：
@@ -170,10 +170,10 @@ nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pa
 
 #### 校验
 - 界面操作
-```
-1. 当迁移完成并且没有迁移失败的记录，可以启动校验，参考 **任务管理界面说明**，点击开始校验按钮
-2. 校验完成后如果有失败记录，可以对校验失败的文件重试，参考 **任务管理界面说明**，点击管理-重试按钮
-```
+
+1. 当迁移完成并且没有迁移失败的记录，可以启动校验，参考 [任务管理界面说明](#任务管理界面说明) ，点击开始校验按钮
+2. 校验完成后如果有失败记录，可以对校验失败的文件重试，参考 [任务管理界面说明](#任务管理界面说明)，点击管理-重试按钮
+
 - 命令行方式（不推荐）
 ```
 命令行方式需要执行以下命令启动校验：
@@ -249,11 +249,11 @@ http 源 需要提供待迁移文件列表的 url 地址
 
 #### 登录界面说明
 
-![][http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png]
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
 
 #### 任务管理界面说明
 
-![][http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png]
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
 
 ```
 PS. 任务操作：
@@ -281,11 +281,11 @@ PS. 统计信息：
 
 #### 创建任务界面说明
 
-![][http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png]
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
 
 #### 节点管理界面说明
 
-![][http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png]
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
 
 #### 创建节点界面说明
 
