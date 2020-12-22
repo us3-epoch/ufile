@@ -230,15 +230,15 @@ US3SYNC 使用 pika 提供缓存服务。主要缓存以下信息：
 | NAS      | 实现 NAS 系统或者本地文件迁移                                  |
 | URL      | 实现 基于 URL 列表迁移                                         |
 
-**aws 说明**
-aws 源 需要额外提供待迁移空间的 region 字段，参考：https://docs.aws.amazon.com/zh_cn/general/latest/gr/s3.html  
+#### AWS
+aws 源需要额外提供待迁移空间的 region 字段，参考：https://docs.aws.amazon.com/zh_cn/general/latest/gr/s3.html  
 第三方实现S3协议参考对应厂商S3文档说明
 
-**local 说明**
-local 源 需要提供待迁移目录的路径
+#### local
+local 源需要提供待迁移目录的路径
 
-**http 说明**
-http 源 需要提供待迁移文件列表的 url 地址
+#### http
+http 源需要提供待迁移文件列表的 url 地址
 待迁移文件列表格式如下，每行代表一个待迁移资源
 >
 > 文件url地址  
