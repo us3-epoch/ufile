@@ -4,6 +4,7 @@
 
 ## 介绍
 ufile-import 是对象存储 US3 提供的一款将数据迁移至 US3 存储空间（Bucket） 的工具。您可以将 ufile-import 部署在本地服务或者云主机上，轻松将您其他云存储的数据迁移到 US3。
+
 全新 US3SYNC 迁移工具已正式发布，请参照：[US3SYNC 迁移工具](ufile/tools/tools/ufile_import)
 
 ### 适用情况
