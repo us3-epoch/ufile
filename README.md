@@ -37,7 +37,7 @@
     * 旧命令行工具（历史版本）
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
-	* [原迁移工具](/ufile/tools/tools/ufile_import)
+        * [原迁移工具](/ufile/tools/tools/ufile_import)
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
