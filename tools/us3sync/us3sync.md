@@ -289,7 +289,7 @@ PS. 统计信息：
 
 #### 创建节点界面说明
 
-![][http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png]
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
 
 ### 与原迁移工具对比
 
