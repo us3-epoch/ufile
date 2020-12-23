@@ -240,7 +240,7 @@ us3fs基于fuse实现，所以除了us3fs自身的设置外，还支持fuse的�
 示例：ls包含10000个文件的目录耗时
 
 ```
-[root@10-9-120-211 ~]# us3fs --dcache_timeout=60s --entry_timeout=60s --attr_timmeout=60s testzwb /data/u2fs
+[root@10-9-120-211 ~]# us3fs --dcache_timeout=60s --entry_timeout=60s --attr_timeout=60s testzwb /data/u2fs
 [root@10-9-120-211 ~]# time ls -la /data/u2fs/test | wc -l
 10003
 
