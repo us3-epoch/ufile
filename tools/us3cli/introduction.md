@@ -2,7 +2,7 @@
 
 ## 概述
 
-us3cli 是用来在命令行上管理 US3 数据的工具，支持丰富的存储桶（bucket）以及对象（object）操作，支持Windows、Linux、Mac平台。
+US3CLI 是一款通过命令行操作对 US3 进行数据管理的工具，支持丰富的存储桶（bucket）以及对象（object）操作，支持Windows、Linux、Mac平台。
 
 通过本工具，您可以进行以下操作：
 
