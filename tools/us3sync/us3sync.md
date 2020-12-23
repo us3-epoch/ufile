@@ -10,20 +10,19 @@ US3SYNC 是一款将不同源的数据同步到 US3 的迁移工具。通过将 
 
 简单介绍图中master节点与worker节点功能：
 
-```
-master节点：
-单点部署，负责迁移任务的管理。其主要逻辑是从源端拉取文件列表，然后将需要迁移的文件派发给worker进程迁移。
-worker节点：
-支持节点扩展，负责迁移文件。其主要逻辑是从源端下载文件，然后将文件上传到目的端。
-```
+- master节点：
+> 单点部署，负责迁移任务的管理。其主要逻辑是从源端拉取文件列表，然后将需要迁移的文件派发给worker进程迁移。
+
+- worker节点：
+> 支持节点扩展，负责迁移文件。其主要逻辑是从源端下载文件，然后将文件上传到目的端。
 
 master节点与worker节点可以部署在同一台机器，也可以部署在多台机器上，用户可以根据需要自行扩展worker节点，下面分别介绍：
 
 - 部署在同一台机器：
-> master节点和worker节点通过启动时配置的**内部通信监听地址**进行通信。用户需要确保配置给worker节点的路径是单独的路径，不可与master路径以及其他worker路径重复
+> master节点和worker节点通过启动时配置的**内部通信监听地址**进行通信。用户需要确保配置给worker节点的路径是单独的路径，不可与master路径以及其他worker路径重复。
 
 - 部署在不同机器：
-> master节点和worker节点通过启动时配置的**内部通信监听地址**进行通信，确保该地址在worker机器上可以访问。用户需要确保配置给worker节点的路径是单独的路径，不可与master路径以及其他worker路径重复
+> master节点和worker节点通过启动时配置的**内部通信监听地址**进行通信，确保该地址在worker机器上可以访问。用户需要确保配置给worker节点的路径是单独的路径，不可与master路径以及其他worker路径重复。
 
 ### 运行环境
 
@@ -114,6 +113,7 @@ US3SYNC start success!
    **注：建议使用内网ip。**
 
 - 命令行操作
+
 ```
 # 部署worker节点，可以部署多个，每个节点需要一个单独目录
 mkdir -p node/bin node/log
@@ -122,13 +122,16 @@ cp bin/worker/US3SYNC ./node/
 cd node
 nohup ./bin/US3SYNC -T <threads> <master-inner-ip>:<master-inner-port> --cache-addr <ip:port> --cache-pass <password> > log/worker.log 2>&1 &
 ```
+
 - 验证
+
 ```
 查看进程是否正常启动
 ps -ef | grep US3SYNC
 ```
 
 #### 创建任务
+
 - 界面操作
 
 1. 创建任务，参考 [创建任务界面说明](#创建任务界面说明)，点击创建任务按钮，在对话框中填写对应信息，点击确定
@@ -141,33 +144,40 @@ ps -ef | grep US3SYNC
 此时会将源端 A/ 下的所有文件迁移到目的端根目录下
 如果源端有一个文件A/a.txt 迁移后在目录端根目录下会有 a.txt
 
-- 命令行方式（不推荐）
+- 命令行操作（不推荐）
+
 ```
-# 命令行方式需要启动master节点之前，在配置文件中配置好迁移任务，然后执行以下命令启动master节点：
+# 命令行操作方式需要启动master节点之前，在配置文件中配置好迁移任务，然后执行以下命令启动master节点：
 nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pass <password> --server-addr <ip:port> --inner-addr <ip:port> --login-user <user> --login-pass <password> --retry-count <count> import > log/master.log 2>&1 &
 ```
+
 #### 启动迁移
+
 - 界面操作
 
 1. 参考 [创建任务界面说明](#创建任务界面说明)，点击开启迁移按钮
 
 - 命令行操作
-命令行方式启动maste节点后自动开始迁移，无需操作
+命令行操作方式启动maste节点后自动开始迁移，无需操作
 
 #### 跳过已存在文件
+
 - 界面操作
-当目的端已经有部分文件，并且迁移过程不想覆盖已经存在的文件，点击开始迁移按钮弹出是否覆盖已有文件时，选择否
+
+当目的端已经有部分文件，并且迁移过程不想覆盖已经存在的文件，点击开始迁移按钮弹出是否覆盖已有文件时，选择否。
+
 -命令行操作
-命令行欲覆盖已存在的文件，启动时添加参数 --overwrite
+
+命令行欲覆盖已存在的文件，启动时添加参数 --overwrite。
 
 #### 重试
 - 界面操作
 
 1. 如果迁移后有失败记录，可以对迁移失败的文件进行重试，参考 [创建任务界面说明](#创建任务界面说明)，点击管理-重试按钮
 
-- 命令行方式（不推荐）
+- 命令行操作（不推荐）
 ```
-命令行方式需要执行以下命令启动重试：
+命令行操作方式需要执行以下命令启动重试：
 nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pass <password> --server-addr <ip:port> --inner-addr <ip:port> --login-user <user> --login-pass <password> --retry-count <count> import --retry > log/master.log 2>&1 &
 ```
 
@@ -177,18 +187,18 @@ nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pa
 1. 当迁移完成并且没有迁移失败的记录，可以启动校验，参考 [任务管理界面说明](#任务管理界面说明) ，点击开始校验按钮
 2. 校验完成后如果有失败记录，可以对校验失败的文件重试，参考 [任务管理界面说明](#任务管理界面说明)，点击管理-重试按钮
 
-- 命令行方式（不推荐）
+- 命令行操作（不推荐）
 ```
-命令行方式需要执行以下命令启动校验：
+命令行操作方式需要执行以下命令启动校验：
 nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pass <password> --server-addr <ip:port> --inner-addr <ip:port> --login-user <user> --login-pass <password> --retry-count <count> audit > log/master.log 2>&1 &
-命令行方式需要执行以下命令启动校验重试：
+命令行操作方式需要执行以下命令启动校验重试：
 nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pass <password> --server-addr <ip:port> --inner-addr <ip:port> --login-user <user> --login-pass <password> --retry-count <count> audit --retry > log/master.log 2>&1 &
 ```
 
 ### 配置文件说明
 无法提供web服务时，可以通过配置文件配置任务
 ```
-# 命令行方式操作使用以下配置，不使用忽略
+# 命令行操作方式使用以下配置，不使用忽略
 # [job]
 # name = ""
 # type = "" # 任务类型，可选：aws, oss, qiniu, us3, uarchive, local, http
