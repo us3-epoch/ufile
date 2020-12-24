@@ -8,7 +8,7 @@ US3SYNC 是一款将不同源的数据同步到 US3 的迁移工具。通过将 
 
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
 
-简单介绍图中master节点与worker节点功能：
+图中master节点与worker节点功能：
 
 - master节点：
 > 单点部署，负责迁移任务的管理。其主要逻辑是从源端拉取文件列表，然后将需要迁移的文件派发给worker进程迁移。
@@ -44,10 +44,10 @@ curl -o US3SYNC.tgz "http://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz"
 
 ### 主要功能
 
-1、支持从 s3，oss，qiniu，youpai，US3 云存储迁移数据到 US3 中。
-2、支持从 NAS 存储或者本地目录将数据迁移到 US3 中。
-3、支持指定 URL 资源列表将数据迁移到 US3 中。
-4、支持 web 管理，通过 web 管理迁移任务，迁移节点。
+1. 支持从 s3，oss，qiniu，youpai，US3 云存储迁移数据到 US3 中。
+2. 支持从 NAS 存储或者本地目录将数据迁移到 US3 中。
+3. 支持指定 URL 资源列表将数据迁移到 US3 中。
+4. 支持 web 管理，通过 web 管理迁移任务，迁移节点。
 
 **注：暂不支持源端为归档类型的文件迁移到 US3。**
 
@@ -106,11 +106,11 @@ US3SYNC start success!
 - 界面操作
 
 1. 服务启动后，在浏览器中打开：https://<web服务监听IP>:<web服务监听端口>/
-   **使用云主机部署迁移服务时，这里需要使用EIP，而不是0.0.0.0。**
+**使用云主机部署迁移服务时，这里需要使用EIP，而不是0.0.0.0。**
 2. 页面登录，使用启动时设置的用户名和密码
 3. 添加工作节点，参考 [创建节点界面说明](#创建节点界面说明)，需要为每个节点提供唯一工作路径。
    每个工作节点需要提供唯一工作路径，如果路径不存在会自动创建对应目录。
-   **注：建议使用内网ip。**
+**注：建议使用内网ip。**
 
 - 命令行操作
 
@@ -166,7 +166,7 @@ nohup ./bin/master/US3SYNC -C conf/config.toml --cache-addr <ip:port> --cache-pa
 
 当目的端已经有部分文件，并且迁移过程不想覆盖已经存在的文件，点击开始迁移按钮弹出是否覆盖已有文件时，选择否。
 
--命令行操作
+- 命令行操作
 
 命令行欲覆盖已存在的文件，启动时添加参数 --overwrite。
 
