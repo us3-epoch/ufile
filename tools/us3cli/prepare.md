@@ -2,44 +2,21 @@
 
 ## 下载地址
 
-Ⅰ.Windows
-
-- [us3cli-win32.exe](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-win32.exe)
-- [us3cli-win64.exe](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-win64.exe)
-
-Ⅱ.Linux
-
-​x86架构
-
-- [us3cli-linux32](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-linux32)
-- [us3cli-linux64](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-linux64)
-
-arm架构
-
-- [us3cli-arm32](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-arm32)
-- [us3cli-arm64](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-arm64)
-
-Ⅲ.Mac
-
-- [us3cli-mac](http://ufile-release.cn-bj.ufileos.com/us3cli%2Fus3cli-mac)
+US3CLI 工具目前对用户提供内测版本，如有使用需求，请联系技术支持获取软件包。
 
 ## 环境准备
 
 ### Linux环境（Linux 64位版本）
 
-1.下载
+1.下载工具至本地。
 
-```
-wget http://ufile-release.cn-bj.ufileos.com/us3cli/us3cli-linux64
-```
-
-2.添加可执行权限
+2.添加可执行权限。
 
 ```
 chmod +x us3cli-linux64 
 ```
 
-3.开始创建配置
+3.开始创建配置。
 
 ```
 ./us3cli-linux64 config
@@ -49,7 +26,7 @@ chmod +x us3cli-linux64
 
 以下命令以Windows 64为例。
 
-1.[点击下载](http://ufile-release.cn-bj.ufileos.com/us3cli/us3cli-win64.exe)
+1.下载工具至本地。
 
 2.以管理员身份打开cmd面板，切换到us3cli-win64.exe文件所在路径。
 
@@ -69,11 +46,7 @@ us3cli-win64 config
 
 ### Mac环境
 
-1.使用curl下载。
-
-```
-curl -o us3cli-mac http://ufile-release.cn-bj.ufileos.com/us3cli/us3cli-mac
-```
+1.下载工具至本地。
 
 2.添加可执行权限。
 
