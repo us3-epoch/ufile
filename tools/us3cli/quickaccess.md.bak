@@ -197,6 +197,8 @@ us3cli rcat us3://<bucketname>/<us3key>
 ./us3cli cp ./test.txt us3://buckettest/test.txt --storageclass IA
 #指定并发数，设置并发数为10(文件大于64MB时才会有效果,因为64MB以上大文件才会使用分片上传)
 ./us3cli cp ./test.txt us3://buckettest/test.txt --parallel 10
+#上传文件并限速50MB/s以下
+./us3cli cp ./test.txt us3://buckettest/test.txt --speedlimit 50MB
 #将本地文件test.txt cat到标准输入，再上传至us3存储桶内
 cat test.txt | ./us3cli rcat us3://buckettest/test.txt
 #流式上传并指定失败重试次数为10，设置并发数为10
@@ -254,6 +256,9 @@ us3cli cat us3://<bucketname>/<us3key>
 #普通下载单个文件
 ./us3cli cp us3://buckettest/test.txt ./test.txt
 
+#下载并限速50MB/s
+./us3cli cp us3://buckettest/test.txt ./test.txt --speedlimit 50MB/s
+
 #下载文件，每个分片大小指定为8M(不区分大小写，并且默认大小为4M，最小值为4M)
 ./us3cli cp us3://buckettest/test.txt ./test.txt --partsize 4M
 
@@ -277,6 +282,9 @@ us3cli cp -r  us3://<bucketname>/<us3key> <localdir>
 
 #下载文件夹并指定并发数为20
 ./us3cli cp -r us3://buckettest/us3dir ./testdir --parallel 20
+
+#下载文件夹并限速为100MB/s
+./us3cli cp -r us3://buckettest/us3dir ./testdir --speedlimit 100MB
 ```
 
 ## 拷贝文件或文件夹

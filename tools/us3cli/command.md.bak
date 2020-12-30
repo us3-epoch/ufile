@@ -382,7 +382,7 @@ Total storage:  1.05 GB
 上传文件
 
 ```
-us3cli cp <本地文件路径> us3://<桶名字>/<文件Key> [--recursive][--hit modtime|etag][--parallel <分片上传并发数>][--storageclass <存储类型>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>]
+us3cli cp <本地文件路径> us3://<桶名字>/<文件Key> [--recursive][--hit modtime|etag][--parallel <分片上传并发数>][--speedlimit <速度限制>][--storageclass <存储类型>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>]
 ```
 
 下载文件
@@ -417,6 +417,7 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--recursi
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
       --secretkey <string>     :用于访问us3的API私钥或Token私钥
+  -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
       --storageclass <string>  :指定存储类型,对应有效值：STANDARD, IA, ARCHIVE(该参数仅限上传)，默认值：STANDARD
 ```
 
@@ -426,7 +427,9 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--recursi
 
  如：   us3://us3cli/test 目录下的test2/test3.txt  会以test2/test3.txt作为字符串筛选，而不是以test3.txt作为字符串进行筛选
 
-2.上传时根据文件大小使用不同的请求，文件大于64MB使用分片上传，小于64MB时使用普通的put请求，故上传中的parallel参数仅限上传64MB以上大文件使用
+2.以下所有speedlimit选项均描述为平均速度
+
+3.上传时根据文件大小使用不同的请求，文件大于64MB使用分片上传，小于64MB时使用普通的put请求，故上传中的parallel参数仅限上传64MB以上大文件使用
 
 ### 使用示例
 
@@ -481,6 +484,14 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--recursi
 ./us3cli cp ~/go/src/test.txt  us3://bucket/path/test.txt --storageclass IA
 ```
 
+- 限速上传
+
+上传文件test.txt，并设置速度为1024Kb/s
+
+```
+./us3cli cp ~/go/src/test.txt us3://bucket/test.txt --speedlimit 1024Kb
+```
+
 - 批量上传
 
 上传所有格式为jpg的文件（通配符）
@@ -526,7 +537,7 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--recursi
 ### 命令格式
 
 ```
-us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|remote][--ruler modtime|etag][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--parallel <请求并发数>]
+us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|remote][--ruler modtime|etag][--speedlimit <速度限制>][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--parallel <请求并发数>]
 ```
 
 ### 参数说明
@@ -549,6 +560,7 @@ us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|rem
   			modtime			   :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
 		    etag               :在判断是否上传时采用文件etag作为判断标准，如果本地文件etag和us3中的etag不同，则进行上传请求，否则不上传
 	  --secretkey <string>     :用于访问us3的API私钥或Token私钥  
+  -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
 ```
 
 增量模式说明：
@@ -573,6 +585,12 @@ us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|rem
 ./us3cli sync --mode remote /root/test us3://bucket/path 
 ```
 
+- 限速为1024 Kb/s上传
+
+```
+./us3cli sync /root/test us3://bucket/path --speedlimit 1024Kb
+```
+
 ## rcat
 
 本命令用于流式上传文件
@@ -580,7 +598,7 @@ us3cli sync <本地文件路径> us3://<桶名字>/<文件Key> [--mode cache|rem
 ### 命令格式
 
 ```
-us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--parallel <并发数限制>]
+us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--speedlimit <速度限制>][--parallel <并发数限制>]
 ```
 
 ### 参数说明
@@ -593,6 +611,7 @@ us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--paralle
       --parallel <int>	       :分片并发数
       --retrycount: <int>      :失败重试次数,默认值：10
 	  --secretkey <string>     :用于访问us3的API私钥或Token私钥
+  -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
 ```
 
 ### 使用示例
@@ -601,6 +620,12 @@ us3cli rcat us3://<桶名字>/<文件Key>	[-retrycount <重试次数>][--paralle
 
 ```
 cat test.txt | ./us3cli rcat us3://bucket1/test.txt
+```
+
+- 流式上传文件test.txt并设置限速为 2MB/s
+
+```
+cat test.txt | ./us3cli rcat us3://bucket1/test.txt --speedlimit 2MB
 ```
 
 - 流式上传文件test.txt并设置重试次数为5次
@@ -653,7 +678,7 @@ us3cli mkdir [--parents] us3://<桶名字>/<目录名>[/<目录名>]
 
 ## cat
 
-本命令用于流式下载文件
+本命令用于流式下载文件，
 
 ### 命令格式
 
