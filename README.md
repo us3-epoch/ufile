@@ -32,12 +32,12 @@
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
         * [原迁移工具](/ufile/tools/tools/ufile_import)
-        * US3CLI 命令行工具
-		* [工具简介](/ufile/tools/us3cli/introduction)
-		* [下载与环境准备](/ufile/tools/us3cli/prepare)
-		* [快速上手](/ufile/tools/us3cli/quickaccess)
-		* [常用命令](/ufile/tools/us3cli/command)
-		* [常见问题](/ufile/tools/us3cli/questions)
+    * US3CLI 命令行工具（内测）
+        * [工具简介](/ufile/tools/us3cli/introduction)
+        * [下载与环境准备](/ufile/tools/us3cli/prepare)
+        * [快速上手](/ufile/tools/us3cli/quickaccess)
+        * [常用命令](/ufile/tools/us3cli/command)
+        * [常见问题](/ufile/tools/us3cli/questions)
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
