@@ -1,7 +1,7 @@
 
 # 概览
 
-* [概览。](/ufile/README)
+* [概览](/ufile/README)
 * 产品简介
     * [产品概述](/ufile/introduction/concept)
     * [功能概览](/ufile/introduction/functions)
