@@ -6,13 +6,13 @@ US3 提供了各种主流语言的 SDK，用于对象存储相关功能的调用
 
 [JS SDK](https://github.com/ufilesdk-dev/ufile-jssdk)
 
-[C SDK](https://github.com/ufilesdk-dev/ufile-csdk)
+[C SDK](https://ucloud-us3.github.io/c-sdk/%E6%A6%82%E8%BF%B0.html)
 
 [PHP SDK](https://github.com/ufilesdk-dev/ufile-phpsdk)
 
-[Python SDK](https://github.com/ucloud/ufile-sdk-python)
+[Python SDK](https://ucloud-us3.github.io/python-sdk/%E6%A6%82%E8%BF%B0.html)
 
-[Go SDK](https://github.com/ufilesdk-dev/ufile-gosdk)
+[Go SDK](https://ucloud-us3.github.io/go-sdk/%E6%A6%82%E8%BF%B0.html)
 
 [C\# SDK](https://github.com/ufilesdk-dev/ufile-csharpsdk)
 
