@@ -590,15 +590,15 @@ us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache
       --metadata <string>      :指定元数据信息，多个元数据以","分隔，如 "key1=value,key2=value2",其他分隔符暂不支持
       --mimetype <string>      :指定mimetype上传
   -m, --mode <string>          :可选项 cache、local  默认值为cache
-  	cache		       :以本地缓存为标准，检查基于缓存的增量文件，同步us3端对应目录的文件，默认为该模式
+        cache		       :以本地缓存为标准，检查基于缓存的增量文件，同步us3端对应目录的文件，默认为该模式
 	local                  :以本地文件系统为标准，检查本地文件以及us3不同步的文件，补全或删除us3端对应目录的文件	
       --parallel <int>         :请求并发数，默认值为10
-      --reduce:                :是否以精简模式执行（不展示进度）
+      --reduce                 :是否以精简模式执行（不展示进度）
   -r, --retrycount: <int>      :失败重试次数,默认值：10
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
       --ruler <string>         :可选项 modtime、etag  默认为modtime
-  	modtime		       :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
+        modtime		       :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
 	etag                   :在判断是否上传时采用文件etag作为判断标准，如果本地文件etag和us3中的etag不同，则进行上传请求，否则不上传
       --secretkey <string>     :用于访问us3的API私钥或Token私钥  
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
@@ -855,7 +855,7 @@ us3cli mv us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--force][
 ```
 
 - 移动文件夹
-- 注意：目标文件夹存在时，文件夹会被移动到目标文件夹子目录中
+  注意：目标文件夹存在时，文件夹会被移动到目标文件夹子目录中
 
 ``` 
 ./us3cli mv us3://bucket/test  us3://bucket/test2  				
@@ -970,7 +970,7 @@ us3cli ls [us3://<桶名称>] [--limit <输出限制数>][--restore][--flat][--m
 
 注意：
 
-​		ls列取文件列表默认情况修改为只显示文件key，文件大小，存储类型，创建时间，可以自行通过参数添加restore、etag、mimetype等信息
+ls列取文件列表默认情况修改为只显示文件key，文件大小，存储类型，创建时间，可以自行通过参数添加restore、etag、mimetype等信息
 
 ### 使用示例
 
