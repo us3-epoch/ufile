@@ -598,7 +598,7 @@ us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
       --ruler <string>         :可选项 modtime、etag  默认为modtime
-        modtime		       :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
+        modtime                :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
 	etag                   :在判断是否上传时采用文件etag作为判断标准，如果本地文件etag和us3中的etag不同，则进行上传请求，否则不上传
       --secretkey <string>     :用于访问us3的API私钥或Token私钥  
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
