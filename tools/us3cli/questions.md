@@ -4,7 +4,7 @@
 
 ### 问题原因
 
-​当前工具查找bucket范围默认为当前账户默认项目，如您的Bucket不在默认项目下，普通操作是无法找到的，需要使用--projectid选项填写您要操作的bucket所在项目ID，即projectid。
+当前工具查找bucket范围默认为当前账户默认项目，如您的Bucket不在默认项目下，普通操作是无法找到的，需要使用--projectid选项填写您要操作的bucket所在项目ID，即projectid。
 
 ### 解决方案
 
@@ -14,11 +14,10 @@
 #1.查看projectid
 #方法1：mb命令创建时会展示当前账户所有projectid
 #方法2：登录控制台查看左上角项目ID
-#us3cli后续版本会推出列取projectid方式，尽请期待
+#方法3: ./us3cli ls --projectid 展示当前账户下所有projectid
 
 #2.指定projectid操作bucket
 ./us3cli stat us3://bucketest --projectid xxxx
-./us3cli ls --projectid xxxx
 ./us3cli du us3://buckettest --projectid xxxx
 ```
 
@@ -32,7 +31,7 @@ qps代表每秒请求数量限制，如qps为1，那么该请求会限制在1秒
 
 ### 问题原因
 
-​在使用us3cli时，需要将文件上传到文件夹内，由于对象存储可以存在同名文件和文件夹的特性，所以需要在文件夹名称后加上“/”才可以判断为上传文件至当前文件夹，否则会识别为普通上传文件。
+在使用us3cli时，需要将文件上传到文件夹内，由于对象存储可以存在同名文件和文件夹的特性，所以需要在文件夹名称后加上“/”才可以判断为上传文件至当前文件夹，否则会识别为普通上传文件。
 
 ### 解决方案
 

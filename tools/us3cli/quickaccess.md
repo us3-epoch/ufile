@@ -11,7 +11,7 @@
 
 ## 配置管理
 
-此处主要介绍us3cli工具配置方式以及常见的使用场景，us3cli工具支持多种配置生成方式，对于不同配置项，支持配置项之间的切换，配置项删除，更新，查看。对于单个配置项，支持配置内容加密（公私钥）、HTTPS、代理。
+此处主要介绍us3cli工具配置方式以及常见的使用场景，us3cli工具支持多种配置生成方式，对于不同配置项，支持配置项之间的切换、配置项删除、更新、查看。对于单个配置项，支持配置内容加密（公私钥）、HTTPS、代理。
 
 配置项：一个配置项代表一个不同权限的配置文件，便于不同操作权限区分管理
 
@@ -20,18 +20,18 @@
   - [配置项管理](#配置项管理)
 - [临时配置](#临时配置)
 
-​        配置方式根据是否保存配置文件做区分，分为常用配置和临时配置，常用配置可进行更新，切换，查看等操作，临时配置作为参数在其他命令运行时输入，表示当前配置参数只在当前命令运行时生效。
+配置方式根据是否保存配置文件做区分，分为常用配置和临时配置，常用配置可进行更新、切换、查看等操作，临时配置作为参数在其他命令运行时输入，表示当前配置参数只在当前命令运行时生效。
 
 ### 常用配置
 
 命令格式：
 
 ```
-us3cli config [--ls][--su <configname>][--rm <configname>][--cat <configname>][configname]
-              [--accesskey <API/Token公钥>][--secretkey <API/Token私钥>][--endpoint <访问域名>]
+us3cli config  [--ls][--su <配置名>][--rm <配置名>][--cat <配置名>][--encrypt][--ssl][--proxy [代理地址]]
+			   [--accesskey <API/Token公钥>][--secretkey <API/Token私钥>][--endpoint <访问域名>]
 ```
 
-常用配置创建方式分为两种：交互式配置和一键配置,命令格式相同，使用方式不同
+常用配置创建方式分为两种：交互式配置和一键配置，命令格式相同，使用方式不同
 
 #### 配置项创建
 
@@ -40,11 +40,12 @@ us3cli config [--ls][--su <configname>][--rm <configname>][--cat <configname>][c
 使用示例：
 
 ```
-# ./us3cli config
-输入当前配置项名称: config1
-创建配置项
-请输入API公钥[当前:]: TOKEN_13be86*********
-请输入API私钥[当前:]: BAtrQO8LYdgve1HS_benbK-MXNTl3**********
+#./us3cli config
+请输入当前配置项名称: config1
+开始创建新配置项：[ config1 ]
+是否启用配置加密(y or n) ? n
+请输入API/Token公钥[当前:]: xxxxxxxxxxxxxxxxxxxxxx
+请输入API/Token私钥[当前:]: xxxxxxxxxxxxxxxxxxxxxx
 地区列表：
 No.     RegionName      Region      
 0       北京            cn-bj       
@@ -62,7 +63,7 @@ No.     RegionName      Region
 12      胡志明市        vn-sng      
 13      华盛顿          us-ws       
 14      孟买            ind-mumbai  
-15      首尔            kr-seoul   
+15      首尔            kr-seoul    
 请输入region编号: 0
 内外网列表：
 No.     Network
@@ -70,19 +71,21 @@ No.     Network
 1       内网   
 请选择或输入内外网编号：0
 您选择的endpoint是：[cn-bj.ufileos.com],[当前:]，请输入回车确认或自定义endponit：
-
-当前最终配置:
+当前最终配置：
 ConfigName: config1
-AccessKey: TOKEN_13be86*********
-SecretKey: BAtrQO8LYdgve1HS_benbK-MXNTl3**********
+AccessKey: xxxxxxxxxxxxxxxxxxxxxx
+SecretKey: xxxxxxxxxxxxxxxxxxxxxx
 Endpoint: cn-bj.ufileos.com
-
-是否使用该配置作为默认配置(当前默认配置为：<configtest>)(y or n)? y
+请检查后输入回车确认：
+是否启用HTTPS (y or n) ? n
+是否启用代理(y or n):n
+配置文件 [ config1 ] 已修改
+是否使用该配置作为默认配置(当前默认配置为：< config >)(y or n)?
 ```
 
 2. 一键配置
 
-使用示例：
+使用示例:
 
 ```
 ./us3cli config config1 --accesskey TOKEN_13be86********* --secretkey BAtrQO8LYdgve1HS_benbK-MXNTl3********** --endpoint cn-bj.ufileos.com
@@ -127,6 +130,9 @@ Endpoint: cn-bj.ufileos.com
 accesskey: "user accesskey"
 secretkey: "user secretkey"
 endpoint: "ufile.cn-north-02.ucloud.cn"
+encrypt: "false"
+enablessl: "false"
+proxy: "http://ip:port or https://ip:port"
 ```
 
 ## 创建存储桶
@@ -145,19 +151,20 @@ us3cli mb us3://<bucketname>
 No.     RegionName      Region      
 0       北京            cn-bj       
 1       上海二          cn-sh2      
-2       香港            hk          
-3       广东            cn-gd       
+2       广州            cn-gd       
+3       香港            hk          
 4       洛杉矶          us-ca       
 5       新加坡          sg          
-6       首尔            kr-seoul    
-7       尼日利亚        afr-nigeria 
-8       台北            tw-tp       
+6       雅加达          idn-jakarta 
+7       台北            tw-tp       
+8       拉各斯          afr-nigeria 
 9       圣保罗          bra-saopaulo
 10      迪拜            uae-dubai   
-11      越南            vn-sng      
-12      孟买            ind-mumbai  
+11      法兰克福        ge-fra      
+12      胡志明市        vn-sng      
 13      华盛顿          us-ws       
-14      法兰克福        ge-fra      
+14      孟买            ind-mumbai  
+15      首尔            kr-seoul    
 请输入要创建bucket地区编号或地区代码(默认为北京:cn-bj):0
 Region: cn-bj
 当前账号下项目信息如下：
@@ -216,6 +223,8 @@ us3cli cp -r <localdir> us3://<bucketname>/<us3key>
 ./us3cli cp -r ./testdir us3://buckettest/us3dir --include "*txt"
 #上传文件名不包含test的文件
 ./us3cli cp -r ./testdir us3://buckettest/us3dir --exclude "*test*"
+#上传文件夹并进行完整性校验
+./us3cli cp -r ./testdir us3://buckettest/us3dir --check
 ```
 
 ### 增量上传文件夹
@@ -229,13 +238,22 @@ us3cli sync <localdir> us3://<bucketname>/<us3key>
 #使用示例:
 #遍历本地文件夹，以本地缓存为标准进行同步，如果文件修改时间晚于本地缓存保存的时间，或者未保存过，则上传文件，否则跳过
 ./us3cli sync ./testdir us3://buckettest/us3dir
+
 #遍历本地文件夹，以本地缓存为标准进行同步，如果文件etag和本地缓存保存的etag不同，则上传文件，否则跳过
 ./us3cli sync ./testdir us3://buckettest/us3dir --ruler etag
+
 #遍历本地文件夹，对比本地和us3所有文件，如果文件修改时间晚于us3文件的修改时间，则上传文件，否则跳过
 #如果存在文件在us3的目录下存在，但在本地不存在，则删除us3中的该文件（该删除操作会默认询问，目前不提供强制删除功能）
-./us3cli sync ./testdir us3://buckettest/us3dir --mode remote
+./us3cli sync ./testdir us3://buckettest/us3dir --mode local
+
 #遍历本地文件夹，对比本地和us3所有文件，如果文件etag和us3同一文件的etag不同，则上传文件，否则跳过
-./us3cli sync ./testdir us3://buckettest/us3dir --mode remote --ruler etag
+./us3cli sync ./testdir us3://buckettest/us3dir --mode local --ruler etag
+
+#增量上传并指定存储类型为低频类型
+./us3cli sync ./testdir us3://buckettest/us3dir --storageclass ”IA“
+
+#增量上传并指定mimetype
+./us3cli sync ./testdir us3://buckettest/us3dir --mimetype "mimetype1"
 ```
 
 ## 下载文件或文件夹
@@ -277,6 +295,9 @@ us3cli cp -r  us3://<bucketname>/<us3key> <localdir>
 
 #下载文件夹并指定并发数为20
 ./us3cli cp -r us3://buckettest/us3dir ./testdir --parallel 20
+
+#下载文件夹并限速为100MB/s
+./us3cli cp -r us3://buckettest/us3dir ./testdir --speedlimit 100MB
 ```
 
 ## 拷贝文件或文件夹

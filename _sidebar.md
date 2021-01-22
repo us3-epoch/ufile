@@ -37,6 +37,7 @@
         * [快速上手](/ufile/tools/us3cli/quickaccess)
         * [常用命令](/ufile/tools/us3cli/command)
         * [常见问题](/ufile/tools/us3cli/questions)
+        * [历史版本](/ufile/tools/us3cli/ReleaseNote)
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
