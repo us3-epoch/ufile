@@ -31,7 +31,7 @@
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
         * [一致性比对工具](/ufile/tools/tools/consistency)
         * [原迁移工具](/ufile/tools/tools/ufile_import)
-    * US3CLI 命令行工具（内测中）
+    * US3CLI 命令行工具（公测中）
         * [工具简介](/ufile/tools/us3cli/introduction)
         * [下载与环境准备](/ufile/tools/us3cli/prepare)
         * [快速上手](/ufile/tools/us3cli/quickaccess)
