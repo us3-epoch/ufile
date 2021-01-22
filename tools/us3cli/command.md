@@ -687,7 +687,7 @@ us3cli rcat us3://<桶名字>/<文件Key>	[--reduce][-retrycount <重试次数>]
       --endpoint <string>      :固定域名，可通过地域和域名页查看
   -h, --help                   :当前命令使用说明
       --parallel <int>	       :分片并发数
-      --reduce 		       :是否以精简模式执行（不展示进度）
+      --reduce                 :是否以精简模式执行（不展示进度）
       --retrycount: <int>      :失败重试次数,默认值：10
       --secretkey <string>     :用于访问us3的API私钥或Token私钥
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
@@ -773,7 +773,7 @@ us3cli cat us3://<bucketname>/<keyname> [--reduce][--retrycount <重试次数>][
       --endpoint <string>      :固定域名，可通过地域和域名页查看
   -h, --help                   :当前命令使用说明
       --partsize               :下载分片大小，默认大小为4M，最小值为1M(该参数仅限下载)
-      --reduce 	               :是否以精简模式执行（不展示进度）
+      --reduce                 :是否以精简模式执行（不展示进度）
       --retrycount: <int>      :失败重试次数,默认值：10
       --secretkey <string>     :用于访问us3的API私钥或Token私钥
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
@@ -962,7 +962,7 @@ us3cli ls [us3://<桶名称>] [--limit <输出限制数>][--restore][--flat][--m
   -h, --help                 :当前命令使用说明
   -l, --limit <int>          :需要同时列出的最大文件条数，默认值为100
       --mimetype             :是否展示mimetype信息
-      --project	             :列出当前账户下所有项目及项目ID
+      --project              :列出当前账户下所有项目及项目ID
       --projectid <string>   :列出bucket时指定projectid，默认项目可忽略
   -r, --restore              :是否展示数据解冻信息
       --secretkey <string>   :用于访问us3的API私钥或Token私钥
