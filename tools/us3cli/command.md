@@ -218,7 +218,7 @@ us3cli mb us3://<桶名字>  [--acl <权限类型>][--region <桶所在地区>][
       --config <string>      :当前命令临时指定配置名/配置文件路径
       --endpoint <string>    :固定域名，可通过地域和域名页查看,如：cn-bj.ufileos.com
   -h, --help                 :当前命令使用说明
-      --projectid <string>	  :项目ID，当前bucket属项目ID，默认为Default
+      --projectid <string>   :项目ID，当前bucket属项目ID，默认为Default
   -r, --region <string>      :桶所在地区，可查看地域信息，默认地区为北京
       --secretkey <string>   :用于访问us3的API私钥或Token私钥
 ```
@@ -289,7 +289,7 @@ us3cli rb us3://<桶名字> [--projectid <项目ID>][--force]
       --endpoint <string>      :固定域名，可通过地域和域名页查看
   -f, --force                  :强制删除
   -h, --help                   :当前命令使用说明
-      --projectid <string>	   :指定当前bucket所在projectid，可以在控制台查看，默认项目可忽略
+      --projectid <string>     :指定当前bucket所在projectid，可以在控制台查看，默认项目可忽略
       --secretkey <string>     :用于访问us3的API私钥或Token私钥
 ```
 
@@ -590,17 +590,17 @@ us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache
       --metadata <string>      :指定元数据信息，多个元数据以","分隔，如 "key1=value,key2=value2",其他分隔符暂不支持
       --mimetype <string>      :指定mimetype上传
   -m, --mode <string>          :可选项 cache、local  默认值为cache
-  		cache			        :以本地缓存为标准，检查基于缓存的增量文件，同步us3端对应目录的文件，默认为该模式
-		local                   :以本地文件系统为标准，检查本地文件以及us3不同步的文件，补全或删除us3端对应目录的文件	
+  	cache		       :以本地缓存为标准，检查基于缓存的增量文件，同步us3端对应目录的文件，默认为该模式
+	local                  :以本地文件系统为标准，检查本地文件以及us3不同步的文件，补全或删除us3端对应目录的文件	
       --parallel <int>         :请求并发数，默认值为10
       --reduce:                :是否以精简模式执行（不展示进度）
   -r, --retrycount: <int>      :失败重试次数,默认值：10
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
       --ruler <string>         :可选项 modtime、etag  默认为modtime
-  		modtime			      	:在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
-		etag                  	:在判断是否上传时采用文件etag作为判断标准，如果本地文件etag和us3中的etag不同，则进行上传请求，否则不上传
-	  --secretkey <string>     :用于访问us3的API私钥或Token私钥  
+  	modtime		       :在判断是否上传时采用文件最后修改时间作为判断标准，如果本地文件最后修改时间晚于us3，则进行上传请求，否则不上传
+	etag                   :在判断是否上传时采用文件etag作为判断标准，如果本地文件etag和us3中的etag不同，则进行上传请求，否则不上传
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥  
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
       --storageclass <string>  :指定存储类型,对应有效值：STANDARD, IA, ARCHIVE，默认值：STANDARD
 ```
@@ -686,10 +686,10 @@ us3cli rcat us3://<桶名字>/<文件Key>	[--reduce][-retrycount <重试次数>]
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
   -h, --help                   :当前命令使用说明
-      --parallel <int>	       	:分片并发数
-      --reduce 				   	:是否以精简模式执行（不展示进度）
+      --parallel <int>	       :分片并发数
+      --reduce 		       :是否以精简模式执行（不展示进度）
       --retrycount: <int>      :失败重试次数,默认值：10
-	  --secretkey <string>   	:用于访问us3的API私钥或Token私钥
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
 ```
 
@@ -772,10 +772,10 @@ us3cli cat us3://<bucketname>/<keyname> [--reduce][--retrycount <重试次数>][
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
   -h, --help                   :当前命令使用说明
-  	  --partsize               :下载分片大小，默认大小为4M，最小值为1M(该参数仅限下载)
-      --reduce 				   	:是否以精简模式执行（不展示进度）
-      --retrycount: <int>     	:失败重试次数,默认值：10
-	  --secretkey <string>     :用于访问us3的API私钥或Token私钥
+      --partsize               :下载分片大小，默认大小为4M，最小值为1M(该参数仅限下载)
+      --reduce 	               :是否以精简模式执行（不展示进度）
+      --retrycount: <int>      :失败重试次数,默认值：10
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥
   -s, --speedlimit <string>    :平均速度限制(单位可以是B,KB,MB，不带单位默认以B/s计算)，默认200MB/s
 ```
 
@@ -826,7 +826,7 @@ us3cli mv us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--force][
 ### 参数说明
 
 ```
-	  --accesskey <string>     :用于访问us3的API公钥或Token公钥
+      --accesskey <string>     :用于访问us3的API公钥或Token公钥
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
       --exclude <string>       :不包含当前通配符的文件名
@@ -834,7 +834,7 @@ us3cli mv us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--force][
   -h, --help                   :当前命令使用说明
       --include <string>       :包含当前通配符的文件名
       --parallel <int>         :并发数
-      --reduce 				   	:是否以精简模式执行（不展示进度）
+      --reduce 		       :是否以精简模式执行（不展示进度）
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
       --secretkey <string>     :用于访问us3的API私钥或Token私钥
@@ -874,8 +874,8 @@ us3cli rm us3://<桶名字>/<文件Key> [--recursive][--force][--reduce][--exclu
 ### 参数说明
 
 ```
- 	  --accesskey <string>     :用于访问us3的API公钥或Token公钥
- 	  --cache  <string>        :要删除的缓存类型 : upload|download|sync|du
+      --accesskey <string>     :用于访问us3的API公钥或Token公钥
+      --cache  <string>        :要删除的缓存类型 : upload|download|sync|du
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
       --exclude <string>       :不包含当前通配符的文件名
@@ -885,10 +885,10 @@ us3cli rm us3://<桶名字>/<文件Key> [--recursive][--force][--reduce][--exclu
       --parallel <int>         :批量删除并发数，默认值为10
   -q, --qps <int>              :限制每秒请求数量，默认50qps，取值范围：1~1000
   -r, --recursive              :递归文件夹中的所有文件及子目录下所有文件
-      --reduce 				   	:是否以精简模式执行（不展示进度）
+      --reduce 		       :是否以精简模式执行（不展示进度）
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
-	  --secretkey <string>    	:用于访问us3的API私钥或Token私钥  
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥  
 ```
 
 ### 使用示例
@@ -954,15 +954,15 @@ us3cli ls [us3://<桶名称>] [--limit <输出限制数>][--restore][--flat][--m
 ### 参数说明
 
 ```
-	  --accesskey <string>   :用于访问us3的API公钥或Token公钥
+      --accesskey <string>   :用于访问us3的API公钥或Token公钥
       --config <string>      :当前命令临时指定配置名/配置文件路径
       --endpoint <string>    :固定域名，可通过地域和域名页查看
       --etag                 :是否展示etag信息
       --flat                 :是否以非层级结构（展开所有目录）显示,默认层级显示
   -h, --help                 :当前命令使用说明
   -l, --limit <int>          :需要同时列出的最大文件条数，默认值为100
-  	  --mimetype           	  :是否展示mimetype信息
-  	  --project				  :列出当前账户下所有项目及项目ID
+      --mimetype             :是否展示mimetype信息
+      --project	             :列出当前账户下所有项目及项目ID
       --projectid <string>   :列出bucket时指定projectid，默认项目可忽略
   -r, --restore              :是否展示数据解冻信息
       --secretkey <string>   :用于访问us3的API私钥或Token私钥
@@ -989,7 +989,7 @@ us3cli          cn-bj   public  2020-09-15 16:17:24
 ```
 ./us3cli ls us3://bucket
 Key                     FileSize   StorageClass         Etag                             CreateTime      
-us3://bucket/cf1   		DIR        IA                   AQAAANo5o-5ea0sNMlW_75VgGJCv2AcJ 2020-07-16 18:51:04  
+us3://bucket/cf1   	DIR        IA                   AQAAANo5o-5ea0sNMlW_75VgGJCv2AcJ 2020-07-16 18:51:04  
 us3://bucket/aa.txt     4KB        STANDARD             AQAAAGNlfLt9cIbFawzU5caZm7aDZkho 2020-07-22 11:04:34 
 us3://bucket/aa.txt     4KB        ARCHIVE              AQAAAGNlfLt9cIbFawzU5caZm7aDZkho 2020-07-22 11:04:34 
 ```
@@ -1001,8 +1001,8 @@ us3://bucket/aa.txt     4KB        ARCHIVE              AQAAAGNlfLt9cIbFawzU5caZ
 当前账号下项目信息如下：
 No.     ProjectName                     ProjectId 
 1       Default                         org-ddhm4o
-2     	Test         					org-nhrc4y
-3       Test2       					org-wr5pej
+2     	Test         			org-nhrc4y
+3       Test2       			org-wr5pej
 ```
 
 - 列出bucket下对象并限制显示文件数量为2
@@ -1036,12 +1036,12 @@ us3cli sign us3://<桶名字>/<文件Key>   [--expires <时间>]
 ### 参数说明
 
 ```
- 	  --accesskey <string>     :用于访问us3的API公钥或Token公钥
+      --accesskey <string>     :用于访问us3的API公钥或Token公钥
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
       --expires <int>          :url使用的过期时间,单位s
-  -h, --help                  	:当前命令使用说明
-	  --secretkey <string>    	:用于访问us3的API私钥或Token私钥  
+  -h, --help                   :当前命令使用说明
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥  
 ```
 
 ### 使用示例
@@ -1133,7 +1133,7 @@ us3cli restore us3://<桶名字>/<文件Key> [--recursive][--reduce][--qps <每�
 ### 参数说明
 
 ```
- 	  --accesskey <string>    	:用于访问us3的API公钥或Token公钥
+      --accesskey <string>     :用于访问us3的API公钥或Token公钥
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
       --exclude <string>       :不包含当前通配符的文件名
@@ -1142,10 +1142,10 @@ us3cli restore us3://<桶名字>/<文件Key> [--recursive][--reduce][--qps <每�
       --parallel <int>         :批量激活并发数，默认值为10
   -q, --qps <int>              :限制每秒请求数量，默认50qps，取值范围：1~1000
   -r, --recursive              :递归文件夹中的所有文件及子目录下所有文件
-      --reduce 				   	:是否以精简模式执行（不展示进度）
+      --reduce 		       :是否以精简模式执行（不展示进度）
       --rexclude <string>      :不包含当前正则表达式的文件名
       --rinclude <string>      :包含当前正则表达式的文件名
-	  --secretkey <string>    	:用于访问us3的API私钥或Token私钥  
+      --secretkey <string>     :用于访问us3的API私钥或Token私钥  
 ```
 
 ### 使用示例
@@ -1226,7 +1226,7 @@ cat test4.txt | ./us3cli etag us3://bucket1/test.txt us3://bucket1/test2.txt tes
 Name                                    Etag                            
 us3://bucket1/test.txt                  AQAAAEpmwm87EANJQDpLTEmxsjR7-R0N
 us3://bucket1/test2.txt                 AQAAAEpmwm87EANJQDpLTEmxsjR7-R0N
-test3.txt    							AQAAAHPuBl-6VRpzVHiBFjSOVhLrcsam
+test3.txt    				AQAAAHPuBl-6VRpzVHiBFjSOVhLrcsam
 [-]                                     SmbCbzsQA0lAOktMSbGyNHv5HQ0= 
 ```
 
