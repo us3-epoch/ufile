@@ -38,7 +38,7 @@ qps代表每秒请求数量限制，如qps为1，那么该请求会限制在1秒
 如：上传本地文件test1至存储桶bucketTest的test目录下时，以下方式1只会生成一个test文件在根目录下，而方式2和方式3都可以成功上传文件到test下，命名为test1.
 
 ```
-// 方式1：./us3cli cp test1 us3://bucketTest/test
+方式1：./us3cli cp test1 us3://bucketTest/test
 方式2: ./us3cli cp test1 us3://bucketTest/test/test1
 方式3: ./us3cli cp test1 us3://bucketTest/test/
 ```
