@@ -326,7 +326,6 @@ us3cli cp us3://<bucketname>/<us3key>
 #命令格式：
 us3cli rm  us3://<bucketname>/<us3key>
 
-
 #使用示例：
 #删除文件
 ./us3cli rm us3://buckettest/test.txt
