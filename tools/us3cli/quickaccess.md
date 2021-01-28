@@ -48,22 +48,22 @@ us3cli config  [--ls][--su <配置名>][--rm <配置名>][--cat <配置名>][--e
 请输入API/Token私钥[当前:]: xxxxxxxxxxxxxxxxxxxxxx
 地区列表：
 No.     RegionName      Region      
-0       北京            cn-bj       
-1       上海二          cn-sh2      
-2       广州            cn-gd       
-3       香港            hk          
-4       洛杉矶          us-ca       
-5       新加坡          sg          
-6       雅加达          idn-jakarta 
-7       台北            tw-tp       
-8       拉各斯          afr-nigeria 
-9       圣保罗          bra-saopaulo
-10      迪拜            uae-dubai   
-11      法兰克福        ge-fra      
-12      胡志明市        vn-sng      
-13      华盛顿          us-ws       
-14      孟买            ind-mumbai  
-15      首尔            kr-seoul    
+0       北京		cn-bj       
+1       上海二		cn-sh2      
+2       广州		cn-gd       
+3       香港		hk          
+4       洛杉矶		us-ca       
+5       新加坡		sg          
+6       雅加达		idn-jakarta 
+7       台北		tw-tp       
+8       拉各斯		afr-nigeria 
+9       圣保罗		bra-saopaulo
+10      迪拜		uae-dubai   
+11      法兰克福		ge-fra      
+12      胡志明市		vn-sng      
+13      华盛顿		us-ws       
+14      孟买		ind-mumbai  
+15      首尔		kr-seoul    
 请输入region编号: 0
 内外网列表：
 No.     Network
@@ -146,25 +146,25 @@ us3cli mb us3://<bucketname>
 使用示例：
 # ./us3cli mb us3://bucketTest
 
-请输入要创建bucket的权限类型acl(private/public,默认为private):private
+请输入要创建bucket的权限类型acl(private/public,默认为private):private  
 地区列表：
 No.     RegionName      Region      
-0       北京            cn-bj       
-1       上海二          cn-sh2      
-2       广州            cn-gd       
-3       香港            hk          
-4       洛杉矶          us-ca       
-5       新加坡          sg          
-6       雅加达          idn-jakarta 
-7       台北            tw-tp       
-8       拉各斯          afr-nigeria 
-9       圣保罗          bra-saopaulo
-10      迪拜            uae-dubai   
-11      法兰克福        ge-fra      
-12      胡志明市        vn-sng      
-13      华盛顿          us-ws       
-14      孟买            ind-mumbai  
-15      首尔            kr-seoul    
+0       北京		cn-bj       
+1       上海二		cn-sh2      
+2       广州		cn-gd       
+3       香港		hk          
+4       洛杉矶		us-ca       
+5       新加坡		sg          
+6       雅加达		idn-jakarta 
+7       台北		tw-tp       
+8       拉各斯		afr-nigeria 
+9       圣保罗		bra-saopaulo
+10      迪拜		uae-dubai   
+11      法兰克福		ge-fra      
+12      胡志明市		vn-sng      
+13      华盛顿		us-ws       
+14      孟买		ind-mumbai  
+15      首尔		kr-seoul     
 请输入要创建bucket地区编号或地区代码(默认为北京:cn-bj):0
 Region: cn-bj
 当前账号下项目信息如下：
