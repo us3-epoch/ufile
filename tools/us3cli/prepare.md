@@ -8,7 +8,7 @@
 
 Ⅱ.Linux
 
-​        x86架构
+  x86架构
 
 - [us3cli-linux32](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-linux32)
 
