@@ -1,7 +1,7 @@
 # 快速上手
 
 - [配置管理](#配置管理)
-- [创建存储桶](#创建存储桶)
+- [创建存储空间](#创建存储空间)
 - [上传文件或文件夹](#上传文件或文件夹)
 - [下载文件或文件夹](#下载文件或文件夹)
 - [拷贝文件或文件夹](#拷贝文件或文件夹)
@@ -135,7 +135,7 @@ enablessl: "false"
 proxy: "http://ip:port or https://ip:port"
 ```
 
-## 创建存储桶
+## 创建存储空间
 
 ### 交互式创建
 
@@ -204,7 +204,7 @@ us3cli rcat us3://<bucketname>/<us3key>
 ./us3cli cp ./test.txt us3://buckettest/test.txt --storageclass IA
 #指定并发数，设置并发数为10(文件大于64MB时才会有效果,因为64MB以上大文件才会使用分片上传)
 ./us3cli cp ./test.txt us3://buckettest/test.txt --parallel 10
-#将本地文件test.txt cat到标准输入，再上传至us3存储桶内
+#将本地文件test.txt cat到标准输入，再上传至us3存储空间内
 cat test.txt | ./us3cli rcat us3://buckettest/test.txt
 #流式上传并指定失败重试次数为10，设置并发数为10
 cat test.txt | ./us3cli rcat us3://buckettest/test.txt --retrycount 10 --parallel 10
@@ -350,7 +350,7 @@ us3cli rm  -r us3://<bucketname>/<us3key>
 #删除test文件夹下不含有test的文件
 ./us3cli rm -r -f us3://buckettest/test --exclude "*test*"
 
-#设置并发数为10，强制清空当前buckettest存储桶
+#设置并发数为10，强制清空当前buckettest存储空间
 ./us3cli rm -r -f us3://buckettest --parallel 10 
 
 #删除文件夹，限制请求数量为每秒10个
