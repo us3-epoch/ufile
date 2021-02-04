@@ -15,7 +15,7 @@
 | 拉各斯 | www.afr-nigeria.ufileos.com      | www.internal-afr-nigeria.ufileos.com     |
 | 圣保罗 | www.bra-saopaulo.ufileos.com      | www.internal-bra-saopaulo.ufileos.com     |
 | 迪拜  | www.uae-dubai.ufileos.com      | www.internal-uae-dubai.ufileos.com     |
-| 法兰克福  | www.ge-fra.ufileos.com      | www.ge-fra.ufileos.com     |
+| 法兰克福  | www.ge-fra.ufileos.com     | www.internal-ge-fra.ufileos.com     |
 | 胡志明市  | www.vn-sng.ufileos.com      | www.internal-vn-sng.ufileos.com     |
 | 华盛顿  | www.us-ws.ufileos.com      | www.internal-us-ws.ufileos.com     |
 | 孟买  | www.ind-mumbai.ufileos.com      | www.internal-ind-mumbai.ufileos.com     |
