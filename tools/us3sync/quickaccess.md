@@ -16,7 +16,7 @@
     - [导出失败文件列表](#导出失败文件列表)
 - [缓存说明](#缓存说明)
 - [迁移类型说明](#迁移类型说明)
-    - [AWS S3](#AWS S3)
+    - [s3](#s3)
     - [local](#local)
     - [http](#http)
 
@@ -144,7 +144,7 @@ US3SYNC 使用 pika 提供缓存服务。主要缓存以下信息：
 
 | 迁移类型 | 说明                                                           |
 | -------- | -------------------------------------------------------------- |
-| AWS S3   | 实现基于 S3 接口的迁移，支持 S3 协议的云平台皆可基于此类型迁移 |
+| S3       | 实现基于 S3 接口的迁移，支持 S3 协议的云平台皆可基于此类型迁移 |
 | OSS      | 实现 OSS 云存储接口                                            |
 | qiniu    | 实现 qiniu 云存储接口                                          |
 | youpai   | 实现 youpai 云存储接口                                         |
@@ -152,9 +152,9 @@ US3SYNC 使用 pika 提供缓存服务。主要缓存以下信息：
 | NAS      | 实现 NAS 系统或者本地文件迁移                                  |
 | URL      | 实现 基于 URL 列表迁移                                         |
 
-### AWS S3
+### S3
 
-AWS S3 源需要额外提供待迁移空间的 region 字段，参考：https://docs.aws.amazon.com/zh_cn/general/latest/gr/s3.html 。
+AWS S3源需要额外提供待迁移空间的 region 字段，参考：https://docs.aws.amazon.com/zh_cn/general/latest/gr/s3.html 。
 
 第三方实现S3协议参考对应厂商S3文档说明。
 
