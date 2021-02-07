@@ -1,5 +1,12 @@
 # 快速上手
 
+- [界面说明](#界面说明)
+    - [登录界面说明](#登录界面说明)
+    - [任务管理界面说明](#任务管理界面说明)
+    - [创建任务界面说明](#创建任务界面说明)
+    - [创建迁移源界面说明](#创建迁移源界面说明)
+    - [节点管理界面说明](#节点管理界面说明)
+    - [创建节点界面说明](#创建节点界面说明)
 - [使用说明](#使用说明)
     - [添加Endpoint](#添加endpoint)
     - [创建任务](#创建任务)
@@ -9,16 +16,58 @@
     - [导出失败文件列表](#导出失败文件列表)
 - [缓存说明](#缓存说明)
 - [迁移类型说明](#迁移类型说明)
-    - [AWS](#aws)
+    - [AWS S3](#AWS S3)
     - [local](#local)
     - [http](#http)
-- [界面说明](#界面说明)
-    - [登录界面说明](#登录界面说明)
-    - [任务管理界面说明](#任务管理界面说明)
-    - [创建任务界面说明](#创建任务界面说明)
-    - [创建迁移源界面说明](#创建迁移源界面说明)
-    - [节点管理界面说明](#节点管理界面说明)
-    - [创建节点界面说明](#创建节点界面说明)
+
+
+## 界面说明
+
+服务启动后，通过浏览器打开页面https://<web服务监听IP>:<web服务监听端口>，即可访问US3SYNC界面，在界面上进行数据的迁移操作。
+
+### 登录界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
+
+### 任务管理界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
+
+
+```
+- 任务操作：
+开始迁移：开始文件迁移
+开始校验：基于大小校验源端与目录端文件，会从源端与目的端全量拉取文件列表对比
+管理-重试：迁移文件后有失败记录，通过该按钮将失败文件重新迁移
+管理-导出：迁移文件后有失败记录，通过该按钮将失败文件列表导出到目的端bucket的.US3SYNC/details/[jobid]/error.log 位置
+管理-删除：删除任务，会清理任务缓存记录
+管理-克隆：打开创建任务界面，并填写当前任务信息
+
+- 统计信息如下：
+=================================
+迁移总数:   此次迁移文件总数
+等待迁移: 处于待迁移队列的文件个数
+正在迁移: 正在执行迁移的文件个数
+迁移成功:   已经迁移成功的文件个数
+迁移失败:   已经迁移失败的文件个数
+=================================
+```
+
+### 创建任务界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
+
+### 创建迁移源界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-ep.png)
+
+### 节点管理界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
+
+### 创建节点界面说明
+
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
 
 ## 使用说明
 
@@ -123,50 +172,3 @@ http 源需要提供待迁移文件列表的 url 地址。
 > 文件url地址  
 > 文件url地址
 > 
-
-## 界面说明
-
-### 登录界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
-
-### 任务管理界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
-
-
-```
-- 任务操作：
-开始迁移：开始文件迁移
-开始校验：基于大小校验源端与目录端文件，会从源端与目的端全量拉取文件列表对比
-管理-重试：迁移文件后有失败记录，通过该按钮将失败文件重新迁移
-管理-导出：迁移文件后有失败记录，通过该按钮将失败文件列表导出到目的端bucket的.US3SYNC/details/[jobid]/error.log 位置
-管理-删除：删除任务，会清理任务缓存记录
-管理-克隆：打开创建任务界面，并填写当前任务信息
-
-- 统计信息如下：
-=================================
-迁移总数:   此次迁移文件总数
-等待迁移: 处于待迁移队列的文件个数
-正在迁移: 正在执行迁移的文件个数
-迁移成功:   已经迁移成功的文件个数
-迁移失败:   已经迁移失败的文件个数
-=================================
-```
-
-### 创建任务界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
-
-### 创建迁移源界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-ep.png)
-
-### 节点管理界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
-
-### 创建节点界面说明
-
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
-
