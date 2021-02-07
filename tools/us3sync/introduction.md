@@ -72,5 +72,5 @@ US3SYNC
 
 ### 运行环境
 
-- Master节点：Linux amd64
-- Worker节点：Linux amd64
+- Master节点：Linux（x86 64位）
+- Worker节点：Linux（x86 64位）
