@@ -24,7 +24,12 @@
     * [统计报表](/ufile/guide/dashboard)
     * [令牌管理](/ufile/guide/token)
 * [管理工具](/ufile/tools/introduction)
-    * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
+    * US3FS 文件挂载工具
+        * [工具简介](/ufile/tools/us3fs/introduction)
+        * [下载与环境准备](/ufile/tools/us3fs/prepare)
+        * [快速上手](/ufile/tools/us3fs/quickaccess)
+        * [常见问题](/ufile/tools/us3fs/questions)
+        * [历史版本](/ufile/tools/us3fs/ReleaseNote)
     * US3SYNC 迁移工具
         * [工具简介](/ufile/tools/us3sync/introduction)
         * [下载与环境准备](/ufile/tools/us3sync/prepare)
