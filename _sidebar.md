@@ -25,19 +25,24 @@
     * [令牌管理](/ufile/guide/token)
 * [管理工具](/ufile/tools/introduction)
     * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
-    * [US3SYNC 迁移工具](/ufile/tools/us3sync/us3sync)
-    * 命令行工具
-        * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
-        * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
-        * [一致性比对工具](/ufile/tools/tools/consistency)
-        * [原迁移工具](/ufile/tools/tools/ufile_import)
-    * US3CLI 命令行工具（公测中）
+    * US3SYNC 迁移工具
+        * [工具简介](/ufile/tools/us3sync/introduction)
+        * [下载与环境准备](/ufile/tools/us3sync/prepare)
+        * [快速上手](/ufile/tools/us3sync/quickaccess)
+        * [常见问题](/ufile/tools/us3sync/questions)
+        * [历史版本](/ufile/tools/us3sync/ReleaseNote)
+    * US3CLI 命令行工具
         * [工具简介](/ufile/tools/us3cli/introduction)
         * [下载与环境准备](/ufile/tools/us3cli/prepare)
         * [快速上手](/ufile/tools/us3cli/quickaccess)
         * [常用命令](/ufile/tools/us3cli/command)
         * [常见问题](/ufile/tools/us3cli/questions)
         * [历史版本](/ufile/tools/us3cli/ReleaseNote)
+    * 命令行工具
+        * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
+        * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
+        * [一致性比对工具](/ufile/tools/tools/consistency)
+        * [原迁移工具](/ufile/tools/tools/ufile_import)
 * 开发者指南
     * 存储空间（Bucket）
         * [创建存储空间](/ufile/guide/bucket/devguide)
