@@ -39,7 +39,7 @@ endpoint: ufile.cn-north-02.ucloud.cn
 * **secret_key**: 私钥，支持token秘钥和api秘钥两种模式
 * **endpoint**: 访问域名，详见[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)。填写时需要去掉`www.`
 
-当需要在一台机器上挂载多个bucket时，可以通过`--passwd=passwd_file`指定账号信息（默认路径为/etc/us3fs/us3fs.conf，不需要指定）。
+当需要在一台机器上挂载多个bucket时，可以通过`--passwd=passwd_file`指定账号信息（默认路径为 /etc/us3fs/us3fs.conf，不需要指定）。
 
 下载us3fs后。使用`chmod +x us3fs`增加可执行权限，如果需要直接执行，可将us3fs移动到/bin目录下。示例：
 
