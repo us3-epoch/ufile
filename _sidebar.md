@@ -23,7 +23,14 @@
     * [防盗链](/ufile/guide/referer)
     * [统计报表](/ufile/guide/dashboard)
     * [令牌管理](/ufile/guide/token)
-* [管理工具](/ufile/tools/introduction)
+* [常用工具](/ufile/tools/introduction)
+    * US3CLI 命令行工具
+        * [工具简介](/ufile/tools/us3cli/introduction)
+        * [下载与环境准备](/ufile/tools/us3cli/prepare)
+        * [快速上手](/ufile/tools/us3cli/quickaccess)
+        * [常用命令](/ufile/tools/us3cli/command)
+        * [常见问题](/ufile/tools/us3cli/questions)
+        * [历史版本](/ufile/tools/us3cli/ReleaseNote)
     * US3FS 文件挂载工具
         * [工具简介](/ufile/tools/us3fs/introduction)
         * [下载与环境准备](/ufile/tools/us3fs/prepare)
@@ -36,14 +43,12 @@
         * [快速上手](/ufile/tools/us3sync/quickaccess)
         * [常见问题](/ufile/tools/us3sync/questions)
         * [历史版本](/ufile/tools/us3sync/ReleaseNote)
-    * US3CLI 命令行工具
-        * [工具简介](/ufile/tools/us3cli/introduction)
-        * [下载与环境准备](/ufile/tools/us3cli/prepare)
-        * [快速上手](/ufile/tools/us3cli/quickaccess)
-        * [常用命令](/ufile/tools/us3cli/command)
-        * [常见问题](/ufile/tools/us3cli/questions)
-        * [历史版本](/ufile/tools/us3cli/ReleaseNote)
-    * 命令行工具
+    * US3Hadoop 大数据适配工具
+        * [工具简介](/ufile/tools/us3hadoop/introduction)
+        * [下载与环境准备](/ufile/tools/us3hadoop/prepare)
+        * [快速上手](/ufile/tools/us3hadoop/quickaccess)
+        * [常见问题](/ufile/tools/us3hadoop/questions)
+    * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
         * [一致性比对工具](/ufile/tools/tools/consistency)
