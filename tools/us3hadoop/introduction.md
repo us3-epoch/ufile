@@ -8,7 +8,7 @@ US3Hadoop适配器是为了解决Hadoop访问UCloud对象存储US3的问题，�
 
 适配器是实现了Hadoop提供的存储访问接口FileSystem的适配器组件，类似HDFS实现的DistributedFileSystem和基于AWS S3协议实现的S3AFileSystem。适配器直接把IO，索引请求发给US3，架构如下图所示。
 
-![方案](./img/hadoop_no_mds.png "IO/索引直连方案")
+![](/images/hadoop_no_mds.png)
 
 该架构适合``备份场景``和``小规模计算分析场景``。
 
