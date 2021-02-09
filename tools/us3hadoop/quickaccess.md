@@ -29,7 +29,6 @@
 需要在core-site.xml中配置以上相关配置项，如：
 
 ```
-xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
@@ -114,7 +113,6 @@ xml
 使用格式为`hadoop fs -ls us3://<bucket name>/<path>`。使用式样如下:
 
 ```
-Shell
 [root@task10 ~]# hadoop fs -ls us3://bigdata-us3/HiBench/Aggregation/Input/rankings | more
 Found 10241 items
 -rw-r--r--   1 root supergroup          0 2021-01-26 13:46 us3://bigdata-us3/HiBench/Aggregation/Input/rankings/_SUCCESS
@@ -148,7 +146,6 @@ Found 10241 items
 假设需要把HDFS集群的/var目录数据备份至US3的bigdata-us3存储空间的/distcp/前缀下，可以在安装好前面的适配器后通过hadoop自带的distcp执行拷贝，如：
 
 ```
-Shell
 [root@master1 tools]# hadoop distcp -bandwidth 15 -m 20 -skipcrccheck -update -pugp  /var us3://bigdata-us3/distcp/var
 21/01/26 16:51:50 INFO tools.DistCp: Input Options: DistCpOptions{atomicCommit=false, syncFolder=true, deleteMissing=false, ignoreFailures=false, overwrite=false, skipCRC=true, blocking=true, numListstatusThreads=0, maxMaps=20, mapBandwidth=15, sslConfigurationFile='null', copyStrategy='uniformsize', preserveStatus=[USER, GROUP, PERMISSION], preserveRawXattrs=false, atomicWorkPath=null, logPath=null, sourceFileListing=null, sourcePaths=[/var], targetPath=us3://bigdata-us3/distcp/var, targetPathExists=false, filtersFile='null'}
 21/01/26 16:51:51 INFO tools.SimpleCopyListing: Paths (files+dirs) cnt = 9226; dirCnt = 851
@@ -181,7 +178,6 @@ Shell
 如果不想安装适配器即可进行备份或者文件系统操作（避免侵入已有服务带来的风险），可以按照如下格式进行执行操作:
 
 ```
-bash
 hadoop fs|distcp|... -Dfs.us3.impl=cn.ucloud.us3.fs.US3FileSystem \
                 -Dfs.us3.access.key=${访问US3的API公钥或者Token公钥} \
                 -Dfs.us3.secret.key=${访问US3的API私钥或者Token私钥} \
@@ -201,7 +197,6 @@ hadoop fs|distcp|... -Dfs.us3.impl=cn.ucloud.us3.fs.US3FileSystem \
 如拉取US3的某个目录:
 
 ```
-shell
 [root@master1 tools]# hadoop fs -Dfs.us3.impl=cn.ucloud.us3.fs.US3FileSystem -Dfs.us3.access.key=TOKEN_7468973e-d192-xxxx-xxxx-xxxxxxxxxxxx -Dfs.us3.secret.key=9a632eb8-3938-xxxx-xxxx-xxxxxxxxxxxx -Dfs.us3.socket.recv.buffer=65536 -Dfs.us3.thread.pool.size=8 -Dfs.us3.log.level=info -Dfs.us3.endpoint=internal-cn-bj.ufileos.com -Dfs.us3.bucket.bigdata.only=false -Dfs.us3.async.wio.use=true -Dfs.us3.async.wio.parallel=2 -Dmapreduce.job.user.classpath.first=true -Dmapreduce.task.classpath.user.precedence=true -libjars ./us3-bigdata-adaptor-2.8.5.0.jar -ls us3://bigdata-us3/distcp/var/log/hadoop-yarn/apps/root/logs
 Found 846 items
 drwxrwxrwx   - root supergroup          0 2021-01-26 16:52 us3://bigdata-us3/distcp/var/log/hadoop-yarn/apps/root/logs/application_1611108331895_0001
