@@ -18,7 +18,7 @@
 
 ## 安装适配器
 
-1. 配置各个节点的core-site.xml参数项，参数项参考[快速上手](/ufile/tools/us3hadoop/quickaccess)；
+1. 配置各个节点的core-site.xml参数项，参数项参考[快速上手-参数说明](/ufile/tools/us3hadoop/quickaccess?id=参数说明)；
 2. 将us3-bigdata-adaptor-${hadoop version}-${adaptor version}.jar拷贝到$HADOOP_HOME/share/hadoop/common/lib/下；
 
 **接入方式具有侵入性，适用于小规模计算分析场景，大数据备份需求场景请参考[快速上手-场景示例](/ufile/tools/us3hadoop/quickaccess?id=场景示例)。**
