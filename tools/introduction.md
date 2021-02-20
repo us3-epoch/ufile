@@ -16,6 +16,7 @@
 |[US3SYNC 迁移工具](/ufile/tools/us3sync/introduction)   |迁移工具 US3SYNC 可帮助用户将数据迁移至 US3 的存储空间中。 |
 |[US3Hadoop 大数据适配工具](/ufile/tools/us3hadoop/introduction)   |大数据适配工具 US3Hadoop 可帮助用户在 Hadoop 中以文件系统的方式访问 US3。 |
 | **其他工具**   | 	:::       |
+|------------------------------------------|--------------------------------------------  |
 |[BUCKETMGR 空间管理](ufile/tools/tools/tools_bcket)  |空间管理工具可帮助用户获取存储相关信息并进行空间管理。 |
 |[FILEMGR 文件管理](ufile/tools/tools/tools_file)  |文件管理工具用于在命令行做上传/下载/删除等针对文件的操作。 |
 |[一致性比对工具](/ufile/tools/tools/consistency)  |一致性比对工具用于比对用户本地与 US3 存储空间中的文件是否一致。 |
