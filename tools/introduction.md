@@ -15,7 +15,9 @@
 |[US3FS 文件挂载工具](/ufile/tools/us3fs/introduction)  |文件系统挂载工具 US3FS 可帮助用户在 Linux 环境下以 POSIX 协议方式挂载文件目录，对文件对象进行操作。 |
 |[US3SYNC 迁移工具](/ufile/tools/us3sync/introduction)   |迁移工具 US3SYNC 可帮助用户将数据迁移至 US3 的存储空间中。 |
 |[US3Hadoop 大数据适配工具](/ufile/tools/us3hadoop/introduction)   |大数据适配工具 US3Hadoop 可帮助用户在 Hadoop 中以文件系统的方式访问 US3。 |
-| **其他工具**   | 	:::       |
+
+以下工具目前已无版本更新计划，请根据需求合理选择使用：
+|工具   |说明  |
 |------------------------------------------|--------------------------------------------  |
 |[BUCKETMGR 空间管理](ufile/tools/tools/tools_bcket)  |空间管理工具可帮助用户获取存储相关信息并进行空间管理。 |
 |[FILEMGR 文件管理](ufile/tools/tools/tools_file)  |文件管理工具用于在命令行做上传/下载/删除等针对文件的操作。 |
