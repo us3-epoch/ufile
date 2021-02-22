@@ -1,3 +1,7 @@
+# v1.1.2
+1. 修复 NAS，URL 列表类型 endpoint 无法创建
+2. 修复 uarchive 类型迁移，mime type 校验失败
+
 
 # v1.1.1
 1. 修复任务阻塞问题
