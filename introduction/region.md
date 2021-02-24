@@ -20,4 +20,5 @@
 | 华盛顿  | www.us-ws.ufileos.com      | www.internal-us-ws.ufileos.com     |
 | 孟买  | www.ind-mumbai.ufileos.com      | www.internal-ind-mumbai.ufileos.com     |
 | 首尔  | www.kr-seoul.ufileos.com      | www.internal-kr-seoul.ufileos.com     |
-
+| 日本  | www.jpn-tky.ufileos.com      | www.internal-jpn-tky.ufileos.com     |
+| 泰国  | www.th-bkk.ufileos.com      | www.internal-th-bkk.ufileos.com     |
