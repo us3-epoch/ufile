@@ -6,8 +6,6 @@ US3 对象存储提供外网、内网域名两种访问方式：外网域名可�
 
 在您创建存储空间后，您存储空间的访问域名地址格式为：`<存储空间名称>.<域名地址>`。
 
-**注：由于存储集群所在地域不同，跨国访问可能会存在响应延迟或失败的情况，如需开通海外加速服务，请联系技术支持。**
-
 | 地域 | 外网域名 | 内网域名 |
 | ---- | -------- | -------- |
 | 北京  | cn-bj.ufileos.com      | B机房内网：ufile.cn-north-02.ucloud.cn<br/>C机房内网: ufile.cn-north-03.ucloud.cn<br/>D机房内网: ufile.cn-north-04.ucloud.cn      |
@@ -28,3 +26,6 @@ US3 对象存储提供外网、内网域名两种访问方式：外网域名可�
 | 首尔  | kr-seoul.ufileos.com      | internal-kr-seoul.ufileos.com     |
 | 日本  | jpn-tky.ufileos.com      | internal-jpn-tky.ufileos.com     |
 | 泰国  | th-bkk.ufileos.com      | internal-th-bkk.ufileos.com     |
+
+
+**注：由于存储集群所在地域不同，跨国访问可能会存在响应延迟或失败的情况，如需开通海外加速服务，请联系技术支持。**
