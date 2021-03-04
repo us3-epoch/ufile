@@ -11,6 +11,7 @@
 - [场景化参数设置](#场景化参数设置)
   - [性能相关参数](#性能相关参数)
   - [小文件场景](#小文件场景)
+- [本地服务支持](#本地服务支持)
 
 
 ## 使用方式
@@ -148,8 +149,8 @@ MISC
 | nodirbl        | lookup时不检查没有对象的目录                                                        |
 | n              | 挂载时不检查bucket权限，如果没有所在地域没有列表服务可开启                          |
 | l              | 开启后对小文件使用本地目录做缓存，异步上传。具体使用示例见[小文件场景](#小文件场景) |
-| s              | 指定异步上传小文件的最大大小，单位字节。最大10MB                                    |
-| p              | 指定启用小文件异步上传使用的本地缓存目录                                            |
+| p              | 指定小文件异步上传的本地缓存目录                                                    |
+| prefix         | 指定挂载的bucket前缀目录，默认为空                                                  |
 
 * fuse常用选项列表（与`-o`一起使用）
 
@@ -266,6 +267,36 @@ sys     0m0.133s
 
 ### 小文件场景
 
-对于大量小文件场景，如果对性能有要求，可指定`-l`开启本地本地缓存。当启用本地缓存后，us3fs挂载后首先会将指定缓存目录下已存在的所有小于10MB的文件按照其路径上传到bucket中。当写入文件大小不大于设置的小文件大小（最大10MB），文件会尝试写入本地缓存目录，写入成功后即返回，后端异步上传到us3。写入失败（如权限不足，空间不足等）则仍然使用同步方式写入us3对象存储
+对于大量小文件场景，如果对性能有要求，可指定`-l`开启本地本地缓存。当启用本地缓存后，us3fs挂载后首先会将指定缓存目录下已存在的所有小于等于4MB的文件按照其路径上传到bucket中。当写入文件大小不大于4MB，文件会尝试写入本地缓存目录，写入成功后即返回，后端异步上传到us3。写入失败（如权限不足，空间不足等）则仍然使用同步方式写入us3对象存储
 
-*注：异步上传可能出现写入后端失败，us3fs会一直重试直到写入成功。*
+*注：异步上传可能出现写入后端失败,us3fs会一直重试直到写入成功。*
+
+## 本地服务支持
+
+ubuntu和centos等使用systemctl的发行版可用以下方式:
+
+在`/etc/systemd/system/`目录下创建名为`us3fs.service`的文件，并增加如下内容
+
+```
+[Unit]
+Description=US3FS (User Space FileSystem for US3)
+Requires=network-online.target
+After=network-online.target
+
+[Service]
+Type=forking
+User=<user>
+Group=<group>
+Restart=always
+RestartSec=10
+ExecStart=/bin/us3fs --passwd=/etc/us3fs/us3fs.conf  <your_bucket> <mountpoint> 
+ExecStop=/bin/umount <monutpoint>
+[Install]
+WantedBy=multi-user.target
+```
+
+* *User*为需要访问挂载点的用户。如为root，则可省略
+* *Group*为需要访问挂载点的用户组。如为root，则可省略
+* *ExecStart*为挂载命令，按照需要自行填写
+
+执行`systemctl dameon-reload`后。可使用`systemctl start us3fs.service`启动服务，`systemctl stop us3fs.service`停止服务；`systemctl restart us3fs.service`重启服务；`systemctl statue us3fs.service`查看服务状态。`systemctl enable us3fs.service`设置为开机自启动。

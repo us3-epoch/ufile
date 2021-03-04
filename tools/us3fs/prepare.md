@@ -25,7 +25,6 @@ curl -o us3fs http://ufile-release.cn-bj.ufileos.com/us3fs%2Fus3fs
 编辑/etc/us3fs/us3fs.conf并增加如下信息(如果没有该目录需要自行创建):
 
 ```
-yaml
 bucket: testzwb
 access_key: ************************************
 secret_key: ************************************
@@ -44,7 +43,6 @@ endpoint: ufile.cn-north-02.ucloud.cn
 下载us3fs后。使用`chmod +x us3fs`增加可执行权限，如果需要直接执行，可将us3fs移动到/bin目录下。示例：
 
 ```
-bash
 chmod +x us3fs
 ./us3fs --passwd=passwd_file <bucket> <mountpoint>
 
