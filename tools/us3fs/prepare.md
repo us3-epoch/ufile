@@ -22,7 +22,7 @@ curl -o us3fs http://ufile-release.cn-bj.ufileos.com/us3fs%2Fus3fs
 
 ## 配置账号访问信息
 
-编辑/etc/us3fs/us3fs.conf并增加如下信息(如果没有该目录需要自行创建):
+编辑/etc/us3fs/us3fs.conf并增加如下信息（如果没有该目录需要自行创建）：
 
 ```
 bucket: testzwb
@@ -33,10 +33,10 @@ endpoint: ufile.cn-north-02.ucloud.cn
 
 *冒号后有单个空格*
 
-* **bucket**: 桶名，需要和挂载的桶名一致
+* **bucket**: 存储空间名，需要和挂载的存储空间名一致
 * **access_key**: 公钥，支持token秘钥和api秘钥两种模式
 * **secret_key**: 私钥，支持token秘钥和api秘钥两种模式
-* **endpoint**: 访问域名，详见[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)。填写时需要去掉`www.`
+* **endpoint**: 访问域名，详见[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)。填写域名为地域域名，并非具体的存储空间域名。
 
 当需要在一台机器上挂载多个bucket时，可以通过`--passwd=passwd_file`指定账号信息（默认路径为 /etc/us3fs/us3fs.conf，不需要指定）。
 

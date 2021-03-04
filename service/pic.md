@@ -132,3 +132,13 @@ http://demobucket.ufile.ucloud.com.cn/here-for-example.jpg?iopcmd=rotate&degree=
 上述请求会将 demobucket 这个空间中的 here-for-example.jpg 文件先旋转 180 度，然后按比例缩放为原来的 40% 大小。
 
 注意：如果请求当前不支持的 iopcmd，则会报错，不会返回原图。
+
+## 图片样式
+
+US3 支持用户以固定的 iopcmd 样式形式进行图片处理的调用，实现方式如下：
+
+1. 用户编辑固定的图片处理调用方式，如将'iopcmd=rotate&degree=180|iopcmd=thumbnail&type=1&scale=40'（进行一次图片翻转操作，按比例缩放为40%大小），设置为'style1'样式。
+
+2. 在访问图片处理时，调用'http://demobucket.ufile.ucloud.com.cn/here-for-example.jpg?iopcmd=style1'，即可以设置的样式方式进行图片处理功能。
+
+**注：该功能处于内测阶段，如需使用请联系技术支持。**
