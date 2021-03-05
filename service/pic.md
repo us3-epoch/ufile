@@ -137,8 +137,20 @@ http://ufile-release.cn-bj.ufileos.com/US3pic/demo.jpg?iopcmd=rotate&degree=180|
 
 US3 支持用户以固定的 iopcmd 样式形式进行图片处理的调用，实现方式如下：
 
-1. 用户编辑固定的图片处理调用方式，如将'http://ufile-release.cn-bj.ufileos.com/US3pic/demo.jpg?iopcmd=rotate&degree=180|iopcmd=thumbnail&type=1&scale=40|iopcmd=watermark&type=1&gravity=SouthEast&text=VUNsb3Vk&fontsize=100'（进行一次图片翻转操作，按比例缩放为40%大小，在右下角增加字体大小为100的文字水印“UCloud”），设置为'style1'样式。
+1. 用户编辑固定的图片处理调用方式，如：
 
-2. 在访问图片处理时，调用'http://ufile-release.cn-bj.ufileos.com/US3pic/demo.jpg?iopcmd=style1'，即可以设置的样式方式进行图片处理功能。
+```
+http://ufile-release.cn-bj.ufileos.com/US3pic/demo.jpg?iopcmd=rotate&degree=180|iopcmd=thumbnail&type=1&scale=40|iopcmd=watermark&type=1&gravity=SouthEast&text=VUNsb3Vk&fontsize=100
+```
+
+实际进行的图片处理操作为进行一次图片翻转操作，按比例缩放为40%大小，在右下角增加字体大小为100的文字水印“UCloud”。
+
+2. 用户将以上调用方式设置为'style1'样式。
+
+3. 在访问图片处理时，采用样式调用方式，以设置的样式方式进行图片处理操作：
+
+```
+http://ufile-release.cn-bj.ufileos.com/US3pic/demo.jpg?iopcmd=style1
+```
 
 **注：该功能处于内测阶段，如需使用请联系技术支持。**
