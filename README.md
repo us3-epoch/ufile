@@ -51,6 +51,11 @@
         * [快速上手](/ufile/tools/us3hadoop/quickaccess)
         * [常见问题](/ufile/tools/us3hadoop/questions)
         * [历史版本](/ufile/tools/us3hadoop/ReleaseNote)
+    * US3VMDS 索引加速工具（公测）
+        * [工具简介](/ufile/tools/us3hadoop/introduction)
+        * [下载与环境准备](/ufile/tools/us3hadoop/prepare)
+        * [快速上手](/ufile/tools/us3hadoop/quickaccess)
+        * [常见问题](/ufile/tools/us3hadoop/questions)
     * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
