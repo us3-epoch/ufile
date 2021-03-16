@@ -26,4 +26,3 @@
 - seek of InputStream
 - getPos of InputStream
 - close of InputStream
-
