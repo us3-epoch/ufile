@@ -198,7 +198,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-micro.sort.png "micro.sort工作负载测试")
+![](/images/hibench-micro.sort.png)
 
 **terasort**
 
@@ -210,7 +210,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-micro.terasort.png "micro.terasort工作负载测试")
+![](/images/hibench-micro.terasort.png)
 
 **wordcoun**
 
@@ -225,7 +225,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-micro.wordcount.png "micro.wordcount工作负载测试")
+![](/images/hibench-micro.wordcount.png)
 
 **dfsioe**
 
@@ -240,7 +240,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-micro.dfsioe.png "micro.dfsioe工作负载测试")
+![](/images/hibench-micro.dfsioe.png)
 
 
 #### SQL
@@ -254,7 +254,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-sql.scan.png "sql.scan工作负载测试")
+![](/images/hibench-sql.scan.png)
 
 **join**
 
@@ -265,7 +265,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-sql.join.png "sql.join工作负载测试")
+![](/images/hibench-sql.join.png)
 
 > 注意: Create rankings和Create uservisits任务同sql.scan，所以忽略
 
@@ -278,7 +278,7 @@ HiBench是 Intel 开源的大数据基准测试工具，可帮助评估速度，
 
 测试数据:
 
-![](/images/hibench-sql.aggregation.png "sql.aggregation工作负载测试")
+![](/images/hibench-sql.aggregation.png)
 
 > 注意: Create rankings和Create uservisits任务同sql.scan，所以忽略
 

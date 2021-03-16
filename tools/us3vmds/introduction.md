@@ -2,7 +2,7 @@
 
 ## 概述
 
-US3VMDS（全称：us3 virtual metadata service）工具是为了解决Hadoop访问UCloud对象存储US3索引速度较慢的问题而引入的一个服务组件。因为Hadoop对分布式文件系统的访问是基于目录树的结构，而对象存储的索引只是简单的KV结构，所以直接通过US3来模拟目录树的移动目录，删除目录等操作时时延高。US3VMDS在内存中基于US3的存储空间索引构建目录树结构，这样客户端可以通过单次交互来实现复杂的逻辑，并可以利用全内存的索引加速如Hadoop对分布式文件系统的getFileStatus，listStatus等操作。
+US3VMDS（全称：US3 Virtual Metadata Service）工具是为了解决Hadoop访问UCloud对象存储US3索引速度较慢的问题而引入的一个服务组件。因为Hadoop对分布式文件系统的访问是基于目录树的结构，而对象存储的索引只是简单的KV结构，所以直接通过US3来模拟目录树的移动目录，删除目录等操作时时延高。US3VMDS在内存中基于US3的存储空间索引构建目录树结构，这样客户端可以通过单次交互来实现复杂的逻辑，并可以利用全内存的索引加速如Hadoop对分布式文件系统的getFileStatus，listStatus等操作。
 
 ## 原理说明
 
