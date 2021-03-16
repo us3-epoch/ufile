@@ -18,7 +18,7 @@
 
 **注意：对应的US3适配版本需要>=v1.0.2**
 
-#### 安装可执行文件
+### 安装可执行文件
 
 1. 下载可执行文件并移动到/usr/bin目录下，如`mv us3vmds-v0.0.1 /usr/bin`;
 2. 为最新的us3vmds建立软链接，如`ln -s /usr/bin/us3vmds-v0.0.1 /usr/bin/us3vmds`;
