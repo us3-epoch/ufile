@@ -48,6 +48,7 @@
         * [下载与环境准备](/ufile/tools/us3hadoop/prepare)
         * [快速上手](/ufile/tools/us3hadoop/quickaccess)
         * [常见问题](/ufile/tools/us3hadoop/questions)
+        * [历史版本](/ufile/tools/us3hadoop/ReleaseNote)
     * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
