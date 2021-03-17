@@ -23,10 +23,10 @@
 | fs.us3.async.wio.parallel      | 在fs.us3.async.wio.use为true情况下生效，表示单个文件写入4MB分片的最大并行 | 2           |
 | fs.us3.metadata.use            | 是否启用索引缓存服务器，来加速US3索引性能，该服务需要使用者管理，目前正在公测中 | false       |
 | fs.us3.metadata.host           | 在fs.us3.metadata.usetrue情况下生效，可以直接指定IP:Port的地址形式，这种方式不需要配置/etc/hosts文件。用户也可以指定自定义域名，需要在/etc/hosts中配置解析地址，或者配置DNS解析。该参数处于测试中。 | 无          |
-| fs.us3.generate.md5            | 默认为`false`，如果为`true`则在写入US3时，客户端会计算一个MD5，并在最后会以`md5-hash`为key，base64编码的md5值为value写入到文件的元数据中。开启会增加>=30%的写入时延。***该功能需要US3适配器的版本>=1.0.2*** | false       |
+| fs.us3.generate.md5            | 默认为`false`，如果为`true`则在写入US3时，客户端会计算一个MD5，并在最后会以`md5-hash`为key，base64编码的md5值为value写入到文件的元数据中。开启会增加>=30%的写入时延。<br> **该功能需要US3适配器的版本>=1.0.2** | false       |
 
 ### Hadoop配置
-
+1
 需要在core-site.xml中配置以上相关配置项，如：
 
 ```
