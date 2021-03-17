@@ -144,8 +144,8 @@ Go的运行时分析可以参考Go的官方文档[Package pprof](https://golang.
 
 | 部署服务                                                     | 数量 | 操作系统        | CPU  | 内存 | 数据盘 （数量/单盘容量/规格） |
 | ------------------------------------------------------------ | ---- | --------------- | ---- | ---- | ----------------------------- |
-| NameNode<br />ResourceManager<br />Zookeeper<br />JournalNode | 3    | Centos 7.6 64位 | 32C  | 128G | 1/100G/RSSD云盘               |
-| DataNode<br />NodeManager                                    | 10   | Centos 7.6 64位 | 32C  | 128G | 10/300G/RSSD云盘              |
+| NameNode<br>ResourceManager<>Zookeeper<br>JournalNode | 3    | Centos 7.6 64位 | 32C  | 128G | 1/100G/RSSD云盘               |
+| DataNode<br>NodeManager                                    | 10   | Centos 7.6 64位 | 32C  | 128G | 10/300G/RSSD云盘              |
 
 ### 软件环境
 
