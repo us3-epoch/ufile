@@ -97,6 +97,6 @@ CDN 回源，流量从 US3 流向 UCDN，这部分流量 UCDN 不计费，由 US
 
 ## 如何存储额外的文件元数据信息？
 
-US3 API 支持用户存储不超过 8KB 的自定义元数据，在用户调用 API 进行文件上传请求时，可在请求头中增加 `X-Ufile-Meta-*` 字段，如增加文件 MD5 信息，可增加请求头 `X-Ufile-Meta-MD5` ，在执行 Head、Get 请求时，可从 Response Header 中获取 `X-Ufile-Meta-MD5:[*]` 的内容。
+US3 API 支持用户存储不超过 8KB 的自定义元数据，在用户调用 API 进行文件上传请求时，可在请求头中增加 `X-Ufile-Meta-*` 字段，如增加文件 MD5 信息，可增加请求头 `X-Ufile-Meta-MD5` ，在执行 Head、Get 请求时，可从 Response Header 中获取 `X-Ufile-Meta-MD5:[*]` 的内容。更多内容可参考[对象存储API文档](https://docs.ucloud.cn/api/ufile-api/README)
 
 **注意：Header 请求中 `X-Ufile-Meta-xxx` 限制 `xxx` 只能包含英文字母、数字和连接符（短横线 '-'）**
