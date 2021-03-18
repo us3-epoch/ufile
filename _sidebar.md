@@ -55,6 +55,10 @@
         * [快速上手](/ufile/tools/us3vmds/quickaccess)
         * [性能数据与分析](/ufile/tools/us3vmds/testdata)
         * [常见问题](/ufile/tools/us3vmds/questions)
+	* US3ClickHouse 插件（公测）
+		* [插件简介](/ufile/tools/us3clickhouse/introduction)
+		* [下载与配置使用](/ufile/tools/us3clickhouse/prepare)
+		* [性能分析](/ufile/tools/us3clickhouse/testdata)
     * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
