@@ -53,6 +53,7 @@
         * [工具简介](/ufile/tools/us3vmds/introduction)
         * [下载与环境准备](/ufile/tools/us3vmds/prepare)
         * [快速上手](/ufile/tools/us3vmds/quickaccess)
+        * [性能分析与数据](/ufile/tools/us3vmds/testdata)
         * [常见问题](/ufile/tools/us3vmds/questions)
     * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
