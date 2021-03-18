@@ -5,7 +5,7 @@
 
 通过[官方ontime测试数据集](https://clickhouse.tech/docs/zh/getting-started/example-datasets/ontime/)进行单表测试，测试结果如下：
 
-![](docs/ch.png)
+![](/images/us3clickhouse1.png)
 
 其中本地测试按照官网步骤执行；US3测试建表语句如下，SQL操作同本地
 
