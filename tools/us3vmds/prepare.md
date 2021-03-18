@@ -5,12 +5,12 @@
 
 ### 获取可执行文件
 
-> us3vmds通过二进制可执行文件提供，文件格式为us3vmds-${version}.jar；
+> us3vmds通过二进制可执行文件提供，文件格式为us3vmds-${version}-${OS}；
 
 #### 公测版本
 
-- [us3vmds-v0.0.1-linux](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3-vmds-v0.0.1-linux)
-- [us3vmds-v0.0.1-macOS](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3-vmds-v0.0.1-mac)
+- [us3vmds-v0.0.1-linux](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3vmds-v0.0.1-linux)
+- [us3vmds-v0.0.1-macOS](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3vmds-v0.0.1-mac)
 
 #### 正式版本
 
