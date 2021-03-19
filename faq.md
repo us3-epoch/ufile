@@ -44,15 +44,15 @@
 
 1. 空间管理的 API，内网访问时域名同公网，使用`api.ucloud.cn`。
 
-2. 文件管理的 API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
+2. 文件管理的 API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-02.ucloud.cn`。
 
-例如，bucket 名称为 demobucket，则其 C 机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
+例如，bucket 名称为 demobucket，则其内网域名为`demobucket.ufile.cn-north-02.ucloud.cn`。
 
 3. 文件管理的 API 列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4. 命令行工具，通过内网访问，需要将配置文件中的 `proxy_host` 改成` "proxy_host":'www.ufile.cn-north-03.ucloud.cn'`。
+4. 命令行工具，通过内网访问，需要将配置文件中的 `proxy_host` 改成` "proxy_host":'www.ufile.cn-north-02.ucloud.cn'`。
 
-5. SDK（以 phpSDK 为例）通过内网访问，需要将配置文件中 `$UCLOUD\_PROXY\_SUFFIX` 改成 `$UCLOUD\_PROXY\_SUFFIX = 'ufile.cn-north-03.ucloud.cn'`（其他 SDK 的配置文件通常改 proxy_suffix)。
+5. SDK（以 phpSDK 为例）通过内网访问，需要将配置文件中 `$UCLOUD\_PROXY\_SUFFIX` 改成 `$UCLOUD\_PROXY\_SUFFIX = 'ufile.cn-north-02.ucloud.cn'`（其他 SDK 的配置文件通常改 proxy_suffix)。
 
 ##  如何删除大量对象？
 

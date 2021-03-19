@@ -18,7 +18,7 @@
 | fs.us3.secret.key              | 访问US3的API私钥或者Token私钥                                | 无          |
 | fs.us3.socket.recv.buffer      | US3读取流Buffer，在HiveSQL、Spark-SQL等场景,如果分析的数据格式是ORC，Parquet等,建议调小该参数，比如16348(16KB)，如果分析的数据格式是普通的文本格式,建议调大该参数，比如1048576(1MB) | 65536(64KB) |
 | fs.us3.log.level               | US3大数据适配器日志级别，支持info, error, debug, trace级别。目前日志统一输出到标准输出 | info        |
-| fs.us3.endpoint                | US3内网域名后缀，如:ufile.cn-north-04.ucloud.cn。参考[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)，域名需去除`www.`前缀。 | 无          |
+| fs.us3.endpoint                | US3内网域名后缀，如:ufile.cn-north-02.ucloud.cn。参考[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)，域名需去除`www.`前缀。 | 无          |
 | fs.us3.async.wio.use           | 单个流写入是否使用异步IO，可以提高写入速度，特别是对单个大文件有效，但会消耗一定CPU资源，可能会降低任务的并行度 | false       |
 | fs.us3.async.wio.parallel      | 在fs.us3.async.wio.use为true情况下生效，表示单个文件写入4MB分片的最大并行 | 2           |
 | fs.us3.metadata.use            | 是否启用索引缓存服务器，来加速US3索引性能，该服务需要使用者管理，目前正在公测中 | false       |
@@ -85,7 +85,7 @@
 	</property>
 	<property>
 		<name>fs.us3.endpoint</name>
-		<value>ufile.cn-north-04.ucloud.cn</value>
+		<value>ufile.cn-north-02.ucloud.cn</value>
 	</property>
   <property>
     <name>fs.us3.async.wio.use</name>

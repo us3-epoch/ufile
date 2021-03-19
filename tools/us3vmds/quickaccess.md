@@ -22,8 +22,8 @@ API/Token公钥修改为: xxxx-xxxx-xxxx-xxxx
 API/Token私钥修改为: yyyy-yyyy-yyyy-yyyy
 输入存储空间Bucket[当前为: ]:bigdata-us3 // 如果需要修改存储空间填入修改值，否则直接输入enter，默认为空
 存储空间Bucket修改为: bigdata-us3
-输入访问端点Endpoint[当前为: ]:ufile.cn-north-04.ucloud.cn // 如果需要修改endpoint填入修改值，否则直接输入enter，默认为空
-访问端点Endpoint修改为: ufile.cn-north-04.ucloud.cn
+输入访问端点Endpoint[当前为: ]:ufile.cn-north-02.ucloud.cn // 如果需要修改endpoint填入修改值，否则直接输入enter，默认为空
+访问端点Endpoint修改为: ufile.cn-north-02.ucloud.cn
 输入日志路径[当前为: /Users/rick.wu/.us3vmds]:/var/log/us3vmds // 如果需要修改日志路径填入修改值，否则直接输入enter，默认为/Users/rick.wu/.us3vmds
 日志路径修改为: /var/log/us3vmds
 输入日志级别(debug|error|info)[当前为: info]:debug // 如果需要修改日志级别则填入修改值，否则直接输入enter采用默认值info，建议始终采用debug级别，方便问题跟踪
@@ -39,7 +39,7 @@ API/Token私钥修改为: yyyy-yyyy-yyyy-yyyy
 |     accesskey     | 访问US3的API公钥或者Token公钥                                |       无       |
 |     secretkey     | 访问US3的API私钥或者Token私钥                                |       无       |
 |      bucket       | 存储空间名                                                   |       无       |
-|     endpoint      | US3内网域名后缀，如:ufile.cn-north-04.ucloud.cn。[参考这里](https://docs.ucloud.cn/ufile/introduction/region)，注意要去掉“www.”。 |       无       |
+|     endpoint      | US3内网域名后缀，如:ufile.cn-north-02.ucloud.cn。[参考这里](https://docs.ucloud.cn/ufile/introduction/region)，注意要去掉“www.”。 |       无       |
 |       host        | us3vmds监听的IP地址                                          |   127.0.0.1    |
 |       port        | us3vmds监听的端口                                            |       80       |
 |      logdir       | 输出的日志路径，日志名固定为us3mvds.log或者历史日志名格式如us3vmds-2021-02-23T02-32-21.424.log，建议该日志路径至少有100G以上存储容量 | $HOME/.us3vmds |
