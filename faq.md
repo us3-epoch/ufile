@@ -44,15 +44,15 @@
 
 1. 空间管理的 API，内网访问时域名同公网，使用`api.ucloud.cn`。
 
-2. 文件管理的 API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-03.ucloud.cn`。
+2. 文件管理的 API，需要使用内网专用域名`<bucket_name>.ufile.cn-north-02.ucloud.cn`。
 
-例如，bucket 名称为 demobucket，则其 C 机房内网域名为`demobucket.ufile.cn-north-03.ucloud.cn`。
+例如，bucket 名称为 demobucket，则其内网域名为`demobucket.ufile.cn-north-02.ucloud.cn`。
 
 3. 文件管理的 API 列表如下：PutFile，PostFile，UploadHit，GetFile，DeleteFile，InitiateMultipartUpload，UploadPart，FinishMultipartUpload，AbortMultipartUpload。
 
-4. 命令行工具，通过内网访问，需要将配置文件中的 `proxy_host` 改成` "proxy_host":'www.ufile.cn-north-03.ucloud.cn'`。
+4. 命令行工具，通过内网访问，需要将配置文件中的 `proxy_host` 改成` "proxy_host":'www.ufile.cn-north-02.ucloud.cn'`。
 
-5. SDK（以 phpSDK 为例）通过内网访问，需要将配置文件中 `$UCLOUD\_PROXY\_SUFFIX` 改成 `$UCLOUD\_PROXY\_SUFFIX = 'ufile.cn-north-03.ucloud.cn'`（其他 SDK 的配置文件通常改 proxy_suffix)。
+5. SDK（以 phpSDK 为例）通过内网访问，需要将配置文件中 `$UCLOUD\_PROXY\_SUFFIX` 改成 `$UCLOUD\_PROXY\_SUFFIX = 'ufile.cn-north-02.ucloud.cn'`（其他 SDK 的配置文件通常改 proxy_suffix)。
 
 ##  如何删除大量对象？
 
@@ -94,3 +94,9 @@ CDN 回源，流量从 US3 流向 UCDN，这部分流量 UCDN 不计费，由 US
 ## 我的账号为何无法进行存储空间或文件操作？
 
 如果您的账号在控制台操作中提示`291:[xxx]该账户没有执行对应 Action 和产品类型的权限`，表示您当前使用的子账号未被授权进行相关 US3 对象存储操作权限，请联系主账号管理员开通相关权限。
+
+## 如何存储额外的文件元数据信息？
+
+US3 API 支持用户存储不超过 8KB 的自定义元数据，在用户调用 API 进行文件上传请求时，可在请求头中增加 `X-Ufile-Meta-*` 字段，如增加文件 MD5 信息，可增加请求头 `X-Ufile-Meta-MD5` ，在执行 Head、Get 请求时，可从 Response Header 中获取 `X-Ufile-Meta-MD5:[*]` 的内容。更多内容可参考[对象存储API文档](https://docs.ucloud.cn/api/ufile-api/README)
+
+**注意：Header 请求中 `X-Ufile-Meta-xxx` 限制 `xxx` 只能包含英文字母、数字和连接符（短横线 '-'）**

@@ -8,7 +8,7 @@ US3 对象存储提供外网、内网域名两种访问方式：外网域名可�
 
 | 地域 | 外网域名 | 内网域名 |
 | ---- | -------- | -------- |
-| 北京  | cn-bj.ufileos.com      | B机房内网：ufile.cn-north-02.ucloud.cn<br/>C机房内网: ufile.cn-north-03.ucloud.cn<br/>D机房内网: ufile.cn-north-04.ucloud.cn      |
+| 北京  | cn-bj.ufileos.com      | ufile.cn-north-02.ucloud.cn      |
 | 上海二 | cn-sh2.ufileos.com      | internal-cn-sh2-01.ufileos.com      |
 | 广州  | cn-gd.ufileos.com      | internal-cn-gd-02.ufileos.com      |
 | 香港  | hk.ufileos.com      | internal-hk-01.ufileos.com     |

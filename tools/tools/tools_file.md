@@ -53,11 +53,7 @@
 ```
 北京
     外网：<bucket_name>.cn-bj.ufileos.com 
-    B机房内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
-    C机房内网: <bucket_name>.ufile.cn-north-03.ucloud.cn
-    D机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
-    E机房内网: <bucket_name>.ufile.cn-north-04.ucloud.cn
-    目前内网域名，推荐都用E机房域名即可；
+    内网：<bucket_name>.ufile.cn-north-02.ucloud.cn
 上海二
     外网: <bucket_name>.cn-sh2.ufileos.com
     内网: <bucket_name>.internal-cn-sh2-01.ufileos.com
