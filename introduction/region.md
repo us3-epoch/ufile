@@ -24,8 +24,8 @@ US3 对象存储提供外网、内网域名两种访问方式：外网域名可�
 | 华盛顿  | us-ws.ufileos.com      | internal-us-ws.ufileos.com     |
 | 孟买  | ind-mumbai.ufileos.com      | internal-ind-mumbai.ufileos.com     |
 | 首尔  | kr-seoul.ufileos.com      | internal-kr-seoul.ufileos.com     |
-| 日本  | jpn-tky.ufileos.com      | internal-jpn-tky.ufileos.com     |
-| 泰国  | th-bkk.ufileos.com      | internal-th-bkk.ufileos.com     |
+| 东京  | jpn-tky.ufileos.com      | internal-jpn-tky.ufileos.com     |
+| 曼谷  | th-bkk.ufileos.com      | internal-th-bkk.ufileos.com     |
 
 
 **注：由于存储集群所在地域不同，跨国访问可能会存在响应延迟或失败的情况，海外加速服务功能处于内测阶段，如需使用请联系技术支持。** 
