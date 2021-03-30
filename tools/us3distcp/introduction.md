@@ -2,11 +2,11 @@
 
 ## 概述
 
-us3 hadoop备份工具（简称us3distcp）是基于mapreduce构建的自动检测，并能自动同步hdfs中的数据在us3中不存在或不一致文件的工具，因此us3distcp可以直接替换hadoop自带的distcp来做数据备份至us3(目前建议通过hadoop distcp同步，用us3distcp校验)。虽然工作原理类似于hadoop自带distcp，但hadoop distcp的文件完整性校验是基于hdfs的checksum，hadoop distcp无法直接利用checksum来对比hdfs的数据与us3中的数据是否一致。因此要校验从hdfs中迁移到us3中文件的完整性，需要使用us3distcp。
+US3Hadoop备份工具（简称US3Distcp）是基于MapReduce构建的自动检测，并能自动同步HDFS中的数据在US3中不存在或不一致文件的工具，因此US3Distcp可以直接替换Hadoop自带的distcp来做数据备份至US3(目前建议通过Hadoop distcp同步，用US3Distcp校验)。虽然工作原理类似于Hadoop自带distcp，但Hadoop distcp的文件完整性校验是基于HDFS的checksum，Hadoop distcp无法直接利用checksum来对比HDFS的数据与US3中的数据是否一致。因此要校验从HDFS中迁移到US3中文件的完整性，需要使用US3Distcp。
 
 ## 原理说明
 
-us3distcp同步的源目的相对位置关系始终跟distcp保持一致。工具会把整个执行阶段分为两个阶段：
+US3Distcp同步的源目的相对位置关系始终跟distcp保持一致。工具会把整个执行阶段分为两个阶段：
 
 - 检测阶段：检测阶段会先构建要同步的文件列表，提前构建好需检测的源与目的的文件，然后根据检测策略去决定任务的拆分，目前提供的策略有以下几种：
   - 目的是否存在：该策略是默认进行且不可跳过，如果目的端不存在则把该记录写入reduce输出文件，并附上`dst not found`表明是由于目标不存在的原因需要进行同步；

@@ -1,4 +1,3 @@
-
 # 下载与环境准备
 
 ## 下载与安装
@@ -9,11 +8,11 @@
 
 ### 适配器版本
 
-- v1.0.2
-  - [hadoop-2.6.0](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.0.2/us3-bigdata-adaptor-2.6.0-1.0.2.jar)
-  - [hadoop-2.8.3](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.0.2/us3-bigdata-adaptor-2.8.3-1.0.2.jar)
-  - [hadoop-2.8.5](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.0.2/us3-bigdata-adaptor-2.8.5-1.0.2.jar)
-  - [hadoop-3.1.1](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.0.2/us3-bigdata-adaptor-3.1.1-1.0.2.jar)
+- v1.1.0
+  - [hadoop-2.6.0](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.1.0/us3-bigdata-adaptor-2.6.0-1.1.0.jar)
+  - [hadoop-2.8.3](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.1.0/us3-bigdata-adaptor-2.8.3-1.1.0.jar)
+  - [hadoop-2.8.5](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.1.0/us3-bigdata-adaptor-2.8.5-1.1.0.jar)
+  - [hadoop-3.1.1](http://us3-release.cn-bj.ufileos.com/us3-bigdata/adaptor/v1.1.0/us3-bigdata-adaptor-3.1.1-1.1.0.jar)
 
 **如有其他版本Hadoop对接需求，请联系技术支持。**
 

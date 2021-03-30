@@ -59,7 +59,7 @@
 		* [插件简介](/ufile/tools/us3clickhouse/introduction)
 		* [下载与配置使用](/ufile/tools/us3clickhouse/prepare)
 		* [性能分析](/ufile/tools/us3clickhouse/testdata)
-	* US3Hadoop备份工具US3Distcp（公测）
+	* US3Distcp 大数据备份工具（公测）
 		* [工具简介](/ufile/tools/us3distcp/introduction)
         * [下载与安装](/ufile/tools/us3distcp/prepare)
         * [快速上手](/ufile/tools/us3distcp/quickaccess)

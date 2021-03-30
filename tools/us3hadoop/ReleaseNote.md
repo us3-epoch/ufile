@@ -1,4 +1,14 @@
-# v1.0.2
+### v1.1.0
+
+## 功能
+
+- 支持distcp校验拷贝功能
+
+## 修复
+
+- 日志格式打印错误
+
+### v1.0.2
 
 ## 功能
 
@@ -17,7 +27,7 @@
 
 - 通知us3vmds逻辑从写入流解耦
 
-# v1.0.1
+### v1.0.1
 
 ## 功能
 
@@ -38,3 +48,4 @@
 - seek of InputStream
 - getPos of InputStream
 - close of InputStream
+
