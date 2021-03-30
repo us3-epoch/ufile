@@ -1,6 +1,7 @@
 
 # 概览
 
+
 * [概览](/ufile/README)
 * 产品简介
     * [产品概述](/ufile/introduction/concept)
@@ -55,7 +56,17 @@
         * [工具简介](/ufile/tools/us3vmds/introduction)
         * [下载与环境准备](/ufile/tools/us3vmds/prepare)
         * [快速上手](/ufile/tools/us3vmds/quickaccess)
+        * [性能数据与分析](/ufile/tools/us3vmds/testdata)
         * [常见问题](/ufile/tools/us3vmds/questions)
+    * US3Distcp 大数据备份工具（公测）
+        * [工具简介](/ufile/tools/us3distcp/introduction)
+        * [下载与安装](/ufile/tools/us3distcp/prepare)
+        * [快速上手](/ufile/tools/us3distcp/quickaccess)
+        * [常见问题](/ufile/tools/us3distcp/questions)
+    * US3ClickHouse 插件（公测）
+        * [工具简介](/ufile/tools/us3clickhouse/introduction)
+        * [下载与配置使用](/ufile/tools/us3clickhouse/prepare)
+        * [性能分析](/ufile/tools/us3clickhouse/testdata)
     * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
@@ -90,4 +101,3 @@
     * [欠费处理](/ufile/bill/arrears)
     * [计费案例](/ufile/bill/case)
 * [常见问题](/ufile/faq)
-
