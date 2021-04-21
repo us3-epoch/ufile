@@ -55,10 +55,6 @@
         * [快速上手](/ufile/tools/us3vmds/quickaccess)
         * [性能数据与分析](/ufile/tools/us3vmds/testdata)
         * [常见问题](/ufile/tools/us3vmds/questions)
-	* US3ClickHouse 插件（公测）
-		* [插件简介](/ufile/tools/us3clickhouse/introduction)
-		* [下载与配置使用](/ufile/tools/us3clickhouse/prepare)
-		* [性能分析](/ufile/tools/us3clickhouse/testdata)
     * US3Distcp 大数据备份工具（公测）
         * [工具简介](/ufile/tools/us3distcp/introduction)
         * [下载与安装](/ufile/tools/us3distcp/prepare)
