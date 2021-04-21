@@ -4,6 +4,8 @@
 
 ## 概述
 
+S3协议是AWS推出，在对象存储行业成为事实标准，US3产品在自有标准的基础上，增加了针对S3 v4协议标准的兼容支持。
+
 <video id="video" length=1000 width=800 controls="" preload="none" poster="http://caozuozhinan.cn-bj.ufileos.com/周恭元1 US3对S3协议的支持.mp4">
       <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/周恭元1 US3对S3协议的支持.mp4">
       </video>
