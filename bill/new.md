@@ -3,6 +3,12 @@
 
 计量计费章节介绍了 US3 对象存储服务的费用组成及计费方式，US3 产品为后付费模式，US3 每小时都会统计用户使用量，按天出日账单，账单粒度为具体计费项。您可前往 [费用中心](https://accountv2.ucloud.cn/costcenter) 查看每日的账单明细。
 
+## US3收费模式
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="http://caozuozhinan.cn-bj.ufileos.com/周恭元2 US3价格与计费.mp4">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/周恭元2 US3价格与计费.mp4">
+      </video>
+
 如您对您在使用 US3 过程中产生的费用明细存在疑问，请参考以下文档：
 
 1. US3 的计费项及价格介绍，请参考 [产品价格](/ufile/bill/billing)。

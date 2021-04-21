@@ -4,6 +4,10 @@
 
 US3 提供标准、低频、归档三种存储类型，分别用于频繁访问的热点数据、低频访问的备份数据和适用于长期保存的归档数据，全面覆盖从热到冷的各种数据存储场景。
 
+<video id="video" length=1000 width=800 controls="" preload="none" poster="http://caozuozhinan.cn-bj.ufileos.com/王梦娜2 存储类型.mp4">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/王梦娜2 存储类型.mp4">
+      </video>
+
 ## 标准存储
 
 标准存储提供高可靠、高可用、高性能的对象存储服务，具有高吞吐和低延时的服务响应能，能够支持频繁的热点数据访问。

@@ -2,6 +2,12 @@
 
 # AWS S3 协议支持说明
 
+## 概述
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="http://caozuozhinan.cn-bj.ufileos.com/周恭元1 US3对S3协议的支持.mp4">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/周恭元1 US3对S3协议的支持.mp4">
+      </video>
+
 ### 支持的 API
 
 US3 目前的 S3 协议模块对标准 S3 协议的支持如下表：
