@@ -5,7 +5,7 @@
 
 ## US3收费模式
 
-<video id="video" length=1000 width=800 controls="" preload="none" poster="http://caozuozhinan.cn-bj.ufileos.com/周恭元2 US3价格与计费.mp4">
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/cf71d9b09af3d70391d79616cf7af607.png">
       <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/周恭元2 US3价格与计费.mp4">
       </video>
 
