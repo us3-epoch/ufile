@@ -6,11 +6,7 @@
 
 您可以使用 US3 提供的 API、SDK 接口或者 US3 迁移工具轻松地将海量数据移入或移出 US3。数据存储到 US3以后，您可以选择标准存储类型的 US3 服务作为移动应用、大型网站、图片分享或热点音视频的主要存储方式；也可以选择成本更低、存储期限更长的低频存储类型和归档存储类型的 US3 服务作为不经常访问数据的备份和归档。
 
-<<<<<<< HEAD
 <video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/c8f75929f40abde64c0a5d3b58cf440b.png">
-=======
-<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/ad74ce6c00e55db06c525802fd7e8141.jpg">
->>>>>>> 07374f479ff7d2c7df076cfcc4d91137bca81e46
       <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/视频一 US3介绍.mp4">
       </video>
 
