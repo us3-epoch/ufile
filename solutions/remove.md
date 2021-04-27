@@ -34,4 +34,4 @@ ufile-import 是对象存储 US3 提供的一款将数据迁移至 US3 存储空
 US3 对象存储不同 bucket 之前的数据迁移
 支持 s3 协议的对象存储迁移到 US3 对象存储
 
-详情请参照：[管理工具-迁移工具](https://docs.ucloud.cn/ufile/tools/tools/ufile_import)
+详情请参照：[管理工具-迁移工具](https://docs.ucloud.cn/ufile/tools/us3sync/introduction)
