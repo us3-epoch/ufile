@@ -30,7 +30,7 @@ US3 对象存储服务将数据文件以对象（object）的形式上传到存�
 
 ## 使用命令行管理工具 US3 Tools
 
-US3 Tools 是以命令行方式管理 US3 数据的工具，支持 Windows、Linux、Mac 平台。US3 Tools 提供方便、简洁、丰富的 Bucket 和 Object 管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[命令行工具US3 Tools](https://docs.ucloud.cn/ufile/tools/tools/tools_file)。
+US3 Tools 是以命令行方式管理 US3 数据的工具，支持 Windows、Linux、Mac 平台。US3 Tools 提供方便、简洁、丰富的 Bucket 和 Object 管理命令，操作简单易用。支持文件和文件夹（目录）上传下载、分片断点续传等。详情请参见[US3CLI 命令行工具](/ufile/tools/us3cli/introduction)。
 
 ## 使用 API/SDK 
 
