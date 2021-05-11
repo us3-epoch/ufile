@@ -4,6 +4,10 @@
 
 US3SYNC 是一款将不同源的数据同步到 US3 的迁移工具。通过将 US3SYNC 部署在本地或者云主机中，可以便捷地从本地或者其他云环境中将数据迁移到 US3 存储空间。
 
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/c90df1569fa689282e518df798ce7e9d.png">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏4 us3 sync.mp4">
+      </video>
+
 ## 工作原理
 
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
