@@ -2,7 +2,9 @@
 
 ## 运行环境
 
-US3SYNC 支持 linux 环境部署。
+- Linux：
+  - CentOS 7.0 及以上 (可通过`cat /etc/redhat-release`查看)
+  - Ubuntu 16.04 及以上 (可通过`cat /etc/issue`查看)
 
 US3SYNC 依赖 telnet，expect，rsync 命令，确保预装这些命令，使用 yum 源做包管理可以使用以下命令安装：
 

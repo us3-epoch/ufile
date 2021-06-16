@@ -76,5 +76,6 @@ US3SYNC
 
 ### 运行环境
 
-- Master节点：Linux（x86 64位）
-- Worker节点：Linux（x86 64位）
+- Linux：
+  - CentOS 7.0 及以上 (可通过`cat /etc/redhat-release`查看)
+  - Ubuntu 16.04 及以上 (可通过`cat /etc/issue`查看)
