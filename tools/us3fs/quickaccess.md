@@ -88,34 +88,38 @@ us3fs --update
 
 ```bash
 ❯ us3fs -h
-us3fs - a single posix file system based on ufile
+us3fs - a single posix file system based on us3
 USAGE
   us3fs [global options] bucket mountpoint
 FUSE
-  --entry_timeout value   How long to cache dentry for inode for fuse. (default: 0s)
-  --attr_timeout value    How long to cache inode attr for fuse (default: 0s)
-  --dcache_timeout value  How long to cache dentry for us3fs (default: 0s)
+  --entry_timeout value   How long to cache dentry for inode for fuse. (default: 5m0s)
+  --attr_timeout value    How long to cache inode attr for fuse (default: 5m0s)
+  --dcache_timeout value  How long to cache dentry for us3fs (default: 5m0s)
   --async_read            Perform all reads (even read-ahead) asynchronously
   --sync_read             Perform all reads (even read-ahead) synchronously
   -o value                specify fuse option
   --wb                    write-back
 
 OS
-  --retry value      number of times to retry a failed I/O (default: 5)
-  --parallel value   number of parallel I/O thread (default: 20)
-  --debug_fuse       set debug level for fuse
-  --readahead value  readahead size, (MB) (default: 16)
-  --critical         Check every part's etag, this option will cost cpu
-  --passwd value     specify access file (default: "/etc/us3fs/us3fs.conf")
-  --enable_md5       enalbe md5 in http header
-  --uid value        specify default uid (default: 0)
-  --gid value        specify default gid (default: 0)
-  --nodirbl          check empty dir
-  --update           update us3fs to /bin/us3fs
-  -n                 doesn't check access when mount us3fs
-  -l                 use local cache
-  -s value           small file size (default: 10485760)
-  -p value           specify local cache location (default: "/tmp/us3fs")
+  --retry value        number of times to retry a failed I/O (default: 5)
+  --parallel value     number of parallel I/O thread (default: 20)
+  --debug_fuse         set debug level for fuse
+  --level value        set log level: error/warn/info/debug (default: "info")
+  --readahead value    readahead size, (1m/1k/1) (default: 0)
+  --etag value         Check etag for part. value is percent(0~100) (default: 50)
+  --passwd value       specify access file (default: "/etc/us3fs/us3fs.conf")
+  --enable_md5         enalbe md5 in http header
+  --uid value          specify default uid (default: 501)
+  --gid value          specify default gid (default: 20)
+  --check_virtual_dir  enable detection of virtual directories
+  --update             update us3fs to /bin/us3fs
+  -n                   doesn't check access when mount us3fs
+  -l                   enable local cache for small file
+  -p value             specify local cache location (default: "/tmp/us3fs/")
+  --prefix value       specify bucket prefix path
+  --gfl                enable get_file_list
+  --direct_read        enable cache bypass read
+  --perf_dump value    How long to output the performance dump (default: 1h0m0s)
 
 MISC
   --help, -h  show help
@@ -127,9 +131,9 @@ MISC
 
 | 选项名称       | 描述                                                                                |
 | -------------- | ----------------------------------------------------------------------------------- |
-| entry_timeout  | 指定fuse缓存被查找的文件名的时间<br>默认为0s                                        |
-| attr_timeout   | 指定fuse缓存文件/目录属性的时间<br>默认为0s                                         |
-| dcache_timeout | 指定us3fs缓存文件/目录属性的时间<br>默认为0s                                        |
+| entry_timeout  | 指定fuse缓存被查找的文件名的时间<br>默认为5min                                      |
+| attr_timeout   | 指定fuse缓存文件/目录属性的时间<br>默认为5min                                       |
+| dcache_timeout | 指定us3fs缓存文件/目录属性的时间<br>默认为5min                                      |
 | async_read     | 指定fuse读取为异步模式。默认开启                                                    |
 | sync_read      | 指定fuse读取为同步模式(包括预读)。默认关闭                                          |
 | retry          | 请求失败后重试次数<br>默认5次                                                       |
@@ -151,6 +155,9 @@ MISC
 | l              | 开启后对小文件使用本地目录做缓存，异步上传。具体使用示例见[小文件场景](#小文件场景) |
 | p              | 指定小文件异步上传的本地缓存目录                                                    |
 | prefix         | 指定挂载的bucket前缀目录，默认为空                                                  |
+| gfl            | 对于没有ListObjects API支持的Endpoint, 该参数可以绕过,通过PrefixFileList API模拟    |
+| direct_read    | 开启后，绕过us3fs内部缓存组织模块，直接读取us3数据，对于被频繁访问的文件会有一定性能降低，反之有利于降低时延|
+| perf_dump      | 指定时间周期输出时延统计信息，默认周期是1hour                                       |
 
 * fuse常用选项列表（与`-o`一起使用）
 
@@ -172,7 +179,7 @@ MISC
 
 设置`dcache_timeout`可增加文件/目录属性在内存中的有效时间，增强使用体验。建议`entry_timeout` , `attr_timeout`设置时间小于`dcache_timeout`
 
-*注：开启缓存后，可能造成用户读取目录的内容和实际bucket中的内容不一致。*
+*注：开启缓存后，可能造成用户读取目录的内容和实际bucket中的内容不一致。默认为开启，需要关闭请设置为0s*
 
 示例：ls包含10000个文件的目录耗时
 
@@ -238,7 +245,7 @@ sys     0m0.133s
 
 * **readahead**
 
-调整预读窗口大小对大文件的顺序读有较大影响，建议在16~32MB.
+调整预读窗口大小对大文件的顺序读有较大影响，建议在16m~32m，但会增加内存消耗，可以适当缩小预读窗口。
 
 示例如下：
 
@@ -263,7 +270,7 @@ sys     0m0.133s
 
 * `parallel`：设置并发线程，对cpu负载有一定影响。建议设置在20~40较为合理
 * `critical`：写入文件时启用本地etag校验，相比未开启会提高约50%的cpu占用。
-* `readahead`：预读窗口大小，由于fuse自身有读写窗口的限制，一定的预读大小对读取性能有显著提升。建议设置在16~32
+* `readahead`：预读窗口大小，由于fuse自身有读写窗口的限制，一定的预读大小对读取性能有显著提升。建议设置在16m~32m，但会增加内存消耗，可以适当缩小预读窗口。
 
 ### 小文件场景
 
