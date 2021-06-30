@@ -65,3 +65,8 @@ nohup ./bin/US3SYNC -S <speed limit, MB> -Q <qps limit, per second> <master-inne
 # 查看进程是否正常启动
 ps -ef | grep US3SYNC
 ```
+
+## 视频参考
+
+部署与使用视频教学请参考[【快速上手】](/ufile/tools/us3sync/quickaccess?id=视频教学
+)
