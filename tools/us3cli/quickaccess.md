@@ -1,5 +1,6 @@
 # 快速上手
 
+- [视频教学](#使用介绍)
 - [配置管理](#配置管理)
 - [创建存储空间](#创建存储空间)
 - [上传文件或文件夹](#上传文件或文件夹)
@@ -8,6 +9,16 @@
 - [删除文件或文件夹](#删除文件或文件夹)
 - [查询文件基本信息](#查询文件基本信息)
 - [文件基本信息修改](#文件基本信息修改)
+
+## 视频教学
+
+
+观看以下视频，快速上手使用US3CLI：
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/d30b1920c4afe729edb1ead99944feaf.png">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏1 us3 cli.mp4">
+      </video>
+
 
 ## 配置管理
 

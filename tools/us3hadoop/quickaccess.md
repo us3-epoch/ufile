@@ -1,10 +1,19 @@
 # 快速上手
 
+- [视频教学](#视频教学)
 - [使用说明](#使用说明)
   - [参数说明](#参数说明)
   - [Hadoop配置](#Hadoop配置)
   - [使用方式](#使用方式)
 - [场景示例](#场景示例)
+
+## 视频教学
+
+观看以下视频，快速上手使用US3Hadoop
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/1a66ee246c0ff52203d82c9f001b6b45.png">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏2 us3 Hadoop.mp4">
+      </video>
 
 ## 使用说明
 

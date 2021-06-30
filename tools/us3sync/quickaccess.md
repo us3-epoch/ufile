@@ -1,5 +1,6 @@
 # 快速上手
 
+- [视频教学](#视频教学)
 - [界面说明](#界面说明)
     - [登录界面说明](#登录界面说明)
     - [任务管理界面说明](#任务管理界面说明)
@@ -20,6 +21,13 @@
     - [local](#local)
     - [http](#http)
 
+## 视频教学
+
+观看以下视频，快速上手部署与使用US3SYNC
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/c90df1569fa689282e518df798ce7e9d.png">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏4 us3 sync.mp4">
+      </video>
 
 ## 界面说明
 

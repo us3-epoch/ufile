@@ -1,5 +1,6 @@
 # 快速上手
 
+- [视频教学](#视频教学)
 - [使用方式](#使用方式)
   - [配置访问权限](#配置访问权限)
   - [设置挂载只读](#设置挂载只读)
@@ -13,6 +14,13 @@
   - [小文件场景](#小文件场景)
 - [本地服务支持](#本地服务支持)
 
+## 视频教学
+
+观看以下视频，快速上手使用US3FS
+
+<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/945f2902d9d0d5451607db50629b8dab.png">
+      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏3 us3 fs.mp4">
+      </video>
 
 ## 使用方式
 

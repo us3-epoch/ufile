@@ -4,9 +4,6 @@
 
 US3CLI 是一款通过命令行操作对 US3 进行数据管理的工具，支持丰富的存储空间（bucket）以及对象（object）操作，支持Windows、Linux、Mac平台。
 
-<video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/d30b1920c4afe729edb1ead99944feaf.png">
-      <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏1 us3 cli.mp4">
-      </video>
 
 通过本工具，您可以进行以下操作：
 存储空间（bucket）：创建、删除、查看存储量、查看存储空间列表等。

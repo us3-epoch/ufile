@@ -39,7 +39,6 @@
         * [历史版本](/ufile/tools/us3fs/ReleaseNote)
     * US3SYNC 迁移工具
         * [工具简介](/ufile/tools/us3sync/introduction)
-        * [视频教学](/ufile/tools/us3sync/video)
         * [下载与环境准备](/ufile/tools/us3sync/prepare)
         * [快速上手](/ufile/tools/us3sync/quickaccess)
         * [常见问题](/ufile/tools/us3sync/questions)
