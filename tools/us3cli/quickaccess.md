@@ -13,7 +13,7 @@
 ## 视频教学
 
 
-观看以下视频，快速上手使用US3CLI：
+观看以下视频，快速上手使用US3CLI
 
 <video id="video" length=1000 width=800 controls="" preload="none" poster="https://static.ucloud.cn/d30b1920c4afe729edb1ead99944feaf.png">
       <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏1 us3 cli.mp4">
