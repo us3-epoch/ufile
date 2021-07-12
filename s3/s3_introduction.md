@@ -119,9 +119,9 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 
 | **请求形式 API 名字**                  | **PUT Object** | **POST Object** | **Complete Multipart Upload** |
 | ------------------------------- | ------------- | --------------- | ----------------------------- |
-| **在 URL 中携带参数**                 | √             | ×               | √                             |
-| **在 Header 中携带参数**              | √             | ×               | √                             |
-| **在 POST 请求的 body 中使用表单域来携带参数** | ×             | √               | ×                             |
+| **在 URL 中携带参数**                 |  √             | ×               |  √                             |
+| **在 Header 中携带参数**              |  √             | ×               |  √                             |
+| **在 POST 请求的 body 中使用表单域来携带参数** | ×             |  √               | ×                             |
 
     √:支持
     ×:不支持
