@@ -125,7 +125,6 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 
     √:支持
     ×:不支持
-√
 
 ### 图片操作支持
 
