@@ -97,7 +97,7 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 
 | **编号** |       **地域**        |        **外网Endpoint**        |            **内网Endpoint**             |
 | ---- | ----------------- | -------------------------- | ----------------------------------- |
-|  1   |    中国-北京二    |    s3-cn-bj.ufileos.com    |    internal.s3-cn-bj.ufileos.com    |
+|  1   |    中国-华北（北京）    |    s3-cn-bj.ufileos.com    |    internal.s3-cn-bj.ufileos.com    |
 |  2   |     中国-上海     |   s3-cn-sh2.ufileos.com    |   internal.s3-cn-sh2.ufileos.com    |
 |  3   |     中国-广州     |           待支持           |    internal.s3-cn-gd.ufileos.com    |
 |  4   |     中国-香港     |     s3-hk.ufileos.com      |     internal.s3-hk.ufileos.com      |
@@ -113,15 +113,15 @@ S3 的 AccessKeyID（或称AccessKey）和 SecretAccessKey（或称SecretKey）�
 |  14  |     印度-孟买     | s3-ind-mumbai.ufileos.com  | internal.s3-ind-mumbai.ufileos.com  |
 |  15  |      新加坡       |     s3-sg.ufileos.com      |     internal.s3-sg.ufileos.com      |
 
-注意: *目前中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域已经支持https协议，其他地域可支持路径风格https，后续支持虚拟主机风格https (所有地域内网不支持https)*
+注意: *目前中国-华北（北京），中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域已经支持https协议，其他地域可支持路径风格https，后续支持虚拟主机风格https (所有地域内网不支持https)*
 
 ### 回调扩展功能支持
 
 | **请求形式 API 名字**                  | **PUT Object** | **POST Object** | **Complete Multipart Upload** |
 | ------------------------------- | ------------- | --------------- | ----------------------------- |
-| **在 URL 中携带参数**                 | √             | ×               | √                             |
-| **在 Header 中携带参数**              | √             | ×               | √                             |
-| **在 POST 请求的 body 中使用表单域来携带参数** | ×             | √               | ×                             |
+| **在 URL 中携带参数**                 |  √             | ×               |  √                             |
+| **在 Header 中携带参数**              |  √             | ×               |  √                             |
+| **在 POST 请求的 body 中使用表单域来携带参数** | ×             |  √               | ×                             |
 
     √:支持
     ×:不支持
