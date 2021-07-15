@@ -45,12 +45,26 @@ US3SYNC start success!
 
 ## 添加worker节点
 
-### 
+### 界面操作
 
 1. 服务启动后，在浏览器中打开：https://<web服务监听IP>:<web服务监听端口>/<br>**注：使用云主机部署迁移服务时，这里需要使用EIP，而不是0.0.0.0。**
 2. 页面登录，使用启动时设置的用户名和密码。
 3. 添加工作节点，参考 [创建节点界面说明](/ufile/tools/us3sync/quickaccess?id=创建节点界面说明)，需要为每个节点提供唯一工作路径。
    每个工作节点需要提供唯一工作路径，如果路径不存在会自动创建对应目录。<br>**注：建议使用内网ip。**
+
+### 命令行操作
+
+```
+# 部署worker节点，可以部署多个，每个节点需要一个单独目录
+mkdir -p node/bin node/log
+cp bin/worker/US3SYNC ./node/
+# 启动worker节点
+cd node
+nohup ./bin/US3SYNC -S <speed limit, MB> -Q <qps limit, per second> <master-inner-ip>:<master-inner-port> --cache-addr <ip:port> --cache-pass <password> > log/worker.log 2>&1 &
+# 验证
+# 查看进程是否正常启动
+ps -ef | grep US3SYNC
+```
 
 ## 视频参考
 
