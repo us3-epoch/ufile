@@ -1,5 +1,23 @@
 # 历史版本
 
+## US3FS v1.5.4
+
+### 新特性
+
+* 新增max_background,congestion_threshold参数支持direct模式下高并发io
+* 新增async_dio参数，允许fuse kernel对direct io异步
+* 新增keep_pagecache参数对文件大小以及修改时间不变的文件在vfs中进行缓存
+
+### 改进
+
+* 自动补全缺失的"key"格式目录，目录只创建"key/"格式的文件，且路径解析时优先head "key/"格式的文件；减少目录索引创建，有效减少创建与查询时延问题
+* 参数check_virtual_dir功能默认开启，且取消该参数，需要关闭使用disable_check_vdir参数；减少对虚拟目录进行判断带来的时延
+* 新增skip_ne_dir_lookup参数来开启文件名后缀的过滤字典，减少head操作频率，目前过滤支持".jpe"、".jpeg"、".png"、".gz"、".tgz"、".gz"、".tgz"、".log"、".plot"、".js"、".html"、".css"、".apk"为后缀的文件，需要确保bucket下没有用以上后缀作为目录后缀的情况
+
+### BUG修复
+
+* 无
+
 ## US3FS v1.5.3
 
 ### 新特性

@@ -902,7 +902,7 @@ us3cli rm us3://<桶名字>/<文件Key> [--recursive][--force][--reduce][--exclu
 - 强制删除文件
 
 ```
-./us3cli rm us3://bucket/test.txt
+./us3cli rm -f us3://bucket/test.txt
 ```
 
 - 强制删除文件夹
