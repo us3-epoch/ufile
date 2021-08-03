@@ -84,7 +84,7 @@
     * AWS S3 协议支持
         * [AWS S3 协议支持说明](/ufile/s3/s3_introduction)
         * [AWS S3 协议应用场景](/ufile/s3/s3_application)
-		* [AWS S3 协议常见问题](/ufile/s3/questions)
+		* [AWS S3 协议常见问题](/ufile/s3/s3_questions)
     * 增值服务
         * [图片处理服务](/ufile/service/pic)
 * [API 列表](/ufile/api_reference)
