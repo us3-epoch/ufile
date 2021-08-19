@@ -42,7 +42,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 **Encrypt Access Keys with a passward:** 请勿勾选。
 
-**Use secure transfer(SSL/TSL)：** 目前仅中国-北京二，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域支持 HTTPS，其他区域请勿勾选。
+**Use secure transfer(SSL/TSL)：** 目前仅中国-华北（北京），中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域支持 HTTPS，其他区域请勿勾选。
 
 具体配置填写如下：
 
@@ -56,7 +56,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 ​	2.对象操作
 
-### 控制台功能说明
+## 控制台功能说明
 
 ![img](images/console.png)
 
@@ -64,18 +64,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 ![img](images/console2.png)
 
-### 常见问题
 
-#### 1.上传文件超过78G,报错400.显示分片大小为16MB
-
-##### 问题原因：
-
-​        s3分片数限制为1万条，设置分片为8M是，只能满足78G左右以下文件的上传，如果文件大小超过78G,会自动调整分片大小，保证分片数小于1万条。目前us3后端s3协议只支持8M的分片，如果分片大小不对，会返回400错误。
-
-##### 解决方案：
-
-- 使用内测版us3browser工具进行上传(s3协议),有需要使用，请联系技术支持获取使用权限
-- 使用us3cli工具进行上传(us3协议)。使用方式参考 [us3cli 工具简介](
 
 ## 网络文件系统 S3FS
 
@@ -381,228 +370,5 @@ service vsftpd start
 ftp ${ftp_server_ip}
 ```
 
-## s3cmd
 
-### 功能说明
-
-s3cmd是一个免费的命令行工具,用于使用S3协议上传、检索和管理数据，它最适合熟悉命令行程序的用户，广泛用于批处理脚本和自动备份。
-
-### 安装和使用
-
-**适用的操作系统：Linux、MacOS、Windows**
-
-#### 安装步骤
-```
-1.下载安装包
-https://s3tools.org/download ,这里以目前最新版本2.1.0为例 
-2.解压安装包
-tar xzvf s3cmd-2.1.0.tar.gz
-3.移动路径
-mv s3cmd-2.1.0 /usr/local/s3cmd
-4.创建软连接
-ln -s /usr/local/s3cmd/s3cmd /usr/bin/s3cmd (权限不足可以使用sudo)
-5.执行配置命令,填写必要信息(直接跳过也可以，可以放在下一步手动填写)
-s3cmd --configure
-6.填写配置
-vim ~/.s3cfg
-打开当前配置，填写以下参数
-access_key = "TOKEN公钥/API公钥"      
-secret_key = "TOKEN私钥/API私钥"     
-host_base = "s3协议域名,例如： s3-cn-bj.ufileos.com"
-host_bucket = "请求风格，例如: %(bucket)s.s3-cn-bj.ufileos.com"
-multipart_chunk_size_mb = 8 "us3 支持的s3协议分片大小为8M,所以这里只能填8"
-
-```
-access_key: 参考[Token公钥](https://console.ucloud.cn/ufile/token)/[API公钥](https://console.ucloud.cn/uapi/apikey)
-
-secret_key: 参考 [Token私钥](https://console.ucloud.cn/ufile/token)/[API私钥](https://console.ucloud.cn/uapi/apikey)
-
-host_base： 参考 [s3协议域名](https://docs.ucloud.cn/ufile/s3/s3_introduction)
-
-#### 示例配置项
-
-```
-[default]
-access_key = "TOKEN_xxxxxxxxx"
-access_token = 
-add_encoding_exts = 
-add_headers = 
-bucket_location = US 
-check_ssl_certificate = True
-check_ssl_hostname = True
-connection_pooling = True
-content_disposition = 
-content_type = 
-default_mime_type = binary/octet-stream
-delay_updates = False
-delete_after = False
-delete_after_fetch = False
-delete_removed = False
-dry_run = False
-enable_multipart = True
-encrypt = False
-expiry_date = 
-expiry_days = 
-expiry_prefix = 
-follow_symlinks = False
-force = False
-get_continue = False
-gpg_passphrase = 
-guess_mime_type = True
-host_base = s3-cn-bj.ufileos.com
-host_bucket = %(bucket)s.s3-cn-bj.ufileos.com
-human_readable_sizes = False
-invalidate_default_index_on_cf = False
-invalidate_default_index_root_on_cf = True
-invalidate_on_cf = False
-kms_key = 
-limit = -1
-limitrate = 0
-list_md5 = False
-log_target_prefix = 
-long_listing = False
-max_delete = -1
-mime_type = 
-multipart_chunk_size_mb = 8
-multipart_max_chunks = 10000
-preserve_attrs = True
-progress_meter = True
-proxy_host =  
-proxy_port = 80 
-public_url_use_https = False
-put_continue = False
-recursive = False
-recv_chunk = 65536
-reduced_redundancy = False
-requester_pays = False
-restore_days = 1
-restore_priority = Standard
-secret_key = "xxxxxxxxxxxxxxxxxxx" 
-send_chunk = 65536
-server_side_encryption = False
-signature_v2 = False
-signurl_use_https = False
-simpledb_host = sdb.amazonaws.com
-skip_existing = False
-socket_timeout = 300
-stats = False
-stop_on_error = False
-storage_class = 
-throttle_max = 100
-upload_id = 
-urlencoding_mode = normal
-use_http_expect = False
-use_https = False
-use_mime_magic = True
-verbosity = WARNING
-website_index = index.html
-```
-#### 使用方法
-
-##### 1.上传文件
-```
-s3cmd put test.txt s3://bucket1
-```
-
-##### 2.删除文件
-```
-s3cmd del s3://bucket1/test.txt
-```
-
-##### 3.下载文件
-```
-s3cmd get s3://bucket1/test.txt
-```
-
-##### 4.拷贝文件
-``` 
-s3cmd cp s3://bucket1/test.txt s3://bucket2/test.txt
-```
-##### 其他常用操作
-```
-1.上传文件夹
-s3cmd put -r ./dir s3://bucket1/dir1
-2.下载文件夹
-s3cmd get -r s3://bucket1/dir1 ./dir1
-3.删除文件夹
-s3cmd del s3://bucket1/dir1
-4.列取bucket列表
-s3cmd ls
-5.列取文件列表
-s3cmd ls s3://bucket1
-6.归档文件取回
-s3cmd restore s3://bucket1
-```
-
-## rclone 
-
-### 功能说明
-
-rclone是一个命令行程序，用于管理云存储上的文件,支持s3协议
-
-### 安装和使用
-
-#### 安装步骤
-
-```
-curl https://rclone.org/install.sh | sudo bash
-
-//参考 https://rclone.org/install/
-```
-
-#### 配置
-
-```
-rclone config
-```
-
-#### 配置参考
-
-```
-[s3]           //这里可以填写s3,ucloud等自定义名，作为命令前缀
-type = s3
-provider = Other
-env_auth = false
-access_key_id = xxxxxxxx                 
-secret_access_key = xxxxxxxxxxx          
-endpoint = http://s3-cn-bj.ufileos.com   //参考
-location_constraint = cn-bj
-acl = private
-bucket_acl = private // public/private
-chunk_size = 8M                          //目前只支持8M分片
-```
-
-access_key_id: 参考[Token公钥](https://console.ucloud.cn/ufile/token)/[API公钥](https://console.ucloud.cn/uapi/apikey)
-
-secret_access_key: 参考 [Token私钥](https://console.ucloud.cn/ufile/token)/[API私钥](https://console.ucloud.cn/uapi/apikey)
-
-endpoint： 参考 [s3协议域名](https://docs.ucloud.cn/ufile/s3/s3_introduction)
-
-#### 使用方法
-
-说明: 以下命令前缀（配置内的中括号内容）以remote为例，使用过程中需要自行修改
-
-##### 1.查看所有bucket
-
-```
-rclone lsd remote:
-```
-
-##### 2.列取文件列表
-
-```
-rclone ls remote:bucket
-```
-
-##### 3.上传文件
-
-```
-rclone copy ./test.txt remote:bucket
-```
-
-##### 4.删除文件
-
-```
-rclone delete remote:bucket/test.txt
-```
 
