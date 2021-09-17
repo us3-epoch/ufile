@@ -36,11 +36,13 @@ us3fs [global options] <bucket> <mountpoint>
 umount <mountpoint>
 ```
 
+> *windows 对cmd执行`Ctrl+C`* 
+
 -----
 
 ### 配置访问权限
 
-us3fs挂载的默认访问权限为当前挂载用户，如果需要允许其他用户/用户组访问挂载点，可以使用如下参数：
+us3fs挂载的默认访问权限为当前挂载用户，如果需要允许其他用户/用户组访问挂载点，可以使用如下参数:
 
 * `-o allow_other`：允许任何用户都可以访问文件。
 * `--uid=xxx`：指定默认的用户
@@ -64,9 +66,13 @@ stderr:
 
 在`/etc/fuse.conf`中增加`user_allow_other`。
 
+> *windows下只支持`--uid`和`--gid`*
+
 ### 设置挂载只读
 
 挂载时时指定`-o ro`。
+
+> windows下不支持
 
 ### 开启日志
 
@@ -88,23 +94,32 @@ us3fs --update
 
 更新后的可执行文件放在`/bin/`目录下
 
+> *windows无效*
+
 -----
 
 ## 使用帮助
 
 通过`us3fs -h`查看us3fs支持的参数
 
+#### Linux
+
 ```bash
 ❯ us3fs -h
 us3fs - a single posix file system based on us3
 USAGE
   us3fs [global options] bucket mountpoint
+Version
+  US3FS Version: 1.5.5-3-g952a8eb
+  Commit ID: 952a8eb
+  Build: 2021-09-09:17:16:15
+  Go Version: go1.16.3 darwin/arm64
+
 FUSE
+  -o value                      Specify fuse/winfsp option
   --entry_timeout value         How long to cache dentry for inode for fuse. (default: 5m0s)
   --attr_timeout value          How long to cache inode attr for fuse (default: 5m0s)
-  --dcache_timeout value        How long to cache dentry for us3fs (default: 5m0s)
   --disable_async_read          Disable all read (even read-ahead) operations asynchronously
-  -o value                      Specify fuse option
   --wb                          Enable writeback mode, which is turned off by default
   --max_background value        Specify the max_background parameter of fuse kernel(>=7.13), currently fuse usespace supports up to 1024 (default: 64)
   --congestion_threshold value  Specify the congestion_threshold parameter of fuse kernel(>=7.13), currently fuse usespace supports up to 768 (default: 48)
@@ -112,68 +127,109 @@ FUSE
   --keep_pagecache              Turn on pagecache, when the file is opened, it will be decided whether to update according to the modification time of the inode, so please pay attention to the attr_timeout and dcache_timeout parameters will have a certain impact on this
 
 OS
-  --retry value         Number of times to retry a failed I/O (default: 5)
-  --parallel value      Number of parallel I/O thread (default: 32)
-  --debug_fuse          Set debug level for fuse
-  --level value         Set log level: error/warn/info/debug (default: "info")
-  --readahead value     Readahead size. e.g.: 1m/1k/1  (default: "0")
-  --etag value          Check etag for part. value is percent(0~100) (default: 50)
-  --passwd value        specify access file (default: "/etc/us3fs/us3fs.conf")
-  --enable_md5          Enalbe md5 in http header
-  --uid value           Specify default uid (default: 1000)
-  --gid value           Specify default gid (default: 1000)
-  --disable_check_vdir  disable detection of virtual directories
-  --update              Update us3fs to /bin/us3fs
-  -n                    Doesn't check access when mount us3fs
-  -l                    Enable local cache for small file
-  -p value              Specify local cache location (default: "/tmp/us3fs/")
-  --prefix value        Specify bucket prefix path
-  --gfl                 Enable get_file_list
-  --direct_read         Enable cache bypass read
-  --perf_dump value     How long to output the performance dump (default: 1h0m0s)
-  --skip_ne_dir_lookup  Skip non-essential directory checking, such as files ending in ".log",".png",".jpg", etc.
+  --dcache_timeout value  How long to cache dentry for us3fs (default: 5m0s)
+  --retry value           Number of times to retry a failed I/O (default: 5)
+  --parallel value        Number of parallel I/O thread (default: 32)
+  --debug                 Set debug level for fuse/winfsp
+  --level value           Set log level: error/warn/info/debug (default: "info")
+  --readahead value       Readahead size. e.g.: 1m/1k/1  (default: "0")
+  --etag value            Check etag for part. value is percent(0~100) (default: 50)
+  --passwd value          specify access file (default: "/etc/us3fs/us3fs.conf")
+  --enable_md5            Enalbe md5 in http header
+  --uid value             Specify default uid (default: 1000)
+  --gid value             Specify default gid (default: 1000)
+  --disable_check_vdir    disable detection of virtual directories
+  --update                Update us3fs to /bin/us3fs
+  -n                      Doesn't check access when mount us3fs
+  -l                      Enable local cache for small file
+  -p value                Specify local cache location (default: "/tmp/us3fs/")
+  --prefix value          Specify bucket prefix path
+  --gfl                   Enable get_file_list
+  --direct_read           Enable cache bypass read
+  --perf_dump value       How long to output the performance dump (default: 1h0m0s)
+  --skip_ne_dir_lookup    Skip non-essential directory checking, such as files ending in ".log",".png",".jpg", etc.
 
 MISC
   --help, -h  show help
   -f          foreground
-
 ```
+
+#### Windows
+
+```shell
+us3fs - a single posix file system based on us3
+USAGE
+  us3fs [global options] bucket mountpoint
+Version
+  US3FS Version: 1.5.5-4-g6a6f55d
+  Commit ID: 6a6f55d
+  Build: 2021-09-09:19:05:36
+  Go Version: go1.15.5 linux/amd64
+
+WinFSP
+  -o value                     Specify fuse/winfsp option
+  --dir_info_timeout value     The expiration time of the directory information, in seconds (default: 5)
+  --file_info_timeout value    File information expiration time, in seconds (default: 5)
+  --volume_info_timeout value  Volume information expiration time, in seconds (default: 5)
+  --case_insensitive           Is case sensitive
+  --keep_filecache             keep filecache
+
+OS
+  --dcache_timeout value  How long to cache dentry for us3fs (default: 5m0s)
+  --retry value           Number of times to retry a failed I/O (default: 5)
+  --parallel value        Number of parallel I/O thread (default: 32)
+  --debug                 Set debug level for fuse/winfsp
+  --level value           Set log level: error/warn/info/debug (default: "info")
+  --readahead value       Readahead size. e.g.: 1m/1k/1  (default: "0")
+  --etag value            Check etag for part. value is percent(0~100) (default: 50)
+  --passwd value          specify access file (default: "/etc/us3fs/us3fs.conf")
+  --enable_md5            Enalbe md5 in http header
+  --uid value             Specify default uid (default: -1)
+  --gid value             Specify default gid (default: -1)
+  --disable_check_vdir    disable detection of virtual directories
+  --update                Update us3fs to /bin/us3fs
+  -n                      Doesn't check access when mount us3fs
+  -l                      Enable local cache for small file
+  -p value                Specify local cache location (default: "/tmp/us3fs/")
+  --prefix value          Specify bucket prefix path
+  --gfl                   Enable get_file_list
+  --direct_read           Enable cache bypass read
+  --perf_dump value       How long to output the performance dump (default: 1h0m0s)
+  --skip_ne_dir_lookup    Skip non-essential directory checking, such as files ending in ".log",".png",".jpg", etc.
+
+MISC
+  --help, -h  show help
+  -f          foreground
+```
+
+> *Linux和Windows的参数区别主要体现在`FUSE`和`WinFsp`*
 
 ## 选项列表
 
+#### WinFsp
+
+| 选项名称            | 描述                       |
+| ------------------- | -------------------------- |
+| o                   | WinFsp支持的option参数     |
+| dir_info_timeout    | 目录缓存的超时时间，默认5s |
+| dir_info_timeout    | 文件缓存的超时时间，默认5s |
+| volume_info_timeout | 卷信息的超时时间，默认5s   |
+| keep_filecache      | 是否把文件放入缓存         |
+|                     |                            |
+
+#### FUSE
+
 | 选项名称             | 描述                                                         |
 | -------------------- | ------------------------------------------------------------ |
-| entry_timeout        | 指定fuse缓存被查找的文件名的时间<br>默认为5min               |
-| attr_timeout         | 指定fuse缓存文件/目录属性的时间<br>默认为5min                |
-| dcache_timeout       | 指定us3fs缓存文件/目录属性的时间<br>默认为5min               |
-| disable_async_read   | 关闭kernel预读使用异步模式。默认开启                         |
+| o                    | FUSE支持的option参数                                         |
+| entry_timeout        | 指定fuse缓存被查找的文件名的时间<br/>默认为5min              |
+| attr_timeout         | 指定fuse缓存文件/目录属性的时间<br/>默认为5min               |
+| disable_async_read   | 关闭fuse kernel预读使用异步模式。默认开启                    |
 | wb                   | 指定写入使用writeback方式。不支持覆盖写/追加写               |
 | max_background       | 指定fuse kernel的max_background参数(fuse kernel版本>=7.13)，<br>目前fuse usespace最多支持1024(默认：64)，该参数能提升direct io的并行度 |
 | congestion_threshold | 指定fuse kernel(fuse kernel版本>=7.13)的congestion_threshold参<br>数，目前fuse usespace最多支持768（默认：48），该参数会触发并行IO的拥塞控制 |
 | async_dio            | 开启fuse内核的async_dio参数，默认关闭async_dio。该参数开启后，<br>fuse kernel对direct io进行异步处理 |
 | keep_pagecache       | 开启pagecache，文件打开时会根据inode的修改时间以及大小变化决<br>定是否更新，所以请注意entry_timeout和dcache_timeout参数对此会<br>有一定影响，使得未能及时感知到文件修改时间、大小变化 |
-| retry                | 请求失败后重试次数，默认5次                                  |
-| parallel             | I/O并发线程数<br>默认20个                                    |
-| debug_fuse           | 指定用户态fuse日志级别为debuy<br>默认关闭                    |
-| level                | 指定us3fs日志级别<br>默认为Info级别                          |
-| readahead            | 预读大小。 例如：1m/1k/1（默认：“0”）                        |
-| etag                 | 检查上传数据的 etag所占百分比。 值是百分比（0~100）（默认值：50） |
-| passwd               | 指定账户文件，默认路径`/etc/us3fs/us3fs.conf`                |
-| enable_md5           | 在http请求头中增加md5校验，默认关闭                          |
-| uid                  | 指定文件所属的默认用户，默认当前用户                         |
-| gid                  | 指定文件所属的默认用户组，默认当前用户组                     |
-| disable_check_vdir   | 禁用虚拟目录检测                                             |
-| update               | 更新us3fs版本，新版本路径为/bin/us3fs                        |
-| n                    | 挂载时不检查bucket权限，如果没有所在地域没有列表服务可开启   |
-| l                    | 开启后对小文件使用本地目录做缓存，异步上传。具体使用示例见[小文件场景](#小文件场景) |
-| p                    | 指定小文件异步上传的本地缓存目录                             |
-| prefix               | 指定挂载的bucket前缀目录，默认为空                           |
-| gfl                  | 对于没有ListObjects API支持的Endpoint, 该参数可以绕过,通过PrefixFileList API模拟 |
-| direct_read          | 开启后，绕过us3fs内部缓存组织模块，直接读取us3数据，<br>对于被频繁访问的文件会有一定性能降低，反之有利于降低时延 |
-| perf_dump            | 指定时间周期输出时延统计信息，默认周期是1hour                |
-| skip_ne_dir_lookup   | 跳过非必要的目录检查，目前过滤支持".jpe"、".jpeg"、".png"、<br>".gz"、".tgz"、".gz"、".tgz"、".log"、".plot"、".js"、".html"、<br>".css"、".apk"为后缀的文件，需要确保bucket下没有用以上后缀<br>作为目录后缀的情况 |
-| help, h              | 查看帮助                                                     |
-| f                    | 挂载时启用前台模式，相关输出会打印到标准输出                 |
 
 * fuse常用选项列表（与`-o`一起使用）
 
@@ -188,6 +244,40 @@ MISC
 -o option=value
 ```
 
+#### OS(Object Storage)
+
+| 选项名称           | 描述                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| dcache_timeout     | dentry cache在us3fs中的缓存时长<br/>默认为5min               |
+| retry              | 请求失败后重试次数，默认5次                                  |
+| parallel           | I/O并发线程数<br>默认20个                                    |
+| debug              | 指定用户态fuse日志级别为debuy<br>默认关闭                    |
+| level              | 指定us3fs日志级别<br>默认为Info级别                          |
+| readahead          | 预读大小。 例如：1m/1k/1（默认：“0”）                        |
+| etag               | 检查上传数据的 etag所占百分比。 值是百分比（0~100）（默认值：50） |
+| passwd             | 指定账户文件，默认路径`/etc/us3fs/us3fs.yaml`  // *windows 平台自定义* |
+| enable_md5         | 在http请求头中增加md5校验，默认关闭                          |
+| uid                | 指定文件所属的默认用户，默认当前用户                         |
+| gid                | 指定文件所属的默认用户组，默认当前用户组                     |
+| disable_check_vdir | 禁用虚拟目录检测                                             |
+| update             | 更新us3fs版本，新版本路径为/bin/us3fs                        |
+| n                  | 挂载时不检查bucket权限，如果没有所在地域没有列表服务可开启   |
+| l                  | 开启后对小文件使用本地目录做缓存，异步上传。具体使用示例见[小文件场景](#小文件场景) |
+| p                  | 指定小文件异步上传的本地缓存目录                             |
+| prefix             | 指定挂载的bucket前缀目录，默认为空                           |
+| gfl                | 对于没有ListObjects API支持的Endpoint, 该参数可以绕过,通过PrefixFileList API模拟 |
+| direct_read        | 开启后，绕过us3fs内部缓存组织模块，直接读取us3数据，<br>对于被频繁访问的文件会有一定性能降低，反之有利于降低时延 |
+| perf_dump          | 指定时间周期输出时延统计信息，默认周期是1hour                |
+| skip_ne_dir_lookup | 跳过非必要的目录检查，目前过滤支持".jpe"、".jpeg"、".png"、<br>".gz"、".tgz"、".gz"、".tgz"、".log"、".plot"、".js"、".html"、<br>".css"、".apk"为后缀的文件，需要确保bucket下没有用以上后缀<br>作为目录后缀的情况 |
+
+#### MISC
+
+| 选项名称 | 描述                                         |
+| -------- | -------------------------------------------- |
+| help, h  | 查看帮助                                     |
+| f        | 挂载时启用前台模式，相关输出会打印到标准输出 |
+
+> *windows下`-f`参数无效*
 
 ## 使用示例
 
@@ -296,7 +386,7 @@ sys     0m0.133s
 
 *注：异步上传可能出现写入后端失败,us3fs会一直重试直到写入成功。*
 
-## 本地服务支持
+## 本地服务支持(Linux)
 
 ubuntu和centos等使用systemctl的发行版可用以下方式:
 

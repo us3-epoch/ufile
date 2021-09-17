@@ -17,7 +17,7 @@ us3fs基于用户态fuse实现，您的机器需要支持fuse。
 [下载链接](http://ufile-release.cn-bj.ufileos.com/us3fs%2Fus3fs)
 
 ```
-curl -o us3fs http://ufile-release.cn-bj.ufileos.com/us3fs%2Fus3fs
+curl -o us3fs http://ufile-release.cn-bj.ufileos.com/us3fs/us3fs
 ```
 
 ## 配置账号访问信息
