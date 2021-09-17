@@ -4,25 +4,25 @@
 
 Ⅰ.Windows
 
-- [us3cli-windows.exe](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-windows.exe)
+- [us3cli-windows.exe](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-windows.exe)
 
 Ⅱ.Linux
 
 x86架构
 
-- [us3cli-linux32](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-linux32)
+- [us3cli-linux32](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-linux32)
 
-- [us3cli-linux64](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-linux64)
+- [us3cli-linux64](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-linux64)
 
 arm架构
 
-- [us3cli-arm32](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-arm32)
+- [us3cli-arm32](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-arm32)
 
-- [us3cli-arm64](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-arm64)
+- [us3cli-arm64](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-arm64)
 
 Ⅲ.Mac
 
-- [us3cli-mac](http://us3-release.cn-bj.ufileos.com/us3cli/us3cli-mac)
+- [us3cli-mac](https://us3-release.cn-bj.ufileos.com/us3cli/us3cli-mac)
 
 ## 环境准备
 

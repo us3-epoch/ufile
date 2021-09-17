@@ -35,11 +35,11 @@
 
 ### 登录界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
 
 ### 任务管理界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
 
 
 ```
@@ -63,19 +63,19 @@
 
 ### 创建任务界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
 
 ### 创建迁移源界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-ep.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-ep.png)
 
 ### 节点管理界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
 
 ### 创建节点界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
 
 ## 使用说明
 

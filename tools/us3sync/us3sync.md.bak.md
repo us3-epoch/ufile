@@ -6,7 +6,7 @@ US3SYNC 是一款将不同源的数据同步到 US3 的迁移工具。通过将 
 
 ### 工作原理
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
 
 图中master节点与worker节点功能：
 
@@ -39,7 +39,7 @@ yum install -y ssh scp expect rsync
 可以通过以下命令下载工具包。
 
 ```
-curl -o US3SYNC.tgz "https://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz"
+curl -o US3SYNC.tgz "http://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz"
 ```
 
 ### 主要功能
@@ -72,7 +72,7 @@ US3SYNC
 
 ```
 # 下载并解压
-curl -o US3SYNC.tgz "https://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz"
+curl -o US3SYNC.tgz "http://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz"
 tar xzf US3SYNC.tgz
 cd ./US3SYNC
 
@@ -260,11 +260,11 @@ http 源需要提供待迁移文件列表的 url 地址
 
 #### 登录界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/login.png)
 
 #### 任务管理界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/job-detail.png)
 
 ```
 - 任务操作：
@@ -292,15 +292,15 @@ http 源需要提供待迁移文件列表的 url 地址
 
 #### 创建任务界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-job.png)
 
 #### 节点管理界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/node-detail.png)
 
 #### 创建节点界面说明
 
-![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
+![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
 
 ### 与原迁移工具对比
 
