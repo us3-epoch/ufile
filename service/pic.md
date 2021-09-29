@@ -107,7 +107,6 @@ EXIF（EXchangeable Image File Format）是专门为数码相机的照片设定�
 | direction   | 1=RightToLeft，2=LeftToRight                                          | 水印文字方向                                                                     |
 | fill        |                                                                      | RGB 颜色编码表，base64 URL encode 后的RGB格式，可以是颜色名称（比如red）或十六进制（比如\#FF0000），缺省为白色。 |
 | SimSun      |                                                                      | 宋体                                                                         |
-| angle\_type | 1=左上角，2=右上角，3=右下角，4=左下角                                              | 九宫格中水印图片位置，默认为左上角。                                                         |
 
 ## 图片格式转换
 
