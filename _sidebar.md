@@ -37,7 +37,7 @@
         * [快速上手](/ufile/tools/us3fs/quickaccess)
         * [常见问题](/ufile/tools/us3fs/questions)
         * [历史版本](/ufile/tools/us3fs/ReleaseNote)
-	* US3Browser 可视化界面工具
+	* US3Browser 可视化界面工具（公测）
 		* [工具简介](/ufile/tools/us3Browser/introduction)
 		* [下载与环境准备](/ufile/tools/us3Browser/prepare)
 		* [快速上手](/ufile/tools/us3Browser/quickaccess)
