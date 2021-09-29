@@ -4,9 +4,9 @@
 ## 下载链接
 
 
-[Windows下载链接](http://us3-release.cn-bj.ufileos.com/us3browser/us3browser-win.exe)
+[Windows下载链接](https://us3-release.cn-bj.ufileos.com/us3browser/us3browser-win.exe)
 
-[Mac系统下载链接](http://us3-release.cn-bj.ufileos.com/us3browser/us3browser-mac.dmg)
+[Mac系统下载链接](https://us3-release.cn-bj.ufileos.com/us3browser/us3browser-mac.dmg)
 
 
 ## 环境准备
