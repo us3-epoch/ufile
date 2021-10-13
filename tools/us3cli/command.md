@@ -24,6 +24,10 @@
 | 修改元数据     | [modify](#modify)   | 修改存储空间中文件的存储类型、MIMETYPE、MetaData               |
 | 归档数据取回   | [restore](#restore) | 将归档类型的文件激活为可下载状态                             |
 | 数据完整性校验 | [etag](#etag)       | 查看本地文件、标准输出、US3存储空间的文件etag                  |
+| 创建token | [create-token](#create-token)       | 创建一个用于操作US3的token                             |
+| 删除token | [delete-token](#delete-token)       | 删除一个用于操作US3的token                             |
+| 更新token | [update-token](#update-token)       | 更新一个用于操作US3的token                             |
+| 描述token | [describe-token](#describe-token)     | 列取并描述操作US3的token                               |
 | 版本更新       | [update](#update)   | 更新工具版本                                                 |
 | 版本特性       | [version](#version) | 查看工具版本特性                                             |
 
@@ -1228,6 +1232,162 @@ us3://bucket1/test.txt                  AQAAAEpmwm87EANJQDpLTEmxsjR7-R0N
 us3://bucket1/test2.txt                 AQAAAEpmwm87EANJQDpLTEmxsjR7-R0N
 test3.txt    				AQAAAHPuBl-6VRpzVHiBFjSOVhLrcsam
 [-]                                     SmbCbzsQA0lAOktMSbGyNHv5HQ0= 
+```
+## create-token
+
+本命令用于创建Token
+
+### 命令格式
+
+```
+us3cli create-token token-name [--flags]
+```
+
+### 参数说明
+
+```
+      --black-list stringArray   黑名单ip
+  -b, --buckets stringArray      token允许操作的桶
+  -e, --expire int               token过期时间
+  -h, --help                     帮助
+  -o, --operations stringArray   token允许的操作
+      --prefixes stringArray     token允许操作的对象前缀
+  -p, --projectid string         token所属的项目id
+  -r, --region string            token所在的区域
+      --white-list stringArray   白名单ip
+```
+
+##### 使用示例
+
+```
+us3cli create-token test-token --projectid org-xxxxxx
+
+2021-10-13 15:02:37.248 INFO Token created successfully, token-id: ea8e7799-3241-xxxxxxxxxx
+```
+
+## delete-token
+
+本命令用于删除Token
+
+### 命令格式
+
+```
+us3cli delete-token --token-id token-id [--flags]
+```
+
+### 参数说明
+
+```
+  -h, --help               帮助信息
+  -p, --projectid string   token的项目id
+  -r, --region string      token所在的区域
+      --token-id string    想要删除的token的id
+```
+
+##### 使用示例
+
+```
+us3cli delete-token --token-id ea8e7799-3241-xxxxxx --projectid org-xxxxxx --region cn-bj
+
+2021-10-13 15:05:14.449 INFO Token deleted successfully
+```
+## update-token
+
+本命令用于更新Token
+
+### 命令格式
+
+```
+us3cli update-token token-id [--flags]
+```
+
+### 参数说明
+
+```
+      --black-list stringArray   黑名单ip
+  -b, --buckets stringArray      token允许操作的桶
+  -e, --expire int               token过期时间
+  -h, --help                     帮助
+  -n, --name string              token的名字
+  -o, --operations stringArray   token允许的操作
+      --prefixes stringArray     token允许操作的对象前缀
+  -p, --projectid string         token所属的项目id
+  -r, --region string            token所在的区域
+      --white-list stringArray   白名单ip
+```
+
+##### 使用示例
+
+```
+us3cli update-token  c1fd74ad-9c04-4ee2-bb1e-xxxxxxxxx  --region cn-bj --projectid org-xxxxxx
+
+2021-10-13 15:12:02.403 INFO Token updated successfully
+```
+## describe-token
+
+本命令用于列出和描述Token
+
+### 命令格式
+
+```
+us3cli describe-token [--flags]
+```
+
+### 参数说明
+
+```
+  -h, --help               帮助信息
+  -p, --projectid string   token的项目id
+  -r, --region string      token所在的区域
+      --token-id string    想要删除的token的id
+```
+
+##### 使用示例
+
+- 列出某个project，某region下的所有token
+```
+us3cli describe-token  --region cn-bj --projectid org-jhrz4y
+Token Id:
+  2853e6eb-951d-4ba4-b2e9-xxxxxxxxx
+Token Name:
+  sourextoken
+Allowed buckets:
+  [sourcex]
+Allowed operations:
+  [TOKEN_ALLOW_READ TOKEN_ALLOW_WRITE TOKEN_ALLOW_DELETE TOKEN_ALLOW_LIST TOKEN_ALLOW_IOP]
+Allowed prefixes:
+  [*]
+Exipre time:
+  1569742841
+Private key:
+  4xxxxxxxxxxxxxxxxxxxxxxx
+Public key:
+  TOKEN_xxxxxxxxxxxxxxxxxxxxx
+
+....
+
+```
+
+- 描述某个特定的token
+```
+us3cli describe-token  --token-id c1fd74ad-9c04-4ee2-bb1e-xxxxxxxxx  --region cn-bj --projectid org-xxxxx
+Token Id:
+  c1fd74ad-9c04-4ee2-bb1e-xxxxxxxx
+Token Name:
+  test-token
+Allowed buckets:
+  [*]
+Allowed operations:
+  [TOKEN_ALLOW_NONE]
+Allowed prefixes:
+  [*]
+Exipre time:
+  86400
+Private key:
+  dxxxxxxxxxxxxxxxxxxxxxx
+Public key:
+  TOKEN_xxxxxxxxxxxxxxxxxxxx
+
 ```
 
 ## update
