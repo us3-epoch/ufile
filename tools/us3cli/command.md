@@ -970,6 +970,7 @@ us3cli ls [us3://<桶名称>] [--limit <输出限制数>][--restore][--flat][--m
       --projectid <string>   :列出bucket时指定projectid，默认项目可忽略
   -r, --restore              :是否展示数据解冻信息
       --secretkey <string>   :用于访问us3的API私钥或Token私钥
+      --prefix-file-list     :调用专有云的列表服务接口
 ```
 
 注意：
