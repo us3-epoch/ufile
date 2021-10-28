@@ -23,18 +23,56 @@
     * [防盗链](/ufile/guide/referer)
     * [统计报表](/ufile/guide/dashboard)
     * [令牌管理](/ufile/guide/token)
-* [管理工具](/ufile/tools/introduction)
+* [常用工具](/ufile/tools/introduction)
     * US3CLI 命令行工具
         * [工具简介](/ufile/tools/us3cli/introduction)
         * [下载与环境准备](/ufile/tools/us3cli/prepare)
         * [快速上手](/ufile/tools/us3cli/quickaccess)
         * [常用命令](/ufile/tools/us3cli/command)
         * [常见问题](/ufile/tools/us3cli/questions)
-    * [US3FS 文件挂载工具](/ufile/tools/tools/us3fs)
-    * [US3SYNC 迁移工具](/ufile/tools/us3sync/us3sync)
-    * 旧命令行工具（历史版本）
+        * [历史版本](/ufile/tools/us3cli/ReleaseNote)
+    * US3FS 文件挂载工具
+        * [工具简介](/ufile/tools/us3fs/introduction)
+        * [下载与环境准备](/ufile/tools/us3fs/prepare)
+        * [快速上手](/ufile/tools/us3fs/quickaccess)
+        * [常见问题](/ufile/tools/us3fs/questions)
+        * [历史版本](/ufile/tools/us3fs/ReleaseNote)
+	* US3Browser 可视化界面工具（公测）
+		* [工具简介](/ufile/tools/us3Browser/introduction)
+		* [下载与环境准备](/ufile/tools/us3Browser/prepare)
+		* [快速上手](/ufile/tools/us3Browser/quickaccess)
+		* [常见问题](/ufile/tools/us3Browser/questions)
+    * US3SYNC 迁移工具
+        * [工具简介](/ufile/tools/us3sync/introduction)
+        * [下载与环境准备](/ufile/tools/us3sync/prepare)
+        * [快速上手](/ufile/tools/us3sync/quickaccess)
+        * [常见问题](/ufile/tools/us3sync/questions)
+        * [历史版本](/ufile/tools/us3sync/ReleaseNote)
+    * US3Hadoop 大数据适配工具
+        * [工具简介](/ufile/tools/us3hadoop/introduction)
+        * [下载与环境准备](/ufile/tools/us3hadoop/prepare)
+        * [快速上手](/ufile/tools/us3hadoop/quickaccess)
+        * [常见问题](/ufile/tools/us3hadoop/questions)
+        * [历史版本](/ufile/tools/us3hadoop/ReleaseNote)
+    * US3VMDS 索引加速工具（公测）
+        * [工具简介](/ufile/tools/us3vmds/introduction)
+        * [下载与环境准备](/ufile/tools/us3vmds/prepare)
+        * [快速上手](/ufile/tools/us3vmds/quickaccess)
+        * [性能数据与分析](/ufile/tools/us3vmds/testdata)
+        * [常见问题](/ufile/tools/us3vmds/questions)
+    * US3Distcp 大数据备份工具（公测）
+        * [工具简介](/ufile/tools/us3distcp/introduction)
+        * [下载与安装](/ufile/tools/us3distcp/prepare)
+        * [快速上手](/ufile/tools/us3distcp/quickaccess)
+        * [常见问题](/ufile/tools/us3distcp/questions)
+    * US3ClickHouse 插件（公测）
+        * [工具简介](/ufile/tools/us3clickhouse/introduction)
+        * [下载与配置使用](/ufile/tools/us3clickhouse/prepare)
+        * [性能分析](/ufile/tools/us3clickhouse/testdata)
+    * 其他工具
         * [BUCKETMGR 空间管理](/ufile/tools/tools/tools_bcket)
         * [FILEMGR 文件管理](/ufile/tools/tools/tools_file)
+        * [一致性比对工具](/ufile/tools/tools/consistency)
         * [原迁移工具](/ufile/tools/tools/ufile_import)
 * 开发者指南
     * 存储空间（Bucket）
@@ -65,3 +103,7 @@
     * [欠费处理](/ufile/bill/arrears)
     * [计费案例](/ufile/bill/case)
 * [常见问题](/ufile/faq)
+
+
+
+
