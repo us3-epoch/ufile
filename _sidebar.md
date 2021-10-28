@@ -15,6 +15,7 @@
     * [日志管理](/ufile/guide/logging)
     * [文件管理](/ufile/guide/management)
     * [生命周期](/ufile/guide/lifecycle)
+    * [域名管理](/ufile/guide/domain)
     * [镜像回源](/ufile/guide/mirror)
     * [跨区域复制](/ufile/guide/multisite)
     * [跨域设置](/ufile/guide/cors)
