@@ -94,7 +94,7 @@
 * [API 列表](/ufile/api_reference)
 * [SDK 列表](/ufile/tools/sdk)
 * 解决方案
-    * [微信小程序端上传方案](/ufile/solutions/small program)
+	* [微信小程序端上传方案](/ufile/solutions/smallprogram)
 	* [数据迁移方案](/ufile/solutions/emigration)
     * [数据库备份方案](/ufile/solutions/backup)
     * [数据归档方案](/ufile/solutions/archive)
