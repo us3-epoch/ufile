@@ -3,11 +3,10 @@
 
 ## 下载链接
 
-[Linux下载链接]() 
 
-[Windows下载链接]()
+[Windows下载链接](https://us3-release.cn-bj.ufileos.com/us3browser/us3browser-win.exe)
 
-[Mac系统下载链接]()
+[Mac系统下载链接](https://us3-release.cn-bj.ufileos.com/us3browser/us3browser-mac.dmg)
 
 
 ## 环境准备

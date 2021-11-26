@@ -9,9 +9,5 @@
 ## 未知错误
    - 数据库连接偶尔会出现连接失败，显示一些未知错误
    - 可能异常的操作，导致内部偶尔会触发异常，显示一些未知错误
-   * 可能偶现出新Cannot read property 'map' of undefined问题
-## 注意
-   - Us3Browser内部走的是S3的协议
-   [S3协议的endpoint类型](https://docs.ucloud.cn/ufile/s3/s3_introduction)
 
  
