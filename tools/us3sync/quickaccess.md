@@ -77,6 +77,22 @@
 
 ![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/create-node.png)
 
+### 1.5.0版本控制台新增功能说明：
+
+#### 创建任务时可以选择任务类型，以及是否启用自动发现prefix功能。
+
+![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/new-create-job.png)
+
+#### 可以在此处获取jobid来构建Fetch请求
+
+![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/jobid.png)
+
+#### 可以在创建Endpoint时指定是否使用Https以及prefix-file-list接口列取
+
+![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/endpoint.png)
+
+### 
+
 ## 使用说明
 
 ### 添加Endpoint
@@ -85,7 +101,8 @@
 
 ### 创建任务
 
-创建任务，参考 [创建任务界面说明](#创建任务界面说明)，点击创建任务按钮，在对话框中填写对应信息，点击确定。
+创建任务，参考 [创建任务界面说明](#创建任务界面说明)，点击创建任务按钮，在对话框中填写对应信息，点击确定。如果您想要创建fetch任务，请您点击界面上的Fetch任务选项。
+另外JobId请您参考 [获取任务Id](#可以在此处获取jobid来构建Fetch请求)
 
 说明：
 
@@ -176,7 +193,5 @@ http 源需要提供待迁移文件列表的 url 地址。
 
 每行代表一个待迁移资源，待迁移文件列表格式如下：
 
->
-> 文件url地址  
+>文件url地址  
 > 文件url地址
-> 

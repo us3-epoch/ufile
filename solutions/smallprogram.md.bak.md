@@ -15,11 +15,11 @@
 
 1. 首先我们需要拼接好上传文件的url，如果您选择的是PUT方法上传，url通常如下：
 
-   `https://<bucket_name>.<endpoint>/<file_name_with_prefix_on_US3>`
+   https://<bucket_name>.<endpoint>/<file_name_with_prefix_on_US3>
 
    而POST方法上传的话，由于文件在US3上的前缀(prefix)和文件名通过POST表单参数来传递，因此我们不需要在url中写入这两个部分：
 
-   `https://<bucket_name>.<endpoint>/`
+   https://<bucket_name>.<endpoint>/
 
 2. 上传文件的接口需要我们使用公钥和私钥对http请求的资源计算一个签名，以供服务端查看请求使用的公私钥是否有对应的权限。计算方法请参考 [API签名算法](https://docs.ucloud.cn/ufile/api/authorization?id=%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86%e7%ad%be%e5%90%8d%e7%ae%97%e6%b3%95) 。这里提供一个计算签名的js代码demo：
 

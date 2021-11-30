@@ -6,7 +6,7 @@ US3SYNC 是一款将不同源的数据同步到 US3 的迁移工具。通过将 
 
 ## 工作原理
 
-![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
+![](https://ufile-release.cn-bj.ufileos.com/us3sync/doc/structure.jpg)
 
 图中master节点与worker节点功能：
 
@@ -68,7 +68,7 @@ US3SYNC
 
 ### 软件版本
 
-当前版本：1.3.1
+当前版本：1.4.0
 
 ### 运行环境
 
