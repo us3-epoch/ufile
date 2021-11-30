@@ -94,7 +94,7 @@
         * [图片处理服务](/ufile/service/pic)
 * [API 列表](/ufile/api_reference)
 * [SDK 列表](/ufile/tools/sdk)
-* 解决方案
+* 解决方案与最佳实践
 	* [微信小程序端上传方案](/ufile/solutions/smallprogram)
 	* [US3文件打包下载方案](/ufile/solutions/PackageDownload)
 	* [数据迁移方案](/ufile/solutions/emigration)

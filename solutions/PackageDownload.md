@@ -2,7 +2,7 @@
 
 ## 简介
 
-这篇文章将会分享如何通过打包服务将US3上指定路径下的文件打包，从而可以方便您将打包好的zip压缩包下载到本地。
+此方案主要是为了解决将US3上Bucket里的文件打包后下载的问题。通过打包服务将US3上指定的文件打包成ZIP压缩包，从而方便将多个文件批量下载到本地。
 
 ### 预先准备
 
@@ -21,7 +21,7 @@
 
 ### 操作步骤
 
-我们这里假定您已经创建了[云主机Uhost](https://console.ucloud.cn/uhost/uhost)，并且在[US3控制台](https://console.ucloud.cn/ufile/token)上拿到了对应的令牌。
+我们这里假定您已经创建了[云主机UHost](https://console.ucloud.cn/uhost/uhost)，并且在[US3控制台](https://console.ucloud.cn/ufile/token)上拿到了对应的令牌。
 
 1. 下载打包工具 [工具包](https://github.com/ufilesdk-dev/ufile-pack/releases/)
 
