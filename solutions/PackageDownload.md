@@ -4,12 +4,12 @@
 
 此方案主要是为了解决将US3上Bucket里的文件打包后下载的问题。通过打包服务将US3上指定的文件打包成ZIP压缩包，从而方便将多个文件批量下载到本地。
 
-### 预先准备
+## 预先准备
 
 * 在[云主机控制台](https://console.ucloud.cn/uhost/uhost)上创建一台linux操作系统的UHost云主机。
 * 在[US3控制台](https://console.ucloud.cn/ufile/token)上拿到具有对于目标桶上传下载，以及列取权限的令牌。
 
-### 基本原理
+## 基本原理
 
 工具的工作原理如下：
 
@@ -19,7 +19,7 @@
 4. 将本地打包好的zip压缩包上传到US3中的指定位置
 5. 您可以根据第二条中获取的zip压缩包Key下载文件
 
-### 操作步骤
+## 操作步骤
 
 我们这里假定您已经创建了[云主机UHost](https://console.ucloud.cn/uhost/uhost)，并且在[US3控制台](https://console.ucloud.cn/ufile/token)上拿到了对应的令牌。
 
@@ -51,13 +51,13 @@
 
    
 
-2. 执行`./US3-PACK`以启动服务，您也可以使用后台进程来执行该服务`nohup ./US3-PACK &`
+4. 执行`./US3-PACK`以启动服务，您也可以使用后台进程来执行该服务`nohup ./US3-PACK &`
 
 5. 此时您可以发送POST请求到服务的根url (例如http://xxx.xxx.xxx.xxx)，请求参数有两种类型，分别对应指定某个前缀下的所有文件进行打包的任务，以及指定具体文件进行打包的任务。
 
    > 注意，如果您申请的UHost云主机只有内网IP，那么请您在同一台云主机上，或者同一VPC内部发送打包的POST请求。
 
-#### 指定前缀进行打包
+### 指定前缀进行打包
 
    ```json
    {
@@ -78,7 +78,7 @@
 
    * file_host为您访问桶所使用的endpoint，请您参考 [地域和域名](https://docs.ucloud.cn/ufile/introduction/region)
 
-#### 指定文件列表进行打包
+### 指定文件列表进行打包
 
    ```json
    {
@@ -109,7 +109,7 @@
 
 其中key字段即为打包请求处理完毕后，工具上传到US3中的压缩包的对象名
 
-#### 获取压缩包
+### 获取压缩包
 
 您可以通过logs/文件夹下的日志文件来查看任务是否完成
 
@@ -117,6 +117,6 @@
 
 `wget http://bucket.internal-cn-sh2-01.ufileos.com/output/xxxx-xxxx-xxxxx-xxxx-xxxxxxx.zip`
 
-### 性能测试
+## 性能测试
 
 在使用1核1G内存的UHost主机，内网传输数据的情况下，打包55个20M文件(总大小1.15G)，的时间大概为30S。

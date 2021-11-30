@@ -1,15 +1,15 @@
 # 在微信小程序端上传文件到US3
 
-### 简介
+## 简介
 
 本文将会介绍并梳理使用小程序原生方法上传文件到US3的流程。
 
-### 预先准备
+## 预先准备
 
 1. 在控制台上创建一个存储桶，以及具有操作该桶的权限的令牌。
 2. 在控制台上获取桶名，终端节点(endpoint)以及令牌的公钥和私钥。
 
-### 上传步骤
+## 上传步骤
 
 接下来我们将以一个图片文件为例，使用PUT 和POST 两种方法来实现文件上传。
 
@@ -48,7 +48,7 @@
 
 3. 接下来将给出两个demo以介绍如何使用PUT和POST方法来上传文件：
 
-##### PUT方法
+### PUT方法
 
 参考文档 [使用PUT方法上传文件](https://docs.ucloud.cn/api/ufile-api/put_file)
 
@@ -85,7 +85,7 @@ function uploadByPut(){
 
 
 
-##### POST方法
+### POST方法
 
 此处我们使用小程序原生的wx.uploadFile函数来实现上传。该方法使用的content-type` 为 `multipart/form-data，调用的接口也同样是POST上传的US3接口，请参考 [使用POST表单上传文件](https://docs.ucloud.cn/api/ufile-api/post_file)
 
