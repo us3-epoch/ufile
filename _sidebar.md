@@ -96,6 +96,7 @@
 * [SDK 列表](/ufile/tools/sdk)
 * 解决方案
 	* [微信小程序端上传方案](/ufile/solutions/smallprogram)
+	* [US3文件打包下载方案](/ufile/solutions/PackageDownload)
 	* [数据迁移方案](/ufile/solutions/emigration)
     * [数据库备份方案](/ufile/solutions/backup)
     * [数据归档方案](/ufile/solutions/archive)
