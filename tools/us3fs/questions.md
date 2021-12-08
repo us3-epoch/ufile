@@ -18,9 +18,9 @@
 报错信息如：”Input/Output error“，进行如下处理：
 
 1. 检查系统日志：
-   1. centos的路径：/var/log/message
-   2. ubuntu的路径：/var/log/syslog
-2. 如果通过日志发现是有http状态码为500错误，请联系技术支持查询该bucket请求报500原因。
+   1. Centos的路径：/var/log/message
+   2. Ubuntu的路径：/var/log/syslog
+2. 如果通过日志发现是有http状态码为500错误，请联系技术支持查询该Bucket请求报500原因。
 
 ## 当前用户挂载后其他用户无法访问
 
@@ -50,4 +50,7 @@
 
 ## 系统日志出现‘too many open files’
 
-该场景出现在有大量随机IO读的情况下，需要调大系统对进程打开文件描述符数量的限制(一般为1024)
+该场景出现在有大量随机IO读的情况下，需要调大系统对进程打开文件描述符数量的限制(一般为1024)。通过`ulimit -a`检查`open files`项，设置成65535或以上。设置方式:
+
+- - 单次bash环境有效: `ulimit -n 65535; <us3fs 挂载命令>`;
+  - 系统生效: 参考[Too many open files](https://askubuntu.com/questions/1182021/too-many-open-files);
