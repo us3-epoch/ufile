@@ -182,5 +182,5 @@ StringToSign = HTTP-VERB + "\n" +
     else:
         hash = base64_url_safe(blkcnt, sha(sha(blk0), sha(blk1)...))
     字段含义
-        blkcnt:文件以4MB为一个块进行切分后的块个数。
+        blkcnt:文件以4MB为一个块进行切分后的块个数, 占4个字节，以小端模式保存。
         blkN:第N(N>=0)个数据块的数据。
