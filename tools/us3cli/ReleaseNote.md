@@ -1,4 +1,34 @@
+# 1.5.0
+
+## 修改
+
+- rcat命令可以指定storage class，mimetype和metadata
+- cp命令在上传文件夹时，如果指定了 [--include --exclude --rinclude --rexclude] 参数中的一个，就不会把文件夹名作为对象键前缀的一部分。
+- config命令在交互式配置时会优先询问是否需要自定义endpoint，而不是先要求选择region
+
+## 新增
+
+- 新增了ls 命令的--format选项，可以选择使用json或yaml格式来输出列表，选项的参数大小写不敏感。（例如us3cli ls us3://bucket --format YAML)
+
+# 1.4.0
+
+## 新增
+
+- 对专有云32M分片大小的支持
+
+- 增加了对如下命令列取时携带--prefix-file-list参数来指定使用prefix-file-list接口列取的功能
+
+  * cp 
+
+  * du 
+  * modify 
+  * mv 
+  * rm 
+  * restore 
+  * sync
+
 # 1.3.0
+
 ## 修改
 
 - cat命令目前可以并发下载
