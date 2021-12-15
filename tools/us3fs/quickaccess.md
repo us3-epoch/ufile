@@ -386,9 +386,16 @@ sys     0m0.133s
 
 *注：异步上传可能出现写入后端失败,us3fs会一直重试直到写入成功。*
 
-## 本地服务支持(Linux)
+## 自动挂载
 
-ubuntu和centos等使用systemctl的发行版可用以下方式:
+推荐的最佳实践方案是采用systemctl来保证服务异常退出，或者机器重启后能重新挂载us3fs，但需要注意Linux(Windows平台暂未提供方案)的发行版本是否支持systemctl：
+
+- Ubuntu >= 15.04
+- Centos、RHEL >= 7
+
+满足系统要求后，经过如下几个简单步骤即可：
+
+1. 设置配置
 
 在`/etc/systemd/system/`目录下创建名为`us3fs.service`的文件，并增加如下内容
 
@@ -410,8 +417,22 @@ ExecStop=/bin/umount <monutpoint>
 WantedBy=multi-user.target
 ```
 
-* *User*为需要访问挂载点的用户。如为root，则可省略
-* *Group*为需要访问挂载点的用户组。如为root，则可省略
+* *User*为需要访问挂载点的用户。如root。
+* *Group*为需要访问挂载点的用户组。如root。
 * *ExecStart*为挂载命令，按照需要自行填写
 
-执行`systemctl dameon-reload`后。可使用`systemctl start us3fs.service`启动服务，`systemctl stop us3fs.service`停止服务；`systemctl restart us3fs.service`重启服务；`systemctl statue us3fs.service`查看服务状态。`systemctl enable us3fs.service`设置为开机自启动。
+执行`systemctl daemon-reload`配置则会生效。
+
+2. 服务启用或停止
+
+   执行`systemctl start us3fs.service`启动服务；
+
+   执行`systemctl stop us3fs.service`停止服务；
+
+   执行`systemctl restart us3fs.service`重启服务；
+
+   执行`systemctl status us3fs.service`查看服务状态;
+
+3. 设置为开机自启动
+
+   执行`systemctl enable us3fs.service`；
