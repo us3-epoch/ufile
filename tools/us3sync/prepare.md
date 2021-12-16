@@ -68,17 +68,15 @@ US3SYNC提供快速拉起环境的云主机镜像，本节介绍如何使用UHos
 
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/run_cloudshell.png)
 
-将弹出的命令行中的命令的--image-id选项对照下方附录中的表格，根据可用区替换成对应的镜像id:
+将弹出的命令行中的命令的--image-id选项对照[镜像启动支持地域](/ufile/tools/us3sync/prepare?id=镜像启动支持地域)，根据可用区替换成对应的镜像id:
 
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/replace_image_id.png)
 
-最后按回车执行命令，等待云主机创建。您可以在[Uhost控制台](https://console.ucloud.cn/uhost/uhost)查看云主机的创建和启动情况。
+最后按回车执行命令，等待云主机创建。您可以在[UHost控制台](https://console.ucloud.cn/uhost/uhost)查看云主机的创建和启动情况。
 
 待云主机启动完毕，您可以在浏览器上访问主机外网ip对应的https服务，首次登录会要求您输入用户名和密码(如果报错服务器拒绝访问，请您稍等片刻，US3SYNC需要一点时间来启动):
-
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/user_passwd.png)
-
-### 镜像启动可支持地域
+### 镜像启动支持地域
 
 镜像列表（表格中未列出的区域暂不提供镜像支持）：
 
