@@ -1,10 +1,8 @@
 # 下载与环境准备
 
-## 环境准备
+US3SYNC提供“通用部署”和“UHOST镜像启动”两种部署US3SYNC的方式。用户可根据现有资源情况选择通用部署或UHOST云主机启动US3SYNC服务。通用部署方案如下：
 
-本节介绍部署US3SYNC的通用过程，可根据运行环境支持情况利用现有资源部署迁移工具。
-
-### 运行环境
+## 运行环境
 
 - Linux：
   - CentOS 7.0 及以上 (可通过`cat /etc/redhat-release`查看)
@@ -16,7 +14,7 @@ US3SYNC 依赖 telnet，expect，rsync 命令，确保预装这些命令，使�
 yum install -y telnet expect rsync
 ```
 
-### 下载并解压
+## 下载并解压
 
 ```
 wget -O US3SYNC.tgz "https://ufile-release.cn-bj.ufileos.com/US3SYNC/US3SYNC.tgz" 
@@ -24,7 +22,7 @@ tar xzf US3SYNC.tgz
 cd ./US3SYNC
 ```
 
-### 启动master服务
+## 启动master服务
 
 ```
 ./console.sh start
@@ -47,16 +45,16 @@ US3SYNC start success!
 ./console.sh show
 ```
 
-### 添加worker节点
+## 添加worker节点
 
 1. 服务启动后，在浏览器中打开：https://<web服务监听IP>:<web服务监听端口>/<br>**注：使用云主机部署迁移服务时，这里需要使用EIP，而不是0.0.0.0。**
 2. 页面登录，使用启动时设置的用户名和密码。
 3. 添加工作节点，参考 [创建节点界面说明](/ufile/tools/us3sync/quickaccess?id=创建节点界面说明)，需要为每个节点提供唯一工作路径。
    每个工作节点需要提供唯一工作路径，如果路径不存在会自动创建对应目录。<br>**注：建议使用内网ip。**
 
-## UHOST镜像启动
+## UHOST镜像启动US3SYNC
 
-为了用户更快捷地开始迁移，US3SYNC提供快速拉起环境的云主机镜像，本节介绍如何使用UHost镜像直接启动一个运行US3SYNC的主节点。
+US3SYNC提供快速拉起环境的云主机镜像，本节介绍如何使用UHost镜像直接启动一个运行US3SYNC的主节点。
 
 ### 操作步骤
 
@@ -79,8 +77,6 @@ US3SYNC start success!
 待云主机启动完毕，您可以在浏览器上访问主机外网ip对应的https服务，首次登录会要求您输入用户名和密码(如果报错服务器拒绝访问，请您稍等片刻，US3SYNC需要一点时间来启动):
 
 ![](http://ufile-release.cn-bj.ufileos.com/us3sync/doc/user_passwd.png)
-
-US3SYNC使用方法请参考[US3SYNC文档-快速上手](https://docs.ucloud.cn/ufile/tools/us3sync/quickaccess)
 
 ### 镜像启动可支持地域
 
