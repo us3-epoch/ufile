@@ -42,7 +42,7 @@ S3 Browser 是一种易于使用和强大的 Amazon S3 免费客户端。 它提
 
 **Encrypt Access Keys with a passward:** 请勿勾选。
 
-**Use secure transfer(SSL/TSL)：** 目前仅中国-华北（北京），中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域支持 HTTPS，其他区域请勿勾选。
+**Use secure transfer(SSL/TSL)：** 目前仅中国-华北一，中国-香港，越南-胡志明，韩国-首尔，巴西-圣保罗，美国-洛杉矶，美国-华盛顿地域支持 HTTPS，其他区域请勿勾选。
 
 具体配置填写如下：
 
