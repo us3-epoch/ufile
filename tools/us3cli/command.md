@@ -579,7 +579,7 @@ us3cli cp us3://<桶名字>/<文件Key> us3://<桶名字>/<文件Key> [--recursi
 ### 命令格式
 
 ```
-us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache|local][--ruler modtime|etag][--speedlimit <速度限制>][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--parallel <请求并发数>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>][--storageclass <存储类型>]
+us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache|local][--ruler modtime|etag][--speedlimit <速度限制>][--retrycount <重试次数>][--exclude <通配符表达式>][--rexclude <正则表达式>][--include <通配符表达式>][--rinclude <正则表达式>][--parallel <请求并发数>][--metadata <Key>=<value1>[,<key2>=<value2>]...][--mimetype <多媒体文件格式>][--storageclass <存储类型>][--force]
 ```
 
 ### 参数说明
@@ -589,6 +589,7 @@ us3cli sync <本地目录> us3://<桶名字>/<文件Key> [--reduce][--mode cache
       --config <string>        :当前命令临时指定配置名/配置文件路径
       --endpoint <string>      :固定域名，可通过地域和域名页查看
       --exclude <string>       :不包含当前通配符的文件名
+  -f, --force		       :是否强制同步，在加入该选项后，同步删除时，不弹出确认信息
   -h, --help                   :当前命令使用说明
       --include <string>       :包含当前通配符的文件名
       --metadata <string>      :指定元数据信息，多个元数据以","分隔，如 "key1=value,key2=value2",其他分隔符暂不支持
