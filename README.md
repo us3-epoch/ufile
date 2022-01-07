@@ -26,6 +26,7 @@
     * [防盗链](/ufile/guide/referer)
     * [统计报表](/ufile/guide/dashboard)
     * [令牌管理](/ufile/guide/token)
+    * [静态网站托管](/ufile/guide/static_websit_hosring)
 * [常用工具](/ufile/tools/introduction)
     * US3CLI 命令行工具
         * [工具简介](/ufile/tools/us3cli/introduction)
