@@ -29,6 +29,7 @@
 ```
 us3fs [global options] <bucket> <mountpoint>
 ```
+> 参数`<bucket>`和`<mountpoint>`必须依次作为最后两个参数，否则其他参数不能生效
 
 * 卸载
 
