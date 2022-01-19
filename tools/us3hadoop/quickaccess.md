@@ -15,30 +15,33 @@
       <source id="mp4" src="http://caozuozhinan.cn-bj.ufileos.com/录屏2 us3 Hadoop.mp4">
       </video>
 
+
 ## 使用说明
 
 ### 参数说明
 
-| 属性Key                        | 属性说明                                                     | 默认值      |
-| ------------------------------ | ------------------------------------------------------------ | ----------- |
-| fs.us3.impl                    | US3对FileSystem的实现类名，请确保为:cn.ucloud.us3.fs.US3FileSystem | 无          |
-| fs.AbstractFileSystem.us3.impl | 对AbstractFileSystem 的实现类，固定为 cn.ucloud.us3.fs.US3Fs。 | 无          |
-| fs.us3.access.key              | 访问US3的API公钥或者Token公钥                                | 无          |
-| fs.us3.secret.key              | 访问US3的API私钥或者Token私钥                                | 无          |
-| fs.us3.socket.recv.buffer      | US3读取流Buffer，在HiveSQL、Spark-SQL等场景,如果分析的数据格式是ORC，Parquet等,建议调小该参数，比如16348(16KB)，如果分析的数据格式是普通的文本格式,建议调大该参数，比如1048576(1MB) | 65536(64KB) |
-| fs.us3.log.level               | US3大数据适配器日志级别，支持info, error, debug, trace级别。目前日志统一输出到标准输出 | info        |
-| fs.us3.endpoint                | US3内网域名后缀，如:ufile.cn-north-02.ucloud.cn。参考[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)，域名需去除`www.`前缀。 | 无          |
-| fs.us3.async.wio.use           | 单个流写入是否使用异步IO，可以提高写入速度，特别是对单个大文件有效，但会消耗一定CPU资源，可能会降低任务的并行度 | false       |
-| fs.us3.async.wio.parallel      | 在fs.us3.async.wio.use为true情况下生效，表示单个文件写入4MB分片的最大并行 | 2           |
-| fs.us3.metadata.use            | 是否启用索引缓存服务器，来加速US3索引性能，该服务需要使用者管理，目前正在公测中 | false       |
-| fs.us3.metadata.host           | 在fs.us3.metadata.usetrue情况下生效，可以直接指定IP:Port的地址形式，这种方式不需要配置/etc/hosts文件。用户也可以指定自定义域名，需要在/etc/hosts中配置解析地址，或者配置DNS解析。该参数处于测试中。 | 无          |
-| fs.us3.generate.md5            | 默认为`false`，如果为`true`则在写入US3时，客户端会计算一个MD5，并在最后会以`md5-hash`为key，base64编码的md5值为value写入到文件的元数据中。开启会增加>=30%的写入时延。<br> **该功能需要US3适配器的版本>=1.0.2** | false       |
+| 属性Key                         | 属性说明                                                     | 默认值      |
+| ------------------------------- | ------------------------------------------------------------ | ----------- |
+| fs.us3.impl                     | US3对FileSystem的实现类名，请确保为:cn.ucloud.us3.fs.US3FileSystem | 无          |
+| fs.AbstractFileSystem.us3.impl  | 对AbstractFileSystem 的实现类，固定为 cn.ucloud.us3.fs.US3Fs。 | 无          |
+| fs.us3.access.key               | 访问US3的API公钥或者Token公钥                                | 无          |
+| fs.us3.secret.key               | 访问US3的API私钥或者Token私钥                                | 无          |
+| fs.us3.socket.recv.buffer       | US3读取流Buffer，在HiveSQL、Spark-SQL等场景,如果分析的数据格式是ORC，Parquet等,建议调小该参数，比如16348(16KB)，如果分析的数据格式是普通的文本格式,建议调大该参数，比如1048576(1MB) | 65536(64KB) |
+| fs.us3.log.level                | US3大数据适配器日志级别，支持info, error, debug, trace级别。目前日志统一输出到标准输出 | info        |
+| fs.us3.endpoint                 | US3内网域名后缀，如:ufile.cn-north-02.ucloud.cn。参考[地域和域名](https://docs.ucloud.cn/ufile/introduction/region)，域名需去除`www.`前缀。 | 无          |
+| fs.us3.async.wio.use            | 单个流写入是否使用异步IO，可以提高写入速度，特别是对单个大文件有效，但会消耗一定CPU资源，可能会降低任务的并行度 | false       |
+| fs.us3.async.wio.parallel       | 在fs.us3.async.wio.use为true情况下生效，表示单个文件写入4MB分片的最大并行 | 2           |
+| fs.us3.metadata.use             | 是否启用索引缓存服务器，来加速US3索引性能，该服务需要使用者管理，目前正在公测中 | false       |
+| fs.us3.metadata.host            | 在fs.us3.metadata.usetrue情况下生效，可以直接指定IP:Port的地址形式，这种方式不需要配置/etc/hosts文件。用户也可以指定自定义域名，需要在/etc/hosts中配置解析地址，或者配置DNS解析。该参数处于测试中。 | 无          |
+| fs.us3.metadata.zookeeper.addrs | 高可用vmds集群方案中使用的zookeeper节点信息，参数格式为以","分割的zookeeper服务器地址和端口号，例如：uhadoop-q4mbrxk2-master1:2181,uhadoop-q4mbrxk2-master2:2181,uhadoop-q4mbrxk2-core1:2181。如果您配置了fs.us3.metadata.host参数，则本参数无效。**该功能需要US3适配器版本>=1.3.0。** | 无          |
+| fs.us3.generate.md5             | 默认为`false`，如果为`true`则在写入US3时，客户端会计算一个MD5，并在最后会以`md5-hash`为key，base64编码的md5值为value写入到文件的元数据中。开启会增加>=30%的写入时延。<br> **该功能需要US3适配器的版本>=1.0.2** | false       |
 
 ### Hadoop配置
+
 1
 需要在core-site.xml中配置以上相关配置项，如：
 
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
@@ -55,15 +58,15 @@
   limitations under the License. See accompanying LICENSE file.
 -->
 <configuration>
-	<property>
+  <property>
     <name>fs.defaultFS</name>
     <value>hdfs://192.168.0.221:9000</value>
-	</property>
-	......
-	<property>
-	  <name>dfs.datanode.data.dir</name>
-	  <value>/data/hd3/datanode</value>
-	</property>
+  </property>
+  ......
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>/data/hd3/datanode</value>
+  </property>
   <property>
     <name>fs.us3.impl</name>
     <value>cn.ucloud.us3.fs.US3FileSystem</value>
@@ -72,30 +75,30 @@
     <name>fs.AbstractFileSystem.us3.impl</name>
     <value>cn.ucloud.us3.fs.US3Fs</value>
   </property>
-	<property>
-		<name>fs.us3.access.key</name>
-		<value>TOKEN_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</value>
-	</property>
-	<property>
-		<name>fs.us3.secret.key</name>
-		<value>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</value>
-	</property>
-	<property>
-		<name>fs.us3.socket.recv.buffer</name>
-		<value>16348</value>
-	</property>
-	<property>
-		<name>fs.us3.thread.pool.size</name>
-		<value>8</value>
-	</property>
-	<property>
-		<name>fs.us3.log.level</name>
-		<value>info</value>
-	</property>
-	<property>
-		<name>fs.us3.endpoint</name>
-		<value>ufile.cn-north-02.ucloud.cn</value>
-	</property>
+  <property>
+    <name>fs.us3.access.key</name>
+    <value>TOKEN_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</value>
+  </property>
+  <property>
+    <name>fs.us3.secret.key</name>
+    <value>xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx</value>
+  </property>
+  <property>
+    <name>fs.us3.socket.recv.buffer</name>
+    <value>16348</value>
+  </property>
+  <property>
+    <name>fs.us3.thread.pool.size</name>
+    <value>8</value>
+  </property>
+  <property>
+    <name>fs.us3.log.level</name>
+    <value>info</value>
+  </property>
+  <property>
+    <name>fs.us3.endpoint</name>
+    <value>ufile.cn-north-02.ucloud.cn</value>
+  </property>
   <property>
     <name>fs.us3.async.wio.use</name>
     <value>false</value>
@@ -111,6 +114,10 @@
   <property>
     <name>fs.us3.metadata.host</name>
     <value></value>
+  </property>
+  <property>
+    <name>fs.us3.metadata.zookeeper.addrs</name>
+    <value>uhadoop-q4mbrxk2-master1:2181,uhadoop-q4mbrxk2-master2:2181,uhadoop-q4mbrxk2-core1:2181</value>
   </property>
 	......
 </configuration>
