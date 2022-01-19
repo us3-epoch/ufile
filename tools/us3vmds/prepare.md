@@ -11,6 +11,8 @@
 
 - [us3vmds-v0.0.1-linux](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3vmds-v0.0.1-linux)
 - [us3vmds-v0.0.1-macOS](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.0.1/us3vmds-v0.0.1-mac)
+- [us3vmds-v0.1.0-linux](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.1.0/us3vmds-v0.1.0-linux)
+- [us3vmds-v0.1.0-macOS](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/v0.1.0/us3vmds-v0.1.0-mac)
 
 #### 正式版本
 
