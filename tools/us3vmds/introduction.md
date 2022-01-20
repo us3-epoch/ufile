@@ -10,6 +10,10 @@ US3VMDS实现了us3适配器用到的Head、PUT、ListObjects、Delete、Rename�
 
 ![](/images/hadoop_mds_model.png)
 
+大于等于v0.1.0版本的US3VMDS同样支持高可用集群部署，集群中同时存在一个主节点和多个备节点。主节点会如上面描述的那样正常提供缓存服务，备节点则仅会处理索引请求，但是不会将结果在内存中缓存。集群中的各个节点以及US3Hadoop适配器会监听zookeeper中的US3VMDS节点信息变动，一旦发现主节点离线(主节点崩溃，网络不通等问题)，则将一个备用节点晋升为主节点来提供缓存服务。架构如下图:
+
+![](http://us3-release.cn-bj.ufileos.com/us3-bigdata/us3-vmds/static/images/vmds.jpg)
+
 该架构适合加速``加速备份场景``和``中小规模计算分析场景``。
 
 ## 运行环境
