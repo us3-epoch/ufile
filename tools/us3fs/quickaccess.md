@@ -215,7 +215,7 @@ MISC
 | ------------------- | -------------------------- |
 | o                   | WinFsp支持的option参数     |
 | dir_info_timeout    | 目录缓存的超时时间，默认5s |
-| dir_info_timeout    | 文件缓存的超时时间，默认5s |
+| file_info_timeout   | 文件缓存的超时时间，默认5s |
 | volume_info_timeout | 卷信息的超时时间，默认5s   |
 | keep_filecache      | 是否把文件放入缓存         |
 |                     |                            |
