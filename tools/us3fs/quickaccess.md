@@ -111,10 +111,10 @@ us3fs - a single posix file system based on us3
 USAGE
   us3fs [global options] bucket mountpoint
 Version
-  US3FS Version: 1.5.5-3-g952a8eb
-  Commit ID: 952a8eb
-  Build: 2021-09-09:17:16:15
-  Go Version: go1.16.3 darwin/arm64
+  US3FS Version: 1.6.6
+  Commit ID: 541a5aa
+  Build: 2022-01-21:11:51:10
+  Go Version: go1.16.3 linux/amd64
 
 FUSE
   -o value                      Specify fuse/winfsp option
@@ -135,7 +135,7 @@ OS
   --level value           Set log level: error/warn/info/debug (default: "info")
   --readahead value       Readahead size. e.g.: 1m/1k/1  (default: "0")
   --etag value            Check etag for part. value is percent(0~100) (default: 50)
-  --passwd value          specify access file (default: "/etc/us3fs/us3fs.conf")
+  --passwd value          specify access file (default: "/etc/us3fs/us3fs.yaml")
   --enable_md5            Enalbe md5 in http header
   --uid value             Specify default uid (default: 1000)
   --gid value             Specify default gid (default: 1000)
@@ -149,6 +149,7 @@ OS
   --direct_read           Enable cache bypass read
   --perf_dump value       How long to output the performance dump (default: 1h0m0s)
   --skip_ne_dir_lookup    Skip non-essential directory checking, such as files ending in ".log",".png",".jpg", etc.
+  --storage_class value   Storage type, including "STANDARD", "IA" (default: "STANDARD")
 
 MISC
   --help, -h  show help
@@ -162,10 +163,10 @@ us3fs - a single posix file system based on us3
 USAGE
   us3fs [global options] bucket mountpoint
 Version
-  US3FS Version: 1.5.5-4-g6a6f55d
-  Commit ID: 6a6f55d
-  Build: 2021-09-09:19:05:36
-  Go Version: go1.15.5 linux/amd64
+  US3FS Version: 1.6.6
+  Commit ID: 541a5aa
+  Build: 2022-01-21:11:51:10
+  Go Version: go1.16.3 linux/amd64
 
 WinFSP
   -o value                     Specify fuse/winfsp option
@@ -197,6 +198,7 @@ OS
   --direct_read           Enable cache bypass read
   --perf_dump value       How long to output the performance dump (default: 1h0m0s)
   --skip_ne_dir_lookup    Skip non-essential directory checking, such as files ending in ".log",".png",".jpg", etc.
+  --storage_class value   Storage type, including "STANDARD", "IA" (default: "STANDARD")
 
 MISC
   --help, -h  show help
@@ -270,6 +272,7 @@ MISC
 | direct_read        | 开启后，绕过us3fs内部缓存组织模块，直接读取us3数据，<br>对于被频繁访问的文件会有一定性能降低，反之有利于降低时延 |
 | perf_dump          | 指定时间周期输出时延统计信息，默认周期是1hour                |
 | skip_ne_dir_lookup | 跳过非必要的目录检查，目前过滤支持".jpe"、".jpeg"、".png"、<br>".gz"、".tgz"、".gz"、".tgz"、".log"、".plot"、".js"、".html"、<br>".css"、".apk"为后缀的文件，需要确保bucket下没有用以上后缀<br>作为目录后缀的情况 |
+| storage_class      | 指定写入US3中文件的存储类型，支持`STANDARD`(标准), `IA`(低频)两种。 (default: `STANDARD`)|
 
 #### MISC
 
