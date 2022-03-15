@@ -2,7 +2,7 @@
 
 图片处理服务是 UCloud 对外提供的海量、安全、低成本高可靠的图片处理服务。用户将原始图片上传保存在对象存储空间中，用户可以在任何时间、任何地点、任何设备上对图片进行处理。
 
-图片处理服务仅在下载时触发。
+图片处理服务仅在下载时触发，目前北京、上海、台北支持所有功能，只有北京和上海地域支持像素10000*10000的图片处理请求。
 
 图片处理服务提供以下功能：
 
@@ -30,15 +30,17 @@
 
 12. 图片锐化
 
-13. 获取图片主色调
+13. 图片模糊
 
-14. 水印
+14. 获取图片主色调
 
-15. 图片格式转换
+15. 水印
 
-16. 图片渐进显示
+16. 图片格式转换
 
-17. 管道顺序调用多种图片处理功能
+17. 图片渐进显示
+
+18. 管道顺序调用多种图片处理功能
 
 ## 基本图片信息获取
 
@@ -167,6 +169,18 @@ EXIF（EXchangeable Image File Format）是专门为数码相机的照片设定�
 ### 注意事项
 - 锐化半径radius越大，越清晰，但是数值过大，计算会比较慢，可能会出现失真情况，sigma建议设置锐化半径的三分之一
 
+## 模糊
+| 参数名     | 值                                                                    | 解释                         |
+| ------- | -------------------------------------------------------------------- | -------------------------- |
+| iopcmd  | blur                                                                | 主命令                        |
+| type  | 0，1                                                                | 0:普通模糊，1:高斯模糊，不传默认为普通模糊   |
+| radius   | [0,50]                                         | 设置锐化半径，默认为0     |
+| sigma   | [0,50]                                           | 设置正态分布标准差，不传默认为0   |
+| width   | 0-10000                                                              | 局部模糊的宽度，不传默认为图片的宽度，为全部模糊       |
+| height  | 0-10000                                                              | 局部模糊的宽度，不传默认为图片的宽度，为全部模糊       |
+| ax      | 0-10000                                                              | 锚点 x 坐标                    |
+| ay      | 0-10000                                                              | 锚点 y 坐标                    |
+| gravity | NorthWest/North/NorthEast/West Center/East/SouthWest/South/SouthEast | 位置偏移指示符，可以和锚点同时指定(比锚点优先使用) |
 
 ## 获取图片主色调
 | 参数名     | 值                                                                    | 解释                         |
@@ -178,18 +192,33 @@ EXIF（EXchangeable Image File Format）是专门为数码相机的照片设定�
 | 参数名         | 值                                                                    | 解释                                                                         |
 | ----------- | -------------------------------------------------------------------- | -------------------------------------------------------------------------- |
 | iopcmd      | watermark                                                            | 主命令                                                                        |
-| type        | 1=文字水印，2=图片水印                                                        | 水印类型                                                                       |
-| gravity     | NorthWest/North/NorthEast/West Center/East/SouthWest/South/SouthEast | 位置偏移指示符，可以和锚点同时指定(比锚点优先使用)                                                 |
-| opacity     | 1-100，缺省为 100（完全不透明）                                                  | 透明度                                                                        |
-| ax          | 小于原图宽度，默认为 10                                                         | 锚点 x 坐标                                                                    |
-| ay          | 小于原图高度，默认为 10                                                         | 锚点 y 坐标                                                                    |
-| text        |                                                                      | base64 URL encode 后的水印文字，支持 UTF-8。                                         |
-| imageurl    |                                                                      | 可访问的图片资源URI，水印图片，必须是可以访问的资源地址，经过 base64 URL encode。                        |
-| font        |                                                                      | base64 URL encode 后的字体名称                                                   |
-| fontsize    | 1-100                                                                | 水印文字大小，缺省为10，字体大小。                                                         |
-| direction   | 1=RightToLeft，2=LeftToRight                                          | 水印文字方向                                                                     |
+| type        | 1=文字水印，2=图片水印                                                        | 水印类型                                                                 |
+| gravity     | NorthWest/North/NorthEast/West Center/East/SouthWest/South/SouthEast | 位置偏移指示符，可以和锚点同时指定(比锚点优先使用)                                    |
+| opacity     | 1-100，缺省为 100（完全不透明）                                                  | 透明度                                                                |
+| ax          | 小于原图宽度，默认为 10                                                         | 锚点 x 坐标                                                            |
+| ay          | 小于原图高度，默认为 10                                                         | 锚点 y 坐标                                                            |
+| text        |                                                                      | base64 URL encode 后的水印文字，支持 UTF-8。                                     |
+| imageurl    |                                                                      | 可访问的图片资源URI，水印图片，必须是可以访问的资源地址，经过 base64 URL encode。       |
+| font        |                                                                      | base64 URL encode 后的字体名称                                                  |
+| fontsize    | 1-100                                                                | 水印文字大小，缺省为10，字体大小。                                                 |
+| rotate    | 0-360                                                                  | 水印文字旋转角度，默认为0，不旋转 。                                               |
+| direction   | 1=RightToLeft，2=LeftToRight                                          | 水印文字方向                                                                  |
 | fill        |                                                                      | RGB 颜色编码表，base64 URL encode 后的RGB格式，可以是颜色名称（比如red）或十六进制（比如\#FF0000），缺省为白色。 |
-| SimSun      |                                                                      | 宋体                                                                         |
+| font     |                字体格式编码类型对应表如下                                                      | 默认宋体                 |
+
+font参数中可选的文字类型以及编码
+|字体    | 中文名                                                                    | 编码值                       |
+| ------- | -------------------------------------------------------------------- | -------------------------- |
+| SimSun | 宋体   |             5a6L5L2T    /      U2ltU3Vu                       | 
+| LiShu | 隶书   |            TGlTaHU                                                    | 
+| FangZhengFangSong |   方正仿宋     |          RmFuZ1poZW5nRmFuZ1Nvbmc=                                                         | 
+| FangZhengHeiTi |   方正黑体  |                RmFuZ1poZW5nSGVpVGk=                                                     | 
+| FangZhengKaiTi |   方正楷体 | RmFuZ1poZW5nS2FpVGk=                                        | 
+| FangZhengShuSong |   方正书宋     |          RmFuZ1poZW5nU2h1U29uZw==                                                           | 
+| WenQuanWeiMiHei |    微泉微米黑 |              V2VuUXVhbldlaU1pSGVp                                                    | 
+| WenQuanYiZhengHei |      微泉驿正黑  |           V2VuUXVhblpoZW5nSGVp                                                | 
+| DroidSansFallback | DroidSansFallback    |            RHJvaWRTYW5zRmFsbGJhY2s=                                                 | 
+
 
 ## 图片格式转换
 
